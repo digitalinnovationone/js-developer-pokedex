@@ -1,0 +1,107 @@
+.normalback {
+    background: linear-gradient(180deg,
+            #a6a877 1%,
+            #fff 100%);
+}
+
+.grassback {
+    background: linear-gradient(180deg,
+            #77c855 1%,
+            #fff 100%);
+}
+
+.fireback {
+    background: linear-gradient(180deg,
+            #ee7f35 1%,
+            #fff 100%)
+}
+
+.waterback {
+    background: linear-gradient(180deg,
+             #678fee 1%,
+            #fff 100%)
+}
+
+.electricback {
+    background: linear-gradient(180deg,
+            #f7cf2e 1%,
+            #fff 100%)
+}
+
+.iceback {
+    background: linear-gradient(180deg,
+             #98d5d7 1%,
+            #fff 100%)
+}
+
+.groundback {
+    background: linear-gradient(180deg,
+           #dfbf69 1%,
+            #fff 100%)
+}
+
+.flyingback {
+    background: linear-gradient(180deg,
+            #a98ff5 1%,
+            #fff 100%)
+}
+
+.poisonback {
+    background: linear-gradient(180deg,
+            #7412ec 1%,
+            #fff 100%)
+}
+
+.fightingback {
+    background: linear-gradient(180deg,
+           #bf3529 1%,
+            #fff 100%)
+}
+
+.psychicback {
+    background: linear-gradient(180deg,
+            #f65687 1%,
+            #fff 100%)
+}
+
+.darkback {
+    background: linear-gradient(180deg,
+             #725847 1%,
+            #fff 100%)
+}
+
+.rockback {
+    background: linear-gradient(180deg,
+             #b8a137 1%,
+            #fff 100%)
+}
+
+.bugback {
+    background: linear-gradient(180deg,
+             #a8b725 1%,
+            #fff 100%)
+}
+
+.ghostback {
+    background: linear-gradient(180deg,
+             #6e5896 1%,
+            #fff 100%)
+}
+
+.steelback {
+    background: linear-gradient(180deg,
+             #b9b7cf 1%,
+            #fff 100%)
+}
+
+.dragonback {
+    background: linear-gradient(180deg,
+             #6f38f6 1%,
+            #fff 100%)
+}
+
+.fairyback {
+    background: linear-gradient(180deg,
+             #f9aec7 1%,
+            #fff 100%)
+}
