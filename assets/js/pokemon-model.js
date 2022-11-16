@@ -6,3 +6,21 @@ class Pokemon {
     types = [];
     photo;
 }
+
+class PokemonFull{
+    number;
+    name;
+    type;
+    types = [];
+    abilities = [];
+    ability; 
+    base_experience;
+    hp;
+    attack;
+    defense;
+    specialAttack;
+    specialDefense;
+    speed;
+    weigth;
+    photo;
+}

@@ -23,13 +23,31 @@
 </head>
 
 <body>
-    <section class="content">
+    <section class="contentFull">
         <h1>Pokedex</h1>
+        
+        <div id="pokemonFull">
+            <ol id="pokemonFull">
+                <table>
+                <!-- ..... Pokemon here ..... -->                
+                </table>
+            </ol>
 
-        <ol id="pokemonList" class="pokemons">
-            <!-- ..... Pokemons here ..... -->
-        </ol>
 
+        </div>
+
+    </section>
+
+    <section class="content">
+        <h1>Selecione um pokemon...</h1>
+
+
+         <ol id="pokemonList" class="pokemons">
+                <!-- ..... Pokemons here ..... -->
+         </ol>
+
+         
+        
         <div class="pagination">
             <button id="loadMoreButton" type="button">
                 Load More
@@ -37,10 +55,13 @@
         </div>
     </section>
 
-    <!-- Nosso JS -->
-    <script src="/assets/js/pokemon-model.js"></script>
-    <script src="/assets/js/poke-api.js"></script>
-    <script src="/assets/js/main.js"></script>
+
+        <!-- Nosso JS -->
+        <script src="/assets/js/pokemon-model.js"></script>
+        <script src="/assets/js/poke-api.js"></script>
+        <script src="/assets/js/detalhePokemon.js"></script>
+        <script src="/assets/js/main.js"></script>
+    
 </body>
 
 </html>
