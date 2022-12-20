@@ -16,7 +16,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: 1s ease;
 }
+
+.pokemon:hover{
+    opacity: 0.8;
+    border: 3px #fbff19 solid;
+}
+
 
 .normal {
     background-color: #a6a877;
@@ -25,6 +32,7 @@
 .grass {
     background-color: #77c850;
 }
+
 
 .fire {
     background-color: #ee7f30;

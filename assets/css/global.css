@@ -4,11 +4,28 @@
 }
 
 body{
+    margin: 0 20px;
     background-color: #f6f8fc;
+    position: relative;
+    background-image: url(../img/bg.jpg);
+    background-position: cover;
+
+    
 }
 
 .content{
-    padding: 1rem;
+    margin: 1rem;
+}
+
+.content figure {
+    text-align: center;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.content figure img{
+    width: 50%;
+    min-width: 220px;
 }
 
 .container-button{

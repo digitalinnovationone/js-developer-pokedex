@@ -13,13 +13,36 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/pokedex.css">
+    <link rel="stylesheet" href="./assets/css/infoPokemon.css">
     <title>Pokedex</title>
 </head>
 <body>
     <section class="content">
-        <h1>Pokedex</h1>
+        
+        <figure><img src="./assets/img/pokedex-logo.png"></figure>>
+
+        <div class="container-selectedPokemon" id="painel" style="display: none">
+            <!-- <div class="selectedPokemon">
+                <div class="selectedPokemon-header">
+                    <h3>POKEMÓN</h3>
+                    <div class="container-imgPokemon">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="buldasaur" width="150px" height="150px">
+                    </div>
+                </div>
+                <ul>
+                    <li>Name: Bulbassaur</li>
+                    <li>Number: 001</li>
+                    <li>Type: Grass</li>
+                    <li>Habitat: Grassland</li>
+                    <li>Heigth: 10 dm</li>
+                    <li>Weigth: 130 hg</li>
+                    <li id="abilities">Abilities: Overgrow e Solar Bean</li>
+                </ul>
+            </div> -->
+        </div>
 
         <ol class="pokemons" id="pokemonList">
+
             <!-- <li class="pokemon">
                 <span class="number">#001</span>
                 <span class="name">Bulbasaur</span>
@@ -48,8 +71,10 @@
         </div>
         
     </section>
+    
     <script src="./assets/js/pokemon-model.js"></script>
     <script src="./assets/js/poke-api.js"></script>
+    <script src="./assets/js/pokemon-selected.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>
