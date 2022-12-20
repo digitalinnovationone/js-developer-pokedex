@@ -7,7 +7,7 @@ let offset = 0;
 
 function convertPokemonToHtml(pokemon){
     return `
-    <li class="pokemon ${pokemon.type}" id="${pokemon.number}" href="#painel">
+    <li class="pokemon ${pokemon.type}" id="${pokemon.number}">
                 <span class="number">#${pokemon.number}</span>
                 <span class="name">${pokemon.name}</span>
 
