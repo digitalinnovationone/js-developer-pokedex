@@ -146,6 +146,38 @@
     border-radius: 1rem;
 }
 
+#search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  #searchInput {
+    margin-right: 0.625rem; 
+  }
+  
+  #searchButton {
+    margin-left: 0.625rem; 
+    background:  #6c79db;
+    border-radius: 1rem;
+    border: none;
+    color: #fff;
+  }
+
+  #searchInput:focus {
+    outline-color: #6c79db;
+  }
+
+  
+  
+  
+
+
+
+
+
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
