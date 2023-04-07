@@ -198,6 +198,7 @@
   padding-right: 2rem;
   margin: auto;
   width: 70%;
+  cursor: pointer;
 }
 
 #loadMorebutton:hover {

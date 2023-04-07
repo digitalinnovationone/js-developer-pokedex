@@ -38,6 +38,7 @@ footer img {
   display: inline;
   margin-top: 0.3rem;
   margin-left: 0.3rem;
+  cursor: pointer;
 }
 
 /*Media querry - conjunto de comandos que será estlizado a tela de acordo com o tamanho dela*/
