@@ -3,6 +3,11 @@ class Pokemon {
   name;
   number;
   types = [];
-  typw;
+  type;
   image;
+  height;
+  weight;
+  abilities= [];
+  stats = [];
+  photo;
 }

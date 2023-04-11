@@ -12,6 +12,7 @@ function convertPokeApi_model(pokeDetail) {
   pokemon.types = types;
   pokemon.type = type;
   pokemon.image = pokeDetail.sprites.front_default;
+  pokemon.stats = pokeDetail.stats.map((base_stats)=>base_stats.base_stat)
 
   return pokemon;
 }
@@ -35,3 +36,4 @@ pokeApi.getPokemons = (offset = 0, limit = 24) => {
     .catch((error) => console.log(error))
     .finally(() => console.log("Requisição concluída."));
 };
+
