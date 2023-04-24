@@ -44,4 +44,16 @@ loadMoreButton.addEventListener('click', () => {
     } else {
         loadPokemonItens(offset, limit)
     }
-})
+});
+
+function buscarPorNome(nome) {
+    if (!nome.value) {
+        pokemonList.innerHTML = ''
+        loadPokemonItens(offset, limit);
+        return;
+    }
+    pokeApi.getAllPokemons(nome.value.toLowerCase()).then((pokemons = []) => {
+        const newHtml = pokemons.map(convertPokemonToLi).join('')
+        pokemonList.innerHTML = newHtml
+    })
+}

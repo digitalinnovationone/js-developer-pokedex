@@ -14,6 +14,11 @@ body {
     background-color: #fff;
 }
 
+input {
+    margin: .5rem;
+    width: calc(100% - 1rem);
+}
+
 @media screen and (min-width: 992px) {
     .content {
         max-width: 992px;
