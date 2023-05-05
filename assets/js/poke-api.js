@@ -23,6 +23,30 @@ pokeApi.getPokemonDetail = (pokemon) => {
         .then(convertPokeApiDetailToPokemon)
 }
 
+pokeApi.getMoreDetailsOfPokemon = (pokemonNumber) => {
+    const URL = `https://pokeapi.co/api/v2/pokemon/${pokemonNumber}`;
+
+    return fetch(URL)
+                    .then((response) => response.json())
+                    .then((data) => {
+                        let stats = data.stats.map(stat => stat.base_stat);
+
+                        const otherDetails = {
+                            height: (data.height) / 10,
+                            weight: data.weight / 10,
+                            hp: data.stats.find((stat) => stat.stat.name).base_stat,
+                            attack: stats[1],
+                            defense: stats[2],
+                            specialAttack: stats[3],
+                            specialDefense: stats[4],
+                            speed: stats[5]
+                        };
+
+                        alert(`Pokémon: ${data.name}\nPeso: ${otherDetails.weight},\nAltura: ${otherDetails.height}\nDefesa: ${otherDetails.defense}`);
+                    })
+                    .catch((error) => console.log(error));
+}
+
 pokeApi.getPokemons = (offset = 0, limit = 5) => {
     const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
 
