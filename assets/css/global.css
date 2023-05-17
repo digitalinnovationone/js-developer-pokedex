@@ -1,24 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap');
+
+:root {
+    color-scheme: dark;
+}
+
 * {
-    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 body {
-    background-color: #f6f8fc;
-}
-
-.content {
-    width: 100vw;
+    background-color: #393d40;
     height: 100vh;
-    padding: 1rem;
-    background-color: #fff;
+    width: 100vw;
+    height: 100dvh;
+    width: 100dvw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
 }
 
-@media screen and (min-width: 992px) {
-    .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
+header {
+    text-align: center;
+}
+
+main {
+    position: relative;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    background-color: #181a1b;
+    height: clamp(40vh, 80%, 70vh);
+    width: clamp(70vw, 70%, 100vw);
+    overflow: auto;
+}
+
+h1 {
+    color: white;
+}
+
+
+.options {
+    display: flex;
+    justify-content: space-between;
+}
+
+#src-poke {
+    border-radius: 3rem;
+    width: clamp(10ch, 60%, 40ch);
+    padding: 0.1em 0.5rem 0.1em 0.5rem;
+    outline-color: none;
+    font-size: 1.3em;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 0.9em;
+}
+
+#btn-search {
+    font-size: 1.4em;
+    border-radius: 10%;
+    background: whitesmoke;
+    color: black;
+}
+
+#btn-search:hover{
+    filter: brightness(60%);
+}
+
+.page {
+    display: flex;
+    justify-content: space-between;
+}
+
+#load {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border: white solid 2.4rem;
+    border-top-color: violet;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    max-height: 15rem;
+    animation: loading 1s ease infinite;
+}
+
+label {
+    border: solid gray 0.2rem;
+    border-radius: 5%;
+    padding: 0.3rem;
+}
+
+label:hover {
+    backdrop-filter: brightness(130%);
+}
+
+@keyframes loading {
+from { transform: rotate(0turn); }
+to { transform: rotate(1turn); }
 }
