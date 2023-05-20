@@ -27,9 +27,9 @@ function loadPokemonInfo(id) {
                     <button id="statsButton">Stats</button>
                 </div>
                 <div id="Information" class="tabcontent">
-                    <label>Peso:</label> 
+                    <label>Weight:</label> 
                     <p class="infoText">${pokemon.weight/10}Kg</p>
-                    <label>Altura:</label>
+                    <label>Height:</label>
                     <p class="infoText">${pokemon.height/10}m</p>
                     <h2>Abilities</h2>
                     <ol class="abilities">
