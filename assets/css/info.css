@@ -1,0 +1,148 @@
+/* Config Cabeçalho */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#backButton {
+    padding: 0;
+    background: none;
+    border: none;
+    font-size: 1.825rem;
+    color: #ffffff;
+}
+
+#backButton:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+#pokemonInfo {
+    margin: -1rem;
+}
+
+.pokemonHeader {
+    padding: 1rem;
+    text-transform: capitalize;
+    color: #ffffff;
+    border-radius: 1rem;
+    display: grid;
+    justify-items: start;
+}
+
+.pokemonHeader img {
+    width: 80vw;
+    max-width: 380px;
+    z-index: 10;
+    justify-self: center;
+}
+
+h1 {
+    text-transform: capitalize;
+}
+
+.detail .types {
+    display: flex;
+}
+
+.detail .types .type {
+    margin: 0 0.625rem 0 0px;
+}
+
+.detailsInfo {
+    background-color: #ffffff;
+    color: #222222;
+    min-height: 400px;
+}
+
+.pokemonStats {
+    padding: 10rem 1rem 5rem 1rem;
+    text-transform: capitalize;
+    color: #333333;
+    border-radius: 1rem;
+    margin: -10rem 0 0 0;
+    background-color: #FFFFFF;
+}
+
+.stats {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.stats li{
+    padding: .625rem 0;
+}
+
+.bar {
+    width: 100%;
+}
+
+.skills {
+    text-align: right;
+    padding: 5px 5px 5px 0;
+    color: white;
+    font-size: .625rem;
+    border-radius: 1rem;
+}
+.display{
+    display: none;
+}
+/* Config Botões Detalhes e Informações */
+.btns{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2rem;
+    contain: content;
+}
+.btns button {
+    width: 50%;
+    border: 0;
+    background-color: #333333;
+    color: #ffffff;
+    padding: .5rem 1rem;
+}
+
+.btns button:disabled {
+    background-color: #dddddd ;
+    color: #333333;
+}
+
+.tabcontent{
+    margin: 2rem 0;
+}
+
+#Information{
+    text-align: center;
+}
+
+.infoText{
+    font-size: 3rem;
+    margin: 0 0 2rem 0;
+}
+
+.abilities{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.ability{
+    margin: 0 1rem;
+    border-radius: 1rem;
+    background: #f2f2f2;
+    padding: 0.5rem 1rem;
+}
+/* Config Responsividade */
+@media screen and (min-width: 380px) {}
+
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 992px) {}
