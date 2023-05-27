@@ -1,0 +1,86 @@
+
+.normal {
+  background-color: #bbb9ac
+}
+.grass {
+  background-color: #8cd852
+}
+.fire {
+  background-color: #fb5643
+}
+.water {
+  background-color: #57adff
+}
+.fighting {
+  background-color: #a95742;
+}
+.flying {
+  background-color: #76a0ff;
+}
+.poison {
+  background-color: #a95ca2;
+}
+.ground {
+  background-color: #eaca55;
+}
+.rock {
+  background-color: #cdbb73;
+}
+.bug {
+  background-color: #c2d11f;
+}
+.ghost {
+  background-color: #7773d2;
+}
+.electric {
+  background-color: #fde138;
+}
+.psychic {
+  background-color: #fa64b5;
+}
+.ice {
+  background-color: #95f1ff;
+}
+.dragon {
+  background-color: #8a75fe;
+}
+.dark {
+  background-color: #8d6855;
+}
+.steel {
+  background-color: #c4c2d8;
+}
+.fairy {
+  background-color: #fbaeff;
+}
+
+.normal:hover,
+.grass:hover,
+.fire:hover,
+.water:hover, 
+.fighting:hover, 
+.flying:hover,
+.poison:hover,
+.ground:hover,
+.rock:hover,
+.bug:hover,
+.ghost:hover,
+.electric:hover,
+.psychic:hover,
+.ice:hover,
+.dragon:hover,
+.dark:hover,
+.steel:hover,
+.fairy:hover{
+  transform: scale(1.05);
+}
+
+.hoverDetail:hover{
+  transform: scale(1.02);
+  color: rgb(255, 255, 255);
+  background-color: #333;
+  filter: brightness(1.2);
+  border-radius: 5px;
+  border: solid 3px #333;
+  cursor: pointer;
+}
