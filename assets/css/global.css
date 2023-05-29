@@ -1,19 +1,26 @@
+/* Config Reset Browsers */
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    text-decoration: none;
 }
-
+/* Config BG */
 body {
-    background-color: #f6f8fc;
+    background-image: url("../img/bg-poke.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
+/* Config Containers Pokemons */
 .content {
-    width: 100vw;
-    height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+/*  width: 100vw;
+    height: 100vh; */
+    background-color: #ffffff;
+    opacity: .875;
 }
-
+/* Config Responsividade */
 @media screen and (min-width: 992px) {
     .content {
         max-width: 992px;
