@@ -13,7 +13,7 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.type = type
 
     const skills = pokeDetail.abilities.map((skillsSlot) => skillsSlot.ability.name)// Mapeia a array abilities em uma nova array somente com os nomes das habilidades
-    const [skill1, skill2] = skills // desestrutura a array em duas variaveis para armazenar a skill1 e skill 2 do pokemon requisitado a API
+    const [skill1, skill2 = 'not have 2nd skill'] = skills // desestrutura a array em duas variaveis para armazenar a skill1 e skill 2 do pokemon requisitado a API
     pokemon.skill1 = skill1  // Atribui as variaveis como propriedades do objeto que sera criado
     pokemon.skill2 = skill2
 
