@@ -4,6 +4,7 @@
     font-size: 2em;
     color: #ff0000;
     font-weight: bold;
+    margin-right: 5px;
 }
 
 .botaoFechar:hover,
@@ -73,10 +74,8 @@
     padding: 0 0 0 20px;
 }
 
-.divSkillsAndNumber {
-    display: grid;
+.divSkills {
     justify-self: center;
-    grid-template-columns: 1fr 2em;
 }
 
 .numberModal {

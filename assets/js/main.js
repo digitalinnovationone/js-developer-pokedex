@@ -37,7 +37,10 @@ function requestDetail(pokemonNumber) {
         detailsModal.innerHTML = `
         <li class="pokemonOpen ${pokemonDetail.type}">
             <span class="nameOpen">${pokemonDetail.name}</span>
-            <div id="divButtonClose"><span class="botaoFechar" onclick="closeModal()" ontouch="closeModal()">&times;</span></div>
+            <div id="divButtonClose">
+             #${pokemonDetail.number}
+                <span class="botaoFechar" onclick="closeModal()" ontouch="closeModal()">&times;</span>
+            </div>
 
             <div class="typesOpen">
                 <ol class="typesOpen"><span>Types: </span>
@@ -45,13 +48,12 @@ function requestDetail(pokemonNumber) {
                 </ol>
             </div>
         
-            <div class="divSkillsAndNumber">
+            <div class="divSkills">
                 <div class="skills"> 
                     <span>skills: </span>                
                     <span class="skillOpen ${pokemonDetail.type}">${pokemonDetail.skill1}</span>
                     <span class="skillOpen ${pokemonDetail.type}">${pokemonDetail.skill2}</span>
                 </div>
-                <div class="numberModal"> #${pokemonDetail.number}</div>
             </div>
 
             <div class="imageOpen">
