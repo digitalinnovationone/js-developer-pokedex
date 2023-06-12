@@ -39,7 +39,7 @@ function requestDetail(pokemonNumber) {
             <span class="nameOpen">${pokemonDetail.name}</span>
             <div id="divButtonClose"><span class="botaoFechar" onclick="closeModal()" ontouch="closeModal()">&times;</span></div>
 
-            <div class="types">
+            <div class="typesOpen">
                 <ol class="typesOpen"><span>Types: </span>
                 ${pokemonDetail.types.map((type) => `<span class="typeOpen ${type}">${type}</span>`).join('')}
                 </ol>
