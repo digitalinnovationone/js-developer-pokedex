@@ -5,6 +5,10 @@ Este projeto foi solicitado como um desafio da [**Formação JavaScript Develope
 
 #### As informações do pokémon são exibidas em forma de modal que é aberto ao clicar em cima do card do pokemon desejado, serão exibidas as informações dos atributos do Pokémon: Hp, Attack, Defense, Special-Attack, Special-Defense and Speed. Alem das skills do pokémon, ambas vem dinamicamente da API com JS.
 
+<p align="center">
+  <img src="./preview.png" alt="preview image">
+</p>
+
 #### Forked from [js-developer-pokedex](https://github.com/digitalinnovationone/js-developer-pokedex)
 
 
