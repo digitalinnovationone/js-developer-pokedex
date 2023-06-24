@@ -19,7 +19,7 @@ Este projeto foi solicitado como um desafio da [**Formação JavaScript Develope
 # JS Developer Trail - Pokédex
 #### **A Pokédex built dynamically with JS**
 
-This project was requested as a challenge for the [**JavaScript Developer Training**](https://www.dio.me/curso-javascript) of [DIO - Digital Innovation One](https:// www.dio.me/curso-javascript). dio.me). The objective of the project was to acquire knowledge and practice consuming a REST API, using [PokeAPI](https://pokeapi.co/), the Pokémon RESTful API.
+This project was requested as a challenge for the [**JavaScript Developer Training**](https://www.dio.me/curso-javascript) of [**DIO - Digital Innovation One**](https://www.dio.me/curso-javascript). The objective of the project was to acquire knowledge and practice consuming a REST API, using [PokeAPI](https://pokeapi.co/), the Pokémon RESTful API.
 
 #### The pokémon's information is displayed in the form of a modal that opens when clicking on the desired pokemon's card. In addition to pokémon skills, both come dynamically from the API with JS.
 
