@@ -14,7 +14,7 @@ function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         
         pokemonList.innerHTML += pokemons.map((pokemon) => `
-            <li class="pokemon ${pokemon.type}" ontouch="requestDetail(${pokemon.number})" onclick='requestDetail(${pokemon.number})'>
+            <li class="tooltip pokemon ${pokemon.type}" ontouch="requestDetail(${pokemon.number})" onclick='requestDetail(${pokemon.number})'>
                 <span class="number" >#${pokemon.number}</span>
                 <span class="name" >${pokemon.name}</span>
                 <div class="detail">
@@ -28,8 +28,10 @@ function loadPokemonItens(offset, limit) {
             </li>
         `).join('');
     })
+    setTimeout(() => {
+        tooltip()
+    }, 1000);
 }
-
 // Função que cria os detalhes para o modalDetalhes dinamicamente
 function requestDetail(pokemonNumber) {
 
