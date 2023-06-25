@@ -1,3 +1,5 @@
+window.onload = function () { tooltip() }
+
 function tooltip() {
     // Inicializar tooltip
     tippy(document.querySelectorAll('.tooltip'), {
