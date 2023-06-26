@@ -145,6 +145,9 @@
     border: none;
     border-radius: 1rem;
 }
+button:hover{
+    background-color: #384ce6;
+}
 
 @media screen and (min-width: 380px) {
     .pokemons {
