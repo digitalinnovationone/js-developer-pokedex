@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
+    
+    <!--ToolTip CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away-extreme.css" />
 
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -17,9 +20,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
 
-    <!-- Nosso CSS -->
-    <link rel="stylesheet" href="/assets/css/global.css">
-    <link rel="stylesheet" href="/assets/css/pokedex.css">
+    <!-- My CSS's -->
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/pokedex.css">
+    <link rel="stylesheet" href="./assets/css/modalDetalhes.css">
+
 </head>
 
 <body>
@@ -27,20 +32,37 @@
         <h1>Pokedex</h1>
 
         <ol id="pokemonList" class="pokemons">
-            <!-- ..... Pokemons here ..... -->
+            <!-- Os pokemons ficarão aqui -->
         </ol>
 
         <div class="pagination">
-            <button id="loadMoreButton" type="button">
+            <button id="loadMore" type="button" >
                 Load More
             </button>
         </div>
+
     </section>
 
+    <div id="my-modal" class="modal">
+        <div class='centralizador'>
+            <div id="conteudoModalFisico" class="conteudoModalFisico">
+                <div id="pokemonListDetails" class="pokemonsModal">
+                    <!-- Detalhes do pokemons virão aqui -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
     <!-- Nosso JS -->
-    <script src="/assets/js/pokemon-model.js"></script>
-    <script src="/assets/js/poke-api.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="./assets/js/manipulaçãoModal.js"></script>
+    <script src="./assets/js/pokemon-model.js"></script>
+    <script src="./assets/js/poke-api.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <!-- Tooltip scripts -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="./assets/js/tooltipConfigs.js"></script>
 </body>
 
 </html>
