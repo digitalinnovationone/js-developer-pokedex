@@ -1,35 +1,25 @@
+const pokeApi = {};
 
-const pokeApi = {}
-
-function convertPokeApiDetailToPokemon(pokeDetail) {
-    const pokemon = new Pokemon()
-    pokemon.number = pokeDetail.id
-    pokemon.name = pokeDetail.name
-
-    const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)
-    const [type] = types
-
-    pokemon.types = types
-    pokemon.type = type
-
-    pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
-
-    return pokemon
-}
-
-pokeApi.getPokemonDetail = (pokemon) => {
+pokeApi.getPokemonDetail = pokemon => {
     return fetch(pokemon.url)
-        .then((response) => response.json())
-        .then(convertPokeApiDetailToPokemon)
-}
+        .then(response => response.json()) // retorna cada busca dos detalhes de cada pokemon e retorna eles em json
+        .then(convertPokemonToPokemonModel);
+};
 
-pokeApi.getPokemons = (offset = 0, limit = 5) => {
-    const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
+pokeApi.getPokemons = (offset = 0, limit = 12) => {
+    const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
+    return fetch(url) // busca a lista de pokemons
+        .then(response => response.json()) // retorna a lista de pokemons em json
+        .then(jsonBody => jsonBody.results) // acessamos o resultado da lista
+        .then(pokemons => pokemons.map(pokeApi.getPokemonDetail)) // faz a chamada da funcao que retorna uma lista de promises passando por parametro a lista de pokemons
+        .then(detailRequest => Promise.all(detailRequest)) // retorna todas as promises
+        .then(pokemonDetails => pokemonDetails) // retorna os detalhes de cada pokemon
+        .catch(error => console.error(error));
+};
 
+pokeApi.getInfoPokemon = id => {
+    const url = `https://pokeapi.co/api/v2/pokemon/${id}/`;
     return fetch(url)
-        .then((response) => response.json())
-        .then((jsonBody) => jsonBody.results)
-        .then((pokemons) => pokemons.map(pokeApi.getPokemonDetail))
-        .then((detailRequests) => Promise.all(detailRequests))
-        .then((pokemonsDetails) => pokemonsDetails)
-}
+        .then(response => response.json())
+        .then(jsonBody => jsonBody.stats);
+};

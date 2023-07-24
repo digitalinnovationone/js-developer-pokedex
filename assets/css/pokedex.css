@@ -1,13 +1,31 @@
 .pokemons {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 10px;
+}
+
+.pokemon {
+    background: url('../img/background.png') no-repeat center;
+    background-size: 200px;
+    background-position: 90% 90%;
+    width: 280px;
+    padding: 20px 10px 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .normal {
     background-color: #a6a877;
+}
+
+.bug {
+    background-color: #a8b720;
+}
+
+.psychic {
+    background-color: #f65687;
 }
 
 .grass {
@@ -22,20 +40,44 @@
     background-color: #678fee;
 }
 
-.electric {
+.eletric {
     background-color: #f7cf2e;
+}
+
+.fairy {
+    background-color: #f9aec7;
+}
+
+.ghost {
+    background-color: #6e5896;
+}
+
+.dark {
+    background-color: #725847;
 }
 
 .ice {
     background-color: #98d5d7;
 }
 
+.rock {
+    background-color: #b8a137;
+}
+
 .ground {
     background-color: #dfbf69;
 }
 
-.flying {
-    background-color: #a98ff0;
+.unknown {
+    background-color: #111;
+}
+
+.shadow {
+    background-color: #444;
+}
+
+.electric {
+    background-color: #c9c62f;
 }
 
 .poison {
@@ -46,120 +88,84 @@
     background-color: #bf3029;
 }
 
-.psychic {
-    background-color: #f65687;
-}
-
-.dark {
-    background-color: #725847;
-}
-
-.rock {
-    background-color: #b8a137;
-}
-
-.bug {
-    background-color: #a8b720;
-}
-
-.ghost {
-    background-color: #6e5896;
-}
-
-.steel {
-    background-color: #b9b7cf;
+.flying {
+    background-color: #a98ff0;
 }
 
 .dragon {
     background-color: #6f38f6;
 }
 
-.fairy {
-    background-color: #f9aec7;
+.steel {
+    background-color: #b9b7cf;
 }
 
-.pokemon {
+.pokemon-header {
     display: flex;
-    flex-direction: column;
-    margin: .5rem;
-    padding: 1rem;
-    border-radius: 1rem;
-}
-
-.pokemon .number {
-    color: #000;
-    opacity: .3;
-    text-align: right;
-    font-size: .625rem;
-}
-
-.pokemon .name {
-    text-transform: capitalize;
-    color: #fff;
-    margin-bottom: .25rem;
-}
-
-.pokemon .detail {
-    display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
-.pokemon .detail .types {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.pokemon .detail .types .type {
+.name {
+    font-size: 20px;
     color: #fff;
-    padding: .25rem .5rem;
-    margin: .25rem 0;
-    font-size: .625rem;
-    border-radius: 1rem;
-    filter: brightness(1.1);
-    text-align: center;
+    text-transform: capitalize;
 }
 
-.pokemon .detail img {
-    max-width: 100%;
-    height: 70px;
+.number {
+    font-size: 18px;
+    color: #ddd;
 }
 
-.pagination {
+.details {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 1rem;
 }
 
-.pagination button {
-    padding: .25rem .5rem;
-    margin: .25rem 0;
-    font-size: .625rem;
+.types {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.type {
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 5px 8px;
     color: #fff;
-    background-color: #6c79db;
+    text-align: center;
+    filter: brightness(1.1);
+    text-transform: capitalize;
+}
+
+.pokemon-img {
+    width: 190px;
+    height: 190px;
+}
+
+
+.button {
+    background-color: #ac46ff;
+    color: #eee;
+    padding: 10px 15px;
+    margin: 30px;
     border: none;
-    border-radius: 1rem;
+    border-radius: 10px;
+    transition: all 0.2s;
 }
 
-@media screen and (min-width: 380px) {
-    .pokemons {
-        grid-template-columns: 1fr 1fr;
-    }
+.button:hover {
+    background-color: #7f11d8;
 }
 
-@media screen and (min-width: 576px) {
-    .pokemons {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+.hidden {
+    visibility: hidden;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 922px) {
     .pokemons {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: space-between;
     }
 }
