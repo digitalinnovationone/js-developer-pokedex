@@ -141,6 +141,7 @@
     margin: .25rem 0;
     font-size: .625rem;
     color: #fff;
+    cursor: pointer;
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;

@@ -12,17 +12,46 @@ export class GetPokemons {
         return __awaiter(this, void 0, void 0, function* () {
             const url = this.getUrl(offset, limit);
             const res = yield this.connectApi(url);
-            return res;
+            const fullRes = yield this.generateDetailedPokemon(res);
+            return fullRes;
         });
     }
     getUrl(offset, limit) {
         return `https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`;
     }
     generateDetailedPokemon(json) {
-        let pokemonArray = [];
-        const pokemonsUrl = json.results.map(pokemon => { return pokemon.url; });
+        return __awaiter(this, void 0, void 0, function* () {
+            const pokemonsUrl = json.results.map(pokemon => { return pokemon.url; });
+            const detailedPokemon = yield this.getDetailedPokemonFromApi(pokemonsUrl);
+            return detailedPokemon;
+        });
     }
-    getDetailedPokemon(url) {
+    getDetailedPokemonFromApi(urls) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let result;
+            try {
+                result = yield Promise.all(urls.map((url) => __awaiter(this, void 0, void 0, function* () {
+                    const res = yield fetch(url).then(r => r.json());
+                    const fullResponse = this.extractIndividualInfo(res);
+                    return fullResponse;
+                })));
+                return result;
+            }
+            catch (error) {
+                console.error(error);
+                throw new Error();
+            }
+        });
+    }
+    extractIndividualInfo(obj) {
+        const types = obj.types.map(type => type.type.name);
+        return {
+            number: obj.id,
+            name: obj.name,
+            type: types[0],
+            types: types,
+            photo: obj.sprites.other.dream_world.front_default,
+        };
     }
     connectApi(url) {
         return __awaiter(this, void 0, void 0, function* () {

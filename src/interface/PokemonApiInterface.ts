@@ -14,6 +14,25 @@ export interface DetailedPokemon {
     number : number;
     name : string;
     type : string;
-    types : [];
+    types : any[];
     photo : string;
+}
+export interface DetailedPokemonPromise {
+    id : number,
+    name : string,
+    types : [
+        {type : {
+            name : string
+        }},
+        {type : {
+            name : string
+        }}
+    ],
+    sprites : {
+        other : {
+            dream_world : {
+                front_default : string
+            }
+        }
+    }
 }
