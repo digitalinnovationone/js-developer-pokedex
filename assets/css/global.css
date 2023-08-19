@@ -1,24 +1,146 @@
+:root {
+  --normal: linear-gradient(45deg, #a8a77a 0%, #7e9774 100%);
+  --fire: linear-gradient(45deg, #ee8130 0%, #e65e64 100%);
+  --water: linear-gradient(45deg, #6390f0 0%, #00b4ff 100%);
+  --electric: linear-gradient(45deg, #f7d02c 0%, #b4c421 100%);
+  --grass: linear-gradient(45deg, #7ac74c 0%, #00ba67 100%);
+  --ice: linear-gradient(45deg, #96d9d6 0%, #76c0d7 100%);
+  --fighting: linear-gradient(45deg, #c22e28 0%, #a75a00 100%);
+  --poison: linear-gradient(45deg, #a33ea1 0%, #6d5fc6 100%);
+  --ground: linear-gradient(45deg, #e2bf65 0%, #afb44e 100%);
+  --flying: linear-gradient(45deg, #a98ff3 0%, #4e92ee 100%);
+  --psychic: linear-gradient(45deg, #f95587 0%, #de5f41 100%);
+  --bug: linear-gradient(45deg, #a6b91a 0%, #73ae29 100%);
+  --rock: linear-gradient(45deg, #b6a136 0%, #8c9b36 100%);
+  --ghost: linear-gradient(45deg, #735797 0%, #476ab1 100%);
+  --dragon: linear-gradient(45deg, #6f35fc 0%, #006fff 100%);
+  --dark: linear-gradient(45deg, #705746 0%, #746548 100%);
+  --steel: linear-gradient(45deg, #b7b7ce 0%, #a9a2be 100%);
+  --fairy: linear-gradient(45deg, #d685ad 0%, #ab81c3 100%);
+}
+
 * {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
-    background-color: #f6f8fc;
+  background: linear-gradient(
+    149deg,
+    rgba(241, 255, 239, 1) 0%,
+    rgba(247, 255, 248, 1) 100%
+  );
+
+  overflow: auto;
 }
 
 .content {
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
-    background-color: #fff;
+  width: 100vw;
+  padding: 2rem;
+  background: rgba(248, 248, 248, 0.3);
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.content__title {
+  margin: 0;
+  color: #242649;
+}
+
+.loader {
+  gap: 1.5rem;
+  justify-content: center;
+  position: relative;
+
+  visibility: hidden;
+  display: none;
+
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.loader--show {
+  visibility: visible;
+  display: flex;
+}
+
+.loader__item {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  transform-origin: 50% 100%;
+  animation: bounce 0.5s linear infinite;
+}
+
+.loader__item:nth-child(1) {
+  background-color: #ee8130;
+}
+
+.loader__item:nth-child(2) {
+  background-color: #6f35fc;
+  animation-delay: 0.1s;
+}
+
+.loader__item:nth-child(3) {
+  background-color: #7ac74c;
+  animation-delay: 0.2s;
+}
+
+.pokemons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 @media screen and (min-width: 992px) {
-    .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
+  .content {
+    max-width: 992px;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 1rem;
+  }
+}
+
+@media screen and (min-width: 380px) {
+  .pokemons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .pokemons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .pokemons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@keyframes bounce {
+  from,
+  to {
+    transform: translateY(-0.5rem) scale(1, 1);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: translateY(0.5rem) scale(1, 1);
+    animation-timing-function: linear;
+  }
+  50% {
+    transform: translateY(0.5rem) scale(1.5, 0.5);
+    animation-timing-function: linear;
+  }
+  55% {
+    transform: translateY(0.5rem) scale(1, 1);
+    animation-timing-function: ease-out;
+  }
 }
