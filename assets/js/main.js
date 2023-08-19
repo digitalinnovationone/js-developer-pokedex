@@ -1,47 +1,62 @@
-const pokemonList = document.getElementById('pokemonList')
-const loadMoreButton = document.getElementById('loadMoreButton')
+const pokemonList = document.getElementById('pokemonList');
+const loader = document.getElementById('loader');
+const modal = document.getElementById('p-modal');
 
-const maxRecords = 151
-const limit = 10
+const maxRecords = 151;
+const limit = 24;
 let offset = 0;
 
-function convertPokemonToLi(pokemon) {
-    return `
-        <li class="pokemon ${pokemon.type}">
-            <span class="number">#${pokemon.number}</span>
-            <span class="name">${pokemon.name}</span>
+let loading = false;
 
-            <div class="detail">
-                <ol class="types">
-                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-                </ol>
+const hideLoader = () => {
+  loader.classList.remove('loader--show');
+};
 
-                <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
-            </div>
-        </li>
-    `
-}
+const showLoader = () => {
+  loader.classList.add('loader--show');
+};
 
-function loadPokemonItens(offset, limit) {
-    pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
-        const newHtml = pokemons.map(convertPokemonToLi).join('')
-        pokemonList.innerHTML += newHtml
-    })
-}
+const closeModal = () => {
+  modal.setAttribute('show', false);
+};
 
-loadPokemonItens(offset, limit)
+const isLoading = () => {
+  return loader.classList.contains('loader--show');
+};
 
-loadMoreButton.addEventListener('click', () => {
-    offset += limit
-    const qtdRecordsWithNexPage = offset + limit
+const loadPokemonItens = async (offset, limit) => {
+  showLoader();
 
-    if (qtdRecordsWithNexPage >= maxRecords) {
-        const newLimit = maxRecords - offset
-        loadPokemonItens(offset, newLimit)
+  let pokemons = await pokeApi.getPokemons(offset, limit);
 
-        loadMoreButton.parentElement.removeChild(loadMoreButton)
-    } else {
-        loadPokemonItens(offset, limit)
-    }
-})
+  pokemons.forEach((pokemon) => {
+    const card = document.createElement('pokemon-card');
+    card.setAttribute('name', pokemon.name);
+    pokemonList.append(card);
+  });
+
+  hideLoader();
+};
+
+loadPokemonItens(offset, limit);
+
+const scroll = () => {
+  if (
+    window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 5 &&
+    offset + limit < maxRecords &&
+    !isLoading()
+  ) {
+    offset += limit;
+    let newLimit = limit;
+
+    if (offset + limit > maxRecords) newLimit = maxRecords - offset;
+
+    loadPokemonItens(offset, newLimit);
+  }
+};
+
+window.addEventListener('scroll', scroll, {
+  passive: true,
+});
+
+window.addEventListener('touchmove', scroll);

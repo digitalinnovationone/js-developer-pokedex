@@ -1,0 +1,36 @@
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeleton-text {
+  min-height: 0.8rem;
+
+  color: transparent !important;
+}
+
+.pokemon__skeleton-image {
+  position: absolute;
+  width: 5rem;
+  aspect-ratio: 1;
+
+  right: 0.3rem;
+  bottom: 0.3rem;
+
+  -webkit-mask-image: url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1.png);
+  mask-image: url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: #c2cfd6;
+  }
+  100% {
+    background-color: #f0f3f5;
+  }
+}
