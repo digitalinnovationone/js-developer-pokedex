@@ -38,7 +38,7 @@ Este projeto foi desenvolvido como parte do Bootcamp Java + Angular Fullstack da
 
 ## Contato
 
-Se você tiver alguma dúvida ou sugestão relacionada a este projeto, sinta-se à vontade para entrar em contato comigo por meio do email (seu@email.com).
+Se você tiver alguma dúvida ou sugestão relacionada a este projeto, sinta-se à vontade para entrar em contato comigo por meio do email (lemosecarlos@gmail.com).
 
 **Nota:** Este projeto é apenas para fins educacionais e não possui nenhuma afiliação oficial com a franquia Pokémon ou suas empresas associadas.
 
