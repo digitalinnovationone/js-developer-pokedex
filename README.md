@@ -1,6 +1,6 @@
 # Trilha JS Developer - Pokedex
 
-Este é um projeto de uma Pokédex desenvolvido durante o Bootcamp Java + Angular Fullstack da empresa DIO (Digital Innovation One), com auxílio do instrutor Renan. O projeto consiste em uma aplicação web que exibe informações sobre diferentes pokémons, permitindo aos usuários explorar suas características, tipos, habilidades e mais. Para executar o projeto, será necessário configurar um servidor HTTP local.
+Este é um projeto de uma Pokédex desenvolvido durante o Bootcamp Java + Angular Fullstack da empresa DIO (Digital Innovation One). O projeto consiste em uma aplicação web que exibe informações sobre diferentes pokémons, permitindo aos usuários explorar suas características, tipos, habilidades e mais. Para executar o projeto, será necessário configurar um servidor HTTP local.
 
 ![Pokédex](assets/img/pokedex-screenshot.png)
 
