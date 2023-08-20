@@ -54,10 +54,6 @@ Este é um projeto de uma Pokédex desenvolvido durante o Bootcamp Java + Angula
 
 Este projeto foi desenvolvido como parte do Bootcamp Java + Angular Fullstack da DIO, com a orientação do instrutor Renan. Agradecemos à DIO por fornecer a oportunidade de aprender e aplicar novas habilidades de desenvolvimento web.
 
-## Contato
-
-Se você tiver alguma dúvida ou sugestão relacionada a este projeto, sinta-se à vontade para entrar em contato comigo por meio do email (seu@email.com).
-
 **Nota:** Este projeto é apenas para fins educacionais e não possui nenhuma afiliação oficial com a franquia Pokémon ou suas empresas associadas.
 
 ---
