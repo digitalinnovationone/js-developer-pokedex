@@ -8,9 +8,7 @@ Este é um projeto de uma Pokédex desenvolvido durante o Bootcamp Java + Angula
 
 - **Lista de Pokémons:** A aplicação exibe uma lista de pokémons com suas imagens e nomes. Os pokémons são carregados a partir de uma fonte de dados externa.
 
-- **Detalhes do Pokémon:** Ao clicar em um pokémon na lista, os detalhes específicos desse pokémon são exibidos, incluindo nome, número da pokédex, tipo(s), habilidades e uma imagem de alta resolução.
-
-- **Pesquisa por Nome:** Os usuários podem pesquisar pokémons por nome, facilitando a localização de seus favoritos.
+- **Load More - Carregar Mais Tipos:** Ao clicar no botão "Load More", mais tipos de pokémons serão carregados e exibidos na lista. Esta funcionalidade permite aos usuários explorar diferentes tipos de pokémons.
 
 ## Tecnologias Utilizadas
 
@@ -46,16 +44,10 @@ Este é um projeto de uma Pokédex desenvolvido durante o Bootcamp Java + Angula
 
 6. Após iniciar o servidor, você receberá uma mensagem informando o endereço local onde a aplicação está sendo executada (geralmente http://localhost:8080). Abra este URL em seu navegador.
 
-7. Você será recebido com uma lista de pokémons. Clique em um pokémon para ver seus detalhes ou utilize a barra de pesquisa para encontrar um pokémon específico.
-
-8. Explore os detalhes do pokémon, como tipo, habilidades e imagem.
+7. Explore a lista de pokémons e clique no botão "Load More" para carregar mais tipos de pokémons na lista.
 
 ## Créditos
 
-Este projeto foi desenvolvido como parte do Bootcamp Java + Angular Fullstack da DIO, com a orientação do instrutor Renan. Agradecemos à DIO por fornecer a oportunidade de aprender e aplicar novas habilidades de desenvolvimento web.
+Este projeto foi desenvolvido como parte do Bootcamp Java + Angular Fullstack da DIO. Agradecemos à DIO por fornecer a oportunidade de aprender e aplicar novas habilidades de desenvolvimento web.
 
 **Nota:** Este projeto é apenas para fins educacionais e não possui nenhuma afiliação oficial com a franquia Pokémon ou suas empresas associadas.
-
----
-
-Divirta-se explorando a Pokédex! Espero que esta documentação tenha sido útil e que você possa continuar aprimorando suas habilidades de desenvolvimento web com projetos futuros.
