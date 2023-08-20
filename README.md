@@ -1,6 +1,6 @@
 # Trilha JS Developer - Pokedex
 
-Este é um projeto de uma Pokédex desenvolvido durante o Bootcamp Java + Angular Fullstack da empresa DIO (Digital Innovation One), com auxílio do instrutor Renan. O projeto consiste em uma aplicação web que exibe informações sobre diferentes pokémons, permitindo aos usuários explorar suas características, tipos, habilidades e mais.
+Este é um projeto de uma Pokédex desenvolvido durante o Bootcamp Java + Angular Fullstack da empresa DIO (Digital Innovation One), com auxílio do instrutor Renan. O projeto consiste em uma aplicação web que exibe informações sobre diferentes pokémons, permitindo aos usuários explorar suas características, tipos, habilidades e mais. Para executar o projeto, será necessário configurar um servidor HTTP local.
 
 ![Pokédex](pokedex-screenshot.png)
 
@@ -22,15 +22,33 @@ Este é um projeto de uma Pokédex desenvolvido durante o Bootcamp Java + Angula
 
 - **Fonte de Dados:** As informações dos pokémons foram obtidas de uma API pública, que fornece detalhes como nome, número da pokédex, tipos, habilidades e imagens.
 
+- **HTTP-Server:** Para executar o projeto, será necessário um servidor HTTP local. Utilize o http-server para isso.
+
 ## Instruções de Uso
 
 1. Clone ou baixe este repositório para a sua máquina local.
 
-2. Abra o arquivo `index.html` no seu navegador web.
+2. Certifique-se de ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
 
-3. Você será recebido com uma lista de pokémons. Clique em um pokémon para ver seus detalhes ou utilize a barra de pesquisa para encontrar um pokémon específico.
+3. Abra o terminal e navegue até o diretório raiz do projeto.
 
-4. Explore os detalhes do pokémon, como tipo, habilidades e imagem.
+4. Instale o `http-server` globalmente, se ainda não estiver instalado, usando o seguinte comando:
+
+   ```bash
+   npm install -g http-server
+   ```
+
+5. Inicie o servidor HTTP local utilizando o comando:
+
+   ```bash
+   http-server
+   ```
+
+6. Após iniciar o servidor, você receberá uma mensagem informando o endereço local onde a aplicação está sendo executada (geralmente http://localhost:8080). Abra este URL em seu navegador.
+
+7. Você será recebido com uma lista de pokémons. Clique em um pokémon para ver seus detalhes ou utilize a barra de pesquisa para encontrar um pokémon específico.
+
+8. Explore os detalhes do pokémon, como tipo, habilidades e imagem.
 
 ## Créditos
 
@@ -38,7 +56,7 @@ Este projeto foi desenvolvido como parte do Bootcamp Java + Angular Fullstack da
 
 ## Contato
 
-Se você tiver alguma dúvida ou sugestão relacionada a este projeto, sinta-se à vontade para entrar em contato comigo por meio do email (lemosecarlos@gmail.com).
+Se você tiver alguma dúvida ou sugestão relacionada a este projeto, sinta-se à vontade para entrar em contato comigo por meio do email (seu@email.com).
 
 **Nota:** Este projeto é apenas para fins educacionais e não possui nenhuma afiliação oficial com a franquia Pokémon ou suas empresas associadas.
 
