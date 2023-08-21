@@ -1,0 +1,22 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "pokedex para projento",
+  "main": "poke-api.js",
+  "scripts": {
+    "test": "server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yusudime/js-developer-pokedex.git"
+  },
+  "keywords": [
+    "pokedex"
+  ],
+  "author": "Yusudime",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Yusudime/js-developer-pokedex/issues"
+  },
+  "homepage": "https://github.com/Yusudime/js-developer-pokedex#readme"
+}
