@@ -11,7 +11,9 @@ body {
     width: 100vw;
     height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #0b07e9;
+    font-style: italic;
+    color: #f6f8fc;
 }
 
 @media screen and (min-width: 992px) {
