@@ -7,7 +7,7 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
+        <li onclick="openDetails(this)" class="pokemon ${pokemon.type}">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
@@ -45,3 +45,21 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
+function openDetails(el){
+   pokeApi.getIndividual(el)
+}
+
+function criaHtmlModal(pokemon){
+    return `
+ <div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModalBtn">&times;</span>
+    <h2>${pokemon.name}</h2>
+    <p>ID: 025</p>
+    <p>Habilidade: Static</p>
+    <img src="pikachu.jpg" alt="Imagem do Pikachu" class="centered-image">
+  </div>
+</div>
+`
+}
