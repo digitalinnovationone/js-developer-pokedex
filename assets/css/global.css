@@ -13,7 +13,9 @@ body {
     padding: 1rem;
     background-color: #fff;
 }
-
+li{
+    cursor: pointer;
+}
 @media screen and (min-width: 992px) {
     .content {
         max-width: 992px;

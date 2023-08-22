@@ -1,0 +1,112 @@
+* {
+  font-family: "Roboto";
+}
+/* Estilo para o modal */
+.modal {
+  display: none;
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow: auto;
+}
+h1 {
+  text-transform: capitalize;
+}
+/* Estilo para o conteúdo do modal */
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 2.5rem;
+  border-radius: 8px;
+  max-width: 800px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o botão de fechar o modal */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #555;
+}
+
+/* Estilo para os tipos de Pokémon */
+.type {
+  display: inline-flex;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #fff;
+}
+
+img {
+  align-self: center;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  border-radius: 8px;
+}
+.stats {
+  background-color: white;
+  padding: 20px;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.grass {
+  background-color: #78c850;
+}
+.fire {
+  background-color: #f08030;
+}
+.water {
+  background-color: #6890f0;
+}
+.electric {
+  background-color: #f8d030;
+}
+.normal {
+  background-color: #a8a878;
+}
+.fighting {
+  background-color: #c03028;
+}
+.poison {
+  background-color: #a040a0;
+}
+.ground {
+  background-color: #e0c068;
+}
+.flying {
+  background-color: #a890f0;
+}
+.psychic {
+  background-color: #f85888;
+}
+.bug {
+  background-color: #a8b820;
+}
+.rock {
+  background-color: #b8a038;
+}
+.ghost {
+  background-color: #705898;
+}
+.dark {
+  background-color: #705848;
+}
+.steel {
+  background-color: #b8b8d0;
+}
+.fairy {
+  background-color: #ee99ac;
+}
