@@ -1,34 +1,34 @@
 const pokeApi = {};
 
 function convertPokeApiDetailToPokemon(pokeDetail) {
-    const pokemon = new Pokemon();
-    const {
-      id: number,
-      name,
-      types,
-      abilities,
-      weight,
-      height,
-      sprites: {
-        other: {
-          dream_world: { front_default: photo }
-        }
-      }
-    } = pokeDetail;
-    const [type] = types.map(typeSlot => typeSlot.type.name);
-   
-    Object.assign(pokemon, {
-      number,
-      name,
-      weight,
-      height,
-      abilities: abilities.map(abilitieSlot => abilitieSlot.ability.name),
-      types: types.map(typeSlot => typeSlot.type.name),
-      type,
-      photo
-    });
-    return pokemon;
-  }
+  const pokemon = new Pokemon();
+  const {
+    id: number,
+    name,
+    types,
+    abilities,
+    weight,
+    height,
+    sprites: {
+      other: {
+        dream_world: { front_default: photo },
+      },
+    },
+  } = pokeDetail;
+  const [type] = types.map((typeSlot) => typeSlot.type.name);
+
+  Object.assign(pokemon, {
+    number,
+    name,
+    weight,
+    height,
+    abilities: abilities.map((abilitieSlot) => abilitieSlot.ability.name),
+    types: types.map((typeSlot) => typeSlot.type.name),
+    type,
+    photo,
+  });
+  return pokemon;
+}
 
 pokeApi.getPokemonDetail = (pokemon) => {
   return fetch(pokemon.url)
@@ -52,5 +52,5 @@ pokeApi.getIndividual = (el) => {
   return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonClicado}`)
     .then((res) => res.json())
     .then(convertPokeApiDetailToPokemon)
-    .then(data=>pokemonList.innerHTML=criaHtmlModal(data))
+    .then((data) => (pokemonList.innerHTML = criaHtmlModal(data)));
 };
