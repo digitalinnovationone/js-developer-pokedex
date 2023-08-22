@@ -136,14 +136,23 @@
     padding: 1rem;
 }
 
-.pagination button {
+.pagination button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: center;
+    color: white;
     padding: .25rem .5rem;
     margin: .25rem 0;
-    font-size: .625rem;
-    color: #fff;
-    background-color: #6c79db;
-    border: none;
+    font-size: 1rem;
     border-radius: 1rem;
+    border: none;
+    background-color: rgb(196, 120, 120);
+}
+#pokebola{
+    width: 0.80rem;
+    margin-left: 0.8rem;
+    align-self: center;
 }
 
 @media screen and (min-width: 380px) {
