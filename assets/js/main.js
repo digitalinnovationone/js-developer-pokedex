@@ -53,12 +53,26 @@ function openDetails(el){
 function criaHtmlModal(pokemon){
     return `
  <div id="myModal" class="modal">
-  <div class="modal-content">
+  <div class="modal-content ${pokemon.type}">
     <span class="close" id="closeModalBtn">&times;</span>
-    <h2>${pokemon.name}</h2>
-    <p>ID: 025</p>
-    <p>Habilidade: Static</p>
-    <img src="pikachu.jpg" alt="Imagem do Pikachu" class="centered-image">
+    <h1>${pokemon.name}</h1>
+    <h2>#${pokemon.number}</h2>
+    <div class="abilities">
+    <ol>
+    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+    </ol>
+    <ol>
+    ${pokemon.abilities.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+    </ol></div>
+    <img src=${pokemon.photo} alt="Imagem do pokemon">
+    <div class="stats">
+    <span>
+    weight:${pokemon.weight}
+    </span>
+    <span>
+    height:${pokemon.height}
+    </span>
+    </div>
   </div>
 </div>
 `
