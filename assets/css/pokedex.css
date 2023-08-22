@@ -87,7 +87,7 @@
     cursor: pointer; 
 }
 .pokemon:hover {
-    margin:0;
+    margin: 0;
 }
 
 .pokemon .number {
