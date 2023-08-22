@@ -20,7 +20,6 @@
 }
 
 .modal {
-    /*Modal global que ocupa a tela inteira*/
     display: none;
     position: fixed;
     left: 0;
@@ -31,7 +30,7 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.centralizarModal {
+.centralizar {
     width: 100%;
     position: fixed;
     top: 50%;
@@ -45,7 +44,7 @@
     justify-content: center;
 }
 
-.pokemonDetalhesModal {
+.pokemonsModal {
     width: 100%;
 }
 
