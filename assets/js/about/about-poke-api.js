@@ -3,6 +3,7 @@ const genderUrl = "https://pokeapi.co/api/v2/gender/"
 const pokeApiAbout = {}
 
 function convertpokeApiAboutDetailToPokemon(pokeDetail) {
+    
     // console.log(pokeDetail)
     const pokemon = new PokemonAbout()
     pokemon.number = pokeDetail.id
@@ -13,11 +14,14 @@ function convertpokeApiAboutDetailToPokemon(pokeDetail) {
     pokemon.type = type
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
 
-    // species
+    // About
     pokemon.species = pokeDetail.species
     pokemon.height = pokeDetail.height
     pokemon.weight = pokeDetail.weight
     pokemon.abilities = pokeDetail.abilities.map((ability) => ability.ability.name)
+
+    // Base stats
+    pokemon.stats = pokeDetail.stats
 
     return pokemon
 }

@@ -9,6 +9,7 @@ window.onload = function () {
 }
 
 function fillValuesAboutPokemon(pokemonValues){
+    let tot_stat = 0;
     const aboutValuesHtml = `
         <div id="title" class="title-values">
             <h1> ${pokemonValues.name} </h1>
@@ -56,30 +57,34 @@ function fillValuesAboutPokemon(pokemonValues){
             </tr>
 
             <!-- Base Stats section -->
+            ${pokemonValues.stats.map((stat) => {
+                tot_stat += Number(stat.base_stat)
+                return `
+                    <tr class="base-stats hide">
+                        <td class="stat-name">${stat.stat.name}</td>
+                        <td class="stat-number">${stat.base_stat}</td>
+                        <td class="stat-gauge" colspan="2">
+                            <div class="gauge">
+                                <div class="${stat.base_stat > 50 ? 'fill-green' : 'fill-red'}" style="width: ${stat.base_stat -20}%;"></div>
+                            </div>
+                        </td>
+                    </tr>
+                `}).join('')}
             <tr class="base-stats hide">
-                <td>Height</td>
-                <td colspan="3"> ------ </td>
-            </tr>
-            <tr class="base-stats hide">
-                <td>Weight</td>
-                <td colspan="3"> ------ </td>
-            </tr>
-            <tr class="base-stats hide">
-                <td>Abilities</td>
-                <td colspan="3"> ------ </td>
-            </tr>
+                <td class="stat-name">Total</td>
+                <td class="stat-number">${tot_stat}</td>
+                <td class="stat-gauge" colspan="2">
+                    <div class="gauge">
+                        <div class="${tot_stat > 300 ? 'fill-green' : 'fill-red'}" style="width: ${tot_stat / 6}%;"></div>
+                    </div>
+                </td>    
         </tbody>
     </table>
     <!-- Breeding -->
-    <table style="padding: 0 0 4em 0;">
-        <thead>
-            <tr class="active-header" data-section="about">
-                <th colspan="4"></th>
-            </tr>
-        </thead>
+    <table style="padding: 0 0 4em 0;" class="about show">
         <tbody>
-            <tr>
-                <td colspan="4"><h3>Breeding</h3></td>
+            <tr class="about show">
+                <td><h4>Breeding</h4></td>
             </tr>
             <tr class="about show">
                 <td>Gender</td>
@@ -95,12 +100,23 @@ function fillValuesAboutPokemon(pokemonValues){
             </tr>
         </tbody>    
     </table>
+    <!-- Type defenses -->
+    <table style="padding: 0 0 4em 0;">
+        <tbody>
+            <tr class="base-stats hide">
+                <td><h4>Type defenses</h4></td>
+            </tr>
+            <tr class="base-stats hide text-stype">
+                <td colspan="4">The effectiveness of each type on</td>
+            </tr>
+        </tbody>    
+    </table>
     `
 
     aboutValues.innerHTML = aboutValuesHtml
     pokeDataDetails.innerHTML = pokeDataDetailsHtml
 
-    // Have to be put here so the querySelectorAll can grab elements created here
+    // Had to be put here so the querySelectorAll can grab elements created here
     changeTableDetails()
 }
 
@@ -114,7 +130,6 @@ function changeTableDetails() {
     headers.forEach(header => {
         header.addEventListener('click', function() {
             const section = header.getAttribute('data-section');
-            console.log(section)
             
             // Hide all rows
             const allRows = document.querySelectorAll('tbody tr');

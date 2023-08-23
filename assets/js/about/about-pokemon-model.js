@@ -7,6 +7,7 @@ class PokemonAbout extends Pokemon {
     abilities = [];
     gender;
     egg_groups;
-    egg_cycle;    
+    egg_cycle;
+    stats = [];
 }
 
