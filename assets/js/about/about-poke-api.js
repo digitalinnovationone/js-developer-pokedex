@@ -17,7 +17,7 @@ function convertpokeApiAboutDetailToPokemon(pokeDetail) {
     pokemon.species = pokeDetail.species
     pokemon.height = pokeDetail.height
     pokemon.weight = pokeDetail.weight
-    pokemon.abilities = pokeDetail.abilities.map((ability) => ability.ability.name).join('')
+    pokemon.abilities = pokeDetail.abilities.map((ability) => ability.ability.name)
 
     return pokemon
 }

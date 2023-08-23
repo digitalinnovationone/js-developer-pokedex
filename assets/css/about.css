@@ -1,22 +1,29 @@
 body {
-    display: inline;
+    text-transform: capitalize;
+    width: 440px;
+    margin: auto;
 }
+
 header {
-    color: white;
-    text-transform: capitalize;   
+    color: #fff;
     display: flex;
     justify-content: space-between;
     margin: .5em .5em 0 .5em; 
     font-size: 3em;
 }
 
-#about-values {
-    padding: 2em;
-    padding-top: .2em;
-    color: white;
+a {
+    text-decoration: none;
+    color: #fff;
 }
 
-#title {
+.about-values {
+    padding: 2em;
+    padding-top: .2em;
+    color: #fff;
+}
+
+.title-values {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -24,13 +31,13 @@ header {
 
 span {
     color: #fff;
-    padding: 0.25rem 0.5rem;
-    margin: 0.25rem 0;
-    font-size: .625rem;
-    border-radius: 1rem;
+    padding: 0.25em 0.5em;
+    margin: 0.25em 0;
+    font-size: .9em;
+    border-radius: 1em;
     filter: brightness(1.1);
     text-align: center;
-    border: 1px solid lightgray;
+    margin-right: .5em;
 }
 
 .poke-img-container {
@@ -47,17 +54,18 @@ span {
     height: 200px;
 }
 
-#poke-data-details {
+.poke-data-details {
     background-color: #fff;
-    border-radius: 10% 10% 10% 10%;
+    border-radius: 7% 7% 7% 7%;
     padding: 2.5em .5em .5em 1.2em;
+    min-height: 560px;
 }
 
 table {    
     margin: auto;
-    width: 100%;    
+    width: 100%;
     align-items: start;
-    text-align: left;    
+    text-align: left;
 }
 
 .poke-about-headline th {
@@ -67,11 +75,41 @@ table {
 table thead {
     height: 35px;
     margin-top: 22px;
-    font-size: smaller;
 }
 
 table tbody tr td {
     padding-left: 20px;
     width: 120px;
     padding-top: 19px;
+}
+
+.male {
+    color: darkblue;
+
+}
+
+.female {
+    color: rgb(192, 110, 123);
+    margin-left: 1.2em;
+}
+
+.male, .female {
+    font-weight: 700;
+    font-size: 1.4em;
+    margin: 8px;
+    padding: 2px
+}
+
+/* change table content behaviour */
+
+.active-header {
+border-bottom: 2px solid black;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: table-row;
 }
