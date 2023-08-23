@@ -3,9 +3,15 @@ const loadMoreButton = document.getElementById('loadMoreButton');
 
 const pokemonDetailsContainer = document.querySelector('.pokemon-details');
 const detailName = document.querySelector('.detail-name');
-const detailTypeList = document.querySelector('.detail-type-list');
+const detailTypeList = document.querySelector('.detail-types-list'); // Corrigido para '.detail-types-list'
 const detailImage = document.querySelector('.detail-image img');
 
+const detailDescription = document.querySelector('.detail-description');
+const detailAttributesList = document.querySelector('.detail-attributes-list');
+const detailAbilitiesList = document.querySelector('.detail-abilities-list');
+const detailTypesList = document.querySelector('.detail-types-list');
+
+    
 let pokemons = []; // Armazena a lista de pokemons carregados
 const maxRecords = 151;
 const limit = 10;
@@ -24,6 +30,23 @@ function showPokemonDetails(pokemon) {
     detailName.textContent = pokemon.name;
     detailTypeList.innerHTML = pokemon.types.map(type => `<li class="type ${type}">${type}</li>`).join('');
     detailImage.src = pokemon.photo;
+    
+    detailDescription.textContent = ''; // Limpar a descrição anterior, se houver
+    pokeApi.getPokemonDetail(pokemon).then((detailedPokemon) => {
+        // Descrição
+        detailDescription.textContent = detailedPokemon.description;
+
+        // Atributos
+        detailAttributesList.innerHTML = detailedPokemon.attributes.map(attr => `<li>${attr}</li>`).join('');
+
+        // Habilidades
+        detailAbilitiesList.innerHTML = detailedPokemon.abilities.map(ability => `<li>${ability}</li>`).join('');
+
+        // Tipos
+        detailTypesList.innerHTML = detailedPokemon.types.map(type => `<li>${type}</li>`).join('');
+    });
+
+    // Mostrar a seção de detalhes
     pokemonDetailsContainer.classList.add('active');
 }
 
@@ -46,6 +69,10 @@ function convertPokemonToLi(pokemon) {
     `
 }
 
+const closeDetailButton = document.getElementById('closeDetailButton');
+closeDetailButton.addEventListener('click', () => {
+    pokemonDetailsContainer.classList.remove('active');
+});
 
 function loadPokemonItems(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemonsData) => {
