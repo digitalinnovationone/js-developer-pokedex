@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    gap: 1rem;
 }
 
 .normal {
@@ -81,7 +82,6 @@
 .pokemon {
     display: flex;
     flex-direction: column;
-    margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
 }
