@@ -27,7 +27,8 @@ function convertpokeApiAboutSpecieDetailToPokemom(pokeSpecie, pokemon){
     pokemon.egg_groups = pokeSpecie.egg_groups.map((egggroup) => egggroup.name).join()
     pokemon.egg_cycle = pokeSpecie.hatch_counter * 255
     pokemon.species = pokemon.species.name
-    console.log(pokemon)
+
+    return pokemon
 }
 
 pokeApiAbout.getPokeGender = (pokemon) => {

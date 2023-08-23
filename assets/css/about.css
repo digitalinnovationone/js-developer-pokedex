@@ -1,0 +1,77 @@
+body {
+    display: inline;
+}
+header {
+    color: white;
+    text-transform: capitalize;   
+    display: flex;
+    justify-content: space-between;
+    margin: .5em .5em 0 .5em; 
+    font-size: 3em;
+}
+
+#about-values {
+    padding: 2em;
+    padding-top: .2em;
+    color: white;
+}
+
+#title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+span {
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0;
+    font-size: .625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+    border: 1px solid lightgray;
+}
+
+.poke-img-container {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: auto;
+    padding-top: 2em;
+    margin-bottom: -2em;
+}
+
+.poke-img-container img {
+    width: 200px;
+    height: 200px;
+}
+
+#poke-data-details {
+    background-color: #fff;
+    border-radius: 10% 10% 10% 10%;
+    padding: 2.5em .5em .5em 1.2em;
+}
+
+table {    
+    margin: auto;
+    width: 100%;    
+    align-items: start;
+    text-align: left;    
+}
+
+.poke-about-headline th {
+    width: 130px;
+}
+
+table thead {
+    height: 35px;
+    margin-top: 22px;
+    font-size: smaller;
+}
+
+table tbody tr td {
+    padding-left: 20px;
+    width: 120px;
+    padding-top: 19px;
+}
