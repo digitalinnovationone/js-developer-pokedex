@@ -30,16 +30,48 @@
             <!-- ..... Pokemons here ..... -->
         </ol>
 
+        <!-- teste -->
+        <div class="pokemon-details">
+            <div class="detail-info">
+                <div class="detail-header">
+                    <h2 class="detail-name"></h2>
+                    <button id="closeDetailButton" type="button">Close</button>
+                </div>
+                <div class="detail-content">
+                    <div class="detail-image">
+                        <img src="" alt="">
+                    </div>
+                    <div class="detail-description"></div>
+                    <div class="detail-attributes">
+                        <h3>Attributes:</h3>
+                        <ul class="detail-attributes-list"></ul>
+                    </div>
+                    <div class="detail-abilities">
+                        <h3>Abilities:</h3>
+                        <ul class="detail-abilities-list"></ul>
+                    </div>
+                    <div class="detail-types">
+                        <h3>Types:</h3>
+                        <ul class="detail-types-list"></ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="pagination">
             <button id="loadMoreButton" type="button">
                 Load More
+            </button>
+            <button id="showLessButton" type="button">
+                Show Less
             </button>
         </div>
     </section>
 
     <!-- Nosso JS -->
-    <script src="/assets/js/pokemon-model.js"></script>
     <script src="/assets/js/poke-api.js"></script>
+    <script src="/assets/js/pokemon-model.js"></script>
     <script src="/assets/js/main.js"></script>
 </body>
 

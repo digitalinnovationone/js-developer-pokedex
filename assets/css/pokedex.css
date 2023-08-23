@@ -6,6 +6,15 @@
     list-style: none;
 }
 
+.pokemon-details {
+    display: none; /* Oculta a seção de detalhes por padrão */
+}
+
+.pokemon-details.active {
+    display: block; /* Mostra a seção de detalhes quando a classe "active" é adicionada */
+    /* Adicione estilos para posicionar a seção de detalhes conforme necessário */
+}
+
 .normal {
     background-color: #a6a877;
 }
