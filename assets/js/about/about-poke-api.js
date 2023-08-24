@@ -4,9 +4,8 @@ const pokeApiAbout = {}
 
 function convertpokeApiAboutDetailToPokemon(pokeDetail) {
     
-    // console.log(pokeDetail)
     const pokemon = new PokemonAbout()
-    pokemon.number = pokeDetail.id
+    pokemon.number = String(pokeDetail.id).padStart(3, '0')
     pokemon.name = pokeDetail.name    
     const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)
     const [type] = types
@@ -18,10 +17,16 @@ function convertpokeApiAboutDetailToPokemon(pokeDetail) {
     pokemon.species = pokeDetail.species
     pokemon.height = pokeDetail.height
     pokemon.weight = pokeDetail.weight
-    pokemon.abilities = pokeDetail.abilities.map((ability) => ability.ability.name)
+    pokemon.abilities = pokeDetail.abilities.map((ability) => ability.ability.name).join(', ')
 
     // Base stats
     pokemon.stats = pokeDetail.stats
+
+    // Evolution
+    // to be implemented
+
+    // Moves
+    pokemon.moves = pokeDetail.moves
 
     return pokemon
 }

@@ -9,5 +9,6 @@ class PokemonAbout extends Pokemon {
     egg_groups;
     egg_cycle;
     stats = [];
+    moves = [];
 }
 

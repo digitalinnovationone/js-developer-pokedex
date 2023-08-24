@@ -55,16 +55,18 @@ span {
 }
 
 .poke-data-details {
+    color: #808080;
     background-color: #fff;
-    border-radius: 7% 7% 7% 7%;
+    border-radius: 5% 5% 5% 5%;
     padding: 2.5em .5em .5em .2em;
+    min-height: 550px;
 }
 
 table {    
     margin: auto;
     width: 100%;
     align-items: start;
-    text-align: left;
+    font-size: smaller;
 }
 
 table thead {
@@ -80,7 +82,6 @@ table tbody tr td {
 
 .male {
     color: darkblue;
-
 }
 
 .female {
@@ -90,8 +91,7 @@ table tbody tr td {
 
 .male, .female {
     font-weight: 700;
-    font-size: 1.4em;
-    margin: 8px;
+    font-size: 1.6em;
     padding: 2px
 }
 
@@ -99,6 +99,8 @@ table tbody tr td {
 
 .active-header {
     border-bottom: 1px solid black;
+    font-weight: 900;
+    color: #000;
 }
 
 .hide {
@@ -113,11 +115,9 @@ table tbody tr td {
     padding-left: 12px;
 }
 
-.base-stats {
-    min-width: 120px;
-}
-.about, .evolution, .moves {
-    width: 90px;
+
+.about, .base-stats, .evolution, .moves {
+    min-width: 90px;
 }
 
 /* Styles for the gauge */
@@ -142,7 +142,6 @@ table tbody tr td {
 
 .stat-name {
     width: 40px;
-    color: #000;
 }
 
 .stat-number {
@@ -155,4 +154,13 @@ table tbody tr td {
 
 .text-stype {
     text-transform: none;   
+}
+
+table tr td:nth-child(2) {
+    font-weight: bold;
+    color: #000;
+}
+
+h4 {
+    color: #000;
 }

@@ -12,8 +12,8 @@ function fillValuesAboutPokemon(pokemonValues){
     let tot_stat = 0;
     const aboutValuesHtml = `
         <div id="title" class="title-values">
-            <h1> ${pokemonValues.name} </h1>
-            <h3> ${pokemonValues.number} </h3>
+            <h1 style="font-size: 2.4em;"> ${pokemonValues.name} </h1>
+            <h3 style="letter-spacing: 1.5px"> #${pokemonValues.number} </h3>
         </div>
         <div>
             ${pokemonValues.types.map((type) => `<span class="type ${type}">${type}</span>`).join('')}
@@ -51,10 +51,6 @@ function fillValuesAboutPokemon(pokemonValues){
                 <td>Abilities</td>
                 <td colspan="3">${pokemonValues.abilities}</td>
             </tr>                
-            <tr class="about show">
-                <td>Species</td>
-                <td colspan="3">${pokemonValues.species}</td>      
-            </tr>
 
             <!-- Base Stats section -->
             ${pokemonValues.stats.map((stat) => {
@@ -77,10 +73,20 @@ function fillValuesAboutPokemon(pokemonValues){
                     <div class="gauge">
                         <div class="${tot_stat > 300 ? 'fill-green' : 'fill-red'}" style="width: ${tot_stat / 6}%;"></div>
                     </div>
-                </td>    
+                </td>
+            </tr>
+
+            <!-- Evolution section -->
+            <tr class="evolution hide">
+                <td colspan="4">
+                    <h3> Under Construction </h3>
+                <td>
+            </tr>
         </tbody>
     </table>
-    <!-- Breeding -->
+
+
+    <!-- Breeding in about -->
     <table style="padding: 0 0 4em 0;" class="about show">
         <tbody>
             <tr class="about show">
@@ -100,7 +106,7 @@ function fillValuesAboutPokemon(pokemonValues){
             </tr>
         </tbody>    
     </table>
-    <!-- Type defenses -->
+    <!-- Type defenses in base stats-->
     <table style="padding: 0 0 4em 0;">
         <tbody>
             <tr class="base-stats hide">
