@@ -1,7 +1,7 @@
 * {
     font-family: "Roboto";
   }
-  /* Estilo para o modal */
+  
   .modal {
     display: none;
     position: fixed;
@@ -17,7 +17,7 @@
   h1 {
     text-transform: capitalize;
   }
-  /* Estilo para o conteúdo do modal */
+  
   .modal-content {
     background-color: #fff;
     margin: auto;
@@ -28,7 +28,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  /* Estilo para o botão de fechar o modal */
+  
   .close {
     position: absolute;
     top: 10px;
@@ -38,7 +38,7 @@
     color: #555;
   }
   
-  /* Estilo para os tipos de Pokémon */
+  
   .type {
     display: inline-flex;
     padding: 4px 8px;
