@@ -84,6 +84,10 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    cursor: pointer; 
+}
+.pokemon:hover {
+    margin: 0;
 }
 
 .pokemon .number {
@@ -111,6 +115,7 @@
     margin: 0;
     list-style: none;
 }
+
 
 .pokemon .detail .types .type {
     color: #fff;
