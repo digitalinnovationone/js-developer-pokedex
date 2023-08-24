@@ -82,6 +82,14 @@ function fillValuesAboutPokemon(pokemonValues){
                     <h3> Under Construction </h3>
                 <td>
             </tr>
+
+            <!-- Moves section -->
+            <tr class="moves hide">
+                <td colspan="4" style="text-align: center">
+                    <input type="text" id="autocomplete-input" placeholder="Search for a move...">
+                    <div id="autocomplete-list"></div>
+                    <div id="move-details"></div>
+                </td>
         </tbody>
     </table>
 
@@ -124,10 +132,10 @@ function fillValuesAboutPokemon(pokemonValues){
 
     // Had to be put here so the querySelectorAll can grab elements created here
     changeTableDetails()
+
+    // Moves section
+    movesAutocompleteSearch(pokemonValues.moves)
 }
-
-
-
 
 function changeTableDetails() {
     // Get all the table header cells
@@ -164,3 +172,56 @@ function changeTableDetails() {
     });
 }
 
+function movesAutocompleteSearch(moves){
+    document.getElementById('autocomplete-input').addEventListener('input', function(e){
+      const inputValue = e.target.value;
+      const matchingMoves = moves.filter(move => move.move.name.includes(inputValue.toLowerCase()));
+      
+      const autocompleteList = document.getElementById('autocomplete-list');
+      autocompleteList.innerHTML = '';
+
+      for (let move of matchingMoves) {
+        const moviesList = document.createElement('div');
+        moviesList.innerHTML = move.move.name;
+        moviesList.addEventListener('click', function() {
+            document.getElementById('autocomplete-input').value = move.move.name;
+            displayMoveDetails(move);
+            autocompleteList.innerHTML = ''
+        })
+        autocompleteList.appendChild(moviesList)
+      }
+    })
+
+    document.addEventListener('click', function(e){
+        if (e.target.id !== 'autocomplete-input'){
+            document.getElementById('autocomplete-list').innerHTML = ''
+        }
+    })
+}
+
+function displayMoveDetails(move) {
+    const detailsDiv = document.getElementById('move-details');
+    detailsDiv.innerHTML = ''
+
+    const moveName = document.createElement('h3');
+    moveName.textContent = move.move.name;
+    detailsDiv.appendChild(moveName);
+
+    const moveURL = document.createElement('a');
+    moveURL.href = move.move.url;
+    moveURL.textContent = "Move URL";
+    moveURL.target = "_blank";
+    detailsDiv.appendChild(moveURL);
+
+    const versionGroupDetailsList = document.createElement('ul');
+    move.version_group_details.forEach(detail => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+            Level: ${detail.level_learned_at}<br>
+            Method: <a href="${detail.move_learn_method.url}" target="_blank">${detail.move_learn_method.name}</a><br>
+            Version: <a href="${detail.version_group.url}" target="_blank">${detail.version_group.name}</a>
+        `;
+        versionGroupDetailsList.appendChild(listItem);
+    })
+    detailsDiv.appendChild(versionGroupDetailsList);
+}
