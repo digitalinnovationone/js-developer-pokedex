@@ -1,0 +1,106 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    padding: 1rem 36rem 0rem 32rem;
+    background-color: #f6f8fc;
+}
+
+.card {
+    margin: 1rem auto;
+    border-radius: 2rem;
+    width: 20rem;
+
+    &:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+        box-shadow: 3px 3px 3px 3px #acabab;
+    }
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem 8rem 1rem;
+    background-image: url(../img/pokeball.svg);
+    background-position: 105% 156%;
+    background-size: 12rem;
+    background-repeat: no-repeat;
+}
+
+.header .name-type {
+    display: flex;
+    flex-direction: column;
+}
+
+.header .name {
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.header .types {
+    color: #fff;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0.2rem;
+}
+
+.header .types li {
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.header .number {
+    color: white;
+}
+
+.content {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 2rem;
+    gap: 0.7rem;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.6);
+    position: relative;
+    padding: 1.5rem;
+    padding: 1.8rem;
+}
+
+.content .stats {
+    list-style: none;
+    display: flex;
+    text-transform: capitalize;
+    gap: 2rem;
+
+}
+
+.content .abilities {
+    gap: 2rem;
+    display: flex;
+}
+
+.content .abilities li {
+    list-style: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.content .image {
+    position: absolute;
+    bottom: 90%;
+    left: 57%;
+    transform: translate(-50%, 20%);
+    width: 55%;
+}
