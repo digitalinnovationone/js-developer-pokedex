@@ -6,7 +6,10 @@
 body {
     background-color: #f6f8fc;
 }
-
+footer {
+text-align: center;
+color: #b0afae;
+}
 .content {
     width: 100vw;
     height: 100vh;
