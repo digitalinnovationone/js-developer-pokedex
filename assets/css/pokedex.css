@@ -84,6 +84,10 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    cursor: pointer; 
+}
+.pokemon:hover {
+    margin: 0;
 }
 
 .pokemon .number {
@@ -112,6 +116,7 @@
     list-style: none;
 }
 
+
 .pokemon .detail .types .type {
     color: #fff;
     padding: .25rem .5rem;
@@ -137,14 +142,51 @@
 }
 
 .pagination button {
-    padding: .25rem .5rem;
-    margin: .25rem 0;
-    font-size: .625rem;
-    color: #fff;
-    background-color: #6c79db;
-    border: none;
-    border-radius: 1rem;
+  background: white;
+  color: black;
+  border: solid 2px black;
+  padding: .375em 1.125em;
+  font-size: 1rem;
 }
+
+.button-arounder {
+  font-size: 2rem;
+  background: hsl(190deg, 30%, 15%);
+  color: hsl(190deg, 10%, 95%);
+  
+  box-shadow: 0 0px 0px hsla(190deg, 15%, 5%, .2);
+  transfrom: translateY(0);
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  
+  --dur: .15s;
+  --delay: .15s;
+  --radius: 16px;
+  
+  transition:
+    border-top-left-radius var(--dur) var(--delay) ease-out,
+    border-top-right-radius var(--dur) calc(var(--delay) * 2) ease-out,
+    border-bottom-right-radius var(--dur) calc(var(--delay) * 3) ease-out,
+    border-bottom-left-radius var(--dur) calc(var(--delay) * 4) ease-out,
+    box-shadow calc(var(--dur) * 4) ease-out,
+    transform calc(var(--dur) * 4) ease-out,
+    background calc(var(--dur) * 4) steps(4, jump-end);
+}
+
+.button-arounder:hover,
+.button-arounder:focus {
+  box-shadow: 0 4px 8px hsla(190deg, 15%, 5%, .2);
+  transform: translateY(-4px);
+  background-color: #678fee;;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  color: white;
+}
+
 
 @media screen and (min-width: 380px) {
     .pokemons {
@@ -163,3 +205,97 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
+/* Adicione esta classe para aplicar a animação de balanço */
+.swing:hover {
+    -webkit-animation: swing 1s ease;
+    animation: swing 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
+  
+  @-webkit-keyframes swing {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    20% {
+      -webkit-transform: translateX(-8px);
+      transform: translateX(-8px);
+    }
+    40% {
+      -webkit-transform: translateX(8px);
+      transform: translateX(8px);
+    }
+    60% {
+      -webkit-transform: translateX(-4px);
+      transform: translateX(-4px);
+    }
+    80% {
+      -webkit-transform: translateX(4px);
+      transform: translateX(4px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes swing {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    20% {
+      -webkit-transform: translateX(-8px);
+      transform: translateX(-8px);
+    }
+    40% {
+      -webkit-transform: translateX(8px);
+      transform: translateX(8px);
+    }
+    60% {
+      -webkit-transform: translateX(-4px);
+      transform: translateX(-4px);
+    }
+    80% {
+      -webkit-transform: translateX(4px);
+      transform: translateX(4px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  
+  /* ... Outras definições de estilo ... */
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: max-content;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%; /* Posição acima do elemento */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  
