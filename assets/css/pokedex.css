@@ -6,6 +6,14 @@
     list-style: none;
 }
 
+li.pokemon p:nth-child(4) {
+    color: #ffffff;
+}
+
+li.pokemon p:nth-child(5) {
+    color: #ffffff;
+}
+
 .normal {
     background-color: #a6a877;
 }

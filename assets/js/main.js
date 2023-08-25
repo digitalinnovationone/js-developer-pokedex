@@ -2,7 +2,7 @@ const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
 const maxRecords = 151
-const limit = 10
+const limit = 20
 let offset = 0;
 
 function convertPokemonToLi(pokemon) {
@@ -19,6 +19,8 @@ function convertPokemonToLi(pokemon) {
                 <img src="${pokemon.photo}"
                      alt="${pokemon.name}">
             </div>
+            <p>Height: ${pokemon.height}m</p>
+            <p>Weight: ${pokemon.weight}kg</p>
         </li>
     `
 }
