@@ -19,6 +19,9 @@ function convertPokemonToLi(pokemon) {
                 <img src="${pokemon.photo}"
                      alt="${pokemon.name}">
             </div>
+            <div class="pokeball">
+                    <img src="pokeball_icon_136305.png">
+                </div>
         </li>
     `
 }
