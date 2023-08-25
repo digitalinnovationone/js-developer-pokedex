@@ -3,15 +3,26 @@
     box-sizing: border-box;
 }
 
+html,
 body {
-    background-color: #f6f8fc;
+  margin: 0px;
+  height: 100%;
 }
 
 .content {
     width: 100vw;
     height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #f6f8fc;
+}
+
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
 }
 
 @media screen and (min-width: 992px) {

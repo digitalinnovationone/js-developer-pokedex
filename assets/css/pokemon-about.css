@@ -1,0 +1,481 @@
+.pokmon-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Use full width */
+    height: auto; /* Let content dictate height */
+    align-items: flex-start;
+    padding: 0.25rem;
+    position: relative;
+    background-color: var(--grayscalewireframe);
+}
+  
+.pokmon-details .title {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+padding: 1.25rem 1.25rem 1.5rem;
+position: relative;
+align-self: stretch;
+width: 100%;
+flex: 0 0 auto;
+z-index: 3;
+}
+
+.pokmon-details .arrow-back {
+position: relative;
+width: 2rem;
+height: 2rem;
+}
+
+.pokmon-details .text-wrapper {
+text-transform: capitalize;
+position: relative;
+flex: 1;
+margin-top: -0.063rem;
+font-family: var(--header-headline-font-family);
+font-weight: var(--header-headline-font-weight);
+color: var(--grayscalewhite);
+font-size: var(--header-headline-font-size);
+letter-spacing: var(--header-headline-letter-spacing);
+line-height: var(--header-headline-line-height);
+font-style: var(--header-headline-font-style);
+}
+
+.pokmon-details .div {
+position: relative;
+width: fit-content;
+font-family: var(--header-subtitle-2-font-family);
+font-weight: var(--header-subtitle-2-font-weight);
+color: var(--grayscalewhite);
+font-size: var(--header-subtitle-2-font-size);
+letter-spacing: var(--header-subtitle-2-letter-spacing);
+line-height: var(--header-subtitle-2-line-height);
+white-space: nowrap;
+font-style: var(--header-subtitle-2-font-style);
+}
+
+.pokmon-details .image {
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+padding: 1rem 1.25rem;
+position: relative;
+flex: 1;
+align-self: stretch;
+width: 100%;
+flex-grow: 1;
+z-index: 2;
+}
+
+.pokmon-details .img {
+position: relative;
+width: 1.5rem;
+height: 1.5rem;
+}
+
+.pokmon-details .silhouette {
+
+margin-left: auto;
+margin-right: auto;
+width: 12.5rem;
+height: 12.5rem;
+top: 0;
+left: 4.75rem;
+background-size: cover;
+background-position: 50% 50%;
+}
+
+.pokmon-details .card {
+display: flex;
+flex-direction: column;
+height: 25.75rem;
+align-items: flex-start;
+gap: 1rem;
+padding: 3.5rem 1.25rem 1.25rem;
+position: relative; 
+align-self: stretch;
+width: 100%;
+z-index: 1;
+background-color: var(--grayscalewhite);
+border-radius: 0.5rem;
+overflow: hidden;
+box-shadow: var(--inner-shadow-2-dp);
+}
+
+.pokmon-details .type {
+text-align: center;
+display: flex;
+justify-content: center;
+gap: 1rem;
+align-self: stretch;
+width: 100%;
+align-items: flex-start;
+position: relative;
+flex: 0 0 auto;
+}
+
+.pokmon-details .type-chips {
+display: inline-flex;
+flex-direction: column;
+padding: 0.125rem 0.5rem;
+background-color: var(--grayscalemedium);
+border-radius: 0.625rem;
+overflow: hidden;
+align-items: flex-start;
+position: relative;
+flex: 0 0 auto;
+}
+
+.pokmon-details .text-wrapper-2 {
+text-transform: capitalize;
+position: relative;
+width: fit-content;
+margin-top: -0.063rem;
+font-family: var(--header-subtitle-3-font-family);
+font-weight: var(--header-subtitle-3-font-weight);
+color: var(--grayscalewhite);
+font-size: var(--header-subtitle-3-font-size);
+letter-spacing: var(--header-subtitle-3-letter-spacing);
+line-height: var(--header-subtitle-3-line-height);
+white-space: nowrap;
+font-style: var(--header-subtitle-3-font-style);
+}
+
+.pokmon-details .text-wrapper-3 {
+position: relative;
+align-self: stretch;
+font-family: var(--header-subtitle-1-font-family);
+font-weight: var(--header-subtitle-1-font-weight);
+color: var(--grayscalewireframe);
+font-size: var(--header-subtitle-1-font-size);
+text-align: center;
+letter-spacing: var(--header-subtitle-1-letter-spacing);
+line-height: var(--header-subtitle-1-line-height);
+font-style: var(--header-subtitle-1-font-style);
+}
+
+.pokmon-details .attribute {
+display: flex;
+align-items: flex-start;
+position: relative;
+align-self: stretch;
+width: 100%;
+flex: 0 0 auto;
+background-color: var(--grayscalewhite);
+overflow: hidden;
+}
+
+.pokmon-details .frame {
+display: flex;
+flex-direction: column;
+gap: 0.25rem;
+flex: 1;
+flex-grow: 1;
+align-items: center;
+position: relative;
+}
+
+.pokmon-details .frame-2 {
+height: 3rem;
+display: flex;
+justify-content: center;
+gap: 0.5rem;
+padding: 0.5rem 0;
+align-self: stretch;
+width: 100%;
+flex: 0 0 auto;
+align-items: center;
+position: relative;
+}
+
+.pokmon-details .img-2 {
+position: relative;
+width: 1rem;
+height: 1rem;
+}
+
+.pokmon-details .text-wrapper-4 {
+position: relative;
+width: fit-content;
+margin-top: -0.063rem;
+font-family: var(--body-body-3-font-family);
+font-weight: var(--body-body-3-font-weight);
+color: var(--grayscaledark);
+font-size: var(--body-body-3-font-size);
+text-align: justify;
+letter-spacing: var(--body-body-3-letter-spacing);
+line-height: var(--body-body-3-line-height);
+white-space: nowrap;
+font-style: var(--body-body-3-font-style);
+}
+
+.pokmon-details .text-wrapper-5 {
+position: relative;
+align-self: stretch;
+font-family: var(--body-caption-font-family);
+font-weight: var(--body-caption-font-weight);
+color: var(--grayscalemedium);
+font-size: var(--body-caption-font-size);
+text-align: center;
+letter-spacing: var(--body-caption-letter-spacing);
+line-height: var(--body-caption-line-height);
+font-style: var(--body-caption-font-style);
+}
+
+.pokmon-details .divider {
+position: relative;
+align-self: stretch;
+width: 0.063rem;
+background-color: var(--grayscalelight);
+}
+
+.pokmon-details .ability-ability-wrapper {
+display: inline-flex;
+height: 3rem;
+gap: 0.5rem;
+align-items: center;
+position: relative;
+}
+
+.pokmon-details .ability-ability {
+text-transform: capitalize;
+text-align: center;
+position: relative;
+width: fit-content;
+margin-top: -0.063rem;
+font-family: var(--body-body-3-font-family);
+font-weight: var(--body-body-3-font-weight);
+color: var(--grayscaledark);
+font-size: var(--body-body-3-font-size);
+letter-spacing: var(--body-body-3-letter-spacing);
+line-height: var(--body-body-3-line-height);
+font-style: var(--body-body-3-font-style);
+}
+
+.pokmon-details .p {
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+flex: 1;
+align-self: stretch;
+font-family: var(--body-body-3-font-family);
+font-weight: var(--body-body-3-font-weight);
+color: var(--grayscaledark);
+font-size: var(--body-body-3-font-size);
+letter-spacing: var(--body-body-3-letter-spacing);
+line-height: var(--body-body-3-line-height);
+font-style: var(--body-body-3-font-style);
+}
+
+.pokmon-details .text-wrapper-6 {
+margin-right: auto;
+margin-left: auto;
+position: relative;
+font-family: var(--header-subtitle-1-font-family);
+font-weight: var(--header-subtitle-1-font-weight);
+color: var(--grayscalewireframe);
+font-size: var(--header-subtitle-1-font-size);
+text-align: center;
+letter-spacing: var(--header-subtitle-1-letter-spacing);
+line-height: var(--header-subtitle-1-line-height);
+font-style: var(--header-subtitle-1-font-style);
+}
+
+.pokmon-details .base-stats {
+display: flex;
+align-items: flex-start;
+gap: 1rem;
+position: relative;
+align-self: stretch;
+width: 100%;
+flex: 0 0 auto;
+background-color: var(--grayscalewhite);
+justify-content: center;
+}
+
+.pokmon-details .label {
+display: inline-flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0 0.25rem 0 0;
+position: relative;
+flex: 0 0 auto;
+}
+
+.pokmon-details .text-wrapper-7 {
+position: relative;
+width: 1.688rem;
+margin-top: -0.063rem;
+font-family: var(--header-subtitle-3-font-family);
+font-weight: var(--header-subtitle-3-font-weight);
+color: var(--grayscalewireframe);
+font-size: var(--header-subtitle-3-font-size);
+text-align: right;
+letter-spacing: var(--header-subtitle-3-letter-spacing);
+line-height: var(--header-subtitle-3-line-height);
+font-style: var(--header-subtitle-3-font-style);
+}
+
+.pokmon-details .text-wrapper-8 {
+position: relative;
+width: 1.688rem;
+font-family: var(--header-subtitle-3-font-family);
+font-weight: var(--header-subtitle-3-font-weight);
+color: var(--grayscalewireframe);
+font-size: var(--header-subtitle-3-font-size);
+text-align: right;
+letter-spacing: var(--header-subtitle-3-letter-spacing);
+line-height: var(--header-subtitle-3-line-height);
+font-style: var(--header-subtitle-3-font-style);
+}
+
+.pokmon-details .data {
+display: inline-flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0 0 0 0.25rem;
+position: relative;
+flex: 0 0 auto;
+}
+
+.pokmon-details .text-wrapper-9 {
+position: relative;
+width: 1.188rem;
+margin-top: -0.063rem;
+font-family: var(--body-body-3-font-family);
+font-weight: var(--body-body-3-font-weight);
+color: var(--grayscaledark);
+font-size: var(--body-body-3-font-size);
+letter-spacing: var(--body-body-3-letter-spacing);
+line-height: var(--body-body-3-line-height);
+font-style: var(--body-body-3-font-style);
+}
+
+.pokmon-details .value {
+display: flex;
+align-items: flex-start;
+padding: 0 5rem 0 0;
+position: relative;
+align-self: stretch;
+width: 100%;
+flex: 0 0 auto;
+border-radius: 0.25rem;
+overflow: hidden;
+}
+
+.pokmon-details .retangle {
+position: relative;
+flex: 1;
+align-self: stretch;
+flex-grow: 1;
+background-color: var(--grayscalewireframe);
+}
+
+.pokmon-details .background {
+position: relative;
+align-self: stretch;
+width: 100%;
+height: 0.25rem;
+margin-top: -0.25rem;
+background-color: var(--grayscalewireframe);
+border-radius: 0.25rem;
+opacity: 0.2;
+}
+
+.pokmon-details .pokeball {
+position: absolute;
+width: 13rem;
+height: 13rem;
+top: 1rem;
+left: 9px;
+z-index: 0;
+}
+
+.normal {
+    background: linear-gradient(45deg, #a8a77a 0%, #7e9774 100%);
+}
+
+.grass {
+    background: linear-gradient(45deg, #7ac74c 0%, #00ba67 100%);
+}
+
+.fire {
+    background: linear-gradient(45deg, #ee8130 0%, #e65e64 100%);
+}
+
+.water {
+    background: linear-gradient(45deg, #6390f0 0%, #00b4ff 100%);
+}
+
+.electric {
+    background: linear-gradient(45deg, #f7d02c 0%, #b4c421 100%);
+}
+
+.ice {
+    background: linear-gradient(45deg, #96d9d6 0%, #76c0d7 100%);
+}
+
+.ground {
+    background: linear-gradient(45deg, #e2bf65 0%, #afb44e 100%);
+}
+
+.flying {
+    background: linear-gradient(45deg, #a98ff3 0%, #4e92ee 100%);
+}
+
+.poison {
+    background: linear-gradient(45deg, #a33ea1 0%, #6d5fc6 100%);
+}
+
+.fighting {
+    background: linear-gradient(45deg, #c22e28 0%, #a75a00 100%);
+}
+
+.psychic {
+    background: linear-gradient(45deg, #f95587 0%, #de5f41 100%);
+}
+
+.dark {
+    background: linear-gradient(45deg, #705746 0%, #746548 100%);
+}
+
+.rock {
+    background: linear-gradient(45deg, #b6a136 0%, #8c9b36 100%);
+}
+
+.bug {
+    background: linear-gradient(45deg, #a6b91a 0%, #73ae29 100%);
+}
+
+.ghost {
+    background: linear-gradient(45deg, #735797 0%, #476ab1 100%);
+}
+
+.steel {
+    background: linear-gradient(45deg, #b7b7ce 0%, #a9a2be 100%);
+}
+
+.dragon {
+    background: linear-gradient(45deg, #6f35fc 0%, #006fff 100%);
+}
+
+.fairy {
+    background: linear-gradient(45deg, #d685ad 0%, #ab81c3 100%);
+}
+
+  
+@media (max-width: 768px) {
+.pokmon-details {
+    padding: 0.625rem; /* Adjust padding for smaller screens */
+}
+
+.pokmon-details .title {
+    padding: 0.625rem; /* Adjust padding for smaller screens */
+}
+
+/* ... adjust other styles as needed ... */
+}
+  
+
+  
