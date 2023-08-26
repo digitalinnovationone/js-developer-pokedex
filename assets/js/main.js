@@ -8,7 +8,7 @@ let offset = 0;
 function convertPokemonToLi(pokemon) {
   return `
         <li class="pokemon ${pokemon.type}">
-            <span class="number">#${pokemon.number}</span>
+            <span class="number">${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
             <div class="detail">
@@ -36,7 +36,7 @@ function loadPokemonItens(offset, limit) {
       pokemon.addEventListener("click", function () {
         // console.log(this.querySelector(".number"));
         const pokemonId = this.querySelector(".number").textContent;
-        // console.log(typeof pokemonId);
+        // console.log(pokemonId);
         window.location.href = `poke-info.html?id=${pokemonId}`;
       });
     });

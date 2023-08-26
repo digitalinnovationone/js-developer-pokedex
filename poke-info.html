@@ -25,63 +25,20 @@
 
     <!-- Nosso CSS -->
 
-    <link rel="stylesheet" href="/assets/css/poke-info.css" />
+    <!-- <link rel="stylesheet" href="/assets/css/poke-info.css" /> -->
   </head>
 
   <body>
+
+    <div class="buttons">
+      <button class="back-btn">back</button>
+      <button>favorite</button>
+
     <section class="content">
       <!--  -->
-      <div class="buttons">
-        <button>back</button>
-        <button>favorite</button>
-      </div>
-      <!--  -->
-      <div class="box-main">
-        <div>
-          <div></div>
-          <h3 class="pokemon-name">Bulbasaur</h3>
-          <ul class="types">
-            <li><p>Grass</p></li>
-            <li><p>Poison</p></li>
-          </ul>
-        </div>
-        <h5 class="pokemon-number">#001</h5>
-      </div>
-
-      <div class="image-container">
-        <img
-          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-          alt=""
-        />
-      </div>
-
-      <div class="info-box">
-        <div class="buttons-container">
-          <button class="about-button">About</button>
-          <button class="base-stats-button">Base Stats</button>
-        </div>
-
-        <!-- <li>Evolution</li> -->
-        <!-- <li>Moves</li> -->
-        <div class="about">
-          <ul>
-            <li>Sepecies: Seed</li>
-            <li>Height: 0.7cm</li>
-            <li>Weigt 6.9kg</li>
-            <li>Abilities: Overgrow</li>
-            <li>Gender: Male 87% Female 13%</li>
-          </ul>
-        </div>
-
-        <div class="Base Stats">
-          <li>HP: 45</li>
-          <li>Attack: 52</li>
-          <li>Defense: 66</li>
-          <li>Sp. Attack: 77</li>
-          <li>Sp. Defense: 22</li>
-          <li>Total: 452</li>
-        </div>
-      </div>
     </section>
   </body>
+  <script src="/assets/js/pokemon-model.js"></script>
+  <script src="/assets/js/poke-api.js"></script>
+  <script src="/assets/js/poke-info.js"></script>
 </html>
