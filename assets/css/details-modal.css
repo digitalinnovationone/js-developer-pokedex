@@ -1,0 +1,134 @@
+
+.modal {
+    height: 600px;
+    width: 250px;
+    display: none; /* Hide the modal by default */
+    position: fixed;
+    margin: auto auto;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px 10px #862c2c;
+}    
+.modal .header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10rem;
+}
+
+.modal .header .menu {
+    margin: 1rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal .header .menu button{
+    border: none;
+}
+
+.modal .header .menu .close:hover{
+    font-size: 40px;
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.modal .header .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1rem;
+}
+
+.modal .header .info .info-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal .header .info .info-name .name{
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.modal .header .info .info-name .info-type{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.modal .header .info .info-name .info-type .type {
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    border-radius: 1rem;
+    font-size: .625rem;
+    filter: brightness(1.1);
+    text-align: center;
+}
+
+.modal .header .info .id{
+    color: #fff;
+    font-size: 0.625rem;
+    margin-right: 1rem;
+}
+
+.modal img {
+    position: fixed;
+    width: 60%;
+    bottom: 285px;
+    right: 55px;
+}
+
+.modal .content {
+    height: 300px;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: #f6f8fc;
+}
+
+.modal .content .sections {
+    padding: 0;
+    margin: 0.75rem 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal .content .sections li{
+    font-size: 0.625rem;
+    color: #8f8f8f;
+}
+
+.modal .content .stats {
+    list-style: none;
+    padding: 0;
+}
+
+.modal .content .stats li {
+    gap: 3rem;
+}
+
+.modal .content .stats .stats-info {
+    margin: 0;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.modal .content .stats li p{
+    margin-bottom: 0.25rem;
+    font-size: 0.625rem;
+    color: #8f8f8f;
+}
+
+.modal .content .stats li span{
+    align-self: center;
+    font-size: 0.625rem;
+}
+
+.modal .content h4{
+    font-size: 0.8rem;
+    margin: 0.2rem 0 0 0;
+}
