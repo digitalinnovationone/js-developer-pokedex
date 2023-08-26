@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+
+    <!-- Normalize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Nosso CSS -->
+
+    <link rel="stylesheet" href="/assets/css/poke-info.css" />
+  </head>
+
+  <body>
+    <section class="content">
+      <!--  -->
+      <div class="buttons">
+        <button>back</button>
+        <button>favorite</button>
+      </div>
+      <!--  -->
+      <div class="box-main">
+        <div>
+          <div></div>
+          <h3 class="pokemon-name">Bulbasaur</h3>
+          <ul class="types">
+            <li><p>Grass</p></li>
+            <li><p>Poison</p></li>
+          </ul>
+        </div>
+        <h5 class="pokemon-number">#001</h5>
+      </div>
+
+      <div class="image-container">
+        <img
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+          alt=""
+        />
+      </div>
+
+      <div class="info-box">
+        <div class="buttons-container">
+          <button class="about-button">About</button>
+          <button class="base-stats-button">Base Stats</button>
+        </div>
+
+        <!-- <li>Evolution</li> -->
+        <!-- <li>Moves</li> -->
+        <div class="about">
+          <ul>
+            <li>Sepecies: Seed</li>
+            <li>Height: 0.7cm</li>
+            <li>Weigt 6.9kg</li>
+            <li>Abilities: Overgrow</li>
+            <li>Gender: Male 87% Female 13%</li>
+          </ul>
+        </div>
+
+        <div class="Base Stats">
+          <li>HP: 45</li>
+          <li>Attack: 52</li>
+          <li>Defense: 66</li>
+          <li>Sp. Attack: 77</li>
+          <li>Sp. Defense: 22</li>
+          <li>Total: 452</li>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
