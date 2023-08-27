@@ -7,7 +7,7 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
+       <li class="pokemon ${pokemon.type}" onClick=redirectPokemonDetails(${pokemon.number})>
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
@@ -21,6 +21,11 @@ function convertPokemonToLi(pokemon) {
             </div>
         </li>
     `
+}
+
+function redirectPokemonDetails(idPokemon) {
+    localStorage.setItem('idPokemon', idPokemon)
+    window.location.href = `pokemonDetails.html`;
 }
 
 function loadPokemonItens(offset, limit) {
