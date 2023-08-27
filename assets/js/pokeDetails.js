@@ -5,6 +5,7 @@ let pokemon;
 
 const getPokemon = async () => {
   const pokemon = await pokeApi.getPokemon(idPokemon);
+  console.log(pokemon);
   return {
     name: pokemon.name,
     number: pokemon.id,
@@ -22,16 +23,18 @@ backButton.addEventListener('click', () => {
 
 const createCardPokemon = async (pokemon) => {
   card.innerHTML = `
-  <div class="pokemons">
+  <div class="pokemon-card">
     <span class="name">${pokemon.name}</span>
     <span class="number">#${pokemon.number}</span>
-    <img src="${pokemon.img}" alt="${pokemon.name}">
-    <div class="detail">
-      <nav>
+    <div class="img">
+      <img src="${pokemon.img}" alt="${pokemon.name}">
+    </div>
+    <div class="content-details">
+      <nav class="nav-bar">
         <ul>
           <li><a href="#/abilities">Habilidades</a></li>
           <li><a href="#/">Estatisticas</a></li>
-          <li><a href="#/types">Tipos</a></li>
+          <li><a href="#/types">Tipo</a></li>
         </ul>
       </nav>
       <div id="conteudo"> 
@@ -39,11 +42,12 @@ const createCardPokemon = async (pokemon) => {
           <li class="stats">
             ${data.stat.name} = ${data.base_stat}
           </li>`).join('')}
-          <li class="stats total}">total = ${pokemon.stats.reduce(( acc, point) => {
+          <br/>
+          <li class="stats">total = ${pokemon.stats.reduce(( acc, point) => {
               return acc + point.base_stat; 
             },0)}
           </li>
-        </ul>;
+        </ul>
       </div>
     </div>
   </div>`
@@ -65,6 +69,7 @@ function roteador() {
       ${pokemon.stats.map((data) => `
         <li class="stats">${data.stat.name} = ${data.base_stat}</li>
       `).join('')}
+      <br/>
       <li class="stats total}">total = ${pokemon.stats.reduce(( acc, point) => {
         return acc + point.base_stat; 
       },0)}</li>
@@ -72,7 +77,7 @@ function roteador() {
   } else if (hash === "types") {
       conteudo.innerHTML = `
       <ul class="types">
-      ${pokemon.types.map((tipo) => `<li class="types ${tipo.type.name}">${tipo.type.name}</li>`).join('')}
+      ${pokemon.types.map((tipo) => `<li class="types">${tipo.type.name}</li>`).join('')}
     </ul>`;
   } else {
     console.log(hash);
@@ -85,5 +90,6 @@ window.addEventListener("hashchange", roteador);
 
 window.onload = async () => {
   pokemon = await getPokemon();
-  createCardPokemon(pokemon)
+  card.classList.add(`${pokemon.types[0].type.name}`)
+  createCardPokemon(pokemon);
 }
