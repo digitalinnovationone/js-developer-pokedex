@@ -1,5 +1,5 @@
-const pokePage = document.querySelector(".content");
 
+const pokePage = document.querySelector(".content");
 
 function pokeInfo() {
   pokeApi.getPokemonDetailPage().then((pokemon) => {
@@ -30,19 +30,19 @@ function pokeInfo() {
 
       <div class="info-box">
         <div class="buttons-container">
-          <button class="about-button">About</button>
-          <button class="base-stats-button">Base Stats</button>
+          <button id="about-button">About</button>
+          <button id="base-stats-button">Base Stats</button>
         </div>
         
-        <div class="about">
-          <ul>
-              <li>Height: ${pokemon.height} m</li>
-              <li>Weight: ${pokemon.weight} kg</li>
-              <li>Abilities: ${pokemon.abilities}</li>
-          </ul>
-        </div>
+        
+        <ul class="about">
+            <li>Height: ${pokemon.height} m</li>
+            <li>Weight: ${pokemon.weight} kg</li>
+            <li>Abilities: ${pokemon.abilities}</li>
+        </ul>
+      
 
-        <div class="Base Stats">
+        <ul class="base-stats">
           <li>HP: ${pokemon.hp}</li>
           <li>Attack: ${pokemon.attack}</li>
           <li>Defense: ${pokemon.deffense}</li>
@@ -50,16 +50,39 @@ function pokeInfo() {
           <li>Special Defense: ${pokemon.specialDefense}</li>
           <li>Speed: ${pokemon.speed}</li>
           <li>Total: ${pokemon.total}</li>
-        </div>
+        </ul>
       </div>
     </div>`;
+
     const backBtn = document.querySelector(".back-btn");
-    backBtn.addEventListener("click", () => (window.location.href = "index.html"));
+    backBtn.addEventListener(
+      "click",
+      () => (window.location.href = "index.html")
+    );
+    const aboutButton = document.getElementById("about-button");
+    const baseStatsButton = document.getElementById("base-stats-button");
+    const about = document.querySelector(".about");
+    const baseStats = document.querySelector(".base-stats");
+
+    aboutButton.addEventListener("click", () => {
+      if (about.style.display = "none") {
+        about.style.display = "block";
+        baseStats.style.display = "none"
+        aboutButton.style.borderBottom = "2px solid blue"
+        baseStatsButton.style.borderBottom = "none"
+      }
+    });
+
+    baseStatsButton.addEventListener("click", () => {
+      if (baseStats.style.display = "none") {
+        about.style.display = "none";
+        baseStats.style.display = "block"
+        aboutButton.style.borderBottom = "none"
+        baseStatsButton.style.borderBottom = "2px solid blue"
+      }
+    })
 
   });
-
-  
 }
 
 pokeInfo();
-
