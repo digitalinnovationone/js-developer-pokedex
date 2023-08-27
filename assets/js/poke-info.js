@@ -19,16 +19,18 @@ function pokeInfo() {
     <h3 class="pokemon-name">${pokemon.name}</h3>
     <ul class="types">
     ${pokemon.types
-      .map((type) => `<span class="type ${pokemon.type}" >${type}</span>`)
+      .map((type) => `<li class="type ${pokemon.type}" >${type}</li>`)
       .join("")}
     </ul>
     </div>
-    <h5 class="pokemon-number">#001</h5>
+    <h5 class="pokemon-number">${pokemon.number}</h5>
     </div>
 
     <div class="image-container">
     <img
-    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${
+      pokemon.number
+    }.svg"
     alt=""
     />
     </div>
@@ -43,21 +45,22 @@ function pokeInfo() {
     <!-- <li>Moves</li> -->
     <div class="about">
     <ul>
-        <li>Sepecies: Seed</li>
-        <li>Height: 0.7cm</li>
-        <li>Weigt 6.9kg</li>
-        <li>Abilities: Overgrow</li>
+        <li>Height: ${pokemon.height} m</li>
+        <li>Weight: ${pokemon.weight} kg</li>
+        <li>Abilities: ${pokemon.abilities}</li>
     </ul>
     </div>
 
-    <!-- <div class="Base Stats">
-    <li>HP: 45</li>
-    <li>Attack: 52</li>
-    <li>Defense: 66</li>
-    <li>Sp. Attack: 77</li>
-    <li>Sp. Defense: 22</li>
-    <li>Total: 452</li>
-    </div> -->
+    <div class="Base Stats">
+    <li>HP: ${pokemon.hp}</li>
+    <li>Attack: ${pokemon.attack}</li>
+    <li>Defense: ${pokemon.deffense}</li>
+    <li>Special Attack: ${pokemon.specialAttack}</li>
+    <li>Special Defense: ${pokemon.specialDefense}</li>
+    <li>Speed: ${pokemon.speed}</li>
+    <li>Total: ${pokemon.total}</li>
+    
+    </div>
     </div>`;
   });
 }

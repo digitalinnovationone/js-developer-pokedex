@@ -5,7 +5,7 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
   pokemon.number = pokeDetail.id;
   pokemon.name = pokeDetail.name;
 
-  console.log(pokemon);
+  // console.log(pokemon);
   const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name);
   const [type] = types;
 
@@ -13,6 +13,27 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
   pokemon.type = type;
 
   pokemon.photo = pokeDetail.sprites.other.dream_world.front_default;
+
+  pokemon.height = parseFloat((pokeDetail.height * 0.1).toFixed(2));
+  pokemon.weight = parseFloat((pokeDetail.weight * 0.1).toFixed(2));
+
+  const abilities = pokeDetail.abilities.map((abilitySlot => abilitySlot.ability.name ))
+  const [ability] = abilities;
+
+  pokemon.abilities = abilities
+  pokemon.ability = ability
+
+  const stats = pokeDetail.stats.map((statSlot) => statSlot.base_stat)
+  const [ statHP, statAttack, statDeffense, statSpecialAttack, statSpecialDefense, statSpeed] = stats
+
+  pokemon.hp = statHP
+  pokemon.attack = statAttack
+  pokemon.deffense = statDeffense
+  pokemon.specialAttack = statSpecialAttack
+  pokemon.specialDefense = statSpecialDefense
+  pokemon.speed = statSpeed
+  pokemon.total =  statHP + statAttack + statDeffense + statSpecialAttack + statSpecialDefense + statSpeed
+
 
   return pokemon;
 }
@@ -36,7 +57,7 @@ pokeApi.getPokemons = (offset = 0, limit = 5) => {
 
 pokeApi.getPokemonDetailPage = () => {
   const urlParams = new URLSearchParams(window.location.search);
-//   console.log(urlParams);
+  //   console.log(urlParams);
   const pokemonParamId = urlParams.get("id");
   console.log(pokemonParamId);
 
