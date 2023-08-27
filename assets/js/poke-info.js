@@ -1,12 +1,5 @@
 const pokePage = document.querySelector(".content");
 const backBtn = document.querySelector(".back-btn");
-const pokePageTemplate = `
-            
-            `;
-
-pokePage.innerHTML = pokePageTemplate;
-
-// console.log(pokePage);
 
 function pokeInfo() {
   pokeApi.getPokemonDetailPage().then((pokemon) => {
