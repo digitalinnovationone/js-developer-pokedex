@@ -99,11 +99,26 @@
     margin-bottom: .25rem;
 }
 
-.pokemon .detail {
+.pokemon .detail{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+.ability {
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0;
+    font-size: .625rem;
+    filter: brightness(1.1);
+    text-align: center;
+}
+.abilities {
+    color: #fff;
+    font-size: .900rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.5rem; 
+    
 }
 
 .pokemon .detail .types {
