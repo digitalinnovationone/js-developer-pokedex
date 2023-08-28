@@ -1,0 +1,116 @@
+.backToList {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.header {
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.header .number {
+    text-align: end;
+    z-index: 999;
+}
+
+.header .types {
+    list-style: none;
+    display: flex;
+    column-gap: 0.5rem;
+    margin: 0 0 0 -2.5rem;
+}
+
+.header .types .type {
+    color: #fff;
+    width: 4.6rem;
+    max-width: 5rem;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0;
+    font-size: 0.7rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+}
+
+.container-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokeball-icon {
+    width: 174px;
+    position: absolute;
+    top: 10rem;
+    left: 60%;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.pokemon-img {
+    width: 12rem;
+    z-index: 999999;
+}
+
+.content-details {
+    background: #f6f8fc;
+    border-radius: 3rem 3rem 20px 20px;
+    padding: 1.5rem;
+    width: 100%;
+    margin-top: -2rem;
+    z-index: 999;
+}
+
+.exp-container {
+    text-align: center;
+    padding: 0 1rem;
+    margin: 1.5rem 0;
+}
+
+.exp-text {
+    font-size: 0.75rem;
+    color: #949494;
+}
+
+.exp {
+    width: 100%;
+    height: 7px;
+    background: #7e7e7e;
+    border-radius: 0.2rem;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.exp>span {
+    display: block;
+    height: 100%;
+    background-color: rgb(43, 194, 83);
+    background-image: linear-gradient(center bottom,
+            rgb(43, 194, 83) 37%,
+            rgb(84, 240, 84) 69%);
+    box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+    border-radius: 0.2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.title-3 {
+    font-size: 0.95rem;
+    color: #6b6b6b;
+}
+
+.pokemon-info {
+    margin-bottom: 1rem;
+}
+
+.pokemon-info>div,
+
+.stats>div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.2rem;
+}
