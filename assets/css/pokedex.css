@@ -7,75 +7,112 @@
 }
 
 .normal {
-    background-color: #a6a877;
+    background-color: hsl(60, 3%, 81%);
+    border: 2px solid #666666;
+    --color: #666666;
 }
 
 .grass {
-    background-color: #77c850;
+    background-color: #7fc55e;
+    border: 2px solid #335c12;
+    --color: #335c12;
 }
 
 .fire {
-    background-color: #ee7f30;
+    background-color: #faa467;
+    border: 2px solid #a75f00;
+    --color: #a75f00;
 }
 
 .water {
-    background-color: #678fee;
+    background-color: #82a6fa;
+    border: 2px solid #0c3581;
+    --color: #0c3581;
 }
 
 .electric {
-    background-color: #f7cf2e;
+    background-color: #f7da66;
+    border: 2px solid #979500;
+    --color: #979500;
 }
 
 .ice {
     background-color: #98d5d7;
+    border: 2px solid #0099f1;
+    --color:#0099f1;
+    ;
 }
 
 .ground {
     background-color: #dfbf69;
+    border: 2px solid #776604;
+    --color: #776604;
 }
 
 .flying {
     background-color: #a98ff0;
+    border: 2px solid #af47b3;
+    --color: #af47b3;
 }
 
 .poison {
-    background-color: #a040a0;
+    background-color: #e48ae4;
+    border: 2px solid #5c0257;
+    --color: #5c0257;
 }
 
 .fighting {
-    background-color: #bf3029;
+    background-color: #bd6661;
+    border: 2px solid #960e0e;
+    --color: #960e0e;
 }
 
 .psychic {
-    background-color: #f65687;
+    background-color: #ff7ba2;
+    border: 2px solid #9e0564;
+    --color: #9e0564;
 }
 
 .dark {
     background-color: #725847;
+    border: 2px solid #311b2d;
+    --color: #311b2d;
 }
 
 .rock {
     background-color: #b8a137;
+    border: 2px solid #c7a615;
+    --color: #c7a615;
 }
 
 .bug {
-    background-color: #a8b720;
+    background-color: #b7c257;
+    border: 2px solid #335c12;
+    --color: #335c12;
 }
 
 .ghost {
-    background-color: #6e5896;
+    background-color: #9270d1;
+    border: 2px solid #713285;
+    --color: #713285;
 }
 
 .steel {
     background-color: #b9b7cf;
+    border: 2px solid #444444;
+    --color: #444444;
 }
 
 .dragon {
     background-color: #6f38f6;
+    border: 2px solid #752ee7;
+    --color: #752ee7;
 }
 
 .fairy {
     background-color: #f9aec7;
+    border: 2px solid #dd15c2;
+    --color: #dd15c2;
 }
 
 .pokemon {
@@ -84,6 +121,7 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    border: 0.1rem solid var(--color);
 }
 
 .pokemon .number {
@@ -113,17 +151,17 @@
 }
 
 .pokemon .detail .types .type {
-    color: #fff;
+    color: #4b4545;
     padding: .25rem .5rem;
     margin: .25rem 0;
     font-size: .625rem;
     border-radius: 1rem;
-    filter: brightness(1.1);
+    filter: brightness(1.3);
     text-align: center;
 }
 
 .pokemon .detail img {
-    max-width: 100%;
+    max-width: 50%;
     height: 70px;
 }
 
