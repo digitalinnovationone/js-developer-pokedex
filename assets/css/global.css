@@ -22,3 +22,6 @@ body {
         border-radius: 1rem;
     }
 }
+.content h1 {
+    margin: 0;
+}
