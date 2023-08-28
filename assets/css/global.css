@@ -4,7 +4,8 @@
 }
 
 body {
-    background-color: #f6f8fc;
+    background-color: #e1e1e0;
+
 }
 
 .content {
@@ -21,4 +22,22 @@ body {
         margin: 1rem auto;
         border-radius: 1rem;
     }
+}
+
+/* Style for highlighted Pokémon */
+.pokemon:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.pokemon {
+    width: 150px;
+    height: 150px;
+    transition: all 0.3s ease;
+}
+
+/* Style for enlarged Pokémon */
+.pokemon.enlarged {
+    width: 200px;
+    height: 200px;
 }

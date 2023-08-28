@@ -44,4 +44,24 @@ loadMoreButton.addEventListener('click', () => {
     } else {
         loadPokemonItens(offset, limit)
     }
+    function loadPokemonItens(offset, limit) {
+        pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
+            const newHtml = pokemons.map(convertPokemonToLi).join('')
+            pokemonList.innerHTML += newHtml;
+
+            const pokemonItems = document.querySelectorAll('.pokemon');
+            pokemonItems.forEach((pokemonItem) => {
+                pokemonItem.addEventListener('click', () => {
+                    pokemonItem.classList.toggle('enlarged');
+                    const pokemonItems = document.querySelectorAll('.pokemon');
+
+                    pokemonItems.forEach((pokemonItem) => {
+                        pokemonItem.addEventListener('click', () => {
+                            pokemonItem.classList.toggle('enlarged');
+                        });
+                    });
+                });
+            });
+        });
+    }
 })
