@@ -5,7 +5,6 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
   pokemon.number = pokeDetail.id;
   pokemon.name = pokeDetail.name;
 
-  // console.log(pokemon);
   const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name);
   const [type] = types;
 
@@ -57,9 +56,7 @@ pokeApi.getPokemons = (offset = 0, limit = 5) => {
 
 pokeApi.getPokemonDetailPage = () => {
   const urlParams = new URLSearchParams(window.location.search);
-  //   console.log(urlParams);
   const pokemonParamId = urlParams.get("id");
-  console.log(pokemonParamId);
 
   return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonParamId}`)
     .then((response) => response.json())

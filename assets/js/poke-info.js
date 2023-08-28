@@ -3,10 +3,9 @@ const pokePage = document.querySelector(".content");
 
 function pokeInfo() {
   pokeApi.getPokemonDetailPage().then((pokemon) => {
-    console.log(pokemon);
     pokePage.innerHTML = `
     <div class="${pokemon.type} content">
-      <button class="back-btn">back</button>
+      <button class="back-btn ph-thin ph-arrow-left"></button>
       <div class="box-main">
         <div>
         <h3 class="pokemon-name">${pokemon.name}</h3>
