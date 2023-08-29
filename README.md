@@ -9,20 +9,20 @@
 <table>
     <tbody>
         <tr>
-            <td style="width: 50%">
+            <td style="width: 550">
                 <img alt="Presentation of the Challenge" src="./assets/misc/Recording_Pokedex.gif">
             </td>
             <td>
-<h3>🛠 Tecnologias</h3>
-<table>
-    <thead>
-        <tr>
-            <th><img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white"></th>
-            <th><img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white"></th>
-            <th><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"></th>
-        </tr>
-    </thead>
-</table>                
+		<h3>🛠 Tecnologias</h3>
+		<table>
+		    <thead>
+		        <tr>
+		            <th><img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white"></th>
+		            <th><img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white"></th>
+		            <th><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"></th>
+		        </tr>
+		    </thead>
+		</table>                
 <strong>Introdução</strong>
 <p>Este projeto é um componente do "DIO Santander Bootcamp 2023 - Fullstack Java+Angular."</p>
 
