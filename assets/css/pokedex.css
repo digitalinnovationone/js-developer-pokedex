@@ -84,9 +84,10 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    border: none;
 }
 
-.pokemon .number {
+.number {
     color: #000;
     opacity: .3;
     text-align: right;
@@ -106,13 +107,13 @@
     justify-content: space-between;
 }
 
-.pokemon .detail .types {
+.types {
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-.pokemon .detail .types .type {
+.type {
     color: #fff;
     padding: .25rem .5rem;
     margin: .25rem 0;
@@ -120,6 +121,19 @@
     border-radius: 1rem;
     filter: brightness(1.1);
     text-align: center;
+    text-transform: capitalize;
+}
+
+.pokemon-info .types .type {
+    width: 5rem;
+    font-size: 1rem;
+    padding: 0.2rem 1rem;
+}
+
+.pokemon-info .types {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .pokemon .detail img {
@@ -163,3 +177,117 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
+.header-icons {
+    display: flex;
+    height: 7em;
+    margin: 0;
+    justify-content: space-between;
+    align-items: end;
+    padding: 1em 1em;
+}
+
+.icon-header {
+    height: 1rem;
+}
+
+.pokemon-info {
+    padding: 0em 1.5em;
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+}
+
+.pokemon-info .pokemon-name-type h1 {
+    margin-top: 1rem;
+    font-size: 2.3em;
+    margin-bottom: .5rem;
+}
+
+.pokemon-name-type {
+    justify-content: baseline;
+}
+
+.pkm-imagem {
+    height: 15em;
+    display: flex;
+    justify-content: center;
+}
+
+.pkm-imagem img {
+    margin-top: 2.5rem;
+    height: 15em;
+}
+
+.pokemon-content {
+    color: white;
+}
+
+.detailed-info {
+    color: #000;
+    height:29rem;
+    border-top-right-radius: 2.5rem;
+    border-top-left-radius: 2.5rem;
+    background-color: white;
+}
+
+.detailed-info h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0;
+    padding-top: 2rem;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-section div {
+    margin: 1rem
+}
+
+.detailed-info section {
+    align-items: center;
+    padding: .3rem 2rem;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
+.centralizar {
+    display: flex;
+    justify-items: center;
+}
+
+section .data {
+    width: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pokemon-name-type h1 {
+    text-transform: capitalize;
+}
+
+.data {
+    text-transform: capitalize;
+}
+
+.name-number {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-item-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.list-item-link:visited {
+    color: inherit;
+}   
+
