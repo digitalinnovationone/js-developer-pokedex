@@ -224,4 +224,5 @@ function displayMoveDetails(move) {
         versionGroupDetailsList.appendChild(listItem);
     })
     detailsDiv.appendChild(versionGroupDetailsList);
+    detailsDiv.style.display = 'block';
 }

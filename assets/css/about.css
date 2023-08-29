@@ -57,7 +57,7 @@ span {
 .poke-data-details {
     color: #808080;
     background-color: #fff;
-    border-radius: 5% 5% 5% 5%;
+    border-radius: 25px;
     padding: 2.5em .5em .5em .2em;
     min-height: 550px;
 }
@@ -189,7 +189,8 @@ h4 {
     border: 1px solid #ccc;
     background-color: #f5f5f5;
     text-align: left;
-    border-radius: 5%;
+    border-radius: 20px;
+    display: none;
 }
 
 #move-details a {
