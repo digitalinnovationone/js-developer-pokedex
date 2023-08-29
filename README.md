@@ -1,32 +1,42 @@
 # Trilha JS Developer - Pokedex
+## Desafio do móduo JS/CSS/HTML do bootcamp DIO Santander 2023
+
+
+<h4 align="center"> 
+	🚧  Pokedex 🚀 Em construção...  🚧
+</h4>
 
 <table>
-    <thead>
-        <tr>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
     <tbody>
         <tr>
             <td style="width: 50%">
                 <img alt="Presentation of the Challenge" src="./assets/misc/Recording_Pokedex.gif">
             </td>
-            <td style="vertical-align: top;">
-                <strong>Introduction</strong>
-                <p>This project is a component of the "DIO Santander Bootcamp 2023 - Fullstack Java+Angular."</p>
+            <td>
+<h3>🛠 Tecnologias</h3>
+<table>
+    <thead>
+        <tr>
+            <th><img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white"></th>
+            <th><img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white"></th>
+            <th><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"></th>
+        </tr>
+    </thead>
+</table>                
+<strong>Introdução</strong>
+<p>Este projeto é um componente do "DIO Santander Bootcamp 2023 - Fullstack Java+Angular."</p>
 
-<p>Originating from a fork of the digitalinnovationone/js-developer-pokedex project, its primary aim is to enhance the original work by introducing a detailed section showcasing the attributes of a Pokémon.</p>
+<p>Originado a partir de um fork do projeto digitalinnovationone/js-developer-pokedex, o objetivo principal é aprimorar o trabalho original, introduzindo uma seção detalhada que mostra os atributos de um Pokémon.</p>
 
-<strong>Installation</strong>
+<strong>Instalação</strong>
 
-<p>Given that this project utilizes Vanilla JS, simply download the repository and deploy it on any HTTP server.</p>
+<p>Dado que este projeto utiliza Vanilla JS, basta baixar o repositório e implantá-lo em qualquer servidor HTTP.</p>
 
-<strong>Areas for Improvement</strong>
+<strong>Áreas para Melhoria Futura</strong>
 
-<p>Device Compatibility: Currently, the details page is optimized solely for mobile devices. Future iterations could potentially expand this compatibility to encompass desktops and tablets.</p>
+<p>Compatibilidade de Dispositivo: Atualmente, a página de detalhes é otimizada apenas para dispositivos móveis. Futuras iterações poderiam potencialmente expandir essa compatibilidade para incluir desktops e tablets.</p>
 
-<p>Design: While functional, there's room for design refinement. However, it's pertinent to note that the primary focus of this project was the application of Javascript to imbue the HTML with interactive behavior.</p>
+<p>Design: Embora funcional, há espaço para refinamento de design. No entanto, é pertinente notar que o foco principal deste projeto foi a aplicação de Javascript para conferir um comportamento interativo ao HTML.</p>
             </td>
         </tr>
     </tbody>
