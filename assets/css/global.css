@@ -4,6 +4,7 @@
 }
 
 body {
+    margin: 0;
     background-color: #f6f8fc;
 }
 
@@ -21,4 +22,11 @@ body {
         margin: 1rem auto;
         border-radius: 1rem;
     }
+}
+
+li button {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
 }
