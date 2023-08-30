@@ -1,50 +1,44 @@
-# Trilha JS Developer - Pokedex
-## Desafio do móduo JS/CSS/HTML do bootcamp DIO Santander 2023
+# Pokedex: Trilha JS Developer 🚀
 
+> Part of the JS/CSS/HTML module for DIO Santander Bootcamp 2023.
 
-<h4 align="center"> 
-	🚧  Pokedex 🚀 Em construção...  🚧
-</h4>
+![Project Status](https://img.shields.io/badge/status-in_progress-yellow)
+![Made with HTML](https://img.shields.io/badge/Made%20with-HTML-red)
+![Made with CSS](https://img.shields.io/badge/Made%20with-CSS-blue)
+![Made with JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-yellow)
 
-<table>
-    <tbody>
-        <tr>
-            <td>
-                <img alt="Presentation of the Challenge" src="./assets/misc/Recording_Pokedex.gif">
-            </td>
-            <td>
-		<h3>🛠 Tecnologias</h3>
-		<table>
-		    <thead>
-		        <tr>
-		            <th><img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white"></th>
-		            <th><img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white"></th>
-		            <th><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"></th>
-		        </tr>
-		    </thead>
-		    <tbody>
-			<tr>
-			    <td ></td>
-			    <td></td>
-			    <td></td>
-			</tr>
-		    </tbody>
-		</table>
-		    
-<strong>Introdução</strong>
-		    
-<p>Este projeto é um componente do "DIO Santander Bootcamp 2023 - Fullstack Java+Angular."</p>
+![Presentation of the Challenge](./assets/misc/Recording_Pokedex.gif)
 
-<p>Originado a partir de um fork do projeto digitalinnovationone/js-developer-pokedex, o objetivo principal é aprimorar o trabalho original, introduzindo uma seção detalhada que mostra os atributos de um Pokémon.</p>
+## 🛠 Technologies
 
-<strong>Instalação</strong>
-<p>Dado que este projeto utiliza Vanilla JS, basta baixar o repositório e implantá-lo em qualquer servidor HTTP.</p>
+- HTML ![HTML Badge](https://img.shields.io/badge/-HTML-239120?style=flat&logo=html5&logoColor=white)
+- CSS ![CSS Badge](https://img.shields.io/badge/-CSS-1572B6?style=flat&logo=css3&logoColor=white)
+- JavaScript ![JavaScript Badge](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
-<strong>Áreas para Melhoria Futura</strong>
-<p>Compatibilidade de Dispositivo: Atualmente, a página de detalhes é otimizada apenas para dispositivos móveis. Futuras iterações poderiam potencialmente expandir essa compatibilidade para incluir desktops e tablets.</p>
+## 📚 Introduction
 
-<p>Design: Embora funcional, há espaço para refinamento de design. No entanto, é pertinente notar que o foco principal deste projeto foi a aplicação de Javascript para conferir um comportamento interativo ao HTML.</p>
-            </td>
-        </tr>
-    </tbody>
-</table>
+This project is a part of the "DIO Santander Bootcamp 2023 - Fullstack Java+Angular." It's a fork from the [digitalinnovationone/js-developer-pokedex](https://github.com/digitalinnovationone/js-developer-pokedex) with the main goal to enhance the original work by adding a detailed section displaying a Pokémon's attributes.
+
+## 🚀 Quick Start
+
+### Installation
+
+Since this project uses Vanilla JS, you can simply:
+
+1. Clone this repository
+git clone https://github.com/yourusername/pokedex.git
+2. Deploy it on any HTTP server.
+
+## 🌟 Future Improvements
+
+- **Device Compatibility**: The detail page is currently optimized for mobile devices only. Future updates could potentially expand this to include desktop and tablets.
+
+- **Design**: While functional, the design can be refined further. Note that the main focus of this project was the application of JavaScript to add interactive behavior to HTML.
+
+## 📝 License
+
+MIT License
+
+---
+
+⭐ If you found this project useful, don't forget to give it a star!
