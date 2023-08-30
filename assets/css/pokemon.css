@@ -1,0 +1,167 @@
+#frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon-card {
+  height: 710px;
+  width: 380px;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 10px;
+}
+
+.pokemon-content {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 8px;
+}
+
+.pokemon-content-top {
+  height: 42%;
+  background-image: url(/assets/images/pokeball.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.info-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: #FFF;
+  font-weight: 700;
+}
+
+.info-top .pokemon-name {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.info-top .pokemon-id {
+  font-size: 1.2rem;
+}
+
+.pokemon-types {
+  margin: 0 5px;
+}
+
+.pokemon-types_types .types-type {
+  display: inline-block;
+  margin: 0 5px;
+  border-radius: 18px;
+  padding: 5px 10px;
+  font-size: 0.827rem;
+  color: #FFF;
+  width: 70px;
+  text-align: center;
+  filter: brightness(1.1);
+}
+
+.pokemon-image {
+  display: flex;
+  justify-content: center;
+  height: 240px;
+  width: 100%;
+}
+
+.pokemon-content-bottom {
+  background-color: #FFF;
+  height: 58%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.title-about {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.info-about {
+  display: grid;
+  grid-template-columns: 1fr 2.4fr;
+  row-gap: 6px;
+  width: 100%;
+  font-size: 0.87rem;
+}
+
+.info-about-name {
+  color: rgb(114, 114, 114);
+}
+
+.title-base-stats {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.info-base-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 57%;
+  row-gap: 6px;
+  width: 100%;
+  align-items: center;
+  font-size: 0.87rem;
+}
+
+.outer {
+  width: 100%;
+  height: 7px;
+  background-color: #ebebeb;
+  border-radius: 4px;
+}
+
+.inner {
+  border-radius: 4px;
+  height: 100%;
+  width: 50%;
+}
+
+.stats-value {
+  text-align: center;
+}
+
+.stats-name {
+  color: rgb(114, 114, 114);
+}
+
+.back {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.back button {
+  padding: .25rem .5rem;
+  margin: .25rem 0;
+  font-size: .625rem;
+  color: #fff;
+  background-color: #6c79db;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+#frame.hidden {
+  display: none;
+}
+
+#pokemonList.hidden {
+  display: none;
+}
+
+#back.hidden {
+  display: none;
+}
+
+.pagination.hidden {
+  display: none;
+}
