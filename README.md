@@ -7,7 +7,10 @@
 ![Made with CSS](https://img.shields.io/badge/Made%20with-CSS-blue)
 ![Made with JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-yellow)
 
-![Presentation of the Challenge](./assets/misc/Recording_Pokedex.gif)
+<table width="100%">
+  <tr>
+    <td valign="top" width="40%"><img alt="Presentation of the Challenge" src="./assets/misc/Recording_Pokedex.gif"></td>
+    <td valign="top" width="60%">
 
 ## 🛠 Technologies
 
@@ -26,7 +29,9 @@ This project is a part of the "DIO Santander Bootcamp 2023 - Fullstack Java+Angu
 Since this project uses Vanilla JS, you can simply:
 
 1. Clone this repository
-git clone [https://github.com/yourusername/pokedex.git](https://github.com/marcelorvergara/js-developer-pokedex.git)
+
+git clone https://github.com/marcelorvergara/js-developer-pokedex.git
+
 2. Deploy it on any HTTP server.
 
 ## 🌟 Future Improvements
@@ -42,3 +47,7 @@ MIT License
 ---
 
 ⭐ If you found this project useful, don't forget to give it a star!
+
+ </td>
+</tr>
+</table>
