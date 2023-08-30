@@ -9,7 +9,7 @@
 <table>
     <tbody>
         <tr>
-            <td style="width: 550">
+            <td>
                 <img alt="Presentation of the Challenge" src="./assets/misc/Recording_Pokedex.gif">
             </td>
             <td>
@@ -22,18 +22,25 @@
 		            <th><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"></th>
 		        </tr>
 		    </thead>
-		</table>                
+		    <tbody>
+			<tr>
+			    <td ></td>
+			    <td></td>
+			    <td></td>
+			</tr>
+		    </tbody>
+		</table>
+		    
 <strong>Introdução</strong>
+		    
 <p>Este projeto é um componente do "DIO Santander Bootcamp 2023 - Fullstack Java+Angular."</p>
 
 <p>Originado a partir de um fork do projeto digitalinnovationone/js-developer-pokedex, o objetivo principal é aprimorar o trabalho original, introduzindo uma seção detalhada que mostra os atributos de um Pokémon.</p>
 
 <strong>Instalação</strong>
-
 <p>Dado que este projeto utiliza Vanilla JS, basta baixar o repositório e implantá-lo em qualquer servidor HTTP.</p>
 
 <strong>Áreas para Melhoria Futura</strong>
-
 <p>Compatibilidade de Dispositivo: Atualmente, a página de detalhes é otimizada apenas para dispositivos móveis. Futuras iterações poderiam potencialmente expandir essa compatibilidade para incluir desktops e tablets.</p>
 
 <p>Design: Embora funcional, há espaço para refinamento de design. No entanto, é pertinente notar que o foco principal deste projeto foi a aplicação de Javascript para conferir um comportamento interativo ao HTML.</p>
