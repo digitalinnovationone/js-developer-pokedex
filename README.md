@@ -30,7 +30,7 @@ Since this project uses Vanilla JS, you can simply:
 
 1. Clone this repository
 
-git clone https://github.com/marcelorvergara/js-developer-pokedex.git
+git clone [https://github.com/marcelorvergara/js-developer-pokedex.git](https://github.com/marcelorvergara/Pokedex-Challenge)
 
 2. Deploy it on any HTTP server.
 
