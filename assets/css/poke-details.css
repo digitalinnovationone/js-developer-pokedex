@@ -1,0 +1,176 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-column {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pokecard {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 400px;
+  border: 3px solid #ccc;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+.pokecard__header {
+  height: 200px;
+  margin-bottom: 28px;
+  position: relative;
+}
+.pokecard__header--heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: #fff;
+  font-size: 18px;
+  padding: 8px;
+}
+
+.pokecard__breeding--heading div {
+  display: flex;
+  gap: 16px;
+}
+
+.pokecard__header--img {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: -40px;
+}
+
+.pokecard__header--img img {
+  width: 180px;
+  height: 180px;
+}
+
+.pokecard__breeding--heading {
+  align-items: center;
+  justify-content: center;
+}
+.pokecard__breeding--heading h1 {
+  font-size: 24px;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+.pokecard__breeding--heading span {
+  border-radius: 12px;
+  padding: 4px 12px;
+  color: #fff;
+  text-transform: capitalize;
+}
+.pokecard__breeding--content {
+  padding: 8px 18px;
+  gap: 2px;
+}
+.pokecard__breeding--content .breeding {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+.pokecard__breeding--content .breeding .block-info {
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.pokecard__breeding--content .breeding .block-info h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.pokecard__breeding--content .breeding .block-info h2 span {
+  font-size: 12px;
+}
+.pokecard__breeding--content .evolution {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+.pokecard__breeding--content .evolution > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+}
+.pokecard__breeding--content .evolution .evoPoke {
+  width: 80px;
+  height: 80px;
+}
+.pokecard__breeding--content .subtitle {
+  font-size: 12px;
+  color: #555;
+  text-transform: capitalize;
+}
+
+.arrow-btn {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+.arrow-btn:hover {
+  cursor: pointer;
+}
+
+.evoArrow {
+  width: 20px;
+  height: 20px;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0 0 12px 12px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  gap: 24px;
+  padding: 12px 24px;
+  color: #eee;
+  background-color: #eb544d;
+  font-weight: 700;
+}
+
+.error-message img {
+  width: 20px;
+  height: 20px;
+}
+
+.error-message img:hover {
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(5px);
+}
+
+.hidden {
+  display: none;
+}
