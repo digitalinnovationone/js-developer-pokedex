@@ -7,6 +7,10 @@ body {
     background-color: #f6f8fc;
 }
 
+h1 {
+    text-align: center;
+}
+
 .content {
     border: 3px solid black;
     width: 100vw;
