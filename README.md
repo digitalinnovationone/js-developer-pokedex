@@ -26,7 +26,7 @@ This project is a part of the "DIO Santander Bootcamp 2023 - Fullstack Java+Angu
 Since this project uses Vanilla JS, you can simply:
 
 1. Clone this repository
-git clone https://github.com/yourusername/pokedex.git
+git clone [https://github.com/yourusername/pokedex.git](https://github.com/marcelorvergara/js-developer-pokedex.git)
 2. Deploy it on any HTTP server.
 
 ## 🌟 Future Improvements
