@@ -4,6 +4,7 @@
 }
 
 body {
+    margin: 0;
     background-color: #f6f8fc;
 }
 
@@ -12,6 +13,31 @@ body {
     height: 100vh;
     padding: 1rem;
     background-color: #fff;
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/17f718db-a3a8-444b-9794-433b43df5873/d57wnp9-8fe5ca79-515b-43e5-9207-269c31a2d220.jpg/v1/fit/w_828,h_1110,q_70,strp/pokeball__outline_by_orankinan_d57wnp9-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTM3MyIsInBhdGgiOiJcL2ZcLzE3ZjcxOGRiLWEzYTgtNDQ0Yi05Nzk0LTQzM2I0M2RmNTg3M1wvZDU3d25wOS04ZmU1Y2E3OS01MTViLTQzZTUtOTIwNy0yNjljMzFhMmQyMjAuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.5czH3P6IMkzFuixuGcp0XLfpC4eC-IczG1kaKH8XSWY');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 100% 150%;
+    background-size: 750px 900px;
+}
+
+.main-title {
+    padding: 1rem;
+    font-size: 3rem;
+    font-weight: 600;
+    background-image: black;
+    color: black;
+    background-clip: text;
+}
+
+.main-title:hover {
+    background-image: linear-gradient(to left, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
+    color: transparent;
+    background-clip: text;
+    -webkit-text-stroke: 1.5px #000;
+    -webkit-background-clip: text;
+    -o-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 @media screen and (min-width: 992px) {
@@ -21,4 +47,11 @@ body {
         margin: 1rem auto;
         border-radius: 1rem;
     }
+}
+
+li button {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
 }
