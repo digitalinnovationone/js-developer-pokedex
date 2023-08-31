@@ -13,5 +13,3 @@ Paleta de cores não respeita cor do texto
 
 Adição de ícone representando o tipo principal do pokémon
 - Solução em desenvolvimento
-
-feat: add pagina de detalhes do pokémon + mudanca na cor do texto para melhoria de legibilidade
