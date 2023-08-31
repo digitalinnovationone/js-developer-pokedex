@@ -10,17 +10,23 @@ body {
 }
 .titulo {
   text-align: center;
-  color: white;
+  color: black;
 }
 .content {
   width: 100vw;
   height: 100vh;
   padding: 1rem;
-  background-image: radial-gradient(red, green, blue, yellow);
 }
 
 @media screen and (min-width: 992px) {
+  body {
+    background-image: url("https://www.portallos.com.br/wp-content/uploads/2010/03/pokemons-wallpaper.jpg");
+  }
+  .titulo {
+    color: white;
+  }
   .content {
+    background-image: radial-gradient(red, green, blue, yellow);
     max-width: 992px;
     height: auto;
     margin: 1rem auto;
