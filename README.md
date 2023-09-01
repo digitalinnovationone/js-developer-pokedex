@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Pokedex logo" src=".github/pngegg.png" width="400px" />
+  <img alt="Pokedex logo" src="https://logospng.org/download/pokemon/pokemon-4096.png" width="400px" />
 </p>
 
 ## Entrega do projeto Pokedex com adição de imagem no background e alteração do h1 (centralizado) e box-shadow aplicado nos cards

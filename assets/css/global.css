@@ -8,9 +8,53 @@ body {
   background-repeat: repeat;
   background-size: 100%;
 }
-.titulo {
+.tituloBarra {
   text-align: center;
+}
+.titulo {
   color: black;
+  text-align: center;
+}
+.search-box {
+  position: absolute;
+  top: 11%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  background: #0a1b2d;
+  height: 50px;
+  padding: 10px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  line-height: 40px;
+  width: 0;
+  transition: 0.5s;
+}
+.search-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #0a1b2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+.search-box:hover > .search-txt {
+  width: 240px;
+  padding: 0 6px;
+}
+.search-box:hover > .search-btn {
+  background: white;
 }
 .content {
   width: 100vw;
