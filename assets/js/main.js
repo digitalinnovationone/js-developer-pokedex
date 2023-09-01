@@ -10,20 +10,15 @@ function convertPokemonToLi(pokemon) {
         <li class="pokemon ${pokemon.type}">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
-            
-
             <div class="detail">
                 <ol class="types">
                 <li>Type</li>
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                 </ol>
-
                 <img src="${pokemon.photo}"
                      alt="${pokemon.name}">
             </div>
-
         <p>Abilities</p>
-
             <div class="detail">
             <ol class="abilities">
                 ${pokemon.abilities.map((ability) => `<li class="ability ${ability}">${ability}</li>`).join('')}
