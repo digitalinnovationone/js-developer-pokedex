@@ -5,5 +5,5 @@
 ## Entrega do projeto Pokedex com adição de imagem no background e alteração do h1 (centralizado) e box-shadow aplicado nos cards
 
 <p align="center">
-  <img alt="Screenshot" src="./assets/cover-readme.png" width="1000px" />
+  <img alt="Screenshot" src="./assets/coverReadme.png" width="1000px" />
 </p>
