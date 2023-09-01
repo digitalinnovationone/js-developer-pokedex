@@ -78,12 +78,22 @@
     background-color: #f9aec7;
 }
 
+.logoImage img{
+    margin: 0 20px;
+    width: 150px;
+}
+
 .pokemon {
     display: flex;
     flex-direction: column;
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    box-shadow: #00000075 5px 5px 10px;
+}
+
+.pokemon:not(:hover) {
+    transform: scale(0.9);
 }
 
 .pokemon .number {
@@ -144,6 +154,10 @@
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+}
+
+.pagination button:hover{
+    transform: scale(1.5);
 }
 
 @media screen and (min-width: 380px) {

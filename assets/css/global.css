@@ -4,14 +4,15 @@
 }
 
 body {
-    background-color: #f6f8fc;
+    background-color:#353638;
 }
 
 .content {
     width: 100vw;
     height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+    background-color: rgba(102, 175, 102, 0.473);
+    box-shadow:#0000005e 5px 5px 10px;
 }
 
 @media screen and (min-width: 992px) {
