@@ -24,4 +24,7 @@ git fetch upstream
 
 ## Teste de envio de dados 
 
+## Entreguei o projeto criando um pull
+https://github.com/digitalinnovationone/js-developer-pokedex/pull/73
+
 
