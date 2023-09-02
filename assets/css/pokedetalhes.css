@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+@media screen and (min-width: 380px) {
+    .content {
+        grid-template-columns: 1fr;
+        min-width: 380px;
+    }
+}
+
+
+
+.content {
+    display: grid;
+
+    background-color: aqua;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.div-superior {
+    background-color: aqua;
+    display: flex;
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+.div-inferior {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(239, 238, 238);
+    width: 100vw;
+    height: 50vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+
+
+}
+
+#atributos {
+    margin: auto;
+    padding: 2rem;
+}
+
+.name {
+    box-shadow: 10px 5px 5px black;
+    font-family: cursive, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+    font-size: 7vw;
+    font-style: bold;
+    color: #fff;
+    margin: auto;
+    margin-top: 1rem;
+    padding-left: 1rem;
+
+
+
+
+}
+
+.div-li{
+    margin: auto;
+    padding: 2rem;
+    align-items: center;
+
+   
+}
+.div-li li{
+    list-style:none;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    text-transform: capitalize;
+}
+
+.number {
+
+    color: #000;
+    opacity: .3;
+    text-align: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    margin: auto;
+    padding: 1rem;
+    font-style: bold;
+}
+
+.type {
+    text-transform: capitalize;
+    color: #fff;
+    margin: auto;
+    margin-top: 1%;
+    padding-left: 1rem;
+    font-size: 3rem;
+}
+
+
+
+img {
+    max-width: 50%;
+    margin: auto;
+    padding: 2rem;
+
+
+
+
+}
+h3{
+    margin-right: 1rem;
+    display: flex;
+}
+ol .listyle{
+    color: #fff;
+}
+.button {
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #6c79db;
+    border: none;
+    border-radius: 1rem;
+}
