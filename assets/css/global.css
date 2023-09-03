@@ -14,11 +14,109 @@ body {
     background-color: #fff;
 }
 
+.modal h1 {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 700;
+    opacity: .7;
+
+}
+
+.modal .modal-header {
+    border-bottom: none;
+}
+
+.modal .modal-content {
+    border-radius: 25px;
+    border: none;
+}
+
+.modal .modal-content .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.modal .modal-content .modal-body img {
+    max-width: 250px;
+    margin-bottom: -15px;
+    z-index: 1;
+}
+
+.modal .modal-content .modal-body .stats {
+    background-color: #FFF;
+    border-radius: 15px;
+    width: 100%;
+    padding: 1rem;
+}
+
+.modal .modal-content .modal-body .stats ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.modal .modal-content .modal-body .stats ul li {
+    display: grid;
+    grid-template-columns: .8fr 1fr;
+    grid-gap: .5rem;
+    align-items: center;
+}
+
+.modal .modal-content .modal-body .stats ul li .stat {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal .modal-content .modal-body .stats ul li .stat .stat-name {
+    text-transform: capitalize;
+}
+
+.modal .modal-content .modal-body .stats ul li .rate {
+    height: 4px;
+    width: 100%;
+    background-color: #e9e9e9;
+    position: relative;
+    border-radius: 5px;
+}
+
+.modal .modal-content .modal-body .stats ul li .rate .red {
+    position: absolute;
+    height: 100%;
+    background-color: red;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 5px;
+}
+
+.modal .modal-content .modal-body .stats ul li .rate .green {
+    position: absolute;
+    height: 100%;
+    background-color: rgb(51, 255, 0);
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+
 @media screen and (min-width: 992px) {
     .content {
         max-width: 992px;
         height: auto;
         margin: 1rem auto;
         border-radius: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal .modal-content .modal-body .stats ul li {
+        grid-template-columns: 1.5fr 1fr;
+    }
+
+    .modal .modal-content .modal-body .stats ul li .stat .stat-name,
+    .modal .modal-content .modal-body .stats ul li .stat .base-stat {
+        font-size: 12px;
     }
 }

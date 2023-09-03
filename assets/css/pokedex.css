@@ -84,6 +84,7 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .pokemon .number {
@@ -112,7 +113,8 @@
     list-style: none;
 }
 
-.pokemon .detail .types .type {
+.pokemon .detail .types .type,
+.modal .type {
     color: #fff;
     padding: .25rem .5rem;
     margin: .25rem 0;
