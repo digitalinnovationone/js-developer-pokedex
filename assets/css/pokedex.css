@@ -1,9 +1,16 @@
 .pokemons {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+   display: flex;
+   flex-wrap: wrap;
+   margin: auto;
+   width: 100%;
+   align-items: end;
+}
+
+.details {
+    width: 20%;
+    height: 10%;
+    margin:0.5%;
+    border-radius: 10%;
 }
 
 .normal {
@@ -84,6 +91,7 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    align-items: center;
 }
 
 .pokemon .number {
@@ -145,6 +153,7 @@
     border: none;
     border-radius: 1rem;
 }
+
 
 @media screen and (min-width: 380px) {
     .pokemons {
