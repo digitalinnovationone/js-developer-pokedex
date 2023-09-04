@@ -7,26 +7,27 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
     return `
-    
-    <li class="pokemon ${pokemon.type}">
-              <span class="number">#${pokemon.number}</span>
-                   <span class="name">${pokemon.name}</span>
-                       <div class="detail">
-        <ol class="types">
-        <li>Type</li>
-            ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-        </ol>
-        <img src="${pokemon.photo}"
-             alt="${pokemon.name}">
-    </div>
-<p>Abilities</p>
-    <div class="detail">
-    <ol class="abilities">
-        ${pokemon.abilities.map((ability) => `<li class="ability ${ability}">${ability}</li>`).join('')}
-    </ol>
-    </div>
-</li>
-`
+     <a href="detail.html" target="_blank"><div>
+     <li class="pokemon ${pokemon.type}">
+     <span class="number">#${pokemon.number}</span>
+     <span class="name">${pokemon.name}</span>
+     <div class="detail">
+         <ol class="types">
+             <li>Type</li>
+             ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+         </ol>
+         <img src="${pokemon.photo}" alt="${pokemon.name}">
+     </div>
+     <p>Abilities</p>
+     <div class="detail">
+         <ol class="abilities">
+             ${pokemon.abilities.map((ability) => `<li class="ability ${ability}">${ability}</li>`).join('')}
+         </ol>
+     </div>
+ </li>
+ </div>
+ </a>
+ `
 }
 
 function loadPokemonItens(offset, limit) {
@@ -46,8 +47,8 @@ loadMoreButton.addEventListener('click', () => {
         const newLimit = maxRecords - offset
         loadPokemonItens(offset, newLimit)
 
-        loadMoreButton.parentElement.removeChild(loadMoreButton)
+        loadMoreButton.parentElement.removeChild(loadMoreButton);
     } else {
-        loadPokemonItens(offset, limit)
+        loadPokemonItens(offset, limit);
     }
 })
