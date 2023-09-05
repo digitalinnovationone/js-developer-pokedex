@@ -12,7 +12,7 @@
             </ol>
             <img src="${pokemon.photo}" alt="${pokemon.name}">
         </div>
-        <p>Abilities</p>
+        <p>Stats</p>
         <div class="detail">
             <ol class="abilities">
                 ${pokemon.stats.map((base_stat) => `<li class="ability ${base_stat}">${base_stat}</li>`).join('')}
