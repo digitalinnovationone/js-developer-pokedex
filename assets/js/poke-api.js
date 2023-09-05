@@ -18,11 +18,19 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.abilities = abilities;
     pokemon.ability = ability
 
+   const stats = pokeDetail.stats.map((stateSlot) => stateSlot.base_stat.name);
+    const[base_stat] = stats;
+
+    pokemon.stats = stats;
+    pokemon.base_stat = base_stat;
+
 
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
 
     return pokemon
 }
+
+
 
 pokeApi.getPokemonDetail = (pokemon) => {
     return fetch(pokemon.url)

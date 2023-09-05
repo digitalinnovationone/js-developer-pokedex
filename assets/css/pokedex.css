@@ -78,6 +78,16 @@
     background-color: #f9aec7;
 }
 
+#pokemonDetailList {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-right: 100px;
+    padding: 0px;
+    width: 400px;
+    list-style: none;
+    align-items: end;
+}
+
 .pokemon {
     display: flex;
     flex-direction: column;

@@ -7,7 +7,7 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
     return `
-     <a href="detail.html" target="_blank"><div>
+     <a href="detail.html?id=${pokemon.number}" target="_self"><div>
      <li class="pokemon ${pokemon.type}">
      <span class="number">#${pokemon.number}</span>
      <span class="name">${pokemon.name}</span>
@@ -29,6 +29,7 @@ function convertPokemonToLi(pokemon) {
  </a>
  `
 }
+
 
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
@@ -52,3 +53,5 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit);
     }
 })
+
+
