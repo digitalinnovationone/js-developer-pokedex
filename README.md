@@ -1,10 +1,3 @@
-<style>
-    p{
-        text-indent: 1.25cm;
-        text-align: justify;
-    }
-</style>
-
 # Trilha JS Developer - Pokedex
 
 ## Desafio de código utilizando uma API REST, PokeAPI.
