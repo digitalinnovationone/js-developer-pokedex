@@ -36,7 +36,6 @@
                 .then((pokemon) => {
                     console.log("Detalhes do Pokémon:", pokemon);
                     const html = convertPokemonToLi(pokemon);
-                    console.log(pokemonDetailList);
                     pokemonDetailList.innerHTML += html;
                 })
         }
