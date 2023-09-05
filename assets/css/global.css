@@ -1,24 +1,46 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap');
+@import url(pokedex.css);
+
+*{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #f6f8fc;
+    background-color: #e8eef8;
 }
 
 .content {
-    width: 100vw;
-    height: 100vh;
     padding: 1rem;
     background-color: #fff;
+    height: 100vh;
+    width: 100vw;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 576px){
     .content {
-        max-width: 992px;
+        max-width: 90%;
         height: auto;
         margin: 1rem auto;
         border-radius: 1rem;
     }
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.pagination button {
+    padding: 0.5rem 0.75rem;
+    margin: 0.25rem 0;
+    color: #fff;
+    background-color: #6c79db;
+    border: none;
+    border-radius: 1rem;
+    font-size: .865rem;
 }
