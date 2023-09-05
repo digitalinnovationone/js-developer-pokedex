@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+
+    <!-- Normalize: Cria uma estilização padrão para todos os navegadores -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Nosso CSS -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/pokemon-detail.css">
+</head>
+<body>
+    <section id="content" class="content">
+        <div class="backArrow">
+            <img src="https://icon-library.com/images/back-arrow-icon-png/back-arrow-icon-png-25.jpg" onclick="closeTab()" alt="back_arrow">
+        </div>
+
+        <h1 id="pokeName"><!-- Nome do Pokemon --></h1>
+
+        <span id="pokeNumber" class="number"><!-- Número do Pokemon --></span>
+
+        <div id="pokeTypes"><!-- Tipos do Pokemon --></div>
+
+        <div id="pokeImag" class="pokeImg"><!-- Imagem do pokemon --></div>
+
+        <div class="detail">
+
+            <nav id="menu">
+                <ul>
+                    <li><button id="mInfo" type="button">Informations</button></li>
+                    <li><button id="mStats" type="button">Stats</button></li>
+                </ul>
+            </nav>
+
+            <div id="information"><!-- Informações sobre o Pokemon --></div>
+
+            <div id="stats"><!-- Stats do Pokemon --></div>
+        </div>
+
+    </section>
+
+    <!-- Nosso JS -->
+    <script src="assets/js/pokemon-model.js"></script>
+    <script src="assets/js/poke-api.js"></script>
+    <script src="assets/js/pokemon-detail.js"></script>
+</body>
+</html>

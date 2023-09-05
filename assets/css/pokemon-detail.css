@@ -1,0 +1,181 @@
+body{
+    background-color: lightgray;
+}
+
+.content h1{
+    margin: 2rem 0 0 1rem;
+    color: #fff;
+    text-transform: capitalize;
+}
+.content img{
+    max-width: 100%;
+    margin-left: 1rem;
+}
+
+.backArrow{
+    display: block;
+    width: 25px;
+    opacity: .9;
+    padding-top: 3rem;
+}
+.number{
+    display: block;
+    float: right;
+    margin-right: 1rem;
+    color: #fff;
+}
+
+.types{
+    padding: 0;
+    margin: 0 0 0 .8rem;
+    list-style: none;
+    text-transform: capitalize;
+}
+.types .type{
+    display: inline-block;
+    color: #fff;
+    font-size: .9rem;
+    filter: brightness(1.1);
+    margin: .3rem 0 .3rem .3rem;
+    padding: .25rem .5rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.pokeImg{
+    width: 300px;
+    margin: 5rem auto -2.5rem auto;
+}
+
+.detail{
+    background-color: #fff;
+    border-radius: 1.5rem 1.5rem 0 0;
+    padding-top: 1.5rem;
+    padding-bottom: 42vh;
+}
+
+#menu ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#menu ul li{
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    padding: 0;
+    text-align: center;
+    font-size: 15pt;
+}
+#menu button{
+    background-color: white;
+    padding: .3rem 0 .3rem 0;
+    border: none;   
+}
+
+#information{
+    display: block;
+    position: absolute;
+}
+#information li{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    margin: 0 0 .5rem -10px;
+    font-size: 15pt;
+}
+
+#stats{
+    display: block;
+    position: absolute;
+}
+#stats li{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    margin: 0 0 .5rem -10px;
+    font-size: 15pt;
+}
+
+ul li span{
+    font-weight: 600;
+    float: left;
+}
+
+ul li div{
+    margin-left: 1rem;
+    margin-right: -4rem;
+    text-transform: capitalize;
+}
+
+@media screen and (min-width: 576px){
+    #menu ul li{
+        font-size: 18pt;
+    }
+    #information li{
+        font-size: 15pt;
+        padding-left: 10rem;
+    }
+    #stats li{
+        font-size: 15pt;
+        padding-left: 10rem;
+    }
+}
+
+@media screen and (min-width: 576px){
+    #menu ul li{
+        font-size: 20pt;
+    }
+    #information li{
+        font-size: 18pt;
+        padding-left: 15rem;
+    }
+    #stats li{
+        font-size: 18pt;
+        padding-left: 15rem;
+    }
+}
+
+@media screen and (min-width: 820px){
+    .content{
+        margin: auto;
+        width: 800px;
+    }
+    .pokeImg{
+        width: 400px;
+    }
+    #menu ul li{
+        font-size: 20pt;
+    }
+    #information li{
+        font-size: 16pt;
+        padding-left: 17.5rem;
+    }
+    #stats li{
+        font-size: 16pt;
+        padding-left: 17.5rem;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .content{
+        margin: auto;
+        width: 900px;
+    }
+    .pokeImg{
+        width: 400px;
+    }
+    #menu ul li{
+        font-size: 20pt;
+    }
+    #information li{
+        font-size: 16pt;
+        padding-left: 20rem;
+    }
+    #stats li{
+        font-size: 16pt;
+        padding-left: 20rem;
+    }
+}
