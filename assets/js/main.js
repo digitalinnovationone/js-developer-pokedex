@@ -42,7 +42,3 @@ loadMoreButton.addEventListener("click", () => {
 	loadMoreButton.className = "";
 	loadMoreButton.id = "loadMoreButton";
 });
-
-// function showLoading(loading) {
-// 	if (loading) loadMoreButton.cl;
-// }
