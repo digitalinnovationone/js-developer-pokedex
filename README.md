@@ -17,7 +17,7 @@ Somente realizamos ajustes no CSS e HTML do código oficial em 06/06/2023.
 
 - HTML 
 - CCS
-- JavaScript
+- JavaScripT
 
 ## License
 
