@@ -45,3 +45,9 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
+const listPokemon = document.getElementById('pokemonList');
+
+listPokemon.addEventListener('click', () => {
+    window.location.href = 'https://pokeapi.co/';
+});
