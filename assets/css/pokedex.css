@@ -83,7 +83,7 @@
     flex-direction: column;
     margin: .5rem;
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: 100%;
 }
 
 .pokemon .number {
