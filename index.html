@@ -7,15 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
 
+    <!--Icone Pokebola-->
+    <link rel="pokeball icon" type="icon.ico" href="./assets/css/imagens/Poke-ball_1_.ico">
+   
+
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Font Roboto -->
+    <!-- Fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    
+
 
     <!-- Nosso CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
@@ -25,15 +31,19 @@
 <body>
     <section class="content">
         <h1>Pokedex</h1>
+        
+        <img src="./assets/css/imagens/pokeball-icon.png" id="pokeball-icon" alt="icone-pokebola"/>
+          
+
+       
 
         <ol id="pokemonList" class="pokemons">
             <!-- ..... Pokemons here ..... -->
         </ol>
-
+    
         <div class="pagination">
-            <button id="loadMoreButton" type="button">
-                Load More
-            </button>
+            <input id="loadMoreButton" type="image" src="./assets/css/imagens/pokebola.png" title="Load More" alt="Submit" style="max-widht:45px; max-height:45px;">
+                    
         </div>
     </section>
 
