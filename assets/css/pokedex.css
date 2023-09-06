@@ -1,3 +1,14 @@
+#pokeball-icon {
+   
+    margin-top: -120px;
+    margin-left: 200px;
+    height: 100px;
+    width: 100px;
+    opacity: 0.3;
+}
+
+
+
 .pokemons {
     display: grid;
     grid-template-columns: 1fr;
@@ -6,48 +17,66 @@
     list-style: none;
 }
 
+
+
 .normal {
     background-color: #a6a877;
+    
 }
 
 .grass {
-    background-color: #77c850;
+    background-color: #a1c38f;
+    
 }
 
 .fire {
-    background-color: #ee7f30;
+    background-color: #d56060;
+   
+
 }
 
 .water {
-    background-color: #678fee;
+    background-color: #98b0e7;
+    
 }
 
 .electric {
     background-color: #f7cf2e;
+    
+
 }
 
 .ice {
     background-color: #98d5d7;
+       
+
 }
 
 .ground {
     background-color: #dfbf69;
+    
+
 }
 
 .flying {
     background-color: #a98ff0;
+    
+
 }
 
 .poison {
-    background-color: #a040a0;
+    background-color: #8e65cb;
+    
 }
 
 .fighting {
     background-color: #bf3029;
+    
 }
 
 .psychic {
     background-color: #f65687;
+        
 }
 
 .dark {
@@ -56,26 +85,36 @@
 
 .rock {
     background-color: #b8a137;
+    
+
 }
 
 .bug {
     background-color: #a8b720;
+    
 }
 
 .ghost {
     background-color: #6e5896;
+    
 }
 
 .steel {
     background-color: #b9b7cf;
+    
+
 }
 
 .dragon {
     background-color: #6f38f6;
+       
+
 }
 
 .fairy {
     background-color: #f9aec7;
+        
+
 }
 
 .pokemon {
@@ -83,8 +122,16 @@
     flex-direction: column;
     margin: .5rem;
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: 1rem; 
 }
+
+
+  .pokemon:hover {
+    opacity: 5;
+    transform: scale(1.2);
+    transition: 500ms linear; 
+    box-shadow: 0px 0px 25px 5px hsl(106, 100%, 48%);
+  }
 
 .pokemon .number {
     color: #000;
@@ -136,15 +183,46 @@
     padding: 1rem;
 }
 
-.pagination button {
-    padding: .25rem .5rem;
-    margin: .25rem 0;
-    font-size: .625rem;
-    color: #fff;
-    background-color: #6c79db;
-    border: none;
-    border-radius: 1rem;
+
+
+input:hover {
+    animation-name: container;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation: loading 5s linear infinite;
 }
+
+@keyframes loading {
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+
+/* ===== Scrollbar CSS ===== */
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #fc0303;
+    border-radius: 10px;
+    border: 2px solid #fdfdfd;
+}
+
+
+
 
 @media screen and (min-width: 380px) {
     .pokemons {
