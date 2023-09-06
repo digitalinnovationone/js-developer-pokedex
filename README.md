@@ -6,7 +6,7 @@ O projeto original conforme "fork" fora criado pelo tutor [Renan](https://github
 
 ## Ajustes
 
-Somente realizamos ajustes no CSS e HTML do código oficial em 06/06/2023.
+Somente realizamos ajustes no CSS e HTML do código oficial em 06/09/2023.
 
 
 ## Fonte da API 
