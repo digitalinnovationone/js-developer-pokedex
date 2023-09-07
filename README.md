@@ -7,7 +7,8 @@ Foi adicionado link onde é possível abrir o status do de cada pokemon separada
 
 selecionando o Pokemon abre um página com os status, que serão adicionados em breve.
 
-![image](https://github.com/BrunoAlcantaraGit/js-developer-pokedex/assets/120646838/e8111323-b344-42b5-9eb9-1aeb3b26b3c2)
+![image](https://github.com/BrunoAlcantaraGit/js-developer-pokedex/assets/120646838/c2bab6a9-ce3b-47c6-b95f-da2dd83ce174)
+
 
 Ao clicar na imagem, retorna para lista principal de pokemons.
 
