@@ -146,6 +146,42 @@
     border-radius: 1rem;
 }
 
+
+#loadMoreButton:hover {
+    background-color: #3498db; /* Altere a cor de fundo ao passar o mouse */
+    color: #fff; /* Altere a cor do texto ao passar o mouse */
+    transition: background-color 0.5s, color 0.5s; /* Adicione uma transição suave */
+}
+
+.pokemon {
+    transition: backgound-color 0.3s, transform 0.3s;
+}
+
+.pokemon:hover{
+    transform: scale(1.05);
+}
+
+#reloadButton {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#reloadButton:hover {
+    background-color: #2575b9;
+}
+
+#reloadButton{
+    margin-top: 10px;
+}
+
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;

@@ -17,7 +17,7 @@ function convertPokemonToLi(pokemon) {
                 </ol>
 
                 <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
+            alt="${pokemon.name}">
             </div>
         </li>
     `
@@ -45,3 +45,9 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
+const reloadButton = document.getElementById('reloadButton');
+
+reloadButton.addEventListener('click', () => {
+    location.reload();
+});
