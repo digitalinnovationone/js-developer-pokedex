@@ -1,19 +1,20 @@
 
     function convertPokemonToLi(pokemon) {
         return `
-        <a href="detail.html?id=${pokemon.number}" target="_self"><div>
+        <div class="pokemons-container">
+        <a href="index.html?id=${pokemon.number}" target="_self"><div>
         <li class="pokemon ${pokemon.type}">
         <span class="number">#${pokemon.number}</span>
         <span class="name">${pokemon.name}</span>
         <div class="detail">
             <ol class="types">
-                <li>Type</li>
+                
                 ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
             </ol>
             <img src="${pokemon.photo}" alt="${pokemon.name}">
         </div>
         <p>Stats</p>
-        <div class="detail">
+        <div class="abilities">
             <ol class="abilities">
                 ${pokemon.stats.map((base_stat) => `<li class="ability ${base_stat}">${base_stat}</li>`).join('')}
             </ol>
@@ -21,6 +22,7 @@
     </li>
     </div>
     </a>
+    </div>
      `
     }
 
