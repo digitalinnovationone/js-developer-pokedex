@@ -45,3 +45,8 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
+const visitPokemon = document.getElementById('pokemonList')
+visitPokemon.addEventListener('click', () => {
+    window.location.href = 'https://www.pokemon.com/br/pokedex/';
+})
