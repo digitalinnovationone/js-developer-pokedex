@@ -1,0 +1,56 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    background-color: #dee1e6;
+    margin-bottom: 0;
+    padding: 0.1rem;
+}
+
+.content h1 {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+p.coded {
+    font-size: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+img#dioIcon {
+    width: 10px;
+    height: 10px;
+}
+
+body {
+    background-color: #e73820;
+}
+
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    background-color: #f0f2f6;
+  }
+
+@media screen and (min-width: 992px) {
+    .content {
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+}
+
+section .pokemon-details {
+    display: block;
+    block-size: 992px auto;
+    border: solid 3px #dee1e6;
+    border-block-color: black;
+}
