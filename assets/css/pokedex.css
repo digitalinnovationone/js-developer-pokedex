@@ -14,6 +14,8 @@
 
 .grass {
     background-color: #77c850;
+  
+  
 }
 
 .fire {
@@ -242,14 +244,36 @@
     .titleAbilities{
         font-size: 12px;
         color: white;
+        border-radius: 10px;
     }
     
     .titleStats{
         font-size: 12px;
         color: white;
+        border-radius: 10px;
     }
     
+    /* Defina a animação */
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
+
+.jumping-title {
+    position: absolute;
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    animation: jump 1s infinite; 
+}
 
 @media screen and (min-width: 380px) {
     .pokemons {
