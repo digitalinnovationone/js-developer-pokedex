@@ -22,3 +22,25 @@ body {
         border-radius: 1rem;
     }
 }
+
+
+.pagination button {
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    color: #fff;
+    background-color: #6c79db;
+    border: none;
+    border-radius: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination button:hover {
+    background-color: #465499;
+    transform: scale(1.05);
+}
+
+
+
+
+

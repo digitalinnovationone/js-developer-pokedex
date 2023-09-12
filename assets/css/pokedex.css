@@ -163,3 +163,40 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
+.pokemon .detail .types .type {
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pokemon .detail .types .type:hover {
+    background-color: #465499;
+    transform: scale(1.05);
+}
+
+.pokemon img:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    
+    transform: translateY(20px); 
+    transition: transform 4s ease;
+}
+
+
+.pokemon.visible {
+   
+    transform: translateY(0);}
