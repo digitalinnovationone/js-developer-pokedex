@@ -5,6 +5,11 @@
     padding: 0;
     list-style: none;
 }
+.pokemon:hover {
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 10px 10px 15px rgba(6, 13, 13, 0.711);
+            /*  adiciona uma sombra que simula um brilho */
+        }
 
 .normal {
     background-color: #a6a877;
@@ -84,18 +89,19 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .pokemon .number {
     color: #000;
-    opacity: .3;
+    opacity: .4;
     text-align: right;
     font-size: .625rem;
 }
 
 .pokemon .name {
     text-transform: capitalize;
-    color: #fff;
+    color: #ffffff;
     margin-bottom: .25rem;
 }
 
@@ -112,8 +118,9 @@
     list-style: none;
 }
 
-.pokemon .detail .types .type {
-    color: #fff;
+.pokemon .detail .types .type,
+.modal .type {
+    color: #e7ffed;
     padding: .25rem .5rem;
     margin: .25rem 0;
     font-size: .625rem;
@@ -140,8 +147,8 @@
     padding: .25rem .5rem;
     margin: .25rem 0;
     font-size: .625rem;
-    color: #fff;
-    background-color: #6c79db;
+    color: #2b00ff;
+    background-color: #6a7af1;
     border: none;
     border-radius: 1rem;
 }
