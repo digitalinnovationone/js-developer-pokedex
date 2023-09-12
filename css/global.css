@@ -1,0 +1,44 @@
+*{
+    /* Padronizar a mesma fonte pra todos */ 
+    font-family: 'Roboto', sans-serif;
+    /* Considerar a borda como tamanho total */ 
+    box-sizing: border-box;
+}
+
+
+.botao {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #717471;
+    border: none;
+    border-radius: 42px;
+    box-shadow: 0 5px #999;
+    height: 20px;
+
+}
+    
+    .botao:hover {
+    background-color: #5a1660
+}
+    
+    .butoa:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+}
+
+.paginacao {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+}
