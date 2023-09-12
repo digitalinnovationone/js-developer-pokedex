@@ -3,11 +3,21 @@ const pokemonInput = document.getElementById("pokemonInput");
 //references the pokemonm list in the HTML
 const pokemonList = document.getElementById("pokemonList");
 const PaginationButtonDiv = document.getElementById("paginationButton");
+const pokemonImageModal = document.getElementById("pokemonImageButton");
 
-const limit = 10;
+
+const limit = 5;
 let offset = 0;
 const max = 151;
 
+function updateModal(pokemon) {
+  const modal = document.getElementById("pokemonModal");
+  modal.innerHTML = `
+      <h4>${pokemon.name}</h4>
+      <p>Type: ${pokemon.type}</p>
+      <p>Description: ${pokemon.description}</p>
+  `;
+}
 //inserts the pokemon info into the HTML
 function insertPokemon(pokemon) {
   return `<li class="pokemon ${pokemon.type}">
@@ -23,18 +33,25 @@ function insertPokemon(pokemon) {
                               )
                               .join(" ")}
                         </ol>
-    
+                        <button id="pokemonImageButton" type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                         <img src=${pokemon.photo}
                             alt="${pokemon.name}">
+                      </button> 
+                       
                     </div>
         </li>
-        `;
+        `
+        ;
 }
 
+
+ 
 //maps the pokemon array returned from the api, uses the function to insert into a HTML format using the function "insertPokemon" and then injects into the HTML of the page
 function loadPokemon(offset, limit) {
   pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
     pokemonList.innerHTML += pokemons.map(insertPokemon).join("");
+    pokemonList.innerHTML += pokemons.map(updateModal).join("");
+
   });
 }
 
@@ -61,7 +78,7 @@ pokemonInput.addEventListener("keydown", () => {
       pokemonList.innerHTML = insertPokemon(pokemon);
       loadMoreButton.parentElement.removeChild(loadMoreButton);
       PaginationButtonDiv.innerHTML = `<div class="goBackButton">
-      <button id="goBackBtn"> Go back</button>
+      <button type="button" class="btn btn-secondary" id="goBackBtn"> Go back</button>
       </div>`;
       const goBackBtn = document.getElementById("goBackBtn");
       goBackBtn.addEventListener("click", () => {
@@ -70,3 +87,7 @@ pokemonInput.addEventListener("keydown", () => {
     });
   }
 });
+
+
+
+

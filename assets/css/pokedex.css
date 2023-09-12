@@ -137,15 +137,6 @@
   padding: 1rem;
 }
 
-.pagination button {
-  padding: 0.25rem 0.5rem;
-  margin: 0.25rem 0;
-  font-size: 0.725rem;
-  color: #fff;
-  background-color: #3a3939;
-  border: none;
-  border-radius: 1rem;
-}
 
 @media screen and (min-width: 380px) {
   .pokemons {

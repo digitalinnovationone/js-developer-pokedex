@@ -1,18 +1,6 @@
 .pokemonNotFound {
-    margin: 0;
-    padding: 0;
     background-color: #fff;
     text-align: center;
-  }
-  .pokemonNotFound button {
-    width: 10rem;
-    padding: 0.25rem 0.5rem;
-    margin: 0.25rem 0;
-    font-size: 0.725rem;
-    color: #fff;
-    background-color: #3a3939;
-    border: none;
-    border-radius: 1rem;
   }
   .error {
     display: flex;
