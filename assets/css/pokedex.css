@@ -12,6 +12,8 @@
 
 .grass {
     background-color: #77c850;
+  
+  
 }
 
 .fire {
@@ -82,22 +84,11 @@
     display: flex;
     flex-direction: column;
     margin: .5rem;
-    padding: 1rem;
-    border-radius: 1rem;
+    padding: 2rem 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
 }
 
-.pokemon .number {
-    color: #000;
-    opacity: .3;
-    text-align: right;
-    font-size: .625rem;
-}
-
-.pokemon .name {
-    text-transform: capitalize;
-    color: #fff;
-    margin-bottom: .25rem;
-}
 
 .pokemon .detail {
     display: flex;
@@ -116,15 +107,29 @@
     color: #fff;
     padding: .25rem .5rem;
     margin: .25rem 0;
-    font-size: .625rem;
+    font-size: .725rem;
     border-radius: 1rem;
     filter: brightness(1.1);
     text-align: center;
 }
 
+.pokemon .number {
+    color: #000000;
+    opacity: .3;
+    text-align: right;
+    font-size: .625rem;
+}
+
+.pokemon .name {
+    color: #fff;
+    margin-bottom: .25rem;
+    text-transform: capitalize;
+}
+
 .pokemon .detail img {
     max-width: 100%;
     height: 70px;
+    align-self: flex-end;
 }
 
 .pagination {
@@ -140,10 +145,119 @@
     padding: .25rem .5rem;
     margin: .25rem 0;
     font-size: .625rem;
-    color: #fff;
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+    color: white;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+  }
+  
+.modalContent {
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 28px;   
+  }
+  
+.modalContent .name{
+    font-size: 22px;
+    padding-bottom: 1rem;
+  }
+
+.modalContent .number{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    opacity: revert;
+}
+
+.modalContent img{
+    max-width: 150px;
+    max-height: 100px;
+    align-self: center;
+}
+
+.modalContent .detail .types .type {
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: 1rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: larger;
+    z-index: 2;
+    left: 10px;
+  }
+  
+  .abilities {
+    font-size: 12px;
+    list-style: none;
+    color: white;
+    padding: 0rem;
+    }
+    
+    .stats {
+        font-size: 12px;
+    list-style: none;
+    color: white;
+    padding: 0rem;   
+    }
+  
+    .statsName {
+        font-size: 12px;
+    list-style: none;
+    color: white;
+    padding: 0rem;
+    }
+    
+
+    .titleAbilities{
+        font-size: 12px;
+        color: white;
+        border-radius: 10px;
+    }
+
+    
+    .titleStats{
+        font-size: 12px;
+        color: white;
+        border-radius: 10px;
+    }
+    
+   
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 @media screen and (min-width: 380px) {
@@ -161,5 +275,32 @@
 @media screen and (min-width: 992px) {
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 380px) {
+    .modalContent {
+       width: 370px;
+    }
+
+}
+
+@media screen and (min-width: 576px) {
+    .modalContent {
+       width: 550px;
+    }
+    .modalContent img{
+        max-width: 250px;
+        max-height: 200px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .modalContent {
+       width: 600px;
+    }
+    .modalContent img{
+        max-width: 350px;
+        max-height: 300px;
     }
 }
