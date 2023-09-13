@@ -51,6 +51,7 @@ loadMoreButton.addEventListener("click", () => {
   }
 });
 function openModal(element) {
+  console.log("aaaaaaaaaa");
   const pokemonJSON = element.getAttribute("data-pokemon");
   const pokemon = JSON.parse(pokemonJSON);
   console.log("openModal called");
@@ -74,13 +75,8 @@ function openModal(element) {
     </ol>
   </div>
 </div>
-
   `;
-
-  // Set the modal content
   modalInser.innerHTML = modalContent;
-
-  // Show the modal
   modalInser.style.display = "flex";
 }
 

@@ -16,8 +16,10 @@ body {
 .content h1 {
   margin: 0;
 }
+.modalMain{
+  display: none;
+}
 .modalMain {
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
@@ -28,6 +30,7 @@ body {
   left: 0; /* Align to the left of the viewport */
   background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
 }
+
 .modalDetais {
   padding: 1rem;
   border-radius: 2rem;
