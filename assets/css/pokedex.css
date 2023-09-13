@@ -12,70 +12,104 @@
 
 .grass {
     background-color: #77c850;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .fire {
     background-color: #ee7f30;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .water {
     background-color: #678fee;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .electric {
     background-color: #f7cf2e;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .ice {
     background-color: #98d5d7;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .ground {
     background-color: #dfbf69;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .flying {
     background-color: #a98ff0;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .poison {
     background-color: #a040a0;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .fighting {
     background-color: #bf3029;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .psychic {
     background-color: #f65687;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .dark {
     background-color: #725847;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .rock {
     background-color: #b8a137;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .bug {
     background-color: #a8b720;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .ghost {
     background-color: #6e5896;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .steel {
     background-color: #b9b7cf;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .dragon {
     background-color: #6f38f6;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .fairy {
     background-color: #f9aec7;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .pokemon {
@@ -121,6 +155,23 @@
     filter: brightness(1.1);
     text-align: center;
 }
+.characteristics{
+    padding: 1rem;
+    margin: 1rem 0;
+    list-style: none;
+    background-color: #6c79db;
+    color: white; 
+    text-shadow: black 0.1em 0.1em 0.2em;
+    border-radius: 1rem;   
+}
+.statsWindow{
+    background-color: #6c79db;
+    color: white; 
+    text-shadow: black 0.1em 0.1em 0.2em;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
 
 .pokemon .detail img {
     max-width: 100%;
@@ -144,6 +195,10 @@
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+}
+.stats {
+    color: white; 
+    text-shadow: black 0.1em 0.1em 0.2em;   
 }
 
 @media screen and (min-width: 380px) {
