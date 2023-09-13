@@ -3,11 +3,11 @@
   box-sizing: border-box;
 }
 
-body .poke_info {
+body {
   background-color: #f6f8fc;
 }
 
-.content {
+.content .card {
   width: 100vw;
   height: 100vh;
   padding: 1rem;

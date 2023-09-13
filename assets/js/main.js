@@ -37,6 +37,7 @@ function getPokemon(id) {
 
 function loadPokemonItens(offset, limit) {
   pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
+    console.log(pokemons);
     const newHtml = pokemons.map(convertPokemonToLi).join("");
     pokemonList.innerHTML += newHtml;
   });
@@ -57,8 +58,3 @@ loadMoreButton.addEventListener("click", () => {
     loadPokemonItens(offset, limit);
   }
 });
-
-// returnToHome.addEventListener("click", () => {
-//   console.log("cliquei");
-//   window.location.replace("../index.html", "_blank");
-// });

@@ -1,36 +1,37 @@
-const pokeInfo = document.getElementsByClassName("content");
+const pokeInfo = document.getElementById("card");
 
-function convertPokeApiInfoToPokemon(pokeDetail) {
-  const pokemon = new Pokemon();
-  pokemon.number = pokeDetail.id;
-  pokemon.name = pokeDetail.name;
-  pokemon.height = pokeDetail.height;
-  pokemon.weight = pokeDetail.weight;
+// function convertPokeApiInfoToPokemon(pokeDetail) {
+//   const pokemon = new Pokemon();
+//   console.log(pokemon);
+//   pokemon.number = pokeDetail.id;
+//   pokemon.name = pokeDetail.name;
+//   pokemon.height = pokeDetail.height;
+//   pokemon.weight = pokeDetail.weight;
 
-  const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name);
-  const [type] = types;
+//   const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name);
+//   const [type] = types;
 
-  pokemon.types = types;
-  pokemon.type = type;
+//   pokemon.types = types;
+//   pokemon.type = type;
 
-  if (pokeDetail.abilities) {
-    const abilities = pokeDetail.abilities.map(
-      (abilitySlot) => abilitySlot.ability.name
-    );
-    const [ability] = abilities;
+//   if (pokeDetail.abilities) {
+//     const abilities = pokeDetail.abilities.map(
+//       (abilitySlot) => abilitySlot.ability.name
+//     );
+//     const [ability] = abilities;
 
-    pokemon.abilities = abilities;
-    pokemon.ability = ability;
-  }
+//     pokemon.abilities = abilities;
+//     pokemon.ability = ability;
+//   }
 
-  pokemon.photo = pokeDetail.sprites.other.dream_world.front_default;
+//   pokemon.photo = pokeDetail.sprites.other.dream_world.front_default;
 
-  return pokemon;
-}
+//   return pokemon;
+// }
 
 function convertPokemonToCard(pokemon) {
-  console.log(pokemon);
-  return `<header>
+  return `
+    <header>
       <p class="back_home">Fechar</p>
       <p>Número</p>
     </header>
@@ -52,8 +53,11 @@ function convertPokemonToCard(pokemon) {
         .join("")}
       </ol>
     </div>
-    <p>${pokemon.height}in</p>
-    <p>${pokemon.weight}lb</p>`;
+    <div>
+    <p>Altura: ${pokemon.height}in</p>
+    <p>Peso: ${pokemon.weight}lb</p>
+    </div>
+    </li>`;
 }
 
 function getId() {
@@ -63,12 +67,12 @@ function getId() {
   return id;
 }
 
-function loadPokemon() {
-  pokeApi.pokemonCard(getId()).then((pokemon) => {
-    const infoPokemon = convertPokemonToCard(pokemon);
-    console.log(infoPokemon);
-    pokeInfo += infoPokemon;
+function loadPokemon(id) {
+  pokeApi.pokemonCard(id).then((pokemon) => {
+    const newPokemon = convertPokemonToCard(pokemon);
+    pokeInfo.innerHTML += newPokemon;
+    console.log();
   });
 }
 
-loadPokemon();
+loadPokemon(getId());

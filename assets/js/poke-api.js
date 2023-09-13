@@ -2,6 +2,7 @@ const pokeApi = {};
 
 function convertPokeApiDetailToPokemon(pokeDetail) {
   const pokemon = new Pokemon();
+  console.log(pokemon);
   pokemon.number = pokeDetail.id;
   pokemon.name = pokeDetail.name;
 
@@ -63,11 +64,10 @@ pokeApi.getPokemons = (offset = 0, limit = 5) => {
 
 pokeApi.pokemonCard = (id) => {
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-  console.log(url);
 
   return fetch(url)
     .then((response) => response.json())
-    .then((pokemon) => convertPokeApiDetailToPokemon(pokemon))
+    .then((pokemon) => convertPokeApiInfoToPokemon(pokemon))
     .then((pokemonsDetails) => pokemonsDetails);
   // .then((res) => {
   //   console.log(res);
