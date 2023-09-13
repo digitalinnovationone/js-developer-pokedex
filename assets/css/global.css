@@ -1,5 +1,6 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Pokemon Solid', sans-serif;
     box-sizing: border-box;
 }
 
@@ -14,6 +15,20 @@ body {
     background-color: #fff;
 }
 
+/* Estilo para o botão com cursor de mão */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Estilo para a imagem ao lado do título */
+.icone {
+    width: 20px; /* Largura desejada para a imagem */
+    height: 20px; /* Altura desejada para a imagem */
+    margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+    vertical-align: middle; /* Alinhar verticalmente a imagem ao texto */
+}
+
+
 @media screen and (min-width: 992px) {
     .content {
         max-width: 992px;
@@ -21,4 +36,109 @@ body {
         margin: 1rem auto;
         border-radius: 1rem;
     }
+}
+
+/* Estilos do Modal - Copie do Projeto 01 e cole no Projeto 02 */
+.modal h1 {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 700;
+    opacity: .7;
+    text-align: center;
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
+.modal .modal-header {
+    border-bottom: none;
+}
+
+.modal .modal-content {
+    border-radius: 25px;
+    border: none;
+}
+
+.modal .modal-content .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
+.modal .modal-content .modal-body img {
+    max-width: 250px;
+    margin-bottom: -15px;
+    z-index: 1;
+}
+
+.modal .modal-content .modal-body .stats {
+    background-color: #FFF;
+    border-radius: 15px;
+    width: 100%;
+    padding: 1rem;
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
+.modal .modal-content .modal-body .stats ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.modal .modal-content .modal-body .stats ul li {
+    display: grid;
+    grid-template-columns: .8fr 1fr;
+    grid-gap: .5rem;
+    align-items: center;
+}
+
+.modal .modal-content .modal-body .stats ul li .stat {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal .modal-content .modal-body .stats ul li .stat .stat-name {
+    text-transform: capitalize;
+}
+
+.modal .modal-content .modal-body .stats ul li .rate {
+    height: 4px;
+    width: 100%;
+    background-color: #e9e9e9;
+    position: relative;
+    border-radius: 5px;
+}
+
+.modal .modal-content .modal-body .stats ul li .rate .red {
+    position: absolute;
+    height: 100%;
+    background-color: red;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 5px;
+}
+
+.modal .modal-content .modal-body .stats ul li .rate .green {
+    position: absolute;
+    height: 100%;
+    background-color: rgb(51, 255, 0);
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+footer#rodape p {
+    text-align: center;
+    margin: auto;
+   }
+   footer#rodape p#teste {
+    text-align: center;
+    margin-left: -50px;
+    margin-top: 10px;
+   }
+
+footer#rodape a {
+    color: #92bb35;
+    margin: 10px;
 }
