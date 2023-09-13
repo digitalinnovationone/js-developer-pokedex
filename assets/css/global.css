@@ -1,24 +1,113 @@
 * {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #f6f8fc;
+  background-color: #f6f8fc;
 }
-
 .content {
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
-    background-color: #fff;
+  padding: 1rem;
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
 }
 
-@media screen and (min-width: 992px) {
-    .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
+.content h1 {
+  margin: 0;
+}
+.modalMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed; /* Change to fixed */
+  z-index: 1;
+  top: 0; /* Align to the top of the viewport */
+  left: 0; /* Align to the left of the viewport */
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+}
+.modalDetais {
+  padding: 1rem;
+  border-radius: 2rem;
+}
+.modalDetais {
+  border: 3px solid white;
+  box-shadow: 0.2rem 0.2rem 1rem rgb(12, 12, 12);
+}
+.modalTitle {
+  padding-top: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.modalNumber {
+  padding: 0.4rem;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  filter: brightness(1.1);
+  box-shadow: 0.01rem 0.01rem 0.0689rem rgb(12, 12, 12);
+}
+.modalName {
+  font-style: italic;
+  text-transform: uppercase;
+  padding-left: 1rem;
+}
+.modalTitle {
+  margin-bottom: 1rem;
+  padding-bottom: 2%;
+  border-bottom: 1px solid white;
+}
+.buttonX {
+  margin-left: auto;
+  background-color: red;
+  filter: brightness(1.07);
+  border: none;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  color: azure;
+}
+main{
+  display: none;
+}
+.modalPhotoCard {
+  background-image: url(../_img/pngaaa.com-96212.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.modalTypes {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  justify-content: space-around;
+  filter: brightness(1.1);
+}
+.modalTypes {
+  border-top: 1px solid white;
+  padding-top: 1rem;
+}
+.modalType{
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem 0;
+  font-size: 0.625rem;
+  border-radius: 1rem;
+  color: white;
+  font-size: 1.5rem;
+}
+.modalName{
+  font-size: 1.3rem;
+  color: white;
+}
+.modalPhoto{
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
