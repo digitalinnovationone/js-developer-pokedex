@@ -18,29 +18,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
 
     <!-- Nosso CSS -->
-    <link rel="stylesheet" href="/assets/css/global.css">
-    <link rel="stylesheet" href="/assets/css/pokedex.css">
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/pokedex.css">
+    <!-- css bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 
 <body>
     <section class="content">
-        <h1>Pokedex</h1>
+        <header class="p-4">
+            <h1 class="ms-4">Pokedex</h1>
+        </header>
+    
+        <main class="container mt-2 m-auto d-flex justify-content-center flex-column">
+            <ol class="pokemons d-flex justify-content-center row p-0 mx-2 gap-3" id="pokemonList">
+    
+            </ol>
 
-        <ol id="pokemonList" class="pokemons">
-            <!-- ..... Pokemons here ..... -->
-        </ol>
+            <div class="pagination justify-content-center">
+                <button id="loadMoreButton" type="button" class="btn btn-primary rounded-pill p-2">
+                    Load More
+                </button>
+            </div>
+        </main>
 
-        <div class="pagination">
-            <button id="loadMoreButton" type="button">
-                Load More
-            </button>
-        </div>
     </section>
 
     <!-- Nosso JS -->
-    <script src="/assets/js/pokemon-model.js"></script>
-    <script src="/assets/js/poke-api.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="./assets/js/pokemon-model.js"></script>
+    <script src="./assets/js/poke-api.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
