@@ -146,6 +146,11 @@
     border-radius: 1rem;
 }
 
+.card:hover {
+    transform: scale(1.1);
+    transition: all .2s ease-in-out; 
+}
+
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
