@@ -69,7 +69,4 @@ pokeApi.pokemonCard = (id) => {
     .then((response) => response.json())
     .then((pokemon) => convertPokeApiInfoToPokemon(pokemon))
     .then((pokemonsDetails) => pokemonsDetails);
-  // .then((res) => {
-  //   console.log(res);
-  // });
 };

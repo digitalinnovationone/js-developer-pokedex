@@ -1,66 +1,39 @@
 const pokeInfo = document.getElementById("card");
 
-// function convertPokeApiInfoToPokemon(pokeDetail) {
-//   const pokemon = new Pokemon();
-//   console.log(pokemon);
-//   pokemon.number = pokeDetail.id;
-//   pokemon.name = pokeDetail.name;
-//   pokemon.height = pokeDetail.height;
-//   pokemon.weight = pokeDetail.weight;
-
-//   const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name);
-//   const [type] = types;
-
-//   pokemon.types = types;
-//   pokemon.type = type;
-
-//   if (pokeDetail.abilities) {
-//     const abilities = pokeDetail.abilities.map(
-//       (abilitySlot) => abilitySlot.ability.name
-//     );
-//     const [ability] = abilities;
-
-//     pokemon.abilities = abilities;
-//     pokemon.ability = ability;
-//   }
-
-//   pokemon.photo = pokeDetail.sprites.other.dream_world.front_default;
-
-//   return pokemon;
-// }
-
 function convertPokemonToCard(pokemon) {
   return `
-    <header>
-      <p class="back_home">Fechar</p>
-      <p>Número</p>
-    </header>
-    <section>
-      <article>
-      <img src="${pokemon.photo}" alt="${pokemon.name}" />
+  <article>
+    <div class="card_first_div ${pokemon.type}">
+      <header>
+        <p>#${pokemon.number}</p>
+      </header>
+      <div>
+        <img src="${pokemon.photo}" alt="${pokemon.name}" />
         <h3>${pokemon.name}</h3>
-        <div class="detail">
+      </div>
+      <div class="card_detail">
         <ol class="pokemon_info_types">${pokemon.types
           .map((type) => `<li class="pokemon_type ${type}">${type}</li>`)
           .join("")}
         </ol>
-        </div>
-      </article>
-    <div class="pokemon_div">
+      </div>
+    </div>
+    <div class="card_second_div">
+      <h3>Informações</h3>
       <h5>Habilidades:</h5>
-      <ol class="pokemon_info_abilities">${pokemon.abilities
-        .map((ability) => `<li class="pokemon_type ${ability}">${ability}</li>`)
+      <ul class="pokemon_info_abilities">${pokemon.abilities
+        .map((ability) => `<li class="ability">${ability}</li>`)
         .join("")}
-      </ol>
+      </ul>
+      <div>
+        <p><span class="info">Altura:</span> ${pokemon.height} in</p>
+        <p><span class="info">Peso:</span> ${pokemon.weight} lb</p>
+      </div>
     </div>
-    <div>
-    <p>Altura: ${pokemon.height}in</p>
-    <p>Peso: ${pokemon.weight}lb</p>
-    </div>
-    </li>`;
+  </article>`;
 }
 
-function getId() {
+function pokemonId() {
   const getUrl = window.location.href;
   const paramUrl = new URL(getUrl);
   const id = paramUrl.searchParams.get("id");
@@ -75,4 +48,4 @@ function loadPokemon(id) {
   });
 }
 
-loadPokemon(getId());
+loadPokemon(pokemonId());
