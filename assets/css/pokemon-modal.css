@@ -1,0 +1,107 @@
+#modal {
+    height: 70vh;
+    width: 20vw;
+
+    position: relative;
+    bottom: 90vh;
+    left: 40vw;
+}
+
+#pokemonStatus {
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 1rem;
+}
+
+header {
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header #pokemonStatsName {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+
+    color: #fff;
+}
+
+header #pokemonStatsOrder {
+    font-size: 0.625rem;
+    opacity: 0.3;
+
+    color: #000;
+}
+
+main {
+    height: 30%;
+}
+
+main img {
+    height: 120px;
+
+    position: relative;
+    top: 30px;
+}
+
+footer {
+    height: 50%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ol {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    border-radius: 1rem;
+
+    list-style: none;
+
+    background-color: #F6F8FC;
+}
+
+footer ol .stats {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+footer ol #modalButton {
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    border: none;
+    border-radius: 1rem;
+
+    background-color: #dd441d;
+    color: #fff;
+}
+
+/* Modal visivel */
+.enable {
+    display: block;
+}
+
+/* Modal Invisivel */
+.disable {
+    display: none;
+}
