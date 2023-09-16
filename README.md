@@ -1,1 +1,1 @@
-# Trilha JS Developer - Pokedex
+# Bootcamp Santander FullStack Java+Angular - Pokedex
