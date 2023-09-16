@@ -163,3 +163,138 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
+.popup {
+    text-transform: capitalize;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+    font-family: 'Roboto',sans-serif;
+    font-size: 1rem;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+
+.popup-content button {
+    background-color: #6c79db;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #5564a7;
+}
+
+
+.popup-content.normal {
+    background-color: #a4c578;
+}
+
+.popup-content.grass {
+    background-color: #77c850;
+}
+
+.popup-content.water {
+    background-color: #678fee;
+}
+
+.popup-content.electric {
+    background-color: #f7cf2e;
+}
+
+.popup-content.fire {
+    background-color: #ee7f30;
+}
+
+.popup-content.ice {
+    background-color: #98d5d7;
+}
+
+.popup-content.ground {
+    background-color: #dfbf69;
+}
+
+.popup-content.flying {
+    background-color: #a98ff0;
+}
+
+.popup-content.poison {
+    background-color: #a040a0;
+}
+
+.popup-content.fighting {
+    background-color: #bf3029;
+}
+
+.popup-content.psychic {
+    background-color: #f65687;
+}
+
+.popup-content.dark {
+    background-color: #725847;
+}
+
+.popup-content.rock {
+    background-color: #b8a137;
+}
+
+.popup-content.bug {
+    background-color: #a8b720;
+}
+
+.popup-content.ghost {
+    background-color: #6e5896;
+}
+
+.popup-content.steel {
+    background-color: #b9b7cf;
+}
+
+.popup-content.dragon {
+    background-color: #6f38f6;
+}
+
+.popup-content.fairy {
+    background-color: #f9aec7;
+}
+
+@media screen and (min-width: 380px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
