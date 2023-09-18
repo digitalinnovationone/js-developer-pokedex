@@ -23,8 +23,28 @@
 </head>
 
 <body>
+    <span class="overlay" onclick="closeOverlay()"></span>
     <section class="content">
+
+
         <h1>Pokedex</h1>
+
+
+        <div id="pokeInfo">
+            <button id="closeButton">X</button>
+            <h2 class="pokeInfoNumber">#001</h2>
+            <h2 class="pokeInfoName">Bulbassaur</h2>
+            <ol class="pokeInfoTypes">
+                <li class="type grass">Grass</li>
+                <li class="type poison">Poison</li>
+            </ol>
+            <img class="pokeInfoImg" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="">
+            <h3>Stats:</h3>
+            <ul class="pokeInfoStats">
+                
+            </ul>
+            
+        </div>
 
         <ol id="pokemonList" class="pokemons">
             <!-- ..... Pokemons here ..... -->
