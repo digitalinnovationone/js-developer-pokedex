@@ -1,0 +1,176 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.icon a img {
+    width: 0.75rem;
+    margin-top: 2rem;
+    margin-left: 0.8rem;
+}
+
+.pokemon {
+    display: flex;
+    flex-direction: column;
+}
+
+.number {
+    color: #fff;
+    font-size: 1rem;
+    text-align: right;
+    margin-right: 0.8rem;
+    margin-top: 1rem;
+}
+
+.name {
+    color: #fff;
+    font-size: 1.6rem;
+    margin: 0.8rem 0 0.2rem 0.6rem;
+    text-transform: capitalize;
+}
+
+.types {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0 1rem;
+}
+
+.type{
+    color: #fff;
+    padding: 0.25rem 0.4rem;
+    margin: 0.225rem 0.2rem;
+    border-radius: 1rem;
+    font-size: 0.825rem;
+    text-align: center;
+    filter: brightness(1.1);
+}
+
+.img-pokemon{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.2rem;
+}
+
+.img-pokemon a img {
+    height: 8.75rem;
+}
+
+.detail {
+    height: 55vh;
+    background-color: #fff;
+    border-radius: 1rem 1rem 0 0rem;
+}
+
+.subtitle {
+    color: #1f1d1d;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0.9rem 0 0 0;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    }
+
+.text {
+    margin-top: 0.1rem;
+    font-size: 0.925rem;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+
+progress {
+    -webkit-appearance: none;
+}
+
+.ability {
+    font-size: 0.855rem;
+    font-weight: 300;
+}
+
+.progress-bar::-webkit-progress-bar {
+    background-color: #ffff;
+    border: 0.125rem solid #000;
+    border-radius: 0.313rem;
+    height: 0.825rem;
+    width: 6.25rem;
+}
+
+.progress-bar::-moz-progress-bar {
+    background-color: #ffff;
+    border: 0.125rem solid #000;
+    height: 0.625rem;
+    width: 7.5rem;
+}
+
+progress::-webkit-progress-value {
+    background: #2bd3ba;
+}
+
+
+@media screen and (min-width: 1000px) and (max-width:1439){
+    .name {
+        font-size: 2rem;
+        margin-left: 1.5rem;
+    }
+    .type {
+        margin-left: 1rem;
+    }
+    .number {
+        font-size: 1rem;
+        margin-right: 1.5rem;
+    }
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    .text {
+        font-size: 1rem;
+    }
+    .ability {
+        font-size: 1rem;
+}
+    .skills {
+        padding-bottom: 7.5rem;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    
+    .name {
+        font-size: 2.5rem;
+        margin-left: 1.5rem;
+    }
+    .type {
+        margin-left: 1rem;
+        font-size: 1rem;
+    }
+    .number {
+        font-size: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    .subtitle {
+        font-size: 1.6rem;
+    }
+    .text {
+        font-size: 1.4rem;
+    }
+    .ability {
+        font-size: 1.4rem;
+}
+}
