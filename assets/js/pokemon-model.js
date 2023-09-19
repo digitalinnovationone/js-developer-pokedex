@@ -6,3 +6,17 @@ class Pokemon {
     types = [];
     photo;
 }
+
+
+class PokemonStatus {
+    id;
+    name;
+    type;
+    weight;
+    height;
+    abilities;
+    attack;
+    defense;
+    speed;
+    image;
+}
