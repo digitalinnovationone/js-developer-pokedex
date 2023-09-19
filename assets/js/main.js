@@ -55,9 +55,7 @@ loadMoreButton.addEventListener('click', () => {
 })
 
 
-
-
-function convertSigleDataToModal(pokeData) {
+function convertPokemons(pokeData) {
     const { id, name, weight, height,
         abilities, attack, defense, speed, image, type, description } = pokeData
     
@@ -99,7 +97,7 @@ function convertSigleDataToModal(pokeData) {
 async function dataPokemon(number) {
     
     const description = await pokeApi.getDescription(number)
-    const listPokemon = await pokeApi.getSinglePokemon(number).then(res => convertSigleDataToModal({ ...res, description: description }))
+    const listPokemon = await pokeApi.getSinglePokemon(number).then(res => convertPokemons({ ...res, description: description }))
     content.innerHTML =  listPokemon
        
 
