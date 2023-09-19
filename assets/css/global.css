@@ -14,6 +14,12 @@ body {
     background-color: #fff;
 }
 
+
+.popupPoke {
+    background: red;
+  }
+
+
 @media screen and (min-width: 992px) {
     .content {
         max-width: 992px;
