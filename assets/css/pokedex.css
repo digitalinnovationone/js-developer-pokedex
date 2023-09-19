@@ -146,6 +146,76 @@
     border-radius: 1rem;
 }
 
+.details {
+    background: #77c850;
+    padding: 2rem 1rem;
+}
+
+.details a {
+    color: white;
+    font-size:x-large;
+}
+
+.details .name{
+    margin: 1rem 0 0;
+    color: white;
+    font-size:xx-large;
+}
+
+.details .number{
+    color: white;
+    text-align: end;
+    margin: 0;
+    padding: 0;
+}
+
+.details .detail .types{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: white;
+}
+
+.details .detail .types .type{
+    color: white;
+    padding: .25rem 1.5rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    font-size: .675rem;
+    text-align: center;
+}
+
+.details ol {
+    margin: 0;
+    list-style: none;
+}
+
+.details {
+    margin: 0;
+}
+
+.information {
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+
+.information ol{
+    display:block;
+    margin: 0;
+    padding: 1rem 0 0 0;
+    font-size: .675rem;
+}
+
+.information .breeding{
+    padding: 1rem 0 0 0;
+    font-size: .750rem;
+}
+
+.information ol ul{
+    padding: 1rem 0 0 0;
+}
+
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
