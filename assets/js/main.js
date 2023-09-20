@@ -12,13 +12,10 @@ function convertPokemonToLi(pokemon) {
         <li class="pokemon ${pokemon.type}" onclick="dataPokemon(${pokemon.number})">  
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
-
             <div class="detail">
                 <ol class="types">
-                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-              
+                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}              
                 </ol>
-
                 <img src="${pokemon.photo}"
                      alt="${pokemon.name}">
             </div>
@@ -26,15 +23,10 @@ function convertPokemonToLi(pokemon) {
     
     `
 }
-
-
-
-
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map(convertPokemonToLi).join('')
-        pokemonList.innerHTML += newHtml
-        
+        pokemonList.innerHTML += newHtml        
     })
 }
 
@@ -54,7 +46,6 @@ loadMoreButton.addEventListener('click', () => {
     }
 })
 
-
 function convertPokemons(pokeData) {
     const { id, name, weight, height,
         abilities, attack, defense, speed, image, type, description } = pokeData
@@ -67,10 +58,8 @@ function convertPokemons(pokeData) {
                     <img
                     src="${image}"
                     alt="${name}"
-                    />
-                    
-            </div>
-        
+                    />                    
+            </div>        
             <div class="detail-pokemon">
                 <span>
                     ${description}
@@ -85,7 +74,6 @@ function convertPokemons(pokeData) {
                 </ul>
             </div>
         </section>
-
         <div class="pagination">
             <button type="button" onclick="reload()")>
                 Voltar
@@ -94,12 +82,10 @@ function convertPokemons(pokeData) {
     `
 }
 
-async function dataPokemon(number) {
-    
+async function dataPokemon(number) {    
     const description = await pokeApi.getDescription(number)
     const listPokemon = await pokeApi.getSinglePokemon(number).then(res => convertPokemons({ ...res, description: description }))
-    content.innerHTML =  listPokemon
-       
+    content.innerHTML =  listPokemon       
 
 }
 
