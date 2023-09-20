@@ -14,6 +14,14 @@ body {
     background-color: #fff;
 }
 
+h1 {
+    text-align: center;
+    background-color: #2f21c7;
+    border: 6px #7708df;
+    border-radius: 0.7rem;
+    font-size: sans-serif;
+    color: rgb(231, 230, 238);
+}
 @media screen and (min-width: 992px) {
     .content {
         max-width: 992px;
