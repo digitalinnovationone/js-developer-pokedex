@@ -4,15 +4,53 @@
 }
 
 body {
-    background-color: #f6f8fc;
+    position: relative;
+    background-size: contain; /* Ajusta a imagem à janela do navegador */
+    background: rgba(128, 128, 128, 0.6); /* Cinza com 60% de opacidade */
+    background-image: url('/assets/plano-de-fundo/todos-os-pokemon.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; /* Centraliza a imagem de fundo */
 }
 
+
+body::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background-size: contain; /* Ajusta o elemento ::before à janela do navegador */
+}
+
+
 .content {
-    width: 100vw;
+    position: relative;
+    width: 100%;
     height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.617);
+    backdrop-filter: blur(5px);
 }
+
+#poketitle {
+    height: 45px;
+    width: 160px;
+    padding: 1rem 2rem;
+    color: #008; /* Define a cor do texto como azul */
+    position: relative;
+    text-decoration: underline;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff; /* Define a borda preta ao redor das letras */
+}
+
+
 
 @media screen and (min-width: 992px) {
     .content {
