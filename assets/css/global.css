@@ -3,15 +3,28 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: PokemonHollow;
+    src: url(../../fonts/PokemonHollow.ttf);
+ }
+
 body {
-    background-color: #f6f8fc;
+    background-image: url("../../img/backgroung.poke.png");
+    
+    }
+
+h1 {
+    font-size: 40px;
+    font-family: PokemonHollow;
+    text-align: center;
+    
 }
 
 .content {
     width: 100vw;
     height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #f6f8fc;    
 }
 
 @media screen and (min-width: 992px) {
@@ -22,3 +35,4 @@ body {
         border-radius: 1rem;
     }
 }
+
