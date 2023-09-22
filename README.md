@@ -1,6 +1,6 @@
-# Santander Bootcamp 2023 - Desenvolvimento Web com PokeAPI
-
 <img src="https://lp.dio.me/wp-content/uploads/2023/05/BADGE_LUZ-4.png" alt="Logo do Santander Bootcamp 2023" width="200">
+
+# Santander Bootcamp 2023 - Desenvolvimento Web com PokeAPI
 
 Este projeto faz parte do Santander Bootcamp 2023 Java + Angular em parceria com a Digital Innovation One (DIO), nesse projeto exploramos o desenvolvimento web utilizando HTML, CSS e JavaScript para criar uma aplicação que integra dados da PokeAPI.
 
