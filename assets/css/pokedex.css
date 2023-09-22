@@ -146,9 +146,129 @@
     border-radius: 1rem;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 10%;
+    top: 10%;
+    width: 80%;
+    height: 90%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 100%;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 1px;
+    right: 12px;
+    z-index: 9999;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal .modal-content .modalBody {
+    background-color: #808080;
+}
+
+.headerBox {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: end;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    align-content: center;
+    justify-items: center;
+}
+
+.headerBox img {
+    max-width: 70%;
+    border: 2px solid #fff; 
+
+}
+
+.headerBoxInside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 15px;
+}
+
+.nameBox {
+    text-align: left;
+    text-transform: capitalize;
+    margin-bottom: 0.25rem;
+}
+
+.numberBox {
+    text-align: right;
+    color: #000;
+    opacity: .3;
+}
+
+.things1 {
+    list-style: none;
+    margin: 0.25rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-transform: capitalize;
+}
+
+.things2 {
+    list-style: none;
+    margin: 0.25rem;
+    text-transform: capitalize;
+}
+
+.order {
+    text-align: center;
+    list-style: none;
+    text-transform: capitalize;
+}
+
+.item {
+    list-style: none;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.abilitiesBox {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.statsBox {
+    text-align: center;
+    text-transform: capitalize;
+}
+.typesBox {
+    text-align: center;
+    text-transform: capitalize;
+}
+.movesBox {
+    text-align: center;
+    text-transform: capitalize;
+}
+
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .modal {
+        left: 10%;
+        top: 10%;
+        width: 35vh;
+        height: 60vh;
     }
 }
 
@@ -156,10 +276,24 @@
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    .modal {
+        left: 10%;
+        top: 10%;
+        width: 53vh;
+        height: 48.2vh;
+    }
 }
 
 @media screen and (min-width: 992px) {
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .modal {
+        left: 10%;
+        top: 10%;
+        width: 93vh;
+        height: 48.2vh;
     }
 }
