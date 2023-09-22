@@ -1,6 +1,16 @@
 
 const pokeApi = {}
 
+function addDetailsToSessionStorage(pokeDetail) {
+    const pokemonComplement = {
+        abilities: pokeDetail.abilities.map((ability) => ability.ability.name),
+        baseExperience: pokeDetail.base_experience,
+        height: pokeDetail.height
+    }
+
+    sessionStorage.setItem(pokeDetail.name, JSON.stringify(pokemonComplement))
+}
+
 function convertPokeApiDetailToPokemon(pokeDetail) {
     const pokemon = new Pokemon()
     pokemon.number = pokeDetail.id
@@ -11,9 +21,10 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
 
     pokemon.types = types
     pokemon.type = type
-
+    
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
-
+    
+    addDetailsToSessionStorage(pokeDetail)
     return pokemon
 }
 
