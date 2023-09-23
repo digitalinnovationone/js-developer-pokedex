@@ -1,5 +1,6 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
+const pokemonInfo = document.getElementById('pokemon-info')
 
 const maxRecords = 151
 const limit = 10
@@ -19,8 +20,42 @@ function convertPokemonToLi(pokemon) {
                 <img src="${pokemon.photo}"
                      alt="${pokemon.name}">
             </div>
+            
+            <div class="btn-stats">
+                <button type="button" onclick="myfunction(${pokemon.number})">
+                    Show stats...
+                </button>
+            </div>
+
         </li>
     `
+}
+
+$('.modal').on('hidden.bs.modal', function(e)
+{ 
+    $(this).empty();
+}) ;
+
+function load_pokemon_modal_information(pokemon) {
+return `
+
+    <div class="pokedex pokemon ${pokemon.type}">
+        <div class="detail">
+            <ul class="stats">
+                Base Stats
+                ${pokemon.stats.map((stat) =>
+                    `<li class="stat">${stat.stat.name} ${stat.base_stat}</li>`).join('')
+                }
+            </ul>
+            <img src="${pokemon.photo}" alt="${pokemon.name}">
+        </div> 
+
+        <div class="btn-stats">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+    </div>
+</div>
+`
 }
 
 function loadPokemonItens(offset, limit) {
@@ -45,3 +80,15 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
+function myfunction(pokemon_number){
+    console.log("Poke number " + pokemon_number)
+
+    request_pokemon_info(pokemon_number).then((pokemon) => {
+        const newHtml = load_pokemon_modal_information(pokemon);
+        console.log(pokemon);
+        $("#JanelaModal").append(newHtml);
+    });
+
+    $("#JanelaModal").modal(); 
+}

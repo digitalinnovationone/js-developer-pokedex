@@ -146,6 +146,35 @@
     border-radius: 1rem;
 }
 
+.btn-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.btn-stats button{
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    color: #fff;
+    background-color: #312e2e2d;
+    border: none;
+    border-radius: 1rem;
+}
+
+.stats{
+    list-style: none;
+}
+.pokedex{
+    margin: 5% auto; /* 25% from top and centered horizontally */
+    max-width: 35%; /* Adjust the maximum width as needed */
+    position: relative;
+    
+}
+
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
