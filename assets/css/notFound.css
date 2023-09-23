@@ -1,0 +1,9 @@
+.pokemonNotFound {
+    background-color: #fff;
+    text-align: center;
+  }
+  .error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
