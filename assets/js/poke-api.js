@@ -1,3 +1,4 @@
+
 const pokeApi = {};
 
 // inserts the information into a interface called pokemon
@@ -51,3 +52,4 @@ pokeApi.getPokemon = (pokemonname) => {
     })
   )
 };
+

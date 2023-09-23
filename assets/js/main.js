@@ -1,3 +1,4 @@
+
 const loadMoreButton = document.getElementById("loadMore");
 const pokemonInput = document.getElementById("pokemonInput");
 //references the pokemonm list in the HTML
@@ -69,3 +70,4 @@ pokemonInput.addEventListener("keydown", () => {
     });
   }
 });
+
