@@ -1,11 +1,22 @@
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+  
 }
 
 body {
     background-color: #f6f8fc;
+   
 }
+.header{
+    width: 100vw;
+    height: 10vh;
+    padding: 1rem;
+    background-color: #ad3737;
+    margin: 0;
+    padding: 3vh;
+}
+
 
 .content {
     width: 100vw;
