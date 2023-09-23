@@ -25,17 +25,43 @@
 <body>
     <section class="content">
         <h1>Pokedex</h1>
+        <div class="optionsDiv">
+            <div class="select">
+                <select name="filter-poke" id="poke-filter" >
+                    <option value="all">all</option>
+                    <option value="bug">bug</option>
+                    <option value="dragon">dragon</option>
+                    <option value="electric">electric</option>
+                    <option value="fairy">fairy</option>
+                    <option value="fighting">fighting</option>
+                    <option value="fire">fire</option>
+                    <option value="flying">flying</option>
+                    <option value="ghost">ghost</option>
+                    <option value="grass">grass</option>
+                    <option value="ground">ground</option>
+                    <option value="ice">ice</option>
+                    <option value="normal">normal</option>
+                    <option value="poison">poison</option>
+                    <option value="psychic">psychic</option>
+                    <option value="rock">rock</option>
+                    <option value="steel">steel</option>
+                    <option value="water">water</option>
+                </select>
+            </div>
+        </div>
 
         <ol id="pokemonList" class="pokemons">
             <!-- ..... Pokemons here ..... -->
         </ol>
 
-        <div class="pagination">
+       <div class="pagination">
             <button id="loadMoreButton" type="button">
                 Load More
             </button>
         </div>
     </section>
+
+    
 
     <!-- Nosso JS -->
     <script src="/assets/js/pokemon-model.js"></script>
