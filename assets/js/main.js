@@ -26,26 +26,25 @@ function loadPokemonItens(offset, limit) {
           
           </div>
         </li>
-    `
-      )
-      .join("");
+    `).join('')
 
-    pokemonList.innerHTML += newHtml;
-  });
+        pokemonList.innerHTML += newHtml
+    })
 }
 
 loadPokemonItens(offset, limit);
 
-loadMoreButton.addEventListener("click", () => {
-  offset += limit;
-  const qtdRecordsWithNextPage = offset + limit;
+loadMoreButton.addEventListener('click', () => {
+    offset += limit
+    const qtdRecordsWithNextPage = offset + limit
 
-  if (qtdRecordsWithNextPage >= maxRecords) {
-    const newLimit = maxRecords - offset;
-    loadPokemonItens(offset, newLimit);
+    if (qtdRecordsWithNextPage >= maxRecords) {
+        const newLimit = maxRecords - offset
+        loadPokemonItens(offset, newLimit)
 
-    loadMoreButton.parentElement.removeChild(loadMoreButton);
-  } else {
-    loadPokemonItens(offset, limit);
-  }
-});
+        loadMoreButton.parentElement.removeChild(loadMoreButton)
+    } else {
+        loadPokemonItens(offset, limit)
+    }
+
+})
