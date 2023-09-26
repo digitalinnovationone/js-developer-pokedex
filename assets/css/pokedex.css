@@ -84,6 +84,7 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .pokemon .number {
@@ -120,6 +121,7 @@
     border-radius: 1rem;
     filter: brightness(1.1);
     text-align: center;
+    text-transform: capitalize;
 }
 
 .pokemon .detail img {
@@ -146,9 +148,173 @@
     border-radius: 1rem;
 }
 
+#detailSection {
+    display: none;
+}
+
+#pokemonsSection {
+    display: block;
+}
+
+#detailContent {
+    height: 100vh;
+}
+
+.detailHeader button {
+    background-color: transparent;
+    border: 0;
+    margin: 1rem 0.5rem;
+    color: white;
+}
+
+#detailPokemon .headerWrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+#detailPokemon .headerWrapper .nameTypes {
+    display: flex;
+    flex-direction: column;
+}
+
+#detailPokemon .headerWrapper .numberShiny {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#detailPokemon .headerWrapper .number {
+    color: #fff;
+    text-align: right;
+    font-size: 1.2rem;
+    align-self: center;
+    justify-content: flex-end;
+}
+
+#detailPokemon .headerWrapper svg {
+    background-color: transparent;
+    border: 0;
+    margin-top: 0.5rem;
+    color: white;
+    height: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#detailPokemon .headerWrapper #shinyTrue {
+    color: #f7cf2e;
+    display: none;
+}
+
+#detailPokemon .headerWrapper .name {
+    text-transform: capitalize;
+    color: #fff;
+    margin: 0.25rem 1rem;
+    font-size: 2rem;
+}
+
+#detailPokemon .headerWrapper .detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#detailPokemon .headerWrapper .detail .types {
+    padding: 0;
+    margin: 0.25rem 1rem;
+    list-style: none;
+    text-transform: capitalize;
+}
+
+#detailPokemon .headerWrapper .detail .types .type {
+    color: #fff;
+    padding: .25rem .75rem;
+    margin: .25rem .125rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+    display: inline;
+    text-transform: capitalize !important;
+}
+
+#detailPokemon .contentWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+}
+
+#detailPokemon .contentWrapper .images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#detailPokemon .contentWrapper .images #photoShiny {
+    display: none;
+}
+
+#detailPokemon .contentWrapper .images img {
+    max-width: 100%;
+    height: 250px;
+}
+
+#detailPokemon .contentWrapper .details {
+    display: flex;
+    justify-content: center;
+}
+
+
+#detailPokemon .details table {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #fff;
+    padding: 2rem 1em;
+    margin: 1rem 2rem;
+    border-radius: 1rem;
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+}
+
+#detailPokemon .details table .title {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#detailPokemon .details table .title th {
+    justify-self: center;
+    margin-bottom: 1rem;
+}
+
+
+#detailPokemon .details table tr {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+#detailPokemon .details table tr th {
+    justify-self: self-start;
+    margin-right: 1rem;
+}
+
+#detailPokemon .details table tr th {
+    justify-self: self-start;
+    margin-right: 1rem;
+}
+
+
+
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
+    }
+
+    #detailPokemon .contentWrapper .images img {
+        height: 300px;
     }
 }
 
@@ -156,10 +322,30 @@
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    #detailPokemon .contentWrapper .images img {
+        height: 400px;
+    }
 }
+
+@media screen and (min-width: 768px) {
+
+    #detailPokemon .contentWrapper .images img {
+        height: 400px;
+    }
+}
+
 
 @media screen and (min-width: 992px) {
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #detailPokemon .contentWrapper .images img {
+        height: 600px;
+    }
+
+    #detailPokemon .contentWrapper {
+        grid-template-columns: 2fr 1fr ;
     }
 }
