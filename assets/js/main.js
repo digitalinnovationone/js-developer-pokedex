@@ -2,9 +2,7 @@ const pokemonList = document.getElementById('pokemonList')
 
 const loadMoreButton = document.getElementById('loadMoreButton')
 
-const showDetail = document.querySelectorAll(".showDetail")
-const buttonsOpenDialog = document.querySelectorAll(".openDialog")
-const modal =  document.querySelector("dialog")
+const modal = document.querySelector("dialog");
 
 const maxRecords = 151
 const limit = 10
@@ -39,33 +37,50 @@ function convertPokemonToLi(pokemon) {
                             alt ="${pokemon.name}">
                 </div>
 
-            <button class="showDetail">Abrir Diálogo</button>
+                <button class="openDialog">Abrir Diálogo</button>
             
-        </li>
-
-        
+        </li>      
     `
 }
 
-// Função para abrir o diálogo
-function abrirDialogo() {
-    modal.showModal();
-}
+document.addEventListener('DOMContentLoaded', function () {
+    const openDialogButtons = document.querySelectorAll('.openDialog');
+    const meuDialogo = document.getElementById('meuDialogo');
 
-// Função para fechar o diálogo
-function fecharDialogo() {
-    modal.close();
-}
+    function abrirDialogo() {
+        meuDialogo.showModal();
+    }
 
-buttonsOpenDialog.forEach(botao => {
-    botao.addEventListener('click', abrirDialogo);
-});
+    openDialogButtons.forEach(botao => {
+        botao.addEventListener('click', abrirDialogo);
+    });
 
-showDetail.forEach(botao => {
-    botao.addEventListener('click', abrirDialogo);
-});
+    function fecharDialogo() {
+        meuDialogo.close();
+    }
+})
 
-// fecharDialogo.addEventListener('click', fecharDialogo);
+// // Função para abrir o diálogo
+// function abrirDialogo() {
+//     modal.showModal();
+// }
+
+// // Função para fechar o diálogo
+// function fecharDialogo() {
+//     modal.close();
+// }
+
+// // Selecionar todos os botões "showDetail" e adicionar evento de clique a cada um
+// const showDetailButtons = document.querySelectorAll('.showDetail');
+// showDetailButtons.forEach(button => {
+//     button.addEventListener('click', abrirDialogo);
+// });
+
+// // Selecionar todos os botões "openDialog" e adicionar evento de clique a cada um
+// const openDialogButtons = document.querySelectorAll('.openDialog');
+// openDialogButtons.forEach(button => {
+//     button.addEventListener('click', abrirDialogo);
+// });
 
 
 function loadPokemonItens(offset, limit) {
