@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    box-shadow: none;
 }
 
 .normal {
@@ -84,6 +85,7 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    border: 0.5px solid #131210;
 }
 
 .pokemon .number {
@@ -97,6 +99,7 @@
     text-transform: capitalize;
     color: #fff;
     margin-bottom: .25rem;
+    text-align:left;
 }
 
 .pokemon .detail {
@@ -121,6 +124,29 @@
     filter: brightness(1.1);
     text-align: center;
 }
+
+.h4 {
+    font-style: italic;
+    color: white;
+    margin-bottom: 3px;
+    margin-top: 5px;
+
+}
+
+.ability {
+    list-style: none;
+    font-size: 10px;
+    margin-left: -40px; 
+    padding: 0;
+ }
+
+ .stat {
+    list-style: none;
+    color: white;
+    font-size: 10px;
+    margin-left: -40px; 
+    padding: 0;
+ }
 
 .pokemon .detail img {
     max-width: 100%;
