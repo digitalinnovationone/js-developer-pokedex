@@ -1,6 +1,8 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
-
+const button = document.querySelector("button")
+const modal = document.querySelector("dialog")
+// const buttonClose = document.querySelector("dialog button")
 
 const maxRecords = 151
 const limit = 10
@@ -8,8 +10,7 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
     return `
-      <a href="pokemon-detail.html" >
-        <li class="pokemon ${pokemon.type}"">
+        <li class="pokemon ${pokemon.type}" id="poke"">
                 <span class="number">#${pokemon.number}</span>
                 <span class="name">${pokemon.name}</span>
 
@@ -19,12 +20,57 @@ function convertPokemonToLi(pokemon) {
                     </ol>
                     
                     <img src="${pokemon.photo}"
-                        alt="${pokemon.name}">
+                            alt ="${pokemon.name}">
                 </div>
-            </li>
-        </a>
+
+             <button> Ver Detalhes </button>  
+             
+             <dialog>
+                <span class="number">#${pokemon.number}</span>
+                            <span class="name">${pokemon.name}</span>
+            
+                            <div class="detail">
+                                <ol class="types">
+                                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                                </ol>
+                                
+                                <img src="${pokemon.photo}"
+                                        alt ="${pokemon.name}">
+                            </div>
+            
+            </dialog>  
+        </li>
+
+        
     `
 }
+
+button.onclick = () => {
+    modal.showModal()
+}
+
+
+
+
+function createDialogDetailsPokemon(pokemon) {
+    return `
+        <dialog>
+            <span class="number">#${pokemon.number}</span>
+            <span class="name">${pokemon.name}</span>
+
+            <div class="detail">
+                <ol class="types">
+                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                </ol>
+                
+                <img src="${pokemon.photo}"
+                        alt ="${pokemon.name}"
+                    onclick = "pokePopup(${pokemon.number})">
+            </div>
+        </dialog>
+    `
+}
+
 
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
@@ -32,7 +78,6 @@ function loadPokemonItens(offset, limit) {
         pokemonList.innerHTML += newHtml
     })
 }
-
 
 loadPokemonItens(offset, limit)
 
@@ -49,7 +94,3 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
-
-function salveSelectedPokemon(pokemon) {
-    window.location = "pokemon-detail.html?pokemon=" + pokemon;
-}
