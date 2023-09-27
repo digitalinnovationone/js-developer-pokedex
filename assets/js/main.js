@@ -3,28 +3,17 @@ const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
 const modal = document.querySelector("dialog");
+const button = document.querySelector("button");
+
 
 const maxRecords = 151
 const limit = 10
 let offset = 0;
 
 function convertPokemonToLi(pokemon) {
-    modal.innerHTML = `
-        <span class="number">#${pokemon.number}</span>
-        <span class="name">${pokemon.name}</span>
-
-        <div class="detail">
-            <ol class="types">
-                ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-            </ol>
-            
-            <img src="${pokemon.photo}"
-                    alt ="${pokemon.name}">
-        </div>
-    `
 
     return `
-        <li class="pokemon ${pokemon.type}" id="poke"">
+        <li class="pokemon ${pokemon.type}" onClick=openDialog(${pokemon.number})>
                 <span class="number">#${pokemon.number}</span>
                 <span class="name">${pokemon.name}</span>
 
@@ -36,57 +25,62 @@ function convertPokemonToLi(pokemon) {
                     <img src="${pokemon.photo}"
                             alt ="${pokemon.name}">
                 </div>
-
-                <button class="openDialog">Abrir Diálogo</button>
             
         </li>      
     `
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const openDialogButtons = document.querySelectorAll('.openDialog');
-    const meuDialogo = document.getElementById('meuDialogo');
+function convertPokemonDetailToDialog(pokemon) {
+    return `
+                <h1>${pokemon.name}</h1>
+                <a>#${pokemon.number}</a>
+                
+                <p> Weight: ${pokemon.weight}</p>
+                <p> Height: ${pokemon.height}</p>
+                <p> Base Experience: ${pokemon.base_experience}</p>
 
-    function abrirDialogo() {
-        meuDialogo.showModal();
-    }
 
-    openDialogButtons.forEach(botao => {
-        botao.addEventListener('click', abrirDialogo);
+
+                <div class="detail">
+                    <h3>Types</h3>
+                    <ol class="types">
+                        ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                    </ol>
+
+                    <h3>Abilities</h3>
+                    <ol>
+                        ${pokemon.abilities.map((ability) => `<li class="ability ${ability}">${ability}</li>`).join('')}
+                    </ol>
+                    
+                </div>
+
+                <img src="${pokemon.photo}"
+                alt ="${pokemon.name}">
+
+                <button onclick="closeDialog()"> Fechar </button>
+    `
+}
+
+
+function openDialog(pokemonId) {
+
+    pokeApi.getPokemon(pokemonId).then((pokemon) => {
+
+        modal.innerHTML = convertPokemonDetailToDialog(pokemon)
     });
 
-    function fecharDialogo() {
-        meuDialogo.close();
-    }
-})
+    modal.showModal();
+}
 
-// // Função para abrir o diálogo
-// function abrirDialogo() {
-//     modal.showModal();
-// }
-
-// // Função para fechar o diálogo
-// function fecharDialogo() {
-//     modal.close();
-// }
-
-// // Selecionar todos os botões "showDetail" e adicionar evento de clique a cada um
-// const showDetailButtons = document.querySelectorAll('.showDetail');
-// showDetailButtons.forEach(button => {
-//     button.addEventListener('click', abrirDialogo);
-// });
-
-// // Selecionar todos os botões "openDialog" e adicionar evento de clique a cada um
-// const openDialogButtons = document.querySelectorAll('.openDialog');
-// openDialogButtons.forEach(button => {
-//     button.addEventListener('click', abrirDialogo);
-// });
+function closeDialog() {
+    modal.close();
+}
 
 
 function loadPokemonItens(offset, limit) {
 
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
-        
+
         const newHtml = pokemons.map(convertPokemonToLi).join('')
         pokemonList.innerHTML += newHtml
     })
