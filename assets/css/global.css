@@ -22,3 +22,7 @@ body {
         border-radius: 1rem;
     }
 }
+
+#loadMoreButton {
+    cursor: pointer;
+}
