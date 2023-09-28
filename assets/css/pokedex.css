@@ -146,74 +146,100 @@
     border-radius: 1rem;
 }
 
-.details {
+.informationsPokemom {
     background: #77c850;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 0 1rem;
 }
 
-.details a {
+.informationsPokemom a {
     color: white;
     font-size:x-large;
 }
 
-.details .name{
+.informationsPokemom .name{
     margin: 1rem 0 0;
     color: white;
     font-size:xx-large;
 }
 
-.details .number{
+.informationsPokemom .number{
     color: white;
     text-align: end;
     margin: 0;
     padding: 0;
 }
 
-.details .detail .types{
-    padding: 0;
+.informationsPokemom .detail .types{
+    display: block;
+    padding: 0 5rem 2rem 5rem;
     margin: 0;
     list-style: none;
     color: white;
+    text-align: center;
 }
 
-.details .detail .types .type{
+.informationsPokemom .detail .types .type{
     color: white;
-    padding: .25rem 1.5rem;
+    padding: 0 2rem;
     border-radius: 1rem;
     filter: brightness(1.1);
     font-size: .675rem;
     text-align: center;
 }
 
-.details ol {
+.informationsPokemom ol {
     margin: 0;
     list-style: none;
 }
 
-.details {
+.informationsPokemom {
     margin: 0;
 }
 
+.informationsPokemom .image img {
+    display: block;
+    max-width: 100%;
+    padding: 0 5rem 0 5rem;
+    justify-content:center;
+    align-items: center;
+}
+
+
 .information {
     background: white;
-    margin: 0;
-    padding: 0;
+    margin: -1rem;
+    padding: -1rem;
+    border-radius: 10% 10% 0 0;
 }
 
 .information ol{
     display:block;
-    margin: 0;
     padding: 1rem 0 0 0;
     font-size: .675rem;
 }
 
-.information .breeding{
-    padding: 1rem 0 0 0;
+.information .about{
+    margin: 0 0 0 1rem;
+    padding: 0 0 0 0;
     font-size: .750rem;
 }
 
-.information ol ul{
+.information .about ul{
+    margin: 0;
     padding: 1rem 0 0 0;
+    font-size: x-small;
+}
+
+.information .breeding{
+    margin: 0 0 0 1rem;
+    padding: 1rem 0 1rem 0;
+    font-size: .750rem;
+}
+
+.information .breeding ul{
+    margin: 0;
+    padding: 1rem 0 0 0;
+    font-size: .750rem;
 }
 
 @media screen and (min-width: 380px) {
