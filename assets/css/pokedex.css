@@ -146,6 +146,98 @@
     border-radius: 1rem;
 }
 
+.informationsPokemon {
+    background: #77c850;
+    padding: 2rem 1rem 0 1rem;
+}
+
+.informationsPokemon a {
+    color: white;
+    font-size:x-large;
+}
+
+.informationsPokemon .name{
+    margin: 1rem 0 0;
+    color: white;
+    font-size:xx-large;
+}
+
+.informationsPokemon .number{
+    color: white;
+    text-align: end;
+    margin: 0;
+    padding: 0;
+}
+
+.informationsPokemon .detail .types{
+    display: block;
+    padding: 0 5rem 2rem 5rem;
+    margin: 0;
+    list-style: none;
+    color: white;
+    text-align: center;
+}
+
+.informationsPokemon .detail .types .type{
+    color: white;
+    padding: 0 2rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    font-size: .675rem;
+    text-align: center;
+}
+
+.informationsPokemon ol {
+    margin: 0;
+    list-style: none;
+}
+
+.informationsPokemon {
+    margin: 0;
+}
+
+.informationsPokemon .image img {
+    max-width: 100%;
+    padding: 0 5rem 0 5rem;
+}
+
+.information {
+    background: white;
+    margin: -1rem;
+    padding: -1rem;
+    border-radius: 10% 10% 0 0;
+}
+
+.information ol{
+    display:block;
+    padding: 1rem 0 0 0;
+    font-size: .675rem;
+}
+
+.information .about{
+    margin: 0 0 0 1rem;
+    padding: 0 0 0 0;
+    font-size: .750rem;
+}
+
+.information .about ul{
+    margin: 0;
+    padding: 1rem 0 0 0;
+    font-size: x-small;
+}
+
+.information .breeding{
+    margin: 0 0 0 1rem;
+    padding: 1rem 0 1rem 0;
+    font-size: .750rem;
+}
+
+.information .breeding ul{
+    margin: 0;
+    padding: 1rem 0 0 0;
+    font-size: .750rem;
+}
+
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;

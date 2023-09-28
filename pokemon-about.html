@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Nosso CSS -->
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/pokedex.css">
+</head>
+
+<body>
+    <section id="pokemonDetailsLi" class="informationsPokemon">
+        <a href="index.html">⇐</a>
+        <div class="name">Bulbasaur</div>
+        <div class="number">#001</div>
+            <div class="detail">
+                <ol class="types">
+                    <span class="type">Grass</span>
+                    <span class="type">Posion</span>
+                </ol>
+            </div>
+
+            <div class="image"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+                        alt="Bulbasaur"></div>
+
+            <div class="information">
+                <ol>
+                    <li class="about"><strong>About</strong>
+                        <hr>
+                        <ul><strong>Species</strong> Seed</ul>
+                        <ul><strong>Height</strong> 2'3,6* (0,70cm)</ul>
+                        <ul><strong>Weight</strong> 12.2 lbs (6,9 kg)</ul>
+                        <ul><strong>Abilities</strong> Oveegrow, Chlorophyl</ul>
+                    </li>        
+                            
+                    <li class="breeding"><strong>Breeding</strong>
+                            <ul><strong>Gender</strong> M: 87,5% | F: 12,5%</ul>
+                            <ul><strong>Egg Groups</strong> Monster</ul>
+                            <ul><strong>Egg Cycle</strong> Grass</ul>
+                    </li>
+                    
+                </ol>
+            </div>
+
+            
+            <!-- ..... Pokemons here ..... -->
+
+
+    <!-- Nosso JS -->
+    <script src="/assets/js/pokemon-model.js"></script>
+    <script src="/assets/js/poke-api.js"></script>
+    <script src="/assets/js/pokemon-about.js"></script>
+</body>
+
+</html>
