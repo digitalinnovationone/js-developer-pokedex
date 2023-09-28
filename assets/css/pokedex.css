@@ -146,30 +146,30 @@
     border-radius: 1rem;
 }
 
-.informationsPokemom {
+.informationsPokemon {
     background: #77c850;
     padding: 2rem 1rem 0 1rem;
 }
 
-.informationsPokemom a {
+.informationsPokemon a {
     color: white;
     font-size:x-large;
 }
 
-.informationsPokemom .name{
+.informationsPokemon .name{
     margin: 1rem 0 0;
     color: white;
     font-size:xx-large;
 }
 
-.informationsPokemom .number{
+.informationsPokemon .number{
     color: white;
     text-align: end;
     margin: 0;
     padding: 0;
 }
 
-.informationsPokemom .detail .types{
+.informationsPokemon .detail .types{
     display: block;
     padding: 0 5rem 2rem 5rem;
     margin: 0;
@@ -178,7 +178,7 @@
     text-align: center;
 }
 
-.informationsPokemom .detail .types .type{
+.informationsPokemon .detail .types .type{
     color: white;
     padding: 0 2rem;
     border-radius: 1rem;
@@ -187,23 +187,22 @@
     text-align: center;
 }
 
-.informationsPokemom ol {
+.informationsPokemon ol {
     margin: 0;
     list-style: none;
 }
 
-.informationsPokemom {
+.informationsPokemon {
     margin: 0;
 }
 
-.informationsPokemom .image img {
+.informationsPokemon .image img {
+    overflow: auto;
     display: block;
     max-width: 100%;
     padding: 0 5rem 0 5rem;
-    justify-content:center;
     align-items: center;
 }
-
 
 .information {
     background: white;
