@@ -1,10 +1,18 @@
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    color:#595959 /* Muda a cor do título*/
 }
 
 body {
     background-color: #f6f8fc;
+    position: relative;
+    background-size: contain; /* Ajusta a imagem à janela do navegador */
+    background: #c1ccfafe; /* Plano de fundo azul claro */
+    background-image: url('/assets/plano-de-fundo/todos-os-pokemon.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; /* Centraliza plano de fundo */
 }
 
 .content {
@@ -14,11 +22,15 @@ body {
     background-color: #fff;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px)  {  
     .content {
         max-width: 992px;
         height: auto;
         margin: 1rem auto;
         border-radius: 1rem;
     }
+}
+
+#loadMoreButton {
+    cursor: pointer;
 }
