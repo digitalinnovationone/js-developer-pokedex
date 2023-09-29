@@ -163,3 +163,15 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
+.overlay {
+    z-index: 9;
+    right: 50%;
+    position: absolute;
+    top: 17em;
+    background: black;
+    height: 10em;
+    min-width: 13em;
+    max-width: 13em;
+    color: black;
+  }
