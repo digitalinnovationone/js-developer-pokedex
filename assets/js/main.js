@@ -16,7 +16,7 @@ function convertPokemonToLi(pokemon) {
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                 </ol>
 
-                <img src="${pokemon.photo}"
+                <img class="photo" src="${pokemon.photo}"
                      alt="${pokemon.name}">
             </div>
         </li>
@@ -45,3 +45,42 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
+function addEvents(){
+    const elements = document.getElementsByClassName("name");
+
+    for (let el of elements) {
+        el.addEventListener("click", () => {
+            let pokemoName = el.innerHTML
+            let pokemon = JSON.parse(sessionStorage.getItem(pokemoName));
+            message = `
+                <div id="sobreposicao" class="overlay">
+                    <li class="pokemon ${pokemon.type}">
+                        <span class="number">#${pokemon.number}</span>
+                        <span id="${pokemoName}" class="name">${pokemoName}</span>
+
+                        <div class="detail">
+                            <ol class="types">
+                                ${pokemon.abilities.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                            </ol>
+
+                            <img class="photo" src="${pokemon.alternativePhoto}"
+                                alt="${pokemoName}">
+                        </div>
+                    </li>
+                
+                </div>
+            `
+            if (document.getElementById("sobreposicao") != null ){
+                document.getElementById("sobreposicao").remove()
+            }
+            document.body.insertAdjacentHTML("beforeend", message)         
+            document.getElementById("sobreposicao").addEventListener("click", () => {
+                document.getElementById("sobreposicao").remove()
+            })
+        })
+    }
+
+}
+
+addEvents()

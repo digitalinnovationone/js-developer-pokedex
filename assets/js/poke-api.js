@@ -5,7 +5,8 @@ function addDetailsToSessionStorage(pokeDetail) {
     const pokemonComplement = {
         abilities: pokeDetail.abilities.map((ability) => ability.ability.name),
         baseExperience: pokeDetail.base_experience,
-        height: pokeDetail.height
+        height: pokeDetail.height,
+        alternativePhoto :pokeDetail.sprites.other.home.front_default
     }
 
     sessionStorage.setItem(pokeDetail.name, JSON.stringify(pokemonComplement))
