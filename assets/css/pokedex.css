@@ -6,97 +6,41 @@
     list-style: none;
 }
 
-.normal {
-    background-color: #a6a877;
-}
-
-.grass {
-    background-color: #77c850;
-}
-
-.fire {
-    background-color: #ee7f30;
-}
-
-.water {
-    background-color: #678fee;
-}
-
-.electric {
-    background-color: #f7cf2e;
-}
-
-.ice {
-    background-color: #98d5d7;
-}
-
-.ground {
-    background-color: #dfbf69;
-}
-
-.flying {
-    background-color: #a98ff0;
-}
-
-.poison {
-    background-color: #a040a0;
-}
-
-.fighting {
-    background-color: #bf3029;
-}
-
-.psychic {
-    background-color: #f65687;
-}
-
-.dark {
-    background-color: #725847;
-}
-
-.rock {
-    background-color: #b8a137;
-}
-
-.bug {
-    background-color: #a8b720;
-}
-
-.ghost {
-    background-color: #6e5896;
-}
-
-.steel {
-    background-color: #b9b7cf;
-}
-
-.dragon {
-    background-color: #6f38f6;
-}
-
-.fairy {
-    background-color: #f9aec7;
-}
-
 .pokemon {
+    margin: 0.5rem;
+    padding: 1rem;
+    text-transform: capitalize;
+    border-radius: 1rem;
+    color: white;
     display: flex;
     flex-direction: column;
-    margin: .5rem;
-    padding: 1rem;
-    border-radius: 1rem;
+    background: url(/assets/img/poke.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+    background-position-y: bottom;
+  
 }
 
+li.pokemon{
+    transition: box-shadow 0.3s ease; /* Adiciona uma transição suave para o efeito de sombra */
+    cursor: pointer; 
+  }
+  li.pokemon:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adapte os valores de acordo com o efeito desejado */
+  }
+  
+  
 .pokemon .number {
     color: #000;
-    opacity: .3;
+    opacity: 0.3;
     text-align: right;
-    font-size: .625rem;
 }
 
 .pokemon .name {
-    text-transform: capitalize;
-    color: #fff;
-    margin-bottom: .25rem;
+    
+    font-size: larger;
+
 }
 
 .pokemon .detail {
@@ -113,20 +57,21 @@
 }
 
 .pokemon .detail .types .type {
-    color: #fff;
-    padding: .25rem .5rem;
-    margin: .25rem 0;
-    font-size: .625rem;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0;
     border-radius: 1rem;
+    margin-top: 0.2rem;
+    font-size: 0.825rem;
     filter: brightness(1.1);
     text-align: center;
 }
 
 .pokemon .detail img {
-    max-width: 100%;
-    height: 70px;
+    /* faz nunca vazar para fora */
+  max-width: 100%;
+  align-self: flex-end;
+  height: 100px;
 }
-
 .pagination {
     display: flex;
     flex-direction: row;
@@ -134,32 +79,132 @@
     align-items: center;
     width: 100%;
     padding: 1rem;
-}
-
-.pagination button {
-    padding: .25rem .5rem;
+  }
+  
+  .pagination button {
+    padding: 2rem 6rem;
     margin: .25rem 0;
-    font-size: .625rem;
+    font-size: 1.5rem;
     color: #fff;
-    background-color: #6c79db;
-    border: none;
-    border-radius: 1rem;
-}
+    background-color: #fe1a00;
+    border:2px solid #d83526;
+    border-radius: 42px;
+    text-decoration:none;
+      text-shadow:0px 0px 0px #b23e35;
+    background-image: url(/assets/img/pokebal.svg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-position: 250px;
+   
+  }
+  .pagination button:hover {
+      background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+      background-color:#ce0100;
+    background-image: url(/assets/img/pokebal.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-position: 250px;
+    
+  }
+  .pagination button:active {
+      position:relative;
+      top:1px;
+  }
+  
 
-@media screen and (min-width: 380px) {
-    .pokemons {
-        grid-template-columns: 1fr 1fr;
+/******CORES DOS TIPOS******/
+.normal {
+    background-color: #a6a877;
+  }
+  
+  .grass {
+    background-color: #77c850;
+  }
+  
+  .fire {
+    background-color: #ee7f30;
+  }
+  
+  .water {
+    background-color: #678fee;
+  }
+  
+  .electric {
+    background-color: #f7cf2e;
+  }
+  
+  .ice {
+    background-color: #98d5d7;
+  }
+  
+  .ground {
+    background-color: #dfbf69;
+  }
+  
+  .flying {
+    background-color: #a98ff0;
+  }
+  
+  .poison {
+    background-color: #a040a0;
+  }
+  
+  .fighting {
+    background-color: #bf3029;
+  }
+  
+  .psychic {
+    background-color: #f65687;
+  }
+  
+  .dark {
+    background-color: #725847;
+  }
+  
+  .rock {
+    background-color: #b8a137;
+  }
+  
+  .bug {
+    background-color: #a8b720;
+  }
+  
+  .ghost {
+    background-color: #6e5896;
+  }
+  
+  .steel {
+    background-color: #b9b7cf;
+  }
+  
+  .dragon {
+    background-color: #6f38f6;
+  }
+  
+  .fairy {
+    background-color: #f9aec7;
+  }
+  
+  /*---------MEDIA QUERY PARA DESIGN RESPONSIVO-------------*/
+  @media screen and (min-width: 930px) {
+    ol.pokemons {
+      grid-template-columns: 1fr 1fr 1fr ;
     }
-}
-
-@media screen and (min-width: 576px) {
-    .pokemons {
-        grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  @media screen and (max-width: 623px) {
+    ol.pokemons {
+      grid-template-columns: 1fr 1fr ;
     }
-}
-
-@media screen and (min-width: 992px) {
-    .pokemons {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  
+  @media screen and (max-width: 622px) {
+    ol.pokemons {
+      display: grid;
+      grid-template-columns: 1fr;
     }
-}
+    .pokemon{
+      background-position: right;
+    }
+  }
