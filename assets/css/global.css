@@ -4,21 +4,38 @@
 }
 
 body {
-    background-color: #f6f8fc;
+    background-size: contain;
+    background-repeat: repeat-x;
+     background-image: url(/assets/img/background.jpg);
+    background-color: rgb(125, 174, 113);
+}
+.content h1 {
+    margin: 0%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+.content {
+    padding: 1rem;
+  margin: 1rem auto;
+  min-width: 453px;
+  background-color: aliceblue;
+  border-radius: 1rem;
+  border: 5px solid rgb(0, 0, 0);
+  
+
+  
 }
 
-.content {
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
-    background-color: #fff;
-}
+/*---------MEDIA QUERY PARA DESIGN RESPONSIVO-------------*/
 
 @media screen and (min-width: 992px) {
     .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
+      max-width: 992px;
     }
-}
+  }
+  @media screen and (max-width: 603px) {
+    .content {
+      max-width: 453px;
+    }
+  }
