@@ -53,13 +53,13 @@ body {
 }
 
 .close-btn {
-    background-color: rgb(189, 117, 117);
-    border: none;
-    border-radius: 5px;
-    color: white;
-    padding: 5px;
-    width: 30px;
-  }
+  background-color: rgb(189, 117, 117);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  width: 30px;
+}
 
 .superior {
   border-radius: 10px;
@@ -99,14 +99,14 @@ body {
 
 .stats-container {
   align-items: center;
+  color: rgb(48, 48, 48);
   display: flex;
   font-size: 18px;
   height: 10px;
   justify-content: space-between;
   position: relative;
-  color: rgb(48, 48, 48);
-  z-index: 1;
   text-shadow: 2px 2px 1px rgb(226, 226, 226);
+  z-index: 1;
 }
 
 .stats-inner-container {
