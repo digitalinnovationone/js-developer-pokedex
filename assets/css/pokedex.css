@@ -10,6 +10,7 @@
     background-color: #a6a877;
 }
 
+
 .grass {
     background-color: #77c850;
 }
@@ -79,11 +80,32 @@
 }
 
 .pokemon {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    animation: cards-pokemons 1s linear;
+    transform: scale(1);
+    transition: .5s ease-in-out;
+
+}
+
+.pokemon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+@keyframes cards-pokemons {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .pokemon .number {
@@ -125,6 +147,135 @@
 .pokemon .detail img {
     max-width: 100%;
     height: 70px;
+}
+
+#close {
+    position: absolute;
+    font-size: 2rem;
+    padding: 5px;
+    color: #fff;
+}
+
+.dGrid {
+    display: grid;
+}
+
+.dNone {
+    display: none;
+}
+
+#pokeDetailModal {
+    background-color: #00000060;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#pokeDetail {
+    background-color: #ecececef;
+    width: 80vw;
+    height: 70vh;
+    max-width: 560px;
+    border-radius: 20px;
+    overflow: auto;
+    padding-bottom: 15px;
+    z-index: 999;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px 20px 30px 30px;
+}
+
+.description img {
+    height: 130px;
+    margin-bottom: 10px;
+}
+
+.name {
+    text-transform: capitalize;
+}
+
+#typesModal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 15px 0px 0px 0px;
+    padding: 0;
+}
+
+#typesModal li {
+    list-style: none;
+    padding: 8px;
+    margin: 2px;
+    border-radius: 10px;
+    filter: brightness(1.1);
+    color: #fff;
+    text-align: center;
+}
+
+#characteristics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#characteristics h3 {
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+#characteristics p {
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0;
+}
+
+#stats {
+    text-align: center;
+    margin-top: 45px;
+}
+
+#stats div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px
+}
+
+#stats h4,
+p {
+    margin: 0;
+}
+
+.red,
+.blue,
+.yellow {
+    margin: auto;
+    width: 90%;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: #dada2da6;
+}
+
+.blue {
+    background-color: #0051ffcb;
 }
 
 .pagination {
