@@ -1,17 +1,17 @@
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'AR One Sans', sans-serif;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #f6f8fc;
+    background-color: whitesmoke;
 }
 
 .content {
     width: 100vw;
     height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+    background-color: black;
 }
 
 @media screen and (min-width: 992px) {
@@ -21,4 +21,9 @@ body {
         margin: 1rem auto;
         border-radius: 1rem;
     }
+    
+}
+
+#loadMoreButton {
+    cursor: pointer;
 }
