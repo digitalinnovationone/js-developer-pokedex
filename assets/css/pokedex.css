@@ -1,3 +1,14 @@
+ul{
+    list-style-type: none;
+  }
+img{
+    overflow: hidden;
+}
+.pokemon-ul{
+    justify-content: center;
+    align-items: center;
+}
+
 .pokemons {
     display: grid;
     grid-template-columns: 1fr;
@@ -95,6 +106,21 @@
     animation: pokemonHover 2s linear infinite;
 }
 
+.btnclose{
+    background-color: green;
+    color: white;
+    border-radius: 10%;
+    width: 8%;
+    min-width: 20%;
+    cursor: pointer;
+}
+
+.btnclose:hover{
+    background-color: red;
+    transform: scale(1.2);
+    animation: btn 2s linear infinite;
+}
+
 .pokemon .number {
     color: #000;
     opacity: .3;
@@ -166,16 +192,19 @@
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
+
 }
 .modal-content{
-    background-color: #D3D3D3;
+    background-color: white;
     margin: 15% auto;
     padding: 20px;
     border-radius: 5px;
-    width: 70%;
+    min-width: 35%;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 30px;
 }
 
 @media screen and (min-width: 380px) {
@@ -209,5 +238,17 @@
         border-color: yellow;
       background-color: red;
       transform: scale(1.2);
+    }
+  }
+
+  @keyframes btn {
+    0%{
+
+    }
+    50%{
+
+    }
+    100%{
+        transform: scale(1.2);
     }
   }
