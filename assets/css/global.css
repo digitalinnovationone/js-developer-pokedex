@@ -1,24 +1,25 @@
 * {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #f6f8fc;
+  background-color: #f6f8fc;
 }
 
 .content {
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
-    background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  font-family: Roboto, sans serif;
 }
 
 @media screen and (min-width: 992px) {
-    .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
+  .content {
+    max-width: 992px;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 1rem;
+  }
 }
