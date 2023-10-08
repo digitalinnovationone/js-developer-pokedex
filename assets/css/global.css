@@ -3,15 +3,16 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #f6f8fc;
+body { 
+    background-color: aliceblue;
 }
+  
 
 .content {
     width: 100vw;
     height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+    background-color: rgba(109, 19, 19, 0.767);
 }
 
 @media screen and (min-width: 992px) {

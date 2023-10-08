@@ -6,6 +6,18 @@
     list-style: none;
 }
 
+.titulo {
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgba(200, 41, 165, 0.615);
+
+
+}
 .normal {
     background-color: #a6a877;
 }
