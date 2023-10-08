@@ -5,6 +5,13 @@ const maxRecords = 151
 const limit = 10
 let offset = 0;
 
+const bulbasaurDescription = document.getElementById('bulbasaurDescription');
+const showDescriptionButton = document.getElementById('showDescriptionButton');
+
+showDescriptionButton.addEventListener('click', () => {
+    bulbasaurDescription.style.display = 'block'; // Mostra a descrição quando o botão é clicado
+});
+
 function convertPokemonToLi(pokemon) {
     return `
         <li class="pokemon ${pokemon.type}">
