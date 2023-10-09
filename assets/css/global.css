@@ -38,11 +38,19 @@ body{
 }
 
 .container-button button{
-    padding: .25rem .5rem;
+    padding: 1.2rem 3rem;
     margin: .25rem 0;
-    font-size: .625rem;
+    font-size: 1rem;
     color: #fff;
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+    transition: 0.7s ease;
+}
+
+.container-button button:hover{
+    cursor: pointer;
+    background-color: aliceblue;
+    color: black;
+    border: 2px solid #6c79db;
 }

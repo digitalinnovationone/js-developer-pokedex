@@ -65,6 +65,17 @@
     align-items: center;
 }
 
+.closebtn{
+    display: block;
+    margin: 8px 90%;
+    font-size: 35px;
+}
+
+.closebtn:hover{
+    cursor: pointer;
+}
+
+
 @media screen and (max-width: 600px){
     .selectedPokemon ul {
            grid-template-columns: 1fr;

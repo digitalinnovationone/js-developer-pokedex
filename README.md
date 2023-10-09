@@ -1,3 +1,10 @@
+# POKEDEX
+
+Criação da Pokedex, do cássico desenho Pokemon
+
+## Link:
+
+https://pokedex-pi-ten-37.vercel.app/
 
 ## 💻 Sobre:
 
