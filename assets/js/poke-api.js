@@ -5,17 +5,21 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     const pokemon = new Pokemon()
     pokemon.number = pokeDetail.id
     pokemon.name = pokeDetail.name
-
+  
     const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)
     const [type] = types
-
+  
     pokemon.types = types
     pokemon.type = type
-
+  
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
+    pokemon.height = pokeDetail.height / 10
+    pokemon.weight = pokeDetail.weight / 10
+    pokemon.stats = pokeDetail.stats.map((stat) => stat.base_stat)
 
-    return pokemon
+    return pokemon;    
 }
+
 
 pokeApi.getPokemonDetail = (pokemon) => {
     return fetch(pokemon.url)
