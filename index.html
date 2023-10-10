@@ -21,26 +21,31 @@
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
 </head>
-
 <body>
     <section class="content">
-        <h1>Pokedex</h1>
-
+        <h1>Pokedex</h1>       
+        <div class="modal-container">
+            <div class="modal">      
+                <div id="pokemonDetail" class="pokemon-detail"> 
+                    <!-- ..... Pokemons details here ..... -->    
+                </div>                    
+                <div class="button">
+                    <button id="buttonClose" class="buttonClose">Close</button>
+                </div>
+            </div>
+        </div>
         <ol id="pokemonList" class="pokemons">
             <!-- ..... Pokemons here ..... -->
-        </ol>
-
+        </ol>        
         <div class="pagination">
-            <button id="loadMoreButton" type="button">
-                Load More
-            </button>
-        </div>
+            <button id="loadMoreButton" type="button">Load More</button>
+        </div>        
     </section>
 
     <!-- Nosso JS -->
     <script src="/assets/js/pokemon-model.js"></script>
     <script src="/assets/js/poke-api.js"></script>
+    <script src="/assets/js/poke-modal.js"></script>    
     <script src="/assets/js/main.js"></script>
 </body>
-
 </html>

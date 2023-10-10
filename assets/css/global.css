@@ -22,3 +22,71 @@ body {
         border-radius: 1rem;
     }
 }
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;  
+    position: fixed;    
+    z-index: 999;
+    top: 5px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+    .modal-container {
+        max-width: 992px;
+        height: 100vh;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+}
+
+.modal {
+    display: flex;   
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    width: 300px;
+    height: 500px; 
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonClose {
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    color: #fff;
+    cursor: pointer;
+    background-color: #6c79db;
+    border: none;
+    border-radius: 1rem;    
+}
+
+.active {
+    display: flex;   
+ }
+ 
+ .active .modal {
+     animation: modal .4s;        
+ }
+ 
+ @keyframes modal {
+     from {
+         opacity: 0;
+         transform: translate3d(0, -60px, 0);       
+     }
+     to {
+         opacity: 1;
+         transform: translate3d(0, -0, 0);       
+ 
+     }
+ }
+

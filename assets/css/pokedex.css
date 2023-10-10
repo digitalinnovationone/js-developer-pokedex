@@ -127,6 +127,26 @@
     height: 70px;
 }
 
+.pokemon-info {
+    display: flex;  
+    flex-direction: column;
+    background-color: lightgray;
+    margin-top: 20px;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    margin-bottom: -1rem;
+    padding: 1rem;
+    border-radius: 1rem;   
+}
+
+.pokemon-info td {
+    font-size: .8rem
+}
+
+.pokemon-info tr :first-child {
+    width: 180px;
+}
+
 .pagination {
     display: flex;
     flex-direction: row;
