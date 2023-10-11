@@ -1,3 +1,7 @@
+body {
+    background-color: darkslategray;
+}
+
 .pokemons {
     display: grid;
     grid-template-columns: 1fr;
@@ -144,7 +148,14 @@
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+    cursor: pointer;
 }
+
+.attack, .defense {
+    font-size: small;
+    padding-left: 3px;
+}
+
 
 @media screen and (min-width: 380px) {
     .pokemons {
