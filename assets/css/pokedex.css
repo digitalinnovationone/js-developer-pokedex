@@ -163,3 +163,28 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
+.pokemon-card {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-card img {
+    width: 200px;
+    height: 200px;
+}
+
+.pokemon-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.pokemon-type {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #555;
+}
