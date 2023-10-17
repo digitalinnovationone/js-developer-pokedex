@@ -1,24 +1,132 @@
 * {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background-color: #f6f8fc;
+  background-color: #f6f8fc;
 }
 
 .content {
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
-    background-color: #fff;
+  background-color: #fff;
+  height: 100vh;
+  padding: 1rem;
+  width: 100vw;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.731);
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  margin: 0 auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
+}
+
+.modal-inner-container {
+  background-color: white;
+  border: 10px solid antiquewhite;
+  border-radius: 10px;
+  color: black;
+  height: 550px;
+  margin: 50px auto;
+  text-align: center;
+  width: 350px;
+  text-transform: capitalize;
+}
+
+.modal-inner-container h2 {
+  margin: 5px;
+  text-align: right;
+}
+
+.title-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.close-btn {
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  width: 30px;
+}
+
+.superior {
+  border-radius: 10px;
+  color: white;
+  height: 38%;
+}
+
+.superior img {
+  height: 200px;
+  margin: 35px auto;
+  position: relative;
+  width: 200px;
+  z-index: 2;
+}
+
+.floor {
+  background-color: rgb(255, 255, 255);
+  border-radius: 100%;
+  bottom: 35px;
+  height: 100px;
+  left: 54px;
+  position: relative;
+  width: 220px;
+  z-index: 1;
+}
+
+.inferior {
+  background-color: white;
+  border-radius: 10px;
+  bottom: 80px;
+  height: 250px;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  text-align: left;
+}
+
+.stats-container {
+  align-items: center;
+  color: black;
+  display: flex;
+  font-size: 18px;
+  height: 10px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.stats-inner-container {
+  height: 10px;
+  opacity: 0.5;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  padding: 0.5rem;
+}
+
+.stats {
+  position: relative;
+  z-index: 3;
 }
 
 @media screen and (min-width: 992px) {
-    .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
+  .content {
+    border-radius: 1rem;
+    height: auto;
+    margin: 1rem auto;
+    max-width: 992px;
+  }
 }
