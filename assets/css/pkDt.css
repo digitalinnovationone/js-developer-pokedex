@@ -1,0 +1,321 @@
+.normal  {
+    
+    background-color: #A6A877;
+
+}    
+.grass   {
+    
+    background-color: #77C850;
+
+}    
+.fire    {
+    
+    background-color: #EE7F30;
+
+}    
+.water   {
+    
+    background-color: #678FEE;
+
+}    
+.electric {
+    
+    background-color: #F7CF2E;
+
+}    
+.ice     {
+    
+    background-color: #98D5D7;
+
+}    
+.ground  {
+    
+    background-color: #DFBF69;
+
+}    
+.flying  {
+    
+    background-color: #A98FF0;
+
+}    
+.poison  {
+    
+    background-color: #A040A0;
+
+}    
+.fighting{
+    
+    background-color: #BF3029;
+
+}    
+.psychic {
+    
+    background-color: #F65687;
+
+}    
+.dark    {
+    
+    background-color: #725847;
+
+}    
+.rock    {
+    
+    background-color: #B8A137;
+
+}    
+.bug     {
+    
+    background-color: #A8B720;
+
+}    
+.ghost   {
+    
+    background-color: #6E5896;
+
+}    
+.steel   {
+    
+    background-color: #B9B7CF;
+
+}    
+.dragon  {
+    
+    background-color: #6F38F6;
+
+}    
+.fairy   {
+    
+    background-color: #F9AEC7;
+
+}    
+
+
+
+
+.pokeDt {
+    display: grid;
+    grid-template-columns: 1rf;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pokeDt {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.pokeDt .number {
+    color:  black;
+    opacity: .3;
+    font-size: 1.5rem;
+    text-align: right;   
+}
+
+.pokeDt .name {
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: .25rem;
+}
+
+.pokeDt .detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.pokeDt .detail .types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.pokeDt .detail .types .type{
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    filter: brightness(0.8);
+    text-align: center;
+    display: inline-block;
+}
+
+.ft .pokeFt img {
+    max-width: 100%;
+    height: 100%;
+    position: relative;
+    
+}
+
+
+.ft {
+   display: flex; 
+   
+   justify-content: center;
+    
+}
+
+.about {
+    color: black;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: 1rem;
+    border-radius: 1rem;
+    list-style: none;
+    
+}
+
+.about li {
+    margin: 1rem 0.1rem 0.3rem;
+    
+}
+
+.bre {
+    color: black;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: 1rem;
+    border-radius: 1rem;
+    list-style: none;
+}
+h4 {
+    margin: 1.7rem 0 0;
+}
+.bre li {
+    margin: 1rem 0.1rem 0.3rem;
+}
+
+
+.status {
+    position: static;
+    border-radius: 2rem;
+    background-color: #fff;
+    margin: 0;
+    padding: 2rem;
+}
+
+.status .divNav .pokeNav a{
+    margin-top: 7rem;
+    text-decoration: none;
+    max-width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+    color: black;
+    opacity: 0.5;
+}
+
+body#home a#aB, body#Bsta a#bS, body#Evo a#eV, body#Mov a#mO {
+    cursor: default;
+    color: black;
+    background-color: rgba(145, 145, 145, 0.2);
+    text-transform: capitalize;
+    opacity: 1;
+    
+}
+
+.status .divNav .pokeNav{
+    text-align: center;
+    padding: 1rem;
+}
+
+.card {
+    border-radius: 2rem;
+}
+
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.pagination button{
+    color: #fff;
+    background-color: #6C79DB;
+    border: node;
+    border-radius: 1rem;
+    padding: 0.25rem 0.5rem;
+    margin: .25rem 0;
+    font-size: 0.625rem;
+
+}
+
+
+.space {
+    display: inline-block;
+    width: 2rem;
+}
+
+span#h{
+    width: 4rem;
+}
+span#a{
+    width: 2.5rem;
+}
+span#d{
+    width: 1.8rem;
+}
+span#sa{
+    width: 2.3rem;
+}
+span#sd{
+    width: 2.3rem;
+}
+span#sp{
+    width: 2.8rem;
+}
+span#tot{
+    width: 3.4rem;
+}
+
+.line{
+    display: inline-flex;
+    width: 50%;
+    text-decoration: line-through;
+    
+}
+
+.alinhar{
+    display: flex;
+    
+    align-items: initial;
+}
+
+
+.pokeEvN {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+.pokeEvN .name{
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: .25rem;
+}
+
+.pokeEvN .type{
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    filter: brightness(0.8);
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+
