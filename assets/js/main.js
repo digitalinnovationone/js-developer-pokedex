@@ -1,6 +1,13 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
+const backToTheTop = () => {
+ window.scrollTo({
+top: 0,
+behavior: 'smooth'
+ })
+}
+
 const maxRecords = 151
 const limit = 10
 let offset = 0;
