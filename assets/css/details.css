@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #F6F7FC;
+  color: #333;
+  width: 100vw;
+  height: 100vh;
+}
+
+#main-content {
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+}
+
+.loading {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #FFF;
+  border-top: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.btn-home {
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 3px 3px 3px rgba(0,0,0,.2);
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+  z-index: 1;
+  background-color: #6C7ADC;
+}
+
+.btn-home:hover {
+  cursor: pointer;
+  filter: brightness(1.1);
+}
+
+.header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1rem;
+  padding-top: 3rem;
+}
+
+.header div.title {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.header div.title h1 {
+  margin: 1rem 0;
+}
+
+.header ol.types {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  gap: .5rem;
+}
+
+.header ol.types .type {
+  color: #FFF;
+  padding: .5rem;
+  font-size: .625rem;
+  margin: .25rem 0;
+  border-radius: 1rem;
+  text-align: center;
+  filter: brightness(1.15);
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: min-content;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-bottom: .8rem;
+}
+
+.about-container {
+  background-color: #F6F7FC;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: .6rem;
+  width: 100%;
+  height: max-content;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 3px rgba(0,0,0,.2);
+  padding: 2rem;
+}
+
+.about-container h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.about-container p {
+  font-size: 1rem;
+  margin: 0;
+  align-self: flex-start;
+}
+
+@media screen and (min-width: 992px) {
+  .infos-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .btn-home {
+    bottom: 70px;
+    right: 60px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .btn-home {
+    bottom: 180px;
+    right: 170px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .header div.title h1 {
+    font-size: 3rem;
+  }
+
+  .header div.title span {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header div.title h1 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .header ol.types .type {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .img-container img {
+    max-width: 60%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .img-container img {
+    max-width: 60%;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  div.about-container h3 {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .about-container {
+    padding: 5rem;
+  }
+
+  div.about-container h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .about-container p {
+    font-size: 1.2rem;
+  }
+}
