@@ -154,10 +154,22 @@
     filter: brightness(1.1);
 }
 
-.pokemon .detailH img {
-    max-width: 100%;
-    height: 70px;
+
+
+ .pokemon .foto  {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    margin-left: 65px;
+    margin-top: 5px;
+    
+}
+ .pokemon .foto img {
+    width: 130px; 
+    height: 130px;
     align-self: flex-end;
+    
+    
     
 }
 

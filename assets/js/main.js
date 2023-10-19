@@ -3,7 +3,7 @@
 
 const pokemonList = document.getElementById('pokemonList');
 const loadMoreButton = document.getElementById('loadMoreButton');
-const max = 649;
+const max = 10263;
 const limit = 20;
 let offset = 0;
 const id = 0;
@@ -20,10 +20,15 @@ function convertPokemonToLi(pokemon){
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                     
                 </ol>
+                   <p><br/><br/></p>
+            </div>
+            <div class="foto">
                 <img src="${pokemon.photo}" alt="${pokemon.name}">
             </div>
     
-        </li>`
+        </li>
+        
+            `
        
 }
 

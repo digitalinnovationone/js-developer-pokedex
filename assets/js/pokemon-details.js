@@ -44,7 +44,7 @@ if (pokemonId) {
                     </div>
                     <div class="ft">
                         <section class="pokeFt">
-                            <img src="${pokemonData.sprites.other.dream_world.front_default}" alt="${pokemonData.name}">
+                            <img src="${pokemonData.sprites.front_default}" alt="${pokemonData.name}">
                         </section>    
                     </div>
                     <div class="status">                    
@@ -120,7 +120,7 @@ if (pokemonId) {
                     </div>
                     <div class="ft">
                         <section class="pokeFt">
-                            <img src="${pokemonData.sprites.other.dream_world.front_default}" alt="${pokemonData.name}">
+                            <img src="${pokemonData.sprites.front_default}" alt="${pokemonData.name}">
                         </section>    
                     </div>
                     <div class="status">                    
@@ -329,7 +329,7 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${cont}`)
                                 <li class="name">${pokemonData.name}</li>
                                 ${pokemonData.types.map((typeSlot) => `<li class="type ${typeSlot.type.name}">${typeSlot.type.name}</li>`).join('')}
                             </ol>
-                            <img src="${pokemonData.sprites.other.dream_world.front_default}" alt="${pokemonData.name}">
+                            <img src="${pokemonData.sprites.front_default}" alt="${pokemonData.name}">
                         </section>    
                     </div>
                     <div class="status">                    
@@ -383,7 +383,7 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
                     </div>
                     <div class="ft">
                         <section class="pokeFt">
-                            <img src="${pokemonData.sprites.other.dream_world.front_default}" alt="${pokemonData.name}">
+                            <img src="${pokemonData.sprites.front_default}" alt="${pokemonData.name}">
                         </section>    
                     </div>
                     <div class="status">                    
