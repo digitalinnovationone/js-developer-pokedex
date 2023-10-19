@@ -1,24 +1,100 @@
 * {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background-color: #f6f8fc;
+  background-color: #6c79dca9;
+  color: #333;
+}
+
+.loading {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #6C7ADC;
+  border-top: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .content {
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
-    background-color: #fff;
+  background-image: url('../images/bg.svg');
+  background-repeat: repeat-y;
+  background-size: 150%;
+  padding: 1rem;
+  min-height: 100vh;
+  max-width: 100%;
+  height: max-content;
+  width: 100vw;
+  padding-bottom: 5rem;
+  box-shadow: 3px 3px 10px rgba(0,0,0,.2);
+}
+
+.content h1 {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.content h1 img {
+  width: 50px;
+}
+
+#btn-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+button.btn {
+  background-color: #6C7ADC;
+  color: #FFF;
+  border: none;
+  padding: 1rem 0;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#btn-container button:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }
 
 @media screen and (min-width: 992px) {
-    .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
+  .content {
+    min-height: calc(100vh - 3rem);
+    height: calc(100vh - 3rem);
+    max-width: 992px;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    padding-bottom: 3rem;
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  button.btn {
+    max-width: 992px;
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 0 0 1rem 1rem;
+  }
 }

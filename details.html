@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <link rel="icon" type="image/svg+xml" href="./assets/images/pokeball.svg" />
@@ -10,31 +9,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
-  <link type="text/css" rel="stylesheet" href="./assets/css/global.css">
   <link type="text/css" rel="stylesheet" href="./assets/css/colorTypes.css">
-  <link type="text/css" rel="stylesheet" href="./assets/css/pokedex.css">
+  <link type="text/css" rel="stylesheet" href="./assets/css/details.css">
 </head>
-
 <body>
-  <section class="content">
-    <h1>
-      Minha Pokédex
-      <img src="./assets/images/pokeball.svg" alt="Pokébola" />
-    </h1>
-    <div class="loading"></div>
-    <div class="pokemon-container">
-      <ol class="pokemon-list"></ol>
-    </div>
-  </section>
-
-  <div id="btn-container">
-    <button type="button" class="btn">Carregue Mais...</button>
-  </div>
+  <div class="loading"></div>
+  <main id="main-content">
+    <header class="header"></header>
+    <section class="infos-container"></section>
+  </main>
+  <button type="button" class="btn-home">
+    <img src="./assets/images/home.svg" alt="Tela inicial">
+  </button>
 
   <script src="./assets/js/utils.js"></script>
   <script src="./assets/js/pokemonModel.js"></script>
   <script src="./assets/js/pokeApi.js"></script>
-  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/details.js"></script>
 </body>
-
 </html>
