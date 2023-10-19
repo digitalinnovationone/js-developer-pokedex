@@ -1,18 +1,33 @@
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    
+
+    
 }
+
 
 body {
     background-color: #f6f8fc;
+    background-image: url(../Imagens/pokemon-wallpapers.png);
+    background-position: center center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
+   
+
 
 .content {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #E9E1E9;
+  
+    
 }
+
+
 
 @media screen and (min-width: 992px) {
     .content {
@@ -22,3 +37,4 @@ body {
         border-radius: 1rem;
     }
 }
+
