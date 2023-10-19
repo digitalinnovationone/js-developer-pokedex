@@ -4,4 +4,8 @@ class PokemonModel {
   types = [];
   type;
   img;
+  height;
+  weight;
+  abilities = [];
+  status = {};
 }

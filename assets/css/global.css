@@ -4,22 +4,49 @@
 }
 
 body {
-  background-color: #F6F7FC;
+  background-color: #6c79dca9;
   color: #333;
 }
 
+.loading {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #6C7ADC;
+  border-top: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 .content {
-  background-color: #FFF;
+  background-image: url('../images/bg.svg');
+  background-repeat: repeat-y;
+  background-size: 150%;
   padding: 1rem;
   min-height: 100vh;
   max-width: 100%;
   height: max-content;
   width: 100vw;
-  padding-bottom: 4rem;
+  padding-bottom: 5rem;
+  box-shadow: 3px 3px 10px rgba(0,0,0,.2);
 }
 
 .content h1 {
-  text-align: center;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.content h1 img {
+  width: 50px;
 }
 
 #btn-container {
@@ -46,11 +73,26 @@ button.btn {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+
 @media screen and (min-width: 992px) {
   .content {
-    height: auto;
+    min-height: calc(100vh - 3rem);
+    height: calc(100vh - 3rem);
     max-width: 992px;
     margin: 1rem auto;
     border-radius: 1rem;
+    padding-bottom: 3rem;
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  button.btn {
+    max-width: 992px;
+    margin: 1rem auto;
+    border-radius: 0 0 1rem 1rem;
   }
 }

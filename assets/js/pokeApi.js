@@ -1,10 +1,17 @@
-const formatPokemonModel = ({ id, name, types, sprites }) => {
+const formatPokemonModel = ({ id, name, types, sprites, height, weight, abilities, stats }) => {
   const pokemon = new PokemonModel();
   pokemon.order = id;
   pokemon.name = name.charAt(0).toUpperCase() + name.slice(1);
   pokemon.types = types.map(({type}) => type.name);
   pokemon.type = pokemon.types[0];
   pokemon.img = sprites.other["official-artwork"].front_default;
+  pokemon.height = height;
+  pokemon.weight = weight;
+  pokemon.abilities = abilities.map(({ability}) => ability.name);
+  pokemon.status = stats.reduce((acc, {stat, base_stat}) => {
+    acc[stat.name] = base_stat;
+    return acc;
+  }, {});
 
   return pokemon;
 }

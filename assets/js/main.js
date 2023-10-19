@@ -1,40 +1,38 @@
+const pokeContainer = document.querySelector('.pokemon-container');
 const pokemonList = document.querySelector('.pokemon-list');
 const btnEl = document.querySelector('.btn');
+const loadingElement = document.querySelector('.loading');
 
 const maxLimit = 151;
 const limit = 10;
 let offset = 0;
 
-const formatOrder = (order) => {
-  if (order < 10) return `#00${order}`;
-  if (order < 100) return `#0${order}`;
-  return `#${order}`;
-}
-
-const convertTypesToOl = (types = []) => {
-  return types.map((type) => `<li class="type ${type}">${type}</li>`).join('');
-};
-
 const createPokemon = ({ order, name, types, type, img }) => {
   return (`
-    <li class="pokemon ${type}" >
-      <span class="number">${formatOrder(order)}</span>
-      <span class="name">${name}</span>
-      <div class="details">
-        <ol class="types">
-          ${convertTypesToOl(types)}
-        </ol>
-        <img
-          src=${img}
-          alt=${name}
-        >
-      </div>
-    </li>
+    <a href="details.html?id=${order}">
+      <li class="pokemon ${type}" >
+        <span class="number">${formatOrder(order)}</span>
+        <span class="name">${name}</span>
+        <div class="details">
+          <ol class="types">
+            ${convertTypesToOl(types)}
+          </ol>
+          <img
+            src=${img}
+            alt=${name}
+          />
+        </div>
+      </li>
+    </a>
   `);
 }
 
 const loadPokemons = async (offset, limit) => {
+  loadingElement.style.display = 'block';
+  pokeContainer.style.display = 'none';
   const pokemonDetails = await requestPokeApi(offset, limit);
+  loadingElement.style.display = 'none';
+  pokeContainer.style.display = 'block';
   const pokemonElements = pokemonDetails.map(pokemon => createPokemon(pokemon));
   pokemonList.innerHTML += pokemonElements.join('');
 }
