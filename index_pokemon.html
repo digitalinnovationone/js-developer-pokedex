@@ -10,33 +10,62 @@
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
 
-     <link rel="stylesheet" href="./css/pokemon.css">
+     <link rel="stylesheet" href="./assets/css/poke_detail.css">
 </head>
 <body>
+    <header class="header">
+        <img class="icons" src="./assets/images/left-arrow.png" alt="left-arrow">
+        <img class="icons" src="./assets/images/heart.png" alt="like" >
+    </header>
+
     <section class="content">
-        <li class="icons">
-        <span>←</span>
-        <span>♥</span>
-        </li>
+        
         
         <section class="head">
-            <span class="pokemon">
-                <li class="name">Bulbasauro</li>
+            <section class="pokemon">
+                <h2 class="name">Bulbasauro</h2>
 
-                <li class="types">grass</li>
-                <li class="types">poison</li>
-            </span>
-            
+                <section class="types">
+                    <h4 class="type">grass</h4>
+                    <h4 class="type">poison</h4>
+                </section>
+            </section>
+                  
             <span class="number"> #001</span>
 
         </section>  
 
-        <section class="image">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Bulbasaur front">
-        </section> 
+        <div class="photo">
+            <img class="image" src="./assets/images/bulbasauro_front.png" alt="Bulbasaur front">
+        </div> 
     </section>
 
-    
+    <footer class="details">
+        <section>
+            
+            <nav class="pages">
+                <a class="link">About</a>
+                <a class="link">Base Status</a>
+                <a class="link">Evolution</a>
+                <a class="link">Moves</a>
+            </nav>
 
-   </body>
+            <div class="about">
+                <h4 class="items">Height:</h4>
+                <h4 class="items">Weight:</h4>
+                <h4 class="items">Habilit:</h4>
+                <h4 class="items">Species:</h4>
+                
+                <h3 class="subtitle">Breeding</h3>
+                
+                <h4 class="items">Gender</h4>
+                <h4 class="items">Egg groups</h4>
+                <h4 class="items">Egg cycle</h4>
+            </div>
+
+        </section>
+    </footer>
+   
+
+</body>
 </html>

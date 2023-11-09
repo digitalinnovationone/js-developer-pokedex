@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+body{
+    background-color: #48D0B0;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.icons{
+    padding: 1rem 1rem;
+    flex-direction: row;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pokemon{
+    color: #FFFFFF;
+    list-style-type: none;
+    flex-direction: column;
+}
+
+.name{
+    font-size: 32px;
+    padding: 1rem;
+}
+
+.types{
+    display: flex;
+    gap: .2px;
+}
+
+.type{
+    flex-direction: row;
+    margin-left: .8rem;
+    padding: .2rem 1rem;
+    background-color: #62e0c9;
+    border-radius: 1rem;
+}
+
+.number{
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 600;    
+}
+
+.photo{
+    text-align: center;
+}
+
+.image{
+    width: 35%;
+}
+
+.details{
+    background-color: #FFFFFF;
+    border-radius: 1.2rem;
+    margin-top: -25px;
+}
+
+.pages{
+    display: flex;
+    justify-content: space-between;
+    color: #000000;
+    padding: 2rem .5rem;
+    
+}
+
+.subtitle{
+    padding: 1rem .5rem;
+}
+
+.items{
+    font-weight: 300;
+    padding: .2rem .5rem;
+}
