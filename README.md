@@ -1,14 +1,5 @@
 
-
-Utilizado Normalize Css - CDN
-mobile forst 
-
-
-
-
 # Trilha JS Developer - Pokedex
-
-
 
 <h1 align="left">
    # Projeto Pokedex
