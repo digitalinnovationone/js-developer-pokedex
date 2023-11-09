@@ -28,6 +28,11 @@ mobile forst
 </p>
 
 <h2 id="objetivo">🚀 <b>Objetivo:</b></h2>
+Acabei de concluir a criação da minha própria Pokédex no curso da Dio e estou super empolgado para compartilhar o resultado com vocês! 🎉 No projeto, utilizei HTML, CSS e JavaScript, incluindo Normalize CSS e fonts do Google para garantir um visual incrível.
+
+A cereja do bolo foi a integração da PokeAPI via CDN, onde mergulhei no funcionamento do protocolo HTTP, manipulei os resultados das requisições usando Promises e aproveitei a função Map para tornar meu código mais limpo e eficiente.
+
+Além disso, explorei a manipulação de múltiplas requisições em paralelo, converti o modelo da PokeAPI para se encaixar no meu projeto e adicionei os tipos de Pokémon dinamicamente. 🌐✨ Para aprimorar ainda mais a experiência, implementei um botão de paginação para facilitar a navegação.
 
 - Criação de uma Pokedex do curso da Dio.
 - No projeto foi incluído, Nornamlize Css, fonts google.
