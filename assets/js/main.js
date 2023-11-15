@@ -1,5 +1,6 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
+let cardPokemon = document.querySelector('.pokemon')
 
 const maxRecords = 151
 const limit = 10
