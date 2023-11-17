@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex | Pokemon</title>
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Roboto by GoogleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,100&display=swap" rel="stylesheet">
+
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0" />
+
+    <!-- CSS -->  
+    <link rel="stylesheet" href="./assets/css/pokedex.css">
+    <link rel="stylesheet" href="./assets/css/pokedex-stats.css">    
+</head>
+<body>
+    <div id="">
+        <section class="content-stats" id="pokemonInfo">
+            <div class="pokemon-top">
+                <a href="index.html"><span class="material-symbols-outlined">arrow_back</span></a>
+                <span class="material-symbols-outlined">favorite</span>
+            </div>
+    
+            <div class="pokemon-name name">
+                <span id="pName">Bulbasaur</span>
+                <span id="pNumber">#001</span>
+            </div>
+    
+            <div class="details">
+                <ol class="types">
+                    <li class="type">grass</li>
+                    <li class="type">posion</li>
+                </ol>
+            </div>
+    
+            <div class="pokemon-image">        
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1.png" alt="pokemon-imagem-large">
+            </div>
+        </section>
+    
+        <div class="pokemon-stats" id="pokemonStats">
+    
+            <nav>
+                <ul>
+                    <li class="active">About</li>
+                    <li>Base Stats</li>
+                    <li>Evolution</li>
+                    <li>Moves</li>
+                </ul>
+            </nav>
+    
+            <div class="info-table">
+                <table>
+                    <tr>
+                        <td class="item">Species</td>
+                        <td class="description">Seed</td>
+                    </tr>
+                    <tr>
+                        <td class="item">Height</td>
+                        <td class="description">2"3.6" (0.70 cm)</td>
+                    </tr>
+                    <tr>
+                        <td class="item">Weight</td>
+                        <td class="description">15.2lbs (6.9 kg)</td>
+                    </tr>
+                    <tr>
+                        <td class="item">Abilities</td>
+                        <td class="description">Overglow, Chlorophyl</td>
+                    </tr>
+                    <th>Breeding</th>
+                        <tr>
+                            <td class="item">Gender</td>
+                            <td class="description gender">
+                                <span class="material-symbols-outlined male">
+                                    male
+                                </span> 87.5%
+                                <span class="material-symbols-outlined female">
+                                    female
+                                </span> 12.5%
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="item">Egg Groups</td>
+                            <td class="description">Monster</td>
+                        </tr>
+                        <tr>
+                            <td class="item">Egg Cycle</td>
+                            <td class="description">Grass</td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/pokemon-page.js"></script>
+</body>
+</html>
