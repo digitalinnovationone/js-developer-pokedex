@@ -1,0 +1,140 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.content-stats {
+    width: 100vw;
+    height: 48vh;
+    padding: 1rem;
+    color: #FFF;
+}
+
+.material-symbols-outlined {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.pokemon-top {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.pokemon-top a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.pokemon-name {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.250rem;
+}
+
+.pokemon-name span:first-child {
+    font-size: 2rem;
+}
+
+.types {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.type {
+    padding: .5rem .8rem;
+    margin: .25rem 0;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #FFF;
+    font-size: .800rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.type:not(:first-child) {
+    margin: .25rem 0 .25rem .5rem;
+}
+
+.pokemon-image{
+    margin-top: 15px;
+    text-align: center;
+}
+
+.pokemon-image img {
+    max-width: 100%;
+    height: 250px;
+}
+
+.pokemon-stats {
+    background-color: #FFF;
+    margin-top: 2rem;
+    color: #4e4d4d;
+    border-radius: .5rem;
+}
+
+.pokemon-stats nav ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 0 0.8rem;
+    padding: 0.8rem 0;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+}
+
+.pokemon-stats li:hover {
+    border-bottom: 3px solid #BCC2E8;
+}
+
+.active {
+    border-bottom: 3px solid #BCC2E8;
+}
+
+table {
+    padding: 1rem;
+    line-height: 1.8;
+}
+
+table .item {
+    width: 120px;
+}
+
+table .description {
+    color: #000;
+}
+
+table th {
+    padding: 20px 0 10px 0;
+    text-align: left;
+    color: #000;
+}
+
+table .gender {
+    display: flex;
+    align-items: center;
+}
+
+table .material-symbols-outlined {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.male {
+    color: #BCC2E8; 
+    padding-right: 5px;
+}
+
+.female {
+    color: #EFB4CB; 
+    padding: 0 5px 0 10px;
+}
