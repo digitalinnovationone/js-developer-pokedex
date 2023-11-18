@@ -1,0 +1,283 @@
+main section.profile{
+    display: flex;
+    flex-direction: column;
+    box-shadow: #00000042 0px 3px 5px 2px ;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 2rem;
+    max-width: 290px;
+    max-height: 570px;
+    background-image: url("../imgs/pokeball.png");
+    background-position: 170px 105px;
+    background-size: 6rem;
+    background-repeat: no-repeat;
+}
+
+main section.profile.normal,
+main section.profile > .basic-infos > .name-type > .types > li.normal {
+    background-color: #a6a877;
+    
+}
+
+main section.profile.grass,
+main section.profile > .basic-infos > .name-type > .types > li.grass {
+    background-color: rgb(70, 211, 5);
+
+}
+
+main section.profile.fire,
+main section.profile > .basic-infos > .name-type > .types > li.fire {
+    background-color: #ee7f30;
+    
+}
+
+main section.profile.water,
+main section.profile > .basic-infos > .name-type > .types > li.water {
+    background-color: #678fee;
+    
+}
+
+main section.profile.electric,
+main section.profile > .basic-infos > .name-type > .types > li.electric {
+    background-color: #f7cf2e;
+    
+}
+
+main section.profile.ice,
+main section.profile > .basic-infos > .name-type > .types > li.ice {
+    background-color: #98d5d7;
+    
+}
+
+main section.profile.ground,
+main section.profile > .basic-infos > .name-type > .types > li.ground {
+    background-color: #dfbf69;
+    
+}
+
+main section.profile.flying,
+main section.profile > .basic-infos > .name-type > .types > li.flying {
+    background-color: #a98ff0;
+    
+}
+
+main section.profile.poison,
+main section.profile > .basic-infos > .name-type > .types > li.poison {
+    background-color: #a040a0;
+    
+}
+
+main section.profile.fighting,
+main section.profile > .basic-infos > .name-type > .types > li.fighting {
+    background-color: #bf3029;
+    
+}
+
+main section.profile.psychic,
+main section.profile > .basic-infos > .name-type > .types > li.psychic {
+    background-color: #f65687;
+    
+}
+
+main section.profile.dark,
+main section.profile > .basic-infos > .name-type > .types > li.dark {
+    background-color: #725847;
+    
+}
+
+main section.profile.rock,
+main section.profile > .basic-infos > .name-type > .types > li.rock {
+    background-color: #b8a137;
+    
+}
+
+main section.profile.bug,
+main section.profile > .basic-infos > .name-type > .types > li.bug {
+    background-color: #a8b720;
+    
+}
+
+main section.profile.ghost,
+main section.profile > .basic-infos > .name-type > .types > li.ghost {
+    background-color: #6e5896;
+    
+}
+
+main section.profile.steel,
+main section.profile > .basic-infos > .name-type > .types > li.steel {
+    background-color: #b9b7cf;
+    
+}
+
+main section.profile.dragon,
+main section.profile > .basic-infos > .name-type > .types > li.dragon {
+    background-color: #6f38f6;
+}
+
+main section.profile.fairy,
+main section.profile > .basic-infos > .name-type > .types > li.fairy {
+    background-color: #f9aec7;
+    
+}
+
+main section.profile > .basic-infos > .name-type >  h2{
+    text-align: left;
+    margin: 30px 10px -5px 10px;
+    color: white;
+}
+
+main section.profile > .basic-infos > img{
+    align-self: center;
+    position: absolute;
+    top: 130px;
+    left: 100px;
+    width: 35%;
+    z-index: 2;
+}
+
+
+main section.profile > .details{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    border-radius: 2rem;
+    margin: 100px 0px 0px 0px;
+    padding: 40px 10px 10px 10px;
+}
+
+main section.profile > .basic-infos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+main section.profile > .basic-infos > .name-type{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+main section.profile > .basic-infos > .name-type > .types{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+main section.profile > .basic-infos > .number {
+    color: #000;
+    opacity: .5;
+    text-align: right;
+    font-size: 1rem;
+}
+
+
+main section.profile > .basic-infos > .name-type > .types > li{
+    color: #fff;
+    margin: 0px 5px;
+    padding: .2rem .7rem;
+    border-radius: 1rem;
+}
+
+main section.profile > .details > .base-stats > h3{
+    text-align: center;
+    margin-top: 8px;
+}
+
+main section.profile > .details > .base-stats > nav > ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    padding: 10px 5px 0px 5px;
+    margin: 0;
+    justify-content: space-between;
+}
+
+main section.profile > .details > .base-stats > nav > ul li{
+    margin: 0px
+}
+main section.profile > .details > .base-stats > nav > ul li a{
+    color: grey;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: .1s ease;
+}
+main section.profile > .details > .base-stats > nav > ul li a.active,
+main section.profile > .details > .base-stats > nav > ul li a:hover{
+    color: rgb(255, 255, 255);
+    background-color: #0000009c;
+    border-radius: 1rem;
+    transition: .1s ease;
+}
+
+main section.profile > .details > .base-stats > .content{
+    display: none;
+    flex-direction: row;
+}
+
+main section.profile > .details > .base-stats > .content > .left,
+main section.profile > .details > .base-stats > .content > .right{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px;
+}
+
+main section.profile > .details > .base-stats > .content > .left ul,
+main section.profile > .details > .base-stats > .content > .right ul{
+    padding: 0;
+    margin: 0;
+}
+
+main section.profile > .details > .base-stats > .content > .left ul li{
+    list-style-type: none;
+    margin: 15px 0px;
+    text-align: right;
+}
+main section.profile > .details > .base-stats > .content > .right ul li{
+    list-style-type: none;
+    margin: 13px 10px 8px 0px;
+    align-items: center;
+}
+main section.profile > .details > .base-stats > .content > .right ul li.infos{
+    list-style-type: none;
+    margin: 15px 0px;
+    align-items: center;
+}
+
+
+main section.profile > .details > .base-stats > .content > .moves{
+    display: flex;
+    flex-direction: row;
+    margin: 40px 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main section.profile > .details > .base-stats > .content > .moves > .contents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px 5px 5px 0px;
+    width: 100px;
+    height: 50px;
+    padding: 10px 10px;
+    border-radius: 1rem;
+    background-color: #dfdfdf;
+}
+
+main section.profile > .details > .base-stats > .content.showContent{
+    display: flex;
+}
+
+main section.profile > .details > .base-stats > .content.showGrid > .grid.showGrid{
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    margin: 40px 25px;   
+}
