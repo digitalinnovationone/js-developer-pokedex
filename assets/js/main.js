@@ -15,7 +15,7 @@ const pokemonWeight = document.querySelector(".pokemon__weight")
 const pokemonMove = document.querySelector(".pokemon__move")
 const pokemonMoveDescription = document.querySelector(".pokemon__move_description")
 const backgroundLayer = document.querySelector(".background__layer")
-const limit = 10;
+const limit = 20;
 let offset = 0;
 
 
