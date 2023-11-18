@@ -7,15 +7,43 @@ body {
     background-color: #f6f8fc;
 }
 
-.content {
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
+/* Navigation Bar*/
+main > nav > ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+}
+main > nav > ul > li{
+    width: 41%;
+    font-size: 17px;
+    align-content: center;
+}
+main > nav > ul > li > a{
+    text-decoration: none;
+    color: #2a2ef3;
+    transition: .1s ease-out;
+}
+main > nav > ul > li > a:hover{
+    color: #7073f5;
+    transition: .1s ease-out;
+}
+
+
+main section.content {
+    /* Removed vh and vw values due scroll problems with some browsers
+      like OperaGX right menu. Maybe it was something to deal with my browsers,
+      but better safe than sorry right? :P */
+    padding: 0 1rem;
     background-color: #fff;
 }
 
+main section.content > h1{
+    text-align: center;
+}
+
 @media screen and (min-width: 992px) {
-    .content {
+    main section.content {
         max-width: 992px;
         height: auto;
         margin: 1rem auto;
