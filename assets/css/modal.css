@@ -1,0 +1,140 @@
+
+
+.modalImage{
+ width: 50%;
+ height: 50%;
+ max-height: 150px;
+}
+.close__button{
+    border: none;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    background-size: cover;
+    background-image: url("/close.png");
+    align-self: flex-end;
+    margin-top: .5rem;
+    margin-right: 2rem;
+    padding-bottom: 1.2rem;
+
+}
+
+.close__button:hover{
+    opacity: 0.5;
+    cursor: pointer;
+    transition: .2s;
+}
+.modal{
+    display: none;
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 450px;
+    max-width: 300px;
+    margin: auto;
+    border-radius: 2em;
+    border: 1px solid black;
+    -webkit-animation: scale-in 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    animation: scale-in 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.modal-active{
+    display: flex;
+    transition: all .5s;
+}
+.modalTitle{
+    font-size: 1.6rem;
+    text-transform: capitalize;
+}
+.nav__list{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+}
+
+.info__list{
+    list-style: none;
+    padding: 0;
+}
+
+.info__stats{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    padding-bottom: 1rem;
+}
+
+.info__stats-item{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.info__stats-item, progress{
+    list-style: none;
+    padding: 0;
+    height: .6rem;
+}
+
+.info__stats-item, p{
+    font-size: .7rem;
+    font-style: italic;
+}
+.nav__list{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+}
+.nav__list p {
+font-weight: 500;
+}
+.nav__list span {
+    font-size: .6rem;
+}
+.gray__line{
+    height: 3rem;
+    width: 1px;
+    background-color: black;
+    opacity: 0.3;
+} 
+
+.pokemon__move{
+    text-transform: capitalize;
+}
+
+progress {
+    background-color: white;
+    -webkit-appearance: none;
+    accent-color: black;
+    height: .4rem;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-bar {
+    background-color: white;
+    border-radius: 10px;
+}
+progress::-webkit-progress-value {
+    background-color: black;
+    border-radius: 10px;
+}
+
+@keyframes scale-in {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
