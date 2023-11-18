@@ -84,6 +84,12 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    position: relative;
+}
+.pokemon:hover{
+    opacity: 0.9;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px rgb(70, 70, 70);
 }
 
 .pokemon .number {
@@ -144,8 +150,43 @@
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+    cursor: pointer;
 }
+.pagination button:hover {
+    opacity: 0.8;
+    transition: .5s;
+}
+.lookDetails{
+    display: flex;
+    border: none;
+    background-color: transparent;
+    align-self: flex-end;
+}
+.lookDetails__img{
+    width: 15px;
+    max-height: 15px;
+    cursor: pointer;
+}
+.lookDetails__img:hover{
+    opacity: 0.7;
 
+}
+.background__layer{
+    display: none;
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 1, .6);
+    transition: .5s;
+    
+}
+.layer-active{
+    display: block;
+}
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
@@ -163,3 +204,4 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
