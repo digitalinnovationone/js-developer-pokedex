@@ -1,8 +1,8 @@
-const pokemonList = document.getElementById('pokemonList')
-const loadMoreButton = document.getElementById('loadMoreButton')
+const pokemonList = document.getElementById('pokemonList');
+const loadMoreButton = document.getElementById('loadMoreButton');
 
-const maxRecords = 151
-const limit = 10
+const maxRecords = 151;
+const limit = 10;
 let offset = 0;
 
 function convertPokemonToLi(pokemon) {
@@ -16,32 +16,69 @@ function convertPokemonToLi(pokemon) {
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                 </ol>
 
-                <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
+                <img data-src="${pokemon.photo}" alt="${pokemon.name}">
             </div>
         </li>
-    `
+    `;
 }
 
-function loadPokemonItens(offset, limit) {
+function loadPokemonData(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
-        const newHtml = pokemons.map(convertPokemonToLi).join('')
-        pokemonList.innerHTML += newHtml
-    })
+        const newHtml = pokemons.map(convertPokemonToLi).join('');
+        pokemonList.innerHTML += newHtml;
+
+        // Desativa o botão "Load More" quando atingir o número máximo
+        if (offset + limit >= maxRecords) {
+            loadMoreButton.disabled = true;
+        }
+
+        // Adiciona a lógica para carregar imagens conforme o usuário rola a página
+        lazyLoadImages();
+    });
 }
 
-loadPokemonItens(offset, limit)
+function lazyLoadImages() {
+    const lazyImages = document.querySelectorAll('img[data-src]');
 
+    lazyImages.forEach((lazyImage) => {
+        lazyImage.src = lazyImage.dataset.src;
+        lazyImage.removeAttribute('data-src');
+    });
+}
+
+// Carrega os primeiros Pokémon
+loadPokemonData(offset, limit);
+
+// Adiciona evento de clique ao botão "Load More"
 loadMoreButton.addEventListener('click', () => {
-    offset += limit
-    const qtdRecordsWithNexPage = offset + limit
+    offset += limit;
+    loadPokemonData(offset, limit);
+});
 
-    if (qtdRecordsWithNexPage >= maxRecords) {
-        const newLimit = maxRecords - offset
-        loadPokemonItens(offset, newLimit)
+// Adiciona eventos de clique aos elementos da lista de Pokémon
+pokemonList.addEventListener('click', function (event) {
+    // Verifique se o clique ocorreu em um elemento com a classe 'pokemon'
+    const pokemonElement = event.target.closest('.pokemon');
+    if (pokemonElement) {
+        // Obtém o ID do Pokémon com base no ID do elemento clicado
+        const pokemonId = pokemonElement.querySelector('.number').textContent.slice(1);
 
-        loadMoreButton.parentElement.removeChild(loadMoreButton)
-    } else {
-        loadPokemonItens(offset, limit)
+        // Chama a função para exibir os detalhes do Pokémon
+        showDetails(pokemonId);
     }
-})
+});
+
+function showDetails(pokemonId) {
+    // Sua lógica existente para obter detalhes do Pokémon...
+
+    pokeApi.getPokemonDetails(pokemonId).then((pokemonDetails) => {
+        // Cria a URL para a nova página com os detalhes do Pokémon
+        const detailsUrl = `/details.html?id=${pokemonDetails.id}`;
+
+        // Abre a nova página na guia atual
+        window.open(detailsUrl, '_self');
+    });
+}
+// Adiciona um evento de scroll para carregar imagens conforme o usuário rola a página
+document.addEventListener('scroll', lazyLoadImages);
+
