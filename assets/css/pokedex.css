@@ -137,13 +137,12 @@
 }
 
 .pagination button {
-    padding: .25rem .5rem;
-    margin: .25rem 0;
-    font-size: .625rem;
-    color: #fff;
-    background-color: #6c79db;
+    background-color: rgb(29, 77, 199);
     border: none;
+    padding: 1rem;
     border-radius: 1rem;
+    color: #fff;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 380px) {
