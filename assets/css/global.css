@@ -14,6 +14,11 @@ body {
     background-color: #fff;
 }
 
+.content a {
+    text-decoration: none;
+    color: white;
+}
+
 @media screen and (min-width: 992px) {
     .content {
         max-width: 992px;
