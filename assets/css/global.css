@@ -34,8 +34,9 @@ body {
     overflow: hidden;
 }
 .modal-body{
-    background-color: aqua;
     padding: 0;
+    background-image: url('https://img.freepik.com/fotos-premium/fundo-cubico-abstrato-com-profundidade-de-ilustracao-3d-de-efeito-de-campo_92790-3390.jpg');
+    background-blend-mode: multiply;
 }
 
 .modal-body section{
@@ -54,15 +55,30 @@ body {
     border-top-right-radius: 50px;
 }
 
-.img-pokemon{
+.modal-body .img-pokemon{
     text-align: center;
-    margin-bottom: -15px;
+    margin-bottom: -55px;
+    margin-top: -20px;
+}
+.modal-body .img-pokemon img{
+    max-width: 70%;
+    max-height: 70%;
 }
 
-.number{
+.description .name{
+    text-transform: capitalize;
+}
+
+.description .number{
     margin-top: -20px;
     display: flex;
     justify-content: end;
+}
+.description .number span{
+    padding: 5px 15px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.15);
+    color: rgb(0, 0, 0, 0.5);
 }
 
 .description .types{
@@ -75,9 +91,8 @@ body {
 
 .description .types .type{
     color: #fff;
-    margin: 8px;
-    padding: 5px 15px;
-    border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.1);
-    text-shadow: 1px 1px 1px rgb(0, 0, 0, 0.3)
+    padding: .5rem .8rem;
+    margin: .25rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
 }

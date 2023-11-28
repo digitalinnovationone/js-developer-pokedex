@@ -28,55 +28,6 @@
 <body>
     <section class="content">
         <h1>Pokedex</h1>
-
-
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-    <div class="modal-content">
-
-        <div class="modal-body">
-            <section>
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-    
-                <div class="description">
-                    <h2 class="name"> You Pokemon </h2>
-                    <span class="number"> #999 </span>
-    
-                    <ol class="types">
-                        <li class="type"> type </li>
-                        <li class="type"> type </li>
-                    </ol>
-                </div>
-    
-                <div class="img-pokemon">
-                    <img class="img-pokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/7.svg" alt="${pokemon.name}">
-                </div>
-                
-            </section>
-
-            <div class="modal-detail">
-                <ul class="types">
-                    <li class="type ${type}"> type </li>
-                    <li class="type ${type}"> type </li>
-                    <li class="type ${type}"> type </li>
-                </ul>
-            </div>
-            
-        </div>
-    </div>
-</div>
-</div>
-
-
         <ol id="pokemonList" class="pokemons">
             <!-- ..... Pokemons here ..... -->
         </ol>
@@ -87,6 +38,12 @@
             </button>
         </div>
     </section>
+
+    <!-- Modal -->
+    <button type="button" id="btnModal" class="collapse" data-bs-toggle="modal" data-bs-target="#modalShowDatail"></button>
+    <div class="modal fade" id="modalShowDatail" tabindex="-1" aria-labelledby="modalShowDatailLabel" aria-hidden="true">
+        
+    </div>
 
     <!-- Nosso JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
