@@ -5,4 +5,8 @@ class Pokemon {
     type;
     types = [];
     photo;
+    urlDetail;
+    abilities = [];
+    experience;
+
 }

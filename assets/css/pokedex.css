@@ -107,12 +107,14 @@
 }
 
 .pokemon .detail .types {
+    text-transform: capitalize;
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
 .pokemon .detail .types .type {
+    text-transform: capitalize;
     color: #fff;
     padding: .25rem .5rem;
     margin: .25rem 0;
