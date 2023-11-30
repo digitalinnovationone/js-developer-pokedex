@@ -12,9 +12,9 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.type = type
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
    
-    urlDetail = pokeDetail.abilities[0].ability.url
-
-    console.log(pokemon)
+    pokemon.urlDetail = pokeDetail.abilities[0].ability.url
+    pokemon.experience = pokeDetail.base_experience
+    pokemon.abilities = pokeDetail.abilities.map((ability) => ability.ability.name)
 
     return pokemon
 }
@@ -24,13 +24,6 @@ pokeApi.getPokemonDetail = (pokemon) => {
         .then((response) => response.json())
         .then(convertPokeApiDetailToPokemon)
 }
-
-pokeApi.getDetail = (pokemon) => {
-    return fetch(pokemon.abilities[0].ability.url)
-        .then((response) => response.json())
-        //.then(convertPokeApiDetailToPokemon)
-}
-
 
 pokeApi.getPokemons = (offset = 0, limit = 5) => {
     const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
@@ -42,12 +35,3 @@ pokeApi.getPokemons = (offset = 0, limit = 5) => {
         .then((detailRequests) => Promise.all(detailRequests))
         .then((pokemonsDetails) => pokemonsDetails)
 }
-
-
-/**
- * abilities => name
- * abilities => url
- * url => effect_entries => effect
- * url => effect_entries => short_effect
- * url => generation = > name
- */

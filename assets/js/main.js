@@ -54,19 +54,27 @@ loadMoreButton.addEventListener('click', () => {
 })
 
 
-function showDetail(id){
+function showDetail(id){ 
     const [pokeDetail] = currentPokemons.filter((pokemon) => pokemon.number == id )
     let modal = document.querySelector('#modalShowDatail')
-    const html = createModalPokemon(pokeDetail)
-
-    //console.log(pokeDetail.types)
-
-    modal.innerHTML = html
-    const btnModal = document.querySelector("#btnModal");
-    btnModal.click();
+    
+    fetch(pokeDetail.urlDetail)
+    .then((response) => response.json())
+    .then((response) => response)
+    .then((detail)=>{
+        const html = createModalPokemon(pokeDetail, detail)
+        modal.innerHTML = html
+        const btnModal = document.querySelector("#btnModal");
+        btnModal.click();
+    })
+    .catch((error) => console.log(error))
 }
+        
 
-function createModalPokemon(pokemon){  
+    
+    
+
+function createModalPokemon(pokemon, datail){  
     return`
         <div class="modal-dialog">
             <div class="modal-content">
@@ -93,11 +101,25 @@ function createModalPokemon(pokemon){
                     </section>
 
                     <div class="modal-detail">
-                        <ul class="types">
-                            ${pokemon.types.map((type) => `<li class="type">${type}</li>`).join('')}
-                        </ul>
+                        <div class="modal-detail-content">
+                            <h6>🪄 Efeitos </h6>
+                            <p class="textInfo text">${datail.effect_entries[0].effect} </p>
+                            <hr>
+
+                            <h6>🐱 Geração </h6>
+                            <p class="textInfo">${datail.generation.name} </p>
+                            <hr>
+
+                            <h6>🥷🏽 Experiência </h6>
+                            <p class="textInfo">XP-${pokemon.experience} </p>
+                            <hr>
+
+                            <h6>🏹 Habilidades </h6>
+                            <ul>
+                                ${pokemon.abilities.map((abilitie) => `<li class="textInfo">${abilitie}</li>`).join('')}
+                            </ul>
+                        </div>
                     </div>
-                    
                 </div>
             </div>
         </div>

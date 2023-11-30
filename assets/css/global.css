@@ -30,13 +30,13 @@ body {
 }
 
 .modal-content{
-    border-radius: 20px;
+    border-radius: 2.5rem;
+    border: solid 3px #ffffff4e;
     overflow: hidden;
 }
 .modal-body{
     padding: 0;
-    background-image: url('https://img.freepik.com/fotos-premium/fundo-cubico-abstrato-com-profundidade-de-ilustracao-3d-de-efeito-de-campo_92790-3390.jpg');
-    background-blend-mode: multiply;
+    background-color: #d2d2d2;
 }
 
 .modal-body section{
@@ -49,7 +49,8 @@ body {
 
 .modal-detail{
     background-color: #fff;
-    min-height: 200px;
+    display: flex;
+    justify-content: center;
     padding-top: 30px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -77,11 +78,12 @@ body {
 .description .number span{
     padding: 5px 15px;
     border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.15);
-    color: rgb(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgb(0, 0, 0, 0.3);
 }
 
 .description .types{
+    text-transform: capitalize;
     display: flex;
     list-style: none;
     margin: 0;
@@ -90,9 +92,24 @@ body {
 }
 
 .description .types .type{
+    text-transform: capitalize;
     color: #fff;
     padding: .5rem .8rem;
     margin: .25rem;
     border-radius: 1rem;
     filter: brightness(1.1);
+}
+
+.modal-detail-content{
+    padding: 0;
+    width: 90%;
+}
+.textInfo{
+    font-size: .9rem;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+.text{
+    text-align: justify;
+    text-transform: none;
 }
