@@ -1,24 +1,34 @@
 * {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+  box-sizing: border-box;
+
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-    background-color: #f6f8fc;
+  overflow-x: hidden;
 }
 
 .content {
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
-    background-color: #fff;
+  width: 100wh;
+  height: 100vh;
+  padding: 1rem;
 }
 
+.content .poke-stats,
+.content .closeButton,
+.content .main-stats,
+.content .poke-details-text,
+.modal #btn-pokedetails,
+#modal-id {
+  display: none;
+}
+
+
 @media screen and (min-width: 992px) {
-    .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
+  .content {
+    max-width: 992px;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 1rem;
+  }
 }
