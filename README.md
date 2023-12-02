@@ -27,3 +27,6 @@ O objetivo deste projeto é criar uma aplicação web que utilize a PokeAPI para
 
    ```bash
    git clone https://github.com/seu-usuario/seu-projeto.git
+   
+2. Visualize no link:
+   🔗 https://js-pokedex-two.vercel.app/
