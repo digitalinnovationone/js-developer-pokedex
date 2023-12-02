@@ -146,6 +146,11 @@
     border-radius: 1rem;
 }
 
+#loadMoreButton:hover {
+    cursor: pointer;
+    zoom: 1.2;
+}
+
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;

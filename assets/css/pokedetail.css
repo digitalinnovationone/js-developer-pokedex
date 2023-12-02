@@ -1,0 +1,123 @@
+#card article {
+    position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      padding: 1rem;
+      background-color: #e8e6e8;
+    }
+    
+    .card_first_div {
+      height: 60%;
+      width: 100%;
+      border-radius: 1rem 1rem 0 0;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+    .card_first_div header {
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      padding: 0 1rem;
+      width: 100%;
+    }
+    
+    .card_first_div header p {
+      font-size: 1rem;
+    }
+    
+    .card_first_div div img {
+      max-height: 11rem;
+      width: auto;
+    }
+    
+    .card_first_div div h3 {
+      text-transform: capitalize;
+      text-align: center;
+      color: white;
+      font-size: 1.5rem;
+      margin: 0.5rem 0 0 0;
+    }
+    
+    .pokemon_info_types {
+      padding: 0;
+      margin: 1rem 0 0 0;
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .card_detail .pokemon_info_types .pokemon_type {
+      color: #ffffff;
+      text-transform: capitalize;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.5rem;
+      font-size: 12px;
+      filter: brightness(1.1);
+    }
+    
+    .card_second_div {
+      background-color: #ffffff;
+      height: 40%;
+      width: 100%;
+      border-radius: 0 0 1rem 1rem;
+      padding: 1rem;
+    }
+    
+    .card_second_div h3 {
+      margin: 0;
+      font-size: 1.25rem;
+      text-align: center;
+      text-decoration: underline;
+    }
+    
+    .card_second_div h5 {
+      margin: 0.75rem 0;
+      font-size: 1rem;
+    }
+    
+    .pokemon_info_abilities {
+      padding-left: 1.25rem;
+      gap: 0.5rem;
+    }
+    
+    .ability {
+      font-size: 1rem;
+      text-transform: capitalize;
+      font-style: inherit;
+    }
+  
+    
+    .info {
+      text-decoration: underline;
+      font-size: 1rem;
+    }
+    
+    @media screen and (min-width: 426px) {
+      #card article {
+        flex-direction: row;
+        padding: 4rem;
+      }
+    
+      .card_first_div {
+        width: 50%;
+        height: auto;
+        border-radius: 1rem 0 0 1rem;
+        justify-content: space-around;
+        padding: 1.5rem;
+      }
+    
+      .card_second_div {
+        width: 50%;
+        height: auto;
+        border-radius: 0 1rem 1rem 0;
+        padding: 1.5rem;
+      }
+    
+      .card_first_div div img {
+        min-width: 50%;
+      }
+    }
