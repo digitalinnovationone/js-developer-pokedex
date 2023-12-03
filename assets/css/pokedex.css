@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    cursor: pointer;
 }
 
 .normal {
@@ -107,12 +108,14 @@
 }
 
 .pokemon .detail .types {
+    text-transform: capitalize;
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
 .pokemon .detail .types .type {
+    text-transform: capitalize;
     color: #fff;
     padding: .25rem .5rem;
     margin: .25rem 0;
@@ -144,6 +147,7 @@
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 380px) {
