@@ -22,3 +22,96 @@ body {
         border-radius: 1rem;
     }
 }
+
+
+.modal-body .modal-header{
+    padding: 0;
+    border: none;
+}
+.modal-header button{
+    cursor: pointer;
+}
+.modal-content{
+    border-radius: 2.5rem;
+    border: solid 3px #ffffff4e;
+    overflow: hidden;
+}
+.modal-body{
+    padding: 0;
+    background-color: #d2d2d2;
+}
+
+.modal-body section{
+    padding: 20px;
+}
+.modal-body .description .name{
+    color: #fff;
+    text-shadow: 2px 1px 1px rgb(0, 0, 0, 0.3)
+}
+
+.modal-detail{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.modal-body .img-pokemon{
+    text-align: center;
+    margin-bottom: -55px;
+    margin-top: -20px;
+}
+.modal-body .img-pokemon img{
+    max-width: 70%;
+    max-height: 70%;
+}
+
+.description .name{
+    text-transform: capitalize;
+}
+
+.description .number{
+    margin-top: -20px;
+    display: flex;
+    justify-content: end;
+}
+.description .number span{
+    padding: 5px 15px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgb(0, 0, 0, 0.3);
+}
+
+.description .types{
+    text-transform: capitalize;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 80%;
+}
+
+.description .types .type{
+    text-transform: capitalize;
+    color: #fff;
+    padding: .5rem .8rem;
+    margin: .25rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+}
+
+.modal-detail-content{
+    padding: 0;
+    width: 90%;
+}
+.textInfo{
+    font-size: .9rem;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+.text{
+    text-align: justify;
+    text-transform: none;
+}
