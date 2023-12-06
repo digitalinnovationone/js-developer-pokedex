@@ -1,0 +1,30 @@
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 25px;
+	align-items: center;
+}
+
+header .logo,
+header .imagem-botao {
+	width: 30px;
+	transition: 0.2s ease-in-out;
+}
+
+header #botao-alterar-tema {
+	background: none;
+	border: none;
+}
+
+header .logo:hover,
+header .imagem-botao:hover,
+main .cartao-pokemon:hover {
+	transform: scale(1.05);
+	cursor: pointer;
+}
+
+header .logoPokemon {
+	width: 220px;
+	margin: 0;
+	padding: 0;
+}
