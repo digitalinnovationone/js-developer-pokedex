@@ -2,6 +2,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	padding: 25px;
+	align-items: center;
 }
 
 header .logo,
@@ -20,4 +21,10 @@ header .imagem-botao:hover,
 main .cartao-pokemon:hover {
 	transform: scale(1.05);
 	cursor: pointer;
+}
+
+header .logoPokemon {
+	width: 220px;
+	margin: 0;
+	padding: 0;
 }
