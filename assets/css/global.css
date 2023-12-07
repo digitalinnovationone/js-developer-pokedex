@@ -14,6 +14,36 @@ body {
     background-color: #fff;
 }
 
+.btnTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 81px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background: rgb(23, 63, 115);
+    text-decoration: none;
+    z-index: 999;
+}
+
+.btnTop::after {
+    content: "↑";
+    font-size: 32px;
+    font-weight: bold;
+    color: aliceblue;
+    transition: margin-top 250ms;
+}
+
+.btnTop:hover::after {
+    margin-top: -8px;
+}
+
+.hide {
+    visibility: hidden;
+}
+
 @media screen and (min-width: 992px) {
     .content {
         max-width: 992px;

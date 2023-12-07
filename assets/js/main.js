@@ -1,47 +1,101 @@
-const pokemonList = document.getElementById('pokemonList')
-const loadMoreButton = document.getElementById('loadMoreButton')
+const pokemonContainer = document.getElementById('pokemonList')
+const btnTop = document.getElementById('btnTop');
 
-const maxRecords = 151
-const limit = 10
+const limit = 12;
 let offset = 0;
 
-function convertPokemonToLi(pokemon) {
-    return `
-        <li class="pokemon ${pokemon.type}">
-            <span class="number">#${pokemon.number}</span>
-            <span class="name">${pokemon.name}</span>
-
-            <div class="detail">
-                <ol class="types">
-                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-                </ol>
-
-                <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
-            </div>
-        </li>
-    `
+function debounce(func, delay) {
+    let timer;
+    return function () {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            func.apply(this, arguments);
+        }, delay);
+    };
 }
 
-function loadPokemonItens(offset, limit) {
-    pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
-        const newHtml = pokemons.map(convertPokemonToLi).join('')
-        pokemonList.innerHTML += newHtml
-    })
-}
+window.onload = function () { scrollFunction() };
 
-loadPokemonItens(offset, limit)
+window.onscroll = function () { scrollFunction() };
 
-loadMoreButton.addEventListener('click', () => {
-    offset += limit
-    const qtdRecordsWithNexPage = offset + limit
+window.addEventListener('scroll', debounce(onScroll, 100));
 
-    if (qtdRecordsWithNexPage >= maxRecords) {
-        const newLimit = maxRecords - offset
-        loadPokemonItens(offset, newLimit)
-
-        loadMoreButton.parentElement.removeChild(loadMoreButton)
-    } else {
-        loadPokemonItens(offset, limit)
+function onScroll() {
+    if (window.scrollY + window.innerHeight >= document.body.scrollHeight - 100) {
+        loadMorePokemons();
     }
-})
+}
+
+function scrollFunction() {
+    if (document.body.scrollTop > 15 || document.documentElement.scrollTop > 15) {
+        btnTop.classList.remove('hide');
+    } else {
+        btnTop.classList.add('hide');
+    }
+}
+
+function convertPokemonToLi(pokemon) {
+    const pokemonLi = createElement('li', {
+        class: `pokemon ${pokemon.type}`
+    });
+
+    const pokemonNumber = createElement('span', {
+        class: 'number'
+    });
+    pokemonNumber.textContent = `#00${pokemon.number}`;
+    pokemonLi.appendChild(pokemonNumber);
+
+    const pokemonName = createElement('span', {
+        class: 'name'
+    });
+    pokemonName.textContent = pokemon.name;
+    pokemonLi.appendChild(pokemonName);
+
+    const pokemonDetails = createElement('div', {
+        class: 'detail'
+    });
+
+    const pokemonTypes = createElement('ol', {
+        class: 'types'
+    });
+
+    pokemon.types.map((type) => {
+        const pokemonType = createElement('li', {
+            class: `type ${type}`
+        });
+        pokemonType.textContent = type;
+        pokemonTypes.appendChild(pokemonType);
+    });
+
+    const pokemonImage = createElement('img', {
+        src: pokemon.photo,
+        alt: pokemon.name
+    });
+
+    pokemonDetails.appendChild(pokemonTypes);
+    pokemonDetails.appendChild(pokemonImage);
+    pokemonLi.appendChild(pokemonDetails);
+
+    return pokemonLi;
+}
+
+function loadPokemons(offset, limit) {
+    pokeApi.getPokemons(offset, limit).then((pokemonList = []) => {
+        pokemonList.map((pokemon) => {
+            const newPokemon = convertPokemonToLi(pokemon);
+            pokemonContainer.appendChild(newPokemon);
+            newPokemon.addEventListener('click', () => {
+                window.location.href = `details.html?id=${pokemon.number}`;
+            });
+        });
+
+    });
+}
+
+loadPokemons(offset, limit);
+
+function loadMorePokemons() {
+    offset += limit;
+    const newLimit = offset + limit;
+    loadPokemons(offset, newLimit);
+}
