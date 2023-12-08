@@ -1,0 +1,111 @@
+.pokemon-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    border: 5px solid #b9b7cf;
+    margin: 0 auto;
+}
+
+.card-header {
+    padding-inline: 0.625rem;
+    filter: brightness(1.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #efefef;
+    border: 2px solid #b9b7cf;
+    border-radius: 1rem;
+}
+
+.card-header span {
+    font-weight: 700;
+}
+
+.card-body {
+    margin-top: 0;
+    margin: 0 auto;
+}
+
+.pokemon-img {
+    filter: brightness(1);
+    margin: .7rem;
+    padding: .625rem;
+    border: 3px solid #f9f9f9;
+    box-shadow: 10px 10px 10px #000;
+
+}
+
+.pokemon-types {
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.pokemon-types span {
+    border: 2px solid #b9b7cf;
+    color: #fff;
+    font-weight: 700;
+    filter: brightness(1.1);
+    padding: .25rem .5rem;
+    border-radius: 1rem;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.card-body img {
+    width: 100%;
+}
+
+.pokemon-stats {
+    filter: brightness(.6);
+    margin: 0;
+    padding: 0;
+    /* margin: .75rem; */
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.pokemon-stats li {
+    border-bottom: 2px solid #b9b7cf;
+    filter: brightness(.1);
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    color: #fff;
+}
+
+.pokemon-stats li span {
+    margin: .25rem;
+    font-size: .725rem;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.card-footer span{
+    font-size: .725rem;
+    margin-inline: 3.5rem;
+    margin-bottom: .5rem;
+}
+
+.stat-name {
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 992px) {
+    .pokemon-card {
+        max-width: 40% !important;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .pokemon-card {
+        max-width: 60% !important;
+    }
+}
