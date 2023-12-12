@@ -1,20 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 * {
-    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background-color: #f6f8fc;
+    background-color: #F6F8FC;
 }
-
 .content {
     width: 100vw;
     height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #FFFFFF;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 960px) {
     .content {
         max-width: 992px;
         height: auto;
@@ -22,3 +25,8 @@ body {
         border-radius: 1rem;
     }
 }
+
+.content h1 {
+    margin-bottom: 1.5rem;
+}
+
