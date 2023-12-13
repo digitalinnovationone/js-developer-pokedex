@@ -1,24 +1,27 @@
+/* Define a fonte padrão para todos os elementos com o nome "Roboto" e fallback para fontes genéricas do tipo sans-serif */
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     box-sizing: border-box;
-}
-
-body {
-    background-color: #f6f8fc;
-}
-
-.content {
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
-    background-color: #fff;
-}
-
-@media screen and (min-width: 992px) {
-    .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
+  }
+  
+  /* Estilizações específicas para o corpo da página */
+  body {
+    background-color: #f6f8fc; /* Define a cor de fundo do corpo da página */
+  }
+  
+  /* Estilizações para o conteúdo principal da página */
+  .content {
+    width: 100vw; /* Define a largura da .content como 100% da largura da viewport */
+    padding: 1rem; /* Adiciona um espaçamento interno de 1rem (16 pixels) em todas as direções */
+    border-color: #fff; /* Define a cor da borda da .content como branco */
+    height: 100vh; /* Define a altura da .content como 100% da altura da viewport */
+  
+    /* Estilizações específicas para telas maiores (largura mínima de 992 pixels) usando media query */
+    @media screen and (min-width: 992px) {
+      max-width: 992px; /* Define a largura máxima da .content como 992 pixels */
+      height: auto; /* Permite que a altura da .content seja ajustada automaticamente conforme o conteúdo */
+      margin: 1rem auto; /* Adiciona margens superior e inferior de 1rem e centraliza a .content na tela */
+      border-radius: 1rem; /* Adiciona uma borda arredondada à .content com raio de 1rem */
     }
-}
+  }
+  

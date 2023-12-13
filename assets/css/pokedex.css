@@ -1,165 +1,179 @@
+/* Define um estilo para a lista de Pokémon (.pokemons) utilizando o modelo de grid */
 .pokemons {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.normal {
+    display: grid; /* Usa o modelo de layout grid */
+    grid-template-columns: 1fr; /* Define uma única coluna na grade ocupando toda a largura disponível */
+    list-style: none; /* Remove os marcadores de lista padrão */
+    padding: 0; /* Remove o preenchimento interno padrão da lista */
+    margin: 0; /* Remove as margens padrão da lista */
+  }
+  
+  .normal {
     background-color: #a6a877;
-}
-
-.grass {
+  }
+  
+  .grass {
     background-color: #77c850;
-}
-
-.fire {
+  }
+  
+  .fire {
     background-color: #ee7f30;
-}
-
-.water {
+  }
+  
+  .water {
     background-color: #678fee;
-}
-
-.electric {
+  }
+  
+  .electric {
     background-color: #f7cf2e;
-}
-
-.ice {
+  }
+  
+  .ice {
     background-color: #98d5d7;
-}
-
-.ground {
+  }
+  
+  .ground {
     background-color: #dfbf69;
-}
-
-.flying {
+  }
+  
+  .flying {
     background-color: #a98ff0;
-}
-
-.poison {
+  }
+  
+  .poison {
     background-color: #a040a0;
-}
-
-.fighting {
+  }
+  
+  .fighting {
     background-color: #bf3029;
-}
-
-.psychic {
+  }
+  
+  .psychic {
     background-color: #f65687;
-}
-
-.dark {
+  }
+  
+  .dark {
     background-color: #725847;
-}
-
-.rock {
+  }
+  
+  .rock {
     background-color: #b8a137;
-}
-
-.bug {
+  }
+  
+  .bug {
     background-color: #a8b720;
-}
-
-.ghost {
+  }
+  
+  .ghost {
     background-color: #6e5896;
-}
-
-.steel {
+  }
+  
+  .steel {
     background-color: #b9b7cf;
-}
-
-.dragon {
+  }
+  
+  .dragon {
     background-color: #6f38f6;
-}
-
-.fairy {
+  }
+  
+  .fairy {
     background-color: #f9aec7;
-}
+  }
+  
+  /* Estilo para o contêiner principal de cada Pokémon (.pokemon) */
+  .pokemon {
+    display: flex; /* Usa o modelo flexível de layout */
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    margin: 0.5rem; /* Adiciona margem de 0.5rem em todos os lados */
+    padding: 1rem; /* Adiciona preenchimento interno de 1rem */
+    border-radius: 1rem;  /* Adiciona bordas arredondadas de 1rem */
+  }
+  
+  /* Estilo para o número do Pokémon (.pokemon .number) */
+  .pokemon .number {
+    color: #000; /* Define a cor do texto como preto */
+    opacity: 0.3; /* Define a opacidade do texto como 30% */
+    text-align: right; /* Alinha o texto à direita */
+    font-size: 0.625rem; /* Define o tamanho da fonte como 0.625rem (aproximadamente 10px) */
+  }
+  
+  /* Estilo para o nome do Pokémon (.pokemon .name) */
+  .pokemon .name {
+    color: #fff; /* Define a cor do texto como branco */
+    margin-bottom: .25rem; /* Adiciona margem inferior de 0.25rem */
+    text-transform: capitalize; /* Transforma o texto para ter a primeira letra de cada palavra em maiúscula */
+  }
+  
+  /* Estilo para o contêiner de detalhes do Pokémon (.pokemon .detail) */
+  .pokemon .detail {
+    display: flex; /* Usa o modelo flexível de layout */
+    flex-direction: row; /* Organiza os elementos em linha (horizontalmente) */
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: space-between; /* Distribui o espaço entre os itens, colocando-os nas extremidades */
+  }
+  
+  /* Estilo para a lista de tipos do Pokémon (.pokemon .detail .types) */
+  .pokemon .detail .types {
+    padding: 0; /* Remove o preenchimento interno da lista */
+    margin: 0; /* Remove as margens da lista */
+    list-style: none; /* Remove os marcadores de lista */
+  }
+  
+  /* Estilo para cada tipo do Pokémon (.pokemon .detail .types .type) */
+  .pokemon .detail .types .type {
+    color: #fff; /* Define a cor do texto como branco */
+    padding: 0.25rem 0.5rem; /* Adiciona preenchimento interno de 0.25rem superior/inferior e 0.5rem esquerda/direita */
+    margin: 0.25rem 0; /* Adiciona margem superior/inferior de 0.25rem */
+    font-size: 0.625rem; /* Define o tamanho da fonte como 0.625rem (aproximadamente 10px) */
+    border-radius: 1rem; /* Adiciona bordas arredondadas de 1rem */
+    filter: brightness(1.1); /* Ajusta o brilho para 110% */
+    text-align: center; /* Centraliza o texto */
+  }
+  
+  /* Estilo para a imagem do Pokémon (.pokemon .detail img) */
+  .pokemon .detail img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner pai */
+    height: 70px; /* Define a altura fixa da imagem como 70px */
+  }
+  
+  /* Estilo para a paginação (.pagination) */
+  .pagination {
+    display: flex; /* Usa o modelo flexível de layout */
+    flex-direction: row; /* Organiza os elementos em linha (horizontalmente) */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    width: 100%; /* Define a largura como 100% do contêiner pai */
+    padding: 1rem; /* Adiciona preenchimento interno de 1rem */
+  }
+  
+  /* Estilo para o botão de paginação (.pagination button) */
+  .pagination button {
+    padding: .25rem .5rem; /* Adiciona preenchimento interno de 0.25rem superior/inferior e 0.5rem esquerda/direita */
+    margin: .25rem 0; /* Adiciona margem superior/inferior de 0.25rem */
+    font-size: .625rem; /* Define o tamanho da fonte como 0.625rem (aproximadamente 10px) */
+    color: #fff; /* Define a cor do texto como branco */
+    background-color: #6c79db; /* Define a cor de fundo como azul */
+    border: none; /* Remove as bordas */
+    border-radius: 1rem; /* Adiciona bordas arredondadas de 1rem */
+  }
 
-.pokemon {
-    display: flex;
-    flex-direction: column;
-    margin: .5rem;
-    padding: 1rem;
-    border-radius: 1rem;
-}
-
-.pokemon .number {
-    color: #000;
-    opacity: .3;
-    text-align: right;
-    font-size: .625rem;
-}
-
-.pokemon .name {
-    text-transform: capitalize;
-    color: #fff;
-    margin-bottom: .25rem;
-}
-
-.pokemon .detail {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.pokemon .detail .types {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.pokemon .detail .types .type {
-    color: #fff;
-    padding: .25rem .5rem;
-    margin: .25rem 0;
-    font-size: .625rem;
-    border-radius: 1rem;
-    filter: brightness(1.1);
-    text-align: center;
-}
-
-.pokemon .detail img {
-    max-width: 100%;
-    height: 70px;
-}
-
-.pagination {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 1rem;
-}
-
-.pagination button {
-    padding: .25rem .5rem;
-    margin: .25rem 0;
-    font-size: .625rem;
-    color: #fff;
-    background-color: #6c79db;
-    border: none;
-    border-radius: 1rem;
-}
-
-@media screen and (min-width: 380px) {
+  
+  
+  /* Media queries para ajustar o layout em diferentes larguras de tela */
+  @media screen and (min-width: 380px) {
     .pokemons {
-        grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
-}
-
-@media screen and (min-width: 576px) {
+  }
+  
+  @media screen and (min-width: 576px) {
     .pokemons {
-        grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
     }
-}
-
-@media screen and (min-width: 992px) {
+  }
+  
+  @media screen and (min-width: 992px) {
     .pokemons {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-}
+  }
+  
