@@ -22,3 +22,14 @@ body {
         border-radius: 1rem;
     }
 }
+
+button{
+    margin: 0.5rem;
+    border-radius: 1rem;
+    background-color: unset;
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+  opacity: 0.5;
+}
