@@ -4,6 +4,8 @@ const loadMoreButton = document.getElementById('loadMoreButton')
 const maxRecords = 151
 const limit = 10
 let offset = 0;
+let olList = [];
+let currentPokemons = []
 
 function convertPokemonToLi(pokemon) {
     return `
@@ -17,7 +19,7 @@ function convertPokemonToLi(pokemon) {
                 </ol>
 
                 <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
+                    alt="${pokemon.name}">
             </div>
         </li>
     `
@@ -27,6 +29,8 @@ function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map(convertPokemonToLi).join('')
         pokemonList.innerHTML += newHtml
+        olList = [...document.querySelector('#pokemonList').children]
+        console.log(olList)
     })
 }
 
@@ -45,3 +49,4 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
