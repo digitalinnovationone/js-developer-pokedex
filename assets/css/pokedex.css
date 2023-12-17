@@ -78,6 +78,11 @@
     background-color: #f9aec7;
 }
 
+.pokemons a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .pokemon {
     display: flex;
     flex-direction: column;
@@ -144,6 +149,115 @@
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+}
+
+.details_wrapper{
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    margin-top: 7rem;
+    position: relative;
+}
+
+section.content a i{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.details_info div span.pokemon_type{
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+}
+
+.details_info h2{
+    color: #fff;
+}
+
+.details_img_wrapper{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: -90px;
+    left: 0px;
+    height: 120px;
+}
+
+.details_img_wrapper img{
+    height: 120px;
+}
+
+.details_hab_wrapper{
+    max-width: 500px;
+    margin: 1.5rem auto;
+}
+
+.details_hab_wrapper nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.details_hab_wrapper nav a{
+    text-decoration: none;
+    padding-bottom: .5rem;
+    color: #333;
+}
+
+.details_hab_wrapper nav a.active{
+    border-bottom: 2px solid #333;
+}
+
+.details_body_wrapper{
+    height: auto;
+}
+
+.details_body{
+    display: none;
+}
+
+.details_body table{
+    margin-top: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.details_body th{
+    color: #b1b1b1;
+    text-align: left;
+}
+
+.details_body h5{
+    font-size: 1rem;
+}
+
+.macho{
+    color: rgb(64, 64, 201);
+}
+
+.femea{
+    color: rgb(221, 113, 113);
+}
+
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    to {
+        background-position: -200% 0;
+    }
 }
 
 @media screen and (min-width: 380px) {
