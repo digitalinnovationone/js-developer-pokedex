@@ -22,3 +22,15 @@ body {
         border-radius: 1rem;
     }
 }
+
+#loadMoreButton {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    transform: scale(1.1);
+}
