@@ -1,0 +1,80 @@
+.navShowInfo{
+    width: 100%;
+    margin-top: 5%;
+}
+
+.ulShowInfo{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    font-size: .7rem;
+}
+
+.liShowInfo{
+    color: #00000063;
+}
+
+.liShowInfo:hover{
+    color: #000000;
+    cursor: pointer;
+}
+
+.activeNav{
+    color: #000;
+    text-decoration: underline;
+    text-decoration-color: rgb(56, 56, 255);
+}
+
+.sectionAtributeShowInfo{
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.pokemonShowInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+}
+
+.pokemonShowInfo h5{
+    margin: 5px;
+    text-align: start;
+}
+
+.dataShowInfo{
+    color: #00000063;
+}
+
+.ocult {
+    visibility: hidden;
+    height: 0;
+}
+
+.distak {
+    transition: all .5s;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 15%;
+}
+
+.distak.info+.overlay {
+    display: block;
+}
+
+.info {
+    transition: all 1s;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 2%;
+    width: 100%;
+    margin: 0;
+}

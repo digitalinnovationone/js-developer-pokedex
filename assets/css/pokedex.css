@@ -10,72 +10,165 @@
     background-color: #a6a877;
 }
 
+.normal:hover {
+    background-color: #c4c493;
+    cursor: pointer;
+}
+
 .grass {
     background-color: #77c850;
+    transition: all .5s;
+}
+
+.grass:hover {
+    background-color: #9aff6b;
+    cursor: pointer;
 }
 
 .fire {
     background-color: #ee7f30;
+    transition: all .5s;
+}
+
+.fire:hover {
+    background-color: #ff9c55;
+    cursor: pointer;
 }
 
 .water {
     background-color: #678fee;
+    transition: all .5s;
+}
+
+.water:hover {
+    background-color: #8aacfc;
+    cursor: pointer;
 }
 
 .electric {
     background-color: #f7cf2e;
 }
 
+.electric:hover {
+    background-color: #ffe168;
+    cursor: pointer;
+}
+
 .ice {
     background-color: #98d5d7;
+}
+
+.ice:hover {
+    background-color: #b4e7eb;
+    cursor: pointer;
 }
 
 .ground {
     background-color: #dfbf69;
 }
 
+.ground:hover {
+    background-color: #f5d88f;
+    cursor: pointer;
+}
+
 .flying {
     background-color: #a98ff0;
+}
+
+.flying:hover {
+    background-color: #c7b0ff;
+    cursor: pointer;
 }
 
 .poison {
     background-color: #a040a0;
 }
 
+.poison:hover {
+    background-color: #c16cc1;
+    cursor: pointer;
+}
+
 .fighting {
     background-color: #bf3029;
+}
+
+.fighting:hover {
+    background-color: #d84c47;
+    cursor: pointer;
 }
 
 .psychic {
     background-color: #f65687;
 }
 
+.psychic:hover {
+    background-color: #ff81a7;
+    cursor: pointer;
+}
+
 .dark {
     background-color: #725847;
+}
+
+.dark:hover {
+    background-color: #8b726a;
+    cursor: pointer;
 }
 
 .rock {
     background-color: #b8a137;
 }
 
+.rock:hover {
+    background-color: #d3c265;
+    cursor: pointer;
+}
+
 .bug {
     background-color: #a8b720;
+}
+
+.bug:hover {
+    background-color: #c4d33f;
+    cursor: pointer;
 }
 
 .ghost {
     background-color: #6e5896;
 }
 
+.ghost:hover {
+    background-color: #856caa;
+    cursor: pointer;
+}
+
 .steel {
     background-color: #b9b7cf;
+}
+
+.steel:hover {
+    background-color: #cccad8;
+    cursor: pointer;
 }
 
 .dragon {
     background-color: #6f38f6;
 }
 
+.dragon:hover {
+    background-color: #8b67fa;
+    cursor: pointer;
+}
+
 .fairy {
     background-color: #f9aec7;
+}
+
+.fairy:hover {
+    background-color: #ffbddb;
+    cursor: pointer;
 }
 
 .pokemon {
