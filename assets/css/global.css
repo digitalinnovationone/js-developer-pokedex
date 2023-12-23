@@ -1,56 +1,57 @@
-*{
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
-body{
-    margin: 0 20px;
-    background-color: #f6f8fc;
-    position: relative;
-    background-image: url(../img/bg.jpg);
-    background-position: cover;
-
-    
+body {
+  margin: 0;
+  background-color: #f6f8fc;
+  position: relative;
+  background-image: url(../img/bg.jpg);
+  background-position: auto;
+  background-repeat: repeat-y;
+  overflow-x: hidden;
 }
 
-.content{
-    margin: 1rem;
+.content {
+  width: 100%;
+  margin: 020px;
 }
 
 .content figure {
-    text-align: center;
-    margin-bottom: 0;
-    padding: 0;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 0;
 }
 
-.content figure img{
-    width: 50%;
-    min-width: 220px;
+.content figure img {
+  width: 50%;
+  min-width: 220px;
 }
 
-.container-button{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 1rem;
+.container-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
 }
 
-.container-button button{
-    padding: 1.2rem 3rem;
-    margin: .25rem 0;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #6c79db;
-    border: none;
-    border-radius: 1rem;
-    transition: 0.7s ease;
+.container-button button {
+  padding: 1.2rem 3rem;
+  margin: 0.25rem 0;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #6c79db;
+  border: none;
+  border-radius: 1rem;
+  transition: 0.7s ease;
 }
 
-.container-button button:hover{
-    cursor: pointer;
-    background-color: aliceblue;
-    color: black;
-    border: 2px solid #6c79db;
+.container-button button:hover {
+  cursor: pointer;
+  background-color: aliceblue;
+  color: black;
+  border: 2px solid #6c79db;
 }
