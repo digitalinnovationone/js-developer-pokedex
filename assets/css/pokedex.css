@@ -86,6 +86,18 @@
     border-radius: 1rem;
 }
 
+.pokemonDetail {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem; /* Ajuste o valor conforme necessário */
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    min-height: 384px;
+}
+
 .pokemon .number {
     color: #000;
     opacity: .3;
@@ -93,10 +105,24 @@
     font-size: .625rem;
 }
 
+.pokemonDetail .number {
+    color: #000;
+    opacity: .3;
+    text-align: right;
+    font-size: 1.625rem;
+}
+
 .pokemon .name {
     text-transform: capitalize;
     color: #fff;
     margin-bottom: .25rem;
+}
+
+.pokemonDetail .nameDetail {
+    text-transform: capitalize;
+    color: #000;
+    margin-bottom: .25rem;
+    font-size: 1.625rem;
 }
 
 .pokemon .detail {
@@ -120,6 +146,34 @@
     border-radius: 1rem;
     filter: brightness(1.1);
     text-align: center;
+}
+
+.pokemonDetail .detail .types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.pokemonDetail .detail .types .type {
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .925rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+    max-width: 120px;
+    margin-right: 5px;
+}
+
+.pokemonDetail img {
+    width: 250px;
+    position: absolute;
+    top: 180px; /* Ajuste conforme necessário para a posição vertical */
+    left: 50%; /* Posiciona a imagem no centro horizontalmente */
+    transform: translateX(-50%); /* Centraliza a imagem horizontalmente */
+    border-radius: 10px 10px 0 0; /* Borda superior arredondada */
 }
 
 .pokemon .detail img {
@@ -162,4 +216,120 @@
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+}
+
+/* styles.css */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-width: 600px; /* Defina o valor máximo desejado */
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 10px; /* Valor para bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adicione uma sombra suave */
+}
+
+.modal-content {
+    width: 100%;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pokemon-stats {
+    background-color: #F5F5F5;
+    margin-top: -4rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    padding: 3rem;
+    border-radius: 1rem;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.8);
+    position: relative;
+    padding: 20px;
+}
+
+.pokemonDetailContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.tab {
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    margin-right: 5px;
+}
+
+.tab-content {
+    padding: 10px;
+    display: none;
+}
+
+.tab-content p {
+    margin: 0;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab.active {
+    background-color: #E0E0E0; /* Cor diferente para a tab ativa */
+}
+
+.moves-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.moves-list .moves {
+    padding: 5px;
+    margin: 5px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.pokemon-info {
+    padding: 10px;
+}
+
+.pokemon-info p {
+    margin: 0;
+}
+
+.ability-list {
+    list-style: none;
+    padding: 0;
+    display: flex;  /* Define o contêiner como um flex container */
+    margin: 0;  /* Remove a margem padrão da lista */
+}
+
+.ability-list li {
+    margin-right: 10px;  /* Adiciona espaçamento entre as habilidades */
 }
