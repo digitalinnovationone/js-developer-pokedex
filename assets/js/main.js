@@ -21,7 +21,7 @@ function convertPokemonToLi(pokemon) {
                 <img src="${pokemon.photo}"
                      alt="${pokemon.name}">
             </div>
-            <button type="button" onclick="showPokemonDetails(1)">Details</button>
+            <button class="details_button" type="button" onclick="showPokemonDetails(1)">Details</button>
         </li>
     `;
 }
@@ -48,3 +48,7 @@ loadMoreButton.addEventListener("click", () => {
         loadPokemonItens(offset, limit);
     }
 });
+
+function showPokemonDetailsModal() {
+    $("#pokemon-detail").modal("show");
+}
