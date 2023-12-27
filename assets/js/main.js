@@ -21,7 +21,9 @@ function convertPokemonToLi(pokemon) {
                 <img src="${pokemon.photo}"
                      alt="${pokemon.name}">
             </div>
-            <button class="details_button" type="button" onclick="showPokemonDetails(1)">Details</button>
+            <button class="details_button" type="button" onclick="searchPokemonDetails(${
+                pokemon.id
+            })">Details</button>
         </li>
     `;
 }
@@ -48,6 +50,16 @@ loadMoreButton.addEventListener("click", () => {
         loadPokemonItens(offset, limit);
     }
 });
+
+function searchPokemonDetails(id) {
+    pokeApi.getPokemonInfoById(id).then((pokemon_info) => {
+        fillPokemonModalInfo(pokemon_info);
+    });
+}
+
+function fillPokemonModalInfo(pokemon) {
+    console.log(pokemon);
+}
 
 function showPokemonDetailsModal() {
     $("#pokemon-detail").modal("show");
