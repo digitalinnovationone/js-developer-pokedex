@@ -58,7 +58,41 @@ function searchPokemonDetails(id) {
 }
 
 function fillPokemonModalInfo(pokemon) {
-    console.log(pokemon);
+    pokemon.types = pokemon.types.map((typeSlot) => typeSlot.type.name);
+    [pokemon.type] = pokemon.types;
+    pokemon.photo = pokemon.sprites.other.dream_world.front_default;
+    pokemon.stats = pokemon.stats.map((stats) => [
+        stats.base_stat,
+        stats.stat.name,
+    ]);
+
+    const info = `
+    <div class="pokemon ${pokemon.type}">
+        <span class="name">${pokemon.name}</span>
+        <div class="detail">
+        <ol class="types">
+            ${pokemon.types
+                .map((type) => `<li class="type ${type}">${type}</li>`)
+                .join("")}
+        </ol>
+
+        <img src="${pokemon.photo}"
+            alt="${pokemon.name}">
+    </div>
+    <div class='pokemon-statistcs'>
+        <h2>Statistics</h2>
+        <ul class="stats">
+            ${pokemon.stats
+                .map((stat) => {
+                    return `<li class="stat">${stat[1] + " = " + stat[0]}</li>`;
+                })
+                .sort()
+                .join("")}
+        </ul>
+    </div>
+    `;
+    $("#pokemon-info").html(info);
+    showPokemonDetailsModal();
 }
 
 function showPokemonDetailsModal() {

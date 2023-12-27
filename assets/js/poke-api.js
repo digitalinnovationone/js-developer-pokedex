@@ -38,5 +38,5 @@ pokeApi.getPokemonInfoById = (id) => {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
     return fetch(url)
         .then((response) => response.json())
-        .then((jsonBody) => console.log(jsonBody));
+        .then((jsonBody) => jsonBody);
 };
