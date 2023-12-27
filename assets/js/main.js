@@ -68,7 +68,6 @@ function fillPokemonModalInfo(pokemon) {
 
     const info = `
     <div class="pokemon ${pokemon.type}">
-        <span class="name">${pokemon.name}</span>
         <div class="detail">
         <ol class="types">
             ${pokemon.types
@@ -92,6 +91,7 @@ function fillPokemonModalInfo(pokemon) {
     </div>
     `;
     $("#pokemon-info").html(info);
+    $("#pokemon-detail-name").html(`${pokemon.name}`);
     showPokemonDetailsModal();
 }
 

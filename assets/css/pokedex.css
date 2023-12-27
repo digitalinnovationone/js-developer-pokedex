@@ -163,6 +163,9 @@
     border: none;
     border-radius: 1rem;
 }
+#pokemon-detail-name {
+    text-transform: capitalize;
+}
 .pokemon-statistcs {
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.2);
