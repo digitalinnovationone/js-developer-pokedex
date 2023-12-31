@@ -1,24 +1,36 @@
-* {
+:root{
+    font-size: 62.5%;
+}
+
+*{
     font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
     box-sizing: border-box;
 }
 
-body {
+body{
     background-color: #f6f8fc;
 }
 
-.content {
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
+.hide{
+    display: none;
+}
+
+h1{
+    font-size: 3.2rem;
+}
+
+.content{
+    padding: 1.6rem;
+    height: auto;
     background-color: #fff;
 }
 
-@media screen and (min-width: 992px) {
-    .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
+.name{
+    text-transform: capitalize;
+}
+
+.number{
+    text-align: right;
+    opacity: 50%;
 }
