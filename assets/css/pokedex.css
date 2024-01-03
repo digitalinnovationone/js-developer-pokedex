@@ -7,77 +7,62 @@
 }
 
 .normal {
-    background-color: #a6a877;
-}
-
-.grass {
-    background-color: #77c850;
-}
-
-.fire {
-    background-color: #ee7f30;
-}
-
-.water {
-    background-color: #678fee;
-}
-
-.electric {
-    background-color: #f7cf2e;
-}
-
-.ice {
-    background-color: #98d5d7;
-}
-
-.ground {
-    background-color: #dfbf69;
-}
-
-.flying {
-    background-color: #a98ff0;
-}
-
-.poison {
-    background-color: #a040a0;
-}
-
-.fighting {
-    background-color: #bf3029;
-}
-
-.psychic {
-    background-color: #f65687;
-}
-
-.dark {
-    background-color: #725847;
-}
-
-.rock {
-    background-color: #b8a137;
-}
-
-.bug {
-    background-color: #a8b720;
-}
-
-.ghost {
-    background-color: #6e5896;
-}
-
-.steel {
-    background-color: #b9b7cf;
-}
-
-.dragon {
-    background-color: #6f38f6;
-}
-
-.fairy {
-    background-color: #f9aec7;
-}
-
+    background-image: linear-gradient(to right,#A8A77A, #c1c0be); 
+ }
+ .fire {
+     /* background-color: #ff9b3eee; */
+     background-image: linear-gradient(to right,#ff9b3eee, #ffb875ee);
+ 
+ }
+ .grass {
+     /* background-color: #14a06f; */
+     background-image: linear-gradient(to right,#14a06f, rgba(98, 220, 178, 0.812));
+ }
+ .fighting{
+     background-image: linear-gradient(to right,rgb(170, 164, 164) , #5d5c5c);
+ }
+ .poison{
+     background-image: linear-gradient(to right, #bb80bb,#a89ea8);
+ }
+ .ghost{
+     background-image: linear-gradient(to right,#996c98 , #572856);
+ }
+ .water{
+     background-image: linear-gradient(to right,#84aafb , #3c78fb);
+ }
+ .electric{
+     background-image: linear-gradient(to right,#d0a700 , #ffe26f);
+ }
+ .ice{
+     background-image: linear-gradient(to right,#57b2ad , #96D9D6);
+ }
+ .ground{
+     background-image: linear-gradient(to right,#b99949 , #E2BF65);
+ }
+ .flying{
+     background-image: linear-gradient(to right,#1f0ffc , rgb(115, 83, 203));
+ }
+ .psychic{
+     background-image: linear-gradient(to right,#f3789d ,#8b3a52);
+ }   
+ .bug{
+     background-image: linear-gradient(to top,#A6B91A ,#a41da9);
+ }   
+ .rock{
+     background-image: linear-gradient(to top,#9c9a91 ,#3e3d39);
+ }
+ .dragon{
+     background-image: linear-gradient(to right,#6F35FC ,#3717ed);
+ }      
+ .dark{
+     background-image: linear-gradient(to top,#010101 ,#ffffff);
+ }      
+ .steel{
+     background-image: linear-gradient(to top,#cecede ,#80808c);
+ }      
+ .fairy{
+     background-image: linear-gradient(to top,#f8a2cd ,#fa0580);
+ }      
 .pokemon {
     display: flex;
     flex-direction: column;
