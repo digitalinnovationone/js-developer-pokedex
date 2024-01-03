@@ -23,3 +23,8 @@ function createPokemonTypeLabel(type) {
     <li class="type ${type}">${type}</li>
   `;
 }
+
+function renderPokemonList(pokemons, targetElement) {
+  const newHtml = pokemons.map(createPokemonCard).join("");
+  targetElement.innerHTML += newHtml;
+}
