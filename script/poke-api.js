@@ -20,11 +20,9 @@ class PokeAPI {
 
 function convertPokeApiDetailToPokemon(pokeDetail) {
   const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name);
-  const [type] = types;
   const pokemon = new Pokemon(
     pokeDetail.id,
     pokeDetail.name,
-    type,
     types,
     pokeDetail.sprites.other.dream_world.front_default
   );
