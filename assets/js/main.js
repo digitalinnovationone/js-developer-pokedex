@@ -51,11 +51,15 @@ function loadPokemonItens(offset, limit) {
 
 loadPokemonItens(offset, limit);
 
-    if (qtdRecordsWithNexPage >= maxRecords) {
-        const newLimit = maxRecords - offset
-        loadPokemonItens(offset, newLimit)
-
-        loadMoreButton.parentElement.removeChild(loadMoreButton)
+pokemonList.addEventListener("click", () => {
+  const element = event.target.closest(".pokemon");
+  if (element) {
+    event.preventDefault();
+    const selectedPokemon = Pokemons[element.id];
+    localStorage.setItem("selectedPokemon", JSON.stringify(selectedPokemon));
+    window.location.href = "/pokemon-details.html";
+  }
+});
     } else {
         loadPokemonItens(offset, limit)
     }
