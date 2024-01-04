@@ -1,5 +1,7 @@
 
 const pokeApi = {}
+const Pokemons = {}
+let loader = document.querySelector('.loader');
 
 function convertPokeApiDetailToPokemon(pokeDetail) {
     const pokemon = new Pokemon()
@@ -13,7 +15,12 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.type = type
 
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
-
+    pokemon.icon = pokeDetail.sprites.other["official-artwork"].front_default
+    pokemon.height = pokeDetail.height
+    pokemon.weight = pokeDetail.weight
+    pokemon.abilities = pokeDetail.abilities
+    pokemon.stats = pokeDetail.stats
+    Pokemons[pokemon.name] = pokemon
     return pokemon
 }
 
