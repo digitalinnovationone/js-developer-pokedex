@@ -60,7 +60,26 @@ pokemonList.addEventListener("click", () => {
     window.location.href = "/pokemon-details.html";
   }
 });
+
+// observer
+let options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 1.0,
+};
+
+let observer = new IntersectionObserver((entries, observer) => {
+  if (entries[0].isIntersecting) {
+    offset += limit;
+    const qtdRecordsWithNextPage = offset + limit;
+
+    if (qtdRecordsWithNextPage >= maxRecords) {
+      const newLimit = maxRecords - offset;
+      loadPokemonItens(offset, newLimit);
     } else {
-        loadPokemonItens(offset, limit)
+      loadPokemonItens(offset, limit);
     }
-})
+  }
+}, options);
+
+observer.observe(document.querySelector("#trigger"));
