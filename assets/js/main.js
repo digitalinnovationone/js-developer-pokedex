@@ -51,6 +51,26 @@ function loadPokemonItens(offset, limit) {
 
 loadPokemonItens(offset, limit);
 
+
+loadMoreButton.addEventListener('click', () => {
+  const element = event.target.closest("#loadMoreButton");
+  if (element) {
+    event.preventDefault();
+    element.remove();
+  }
+  offset += limit
+  const qtdRecordsWithNexPage = offset + limit
+
+  if (qtdRecordsWithNexPage >= maxRecords) {
+      const newLimit = maxRecords - offset
+      loadPokemonItens(offset, newLimit)
+
+      loadMoreButton.parentElement.removeChild(loadMoreButton)
+  } else {
+      loadPokemonItens(offset, limit)
+  }
+})
+
 pokemonList.addEventListener("click", () => {
   const element = event.target.closest(".pokemon");
   if (element) {
