@@ -26,16 +26,30 @@ function convertPokemonToLi(pokemon) {
 
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
-        const newHtml = pokemons.map(convertPokemonToLi).join('')
-        pokemonList.innerHTML += newHtml
-    })
+    const newHtml = pokemons.map(convertPokemonToLi).join("");
+    pokemonList.innerHTML += newHtml;
+
+    // Recupere os pokemons existentes no localStorage
+    let existingPokemons = JSON.parse(localStorage.getItem("pokemons")) || [];
+
+    // Adicione os novos pokemons à lista existente
+    existingPokemons = existingPokemons.concat(pokemons);
+
+    // Remova duplicatas
+    existingPokemons = existingPokemons.filter(
+      (pokemon, index, self) =>
+        index === self.findIndex((t) => t.number === pokemon.number)
+    );
+
+    // Ordene os pokemons em ordem crescente pelo número
+    existingPokemons.sort((a, b) => a.number - b.number);
+
+    // Armazene os pokemons atualizados no localStorage
+    localStorage.setItem("pokemons", JSON.stringify(existingPokemons));
+  });
 }
 
-loadPokemonItens(offset, limit)
-
-loadMoreButton.addEventListener('click', () => {
-    offset += limit
-    const qtdRecordsWithNexPage = offset + limit
+loadPokemonItens(offset, limit);
 
     if (qtdRecordsWithNexPage >= maxRecords) {
         const newLimit = maxRecords - offset
