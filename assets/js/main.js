@@ -1,5 +1,6 @@
 const pokemonList = document.getElementById("pokemonList");
 const loadMoreButton = document.getElementById("loadMoreButton");
+const trigger = document.getElementById("trigger");
 const maxRecords = 151;
 const limit = 10;
 let offset = 0;
@@ -29,6 +30,11 @@ function loadPokemonItens(offset, limit) {
     const newHtml = pokemons.map(convertPokemonToLi).join("");
     pokemonList.innerHTML += newHtml;
 
+    setTimeout(() => {
+    trigger.style.display = 'block'
+      
+    }, 200);
+
     // Recupere os pokemons existentes no localStorage
     let existingPokemons = JSON.parse(localStorage.getItem("pokemons")) || [];
 
@@ -51,13 +57,7 @@ function loadPokemonItens(offset, limit) {
 
 loadPokemonItens(offset, limit);
 
-
 loadMoreButton.addEventListener('click', () => {
-  const element = event.target.closest("#loadMoreButton");
-  if (element) {
-    event.preventDefault();
-    element.remove();
-  }
   offset += limit
   const qtdRecordsWithNexPage = offset + limit
 
@@ -65,10 +65,10 @@ loadMoreButton.addEventListener('click', () => {
       const newLimit = maxRecords - offset
       loadPokemonItens(offset, newLimit)
 
-      loadMoreButton.parentElement.removeChild(loadMoreButton)
-  } else {
+    } else {
       loadPokemonItens(offset, limit)
-  }
+    }
+    loadMoreButton.parentElement.removeChild(loadMoreButton)
 })
 
 pokemonList.addEventListener("click", () => {
@@ -92,7 +92,6 @@ let observer = new IntersectionObserver((entries, observer) => {
   if (entries[0].isIntersecting) {
     offset += limit;
     const qtdRecordsWithNextPage = offset + limit;
-
     if (qtdRecordsWithNextPage >= maxRecords) {
       const newLimit = maxRecords - offset;
       loadPokemonItens(offset, newLimit);

@@ -20,6 +20,10 @@ body {
     background-color: #fff;
 }
 
+#loadMoreButton, #trigger {
+    display: none;
+}
+
 button:not(#loadMoreButton) {
     line-height: 0;
 }
@@ -30,5 +34,8 @@ button:not(#loadMoreButton) {
         height: auto;
         margin: 1rem auto;
         border-radius: 1rem;
+    }
+    #loadMoreButton {
+        display: block;
     }
 }
