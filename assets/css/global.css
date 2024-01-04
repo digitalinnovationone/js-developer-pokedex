@@ -1,6 +1,8 @@
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -8,10 +10,18 @@ body {
 }
 
 .content {
+    background: top right no-repeat url(../imgs/pokeball.svg);
+}
+
+.content {
     width: 100vw;
     height: 100vh;
-    padding: 1rem;
+    padding: 1.25rem;
     background-color: #fff;
+}
+
+button:not(#loadMoreButton) {
+    line-height: 0;
 }
 
 @media screen and (min-width: 992px) {
