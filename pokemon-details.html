@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Nosso CSS -->
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/pokedex.css">
+    <link rel="stylesheet" href="/assets/css/details.css">
+</head>
+
+<body>
+    <section class="content" id="content">
+        <!-- <button id="voltar">voltar</button>
+        <img src="./assets/imgs/pokeball.svg" alt="Descrição da imagem"> -->
+        <header>
+            <div class="header__container">
+                <section class="header">
+                    <div class="header__title">
+                        <button class="voltar" id="voltar">
+                            <img src="./assets/imgs/arrow.svg" alt="seta para direita">
+                        </button>
+                        <p id="name">Pokémon Name</p>
+                    </div>
+                    <span class="header__subtitle" id="header__subtitle"></span>
+                </section>
+                <main>
+                    <div class="main__header">
+                        <img width="54" src="./assets/imgs/chevron_left.svg" alt="" id="arrow_left">
+                        <img id="icon" width="200" height="200" src="./assets/imgs/silhouette.svg" alt="">
+                        <img width="54" src="./assets/imgs/chevron_right.svg" alt="" id="arrow_right">
+                    </div>
+                    <div class="main__card">
+                        <div class="main__card-header">
+                            <div class="types" id="types"></div>
+                            <div class="about">
+                                <p>About</p>
+                            </div>
+                            <div class="about__attributes" style="max-height: 48px;">
+                                <div class="weight">
+                                    <div class="weight_kit">
+                                        <img src="./assets/imgs/weight.svg" alt="">
+                                        <p class="weight-kg" id="weight-kg"></p>
+                                    </div>
+                                    <p class="weight-label">weight</p>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="height">
+                                    <div class="height_kit">
+                                        <img src="./assets/imgs/straighten.svg" alt="">
+                                        <p class="height-m" id="height-m"></p>
+                                    </div>
+                                    <p class="height-label">Height</p>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="ability">
+                                    <div class="ability_kit" id="ability_kit"></div>
+                                    <p class="weight-label">Moves</p>
+                                </div>
+                            </div>
+                            <div class="lorem">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc iaculis eros vitae tellus condimentum maximus sit amet in eros.
+                            </div>
+                            <div class="base-stats">
+                                <p>Base Stats</p>
+                            </div>
+                            <div class="base-stats__content" style="max-height: 96px;">
+                                <div class="base-stats__content-container">
+                                    <p class="base-status__content-item">HP</p>
+                                    <p class="base-status__content-item">ATK</p>
+                                    <p class="base-status__content-item">DEF</p>
+                                    <p class="base-status__content-item">SATK</p>
+                                    <p class="base-status__content-item">SDEF</p>
+                                    <p class="base-status__content-item">SPD</p>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="">
+                                    <p class="base-status__content-item__label" id="hp"></p>
+                                    <p class="base-status__content-item__label" id="attack"></p>
+                                    <p class="base-status__content-item__label" id="defense"></p>
+                                    <p class="base-status__content-item__label" id="special-attack"></p>
+                                    <p class="base-status__content-item__label" id="special-defense"></p>
+                                    <p class="base-status__content-item__label" id="speed"></p>
+                                </div>
+                               <div class="">
+                                <div class="progress__container">
+                                    <progress value="100" max="233" id="progress-hp"></progress>
+                                </div>
+                                <div class="progress__container">
+                                    <progress value="100" max="233" id="progress-attack"></progress>
+                                </div>
+                                <div class="progress__container">
+                                    <progress value="100" max="233" id="progress-defense"></progress>
+                                </div>
+                                <div class="progress__container">
+                                    <progress value="100" max="233" id="progress-special-attack"></progress>
+                                </div>
+                                <div class="progress__container">
+                                    <progress value="100" max="233" id="progress-special-defense"></progress>
+                                </div>
+                                <div class="progress__container">
+                                    <progress value="100" max="233" id="progress-speed"></progress>
+                                </div>
+                               </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </header>
+    </section>
+
+    <!-- Nosso JS -->
+    <script src="/assets/js/poke-api.js"></script>
+    <script src="/assets/js/pokemon-details.js"></script>
+</body>
+
+</html>
