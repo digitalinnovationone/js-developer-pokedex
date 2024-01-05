@@ -24,6 +24,7 @@ h1{
     background-color: #fff;
 }
 
+
 @media screen and (min-width: 992px) {
     .content {
         max-width: 992px;
