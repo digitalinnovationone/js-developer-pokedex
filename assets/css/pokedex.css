@@ -163,3 +163,7 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
+.pokemons :hover {
+     -webkit-transform:scale(1.1);   
+}

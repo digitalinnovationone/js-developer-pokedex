@@ -4,7 +4,17 @@
 }
 
 body {
-    background-color: #f6f8fc;
+    background-color: #f59649;
+}
+.foto-cabecalho{
+    position: absolute;
+    width: 150px;
+    margin-top: -15px;
+    margin-left: 0px;
+}
+h1{
+    position: relative;
+    margin-left: 90px;
 }
 
 .content {
@@ -13,6 +23,7 @@ body {
     padding: 1rem;
     background-color: #fff;
 }
+
 
 @media screen and (min-width: 992px) {
     .content {
