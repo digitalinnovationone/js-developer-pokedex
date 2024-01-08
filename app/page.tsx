@@ -1,13 +1,22 @@
 'use client';
+import { Input } from '@/components/ui/input';
 import axios from 'axios';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
+
+interface IPokeInfo {
+  name: string;
+  image: string;
+  weight: number;
+}
 
 export default function Home() {
   const [data, setData] = useState<any>();
-  const [pokeName, setPokeName] = useState<string>('');
-  const [pokeImage, setPokeImage] = useState<string>('');
-  const [pokeWeight, setPokeWeight] = useState<string>('');
+  const [pokeInfo, setPokeInfo] = useState<IPokeInfo>({
+    name: '',
+    image: '',
+    weight: 0,
+  });
   const [pokeNumber, setPokeNumber] = useState<number>(1);
   const URL = `https://pokeapi.co/api/v2/pokemon/${pokeNumber}`;
 
@@ -16,35 +25,51 @@ export default function Home() {
       .get(URL)
       .then((response) => {
         setData(response.data);
-        setPokeName(response.data.name);
-        setPokeImage(response.data.sprites.other.dream_world.front_default);
-        setPokeWeight(response.data.weight);
+        setPokeInfo({
+          name: response.data.name,
+          image: response.data.sprites.other.dream_world.front_default,
+          weight: response.data.weight,
+        });
       })
       .catch((err) => {
         console.error(err);
       });
   }, [URL]);
 
-  console.log(data);
-
-  return data ? (
-    <main>
-      <input
+  return pokeInfo ? (
+    <main
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: '10%',
+      }}>
+      <Input
         type='number'
         onChange={(e) => {
           setPokeNumber(parseInt(e.target.value));
         }}
+        style={{
+          maxWidth: 500,
+        }}
       />
-      <h1>Pokemon</h1>
-      {pokeName}
-      <p>weight {pokeWeight}</p>
+      <p style={{ marginTop: 20 }}>Name: {pokeInfo.name}</p>
+      <p>Weight: {pokeInfo.weight}</p>
+      <p>
+        Types:{' '}
+        {data &&
+          data.types.map((value: any, key: string) => {
+            return <div key={key}>{value.type.name}</div>;
+          })}
+      </p>
       <Image
-        src={pokeImage}
-        alt={pokeName}
-        width={120}
-        height={120}
+        src={pokeInfo.image}
+        alt={pokeInfo.name}
+        width={130}
+        height={130}
       />
-      <p>Abilities: </p>
+      <p style={{ marginTop: 20 }}>Abilities: </p>
       {data &&
         data.abilities.map((value: any, key: string) => {
           return <div key={key}>{value.ability.name}</div>;
