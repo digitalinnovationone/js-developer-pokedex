@@ -23,7 +23,9 @@
 </head>
 
 <body>
-    <section class="content">
+    <section class="content" id="content"></section>
+
+    <template id="mainTemplate">
         <h1>Pokedex</h1>
 
         <ol id="pokemonList" class="pokemons">
@@ -35,12 +37,46 @@
                 Load More
             </button>
         </div>
-    </section>
+    </template>
+
+    <template id="detailTemplate">
+        <div class="pokemon">
+            <div class="pagination">
+                <button onclick="voltar()" type="button">voltar</button>
+                <button onclick="anterior('{pkm.number}')" type="button"><< Anterior</button>
+                <button onclick="proximo('{pkm.number}')" type="button">Proximo >></button>
+            </div>
+            
+            <div class="banner {pkm.type}">
+                <img src="{pkm.image}" alt="{pkm.name}">
+            </div>
+
+            <h1 class="detail-title">{pkm.name} <span class="detail-number">#{pkm.number}</span></h1>
+
+            <div class="detail">
+                
+                <ul class="types">{pkm.types}</ul>
+                
+                <ul class="caract">
+                    <li>Tamanho: {pkm.height} M</li>
+                    <li>Peso: {pkm.weight} KG</li>
+                </ul>
+
+                <div width="450" height="300">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </template>
 
     <!-- Nosso JS -->
     <script src="/assets/js/pokemon-model.js"></script>
     <script src="/assets/js/poke-api.js"></script>
     <script src="/assets/js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </body>
 
 </html>
