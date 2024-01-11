@@ -1,3 +1,11 @@
+.btn-open-detail-pokemon{
+    outline: none;
+    border: 0;
+    background: transparent;
+    margin: 4px;
+    padding: 0;
+}
+
 .pokemons {
     display: grid;
     grid-template-columns: 1fr;
