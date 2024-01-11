@@ -1,5 +1,6 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
+const pokemonDialog = document.getElementById('pokemonDialog')
 
 const maxRecords = 151
 const limit = 10
@@ -7,19 +8,19 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
-            <span class="number">#${pokemon.number}</span>
-            <span class="name">${pokemon.name}</span>
+            <li class="pokemon ${pokemon.type}" id="currentPokemon"  onclick="openInfoPokemon('${pokemon.name}')">
+                <span class="number">#${pokemon.number}</span>
+                <span class="name">${pokemon.name}</span>
 
-            <div class="detail">
-                <ol class="types">
-                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-                </ol>
+                <div class="detail">
+                    <ol class="types">
+                        ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                    </ol>
 
-                <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
-            </div>
-        </li>
+                    <img src="${pokemon.photo}"
+                        alt="${pokemon.name}">
+                </div>
+            </li>
     `
 }
 
@@ -45,3 +46,23 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
+function  closeDialog(){ pokemonDialog.close() }
+
+function openInfoPokemon(namePokemon){
+    pokeApi.getByPokemonName(namePokemon)
+    pokemonDialog.showModal()
+    pokemonDialog.innerHTML += `<div>  <div>${namePokemon}<div/> <div onclick=closeDialog()>X </div> </div>`
+} 
+
+function showContentDialog(contentId) {
+    let contents = document.getElementsByClassName('dialogContent');
+    for (let i = 0; i < contents.length; i++) {
+      contents[i].style.display = 'none';
+    }
+  
+    let selectedContent = document.getElementById(contentId + 'Content');
+    if (selectedContent) {
+      selectedContent.style.display = 'block';
+    }
+  }
