@@ -4,14 +4,18 @@
 }
 
 body {
-    background-color: #f6f8fc;
+    background-color: #5d5d6b;
+}
+
+h1 {
+    text-align-last: center;
 }
 
 .content {
     width: 100vw;
     height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+
 }
 
 @media screen and (min-width: 992px) {
@@ -20,5 +24,10 @@ body {
         height: auto;
         margin: 1rem auto;
         border-radius: 1rem;
+        background-color: #5d5d6b;
+    }
+
+    .content h1 {
+        color: white;
     }
 }
