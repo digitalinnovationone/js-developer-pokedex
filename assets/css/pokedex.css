@@ -84,7 +84,7 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
-    box-shadow: .313rem 0.313rem 0.313rem 0rem rgba(0,0,0,0.1)
+    box-shadow: .313rem 0.313rem 0.313rem 0rem rgba(0, 0, 0, 0.1)
 }
 
 .pokemon .number {
@@ -147,10 +147,39 @@
     border-radius: 1rem;
 }
 
-#card {
-    /* display: none; */
+.modal-close {
+    position: absolute;
+    width: 5%;
+    min-width: 5%;
+    right: 1%;
+    left: auto;
     margin: .5rem;
-    background-image: url() ;
+    font-size: 1.6rem;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+        color: black;
+    }
+}
+
+.modal-window {
+    position: fixed;
+    top: 20%;
+    right: 3%;
+    bottom: 10%;
+    left: 3%;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+
+    &:target {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
 }
 
 .cardStats {
@@ -161,9 +190,12 @@
 }
 
 .cardStats h2 {
+    width: 75%;
+    right: auto;
+    left: 0;
+    font-size: 1.6rem;
     text-transform: capitalize;
     margin: .5rem;
-
 }
 
 .cardStats ul {
@@ -171,29 +203,29 @@
     padding: .25rem;
 }
 
-.cardStats li, p {
-    font-size: .600rem;
+.cardStats li,
+p {
+    font-size: 1.2rem;
     text-align: center;
     margin: 0;
 }
 
 .cardStats img {
     margin: auto;
-    height: 100px;
+    height: 12.5rem;
 }
 
 .cardStats .info {
     filter: brightness(1.1);
-    text-align: center;
     font-weight: 700;
     display: inline-block;
     text-align: center;
-    font-size: .825rem;
+    font-size: 1.7rem;
     width: 100%;
     margin: .25rem;
-    padding: .25rem; 
+    padding: .25rem;
     border-radius: 1rem;
-    box-shadow: .313rem 0.313rem 0.313rem 0rem rgba(0,0,0,0.1)
+    box-shadow: .313rem 0.313rem 0.313rem 0rem rgba(0, 0, 0, 0.1)
 }
 
 .cardStats .title {
@@ -201,7 +233,6 @@
     display: inline-block;
     text-align: left;
     width: 60%;
-
 }
 
 .cardStats .value {
@@ -209,7 +240,6 @@
     display: inline-block;
     text-align: right;
     width: 40%;
-    
 }
 
 @media screen and (min-width: 380px) {

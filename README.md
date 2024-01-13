@@ -1,3 +1,3 @@
 # Trilha JS Developer - Pokedex
 
-Adicionando cards para detalhes do pokemon
+Adicionando modal em CSS para detalhes do pokemon
