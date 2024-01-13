@@ -20,6 +20,21 @@ function convertPokemonToLi(pokemon) {
                      alt="${pokemon.name}">
             </div>
         </li>
+        <div id="card" class="cardStats ${pokemon.type}">
+        <h2>${pokemon.name}</h2>
+        <img src="${pokemon.photo}"  alt="${pokemon.name}">
+        <ul class="cardStats">
+            <li class="cardStats"><p><span class="title">Habilidade 1:</span><span class="value">${pokemon.abilities[0]}</span></p></li>
+            <li class="cardStats"><p><span class="title">Habilidade 2:</span><span class="value">${pokemon.abilities[1]}</span></p></li>
+            <li class="cardStats"><p class="info ${pokemon.type}">Info</p></li>
+            <li class="cardStats"><p><span class="title">HP:</span><span class="value">${pokemon.hp}</span></p></li>
+            <li class="cardStats"><p><span class="title">Ataque: </span><span class="value">${pokemon.attack}</span></p></li>
+            <li class="cardStats"><p><span class="title">Defesa: </span><span class="value">${pokemon.defense}</span></p></li>
+            <li class="cardStats"><p><span class="title">Ataque Especial: </span><span class="value">${pokemon.specialAttack}</span></p></li>
+            <li class="cardStats"><p><span class="title">Defesa Especial: </span><span class="value">${pokemon.specialDefense}</span></p></li>
+            <li class="cardStats"><p><span class="title">Valocidade: </span><span class="value">${pokemon.specialDefense}</span></p></li>
+        </ul>
+    </div>
     `
 }
 
