@@ -4,7 +4,7 @@
 
 O projeto Pokedex em JavaScript é um aplicativo que utiliza a PokeAPI para exibir informações sobre diferentes Pokémon. Ele foi desenvolvido usando JavaScript, HTML e CSS para criar uma interface interativa e amigável. A PokeAPI fornece dados detalhados sobre os Pokémon, incluindo seus tipos, habilidades, estatísticas e imagens, o que fiz questão de incluir nos detalhes. O projeto Pokedex em JavaScript permite aos usuários pesquisar e visualizar informações sobre Pokémon específicos, tornando-o uma ferramenta útil para fãs e entusiastas de Pokémon.
 <br>
-<img src="assets/pokedex.gif">
+<img src="assets/pokedex.gif" width=200 height=450>
 <br><br>
 ![Concluido](http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=GREEN&style=for-the-badge)
 
