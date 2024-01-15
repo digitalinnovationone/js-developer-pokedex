@@ -7,11 +7,23 @@ body {
     background-color: #f6f8fc;
 }
 
+h1{
+    text-align: center;
+}
+
 .content {
+    display: flex;
     width: 100vw;
     height: 100vh;
     padding: 1rem;
     background-color: #fff;
+}
+
+.windows-pokemon{
+    width: 100vw;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 50px 20px 50px rgba(0, 0, 0, 0.336);
 }
 
 @media screen and (min-width: 992px) {
