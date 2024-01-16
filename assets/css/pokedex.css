@@ -131,6 +131,25 @@
     height: 70px;
 }
 
+#pokemonDialog{
+    animation: animatezoom 0.6s;
+    border: none;
+    border-radius: 1rem;
+}
+#pokemonDialog header {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+}
+#pokemonDialog h2{
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+
 .pagination {
     display: flex;
     flex-direction: row;
@@ -194,6 +213,16 @@
     width: calc(var(--progress) * 1%);
     background-color: hsl( calc(var(--progress) * 1.2) , 80%, 50%);
 }  
+
+.aboutPokemon{
+    display: flex;
+    padding: 13px;
+    margin: 10px;
+    list-style: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+}
   
 @media screen and (min-width: 380px) {
     .pokemons {

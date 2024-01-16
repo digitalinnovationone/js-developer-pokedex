@@ -16,11 +16,7 @@ h1{
     padding: 1rem;
     background-color: #e85757;
 }
-#pokemonDialog{
-    animation: animatezoom 0.6s;
-    border: none;
-    border-radius: 1rem;
-}
+
 
 @keyframes animatezoom{
     0%{

@@ -52,9 +52,9 @@ async function openInfoPokemon (namePokemon) {
     const infoPokemon = await  pokeApi.getByPokemonName(namePokemon)
 
     pokemonDialog.showModal()
-    pokemonDialog.classList.add(infoPokemon.about[0].egg_cycle)
+    pokemonDialog.className = infoPokemon.about[0].egg_cycle
 
-    pokemonDialog.innerHTML = `<main class="pokemon ${infoPokemon.about.egg_cycle}"> 
+    pokemonDialog.innerHTML = `<main class="pokemon ${infoPokemon.about[0].egg_cycle}"> 
                                     <header>
                                         <span onclick=closeDialog()>X </span> 
                                         <span> #${ String(infoPokemon.id).padStart(3, '0')} </span>
@@ -62,7 +62,7 @@ async function openInfoPokemon (namePokemon) {
                                     
 
                                     <section class="detail">
-                                        <h4>${namePokemon}<h4/> 
+                                        <h2>${namePokemon}<h2/> 
                                         <ol class="types">
                                             ${infoPokemon.about[0].types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                                         </ol>
@@ -78,7 +78,7 @@ async function openInfoPokemon (namePokemon) {
                                         </nav>
                                         
                                         <section id="aboutContent" class="dialogSubContent">
-                                            <ol class="types">   
+                                            <ol class="aboutPokemon">   
                                                  ${infoPokemon.about.map((aboutPokemon)=>{
                                                     if(Array.isArray(aboutPokemon)){
                                                         return aboutPokemon.map((element)=>{
@@ -133,6 +133,8 @@ function showContentDialog(contentId) {
     let selectedContent = document.getElementById(contentId + 'Content');
     if (selectedContent) {
       selectedContent.style.display = 'block';
+      selectedContent.style.padding = '13px'
+      selectedContent.style.margin = '10px'
     }
   }
   
