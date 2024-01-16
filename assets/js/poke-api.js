@@ -1,5 +1,8 @@
+import { Pokemon } from './pokemon-model.js'
+const pokeApi = {
 
-const pokeApi = {}
+    
+}
 
 function convertPokeApiDetailToPokemon(pokeDetail) {
     const pokemon = new Pokemon()
@@ -33,3 +36,6 @@ pokeApi.getPokemons = (offset = 0, limit = 5) => {
         .then((detailRequests) => Promise.all(detailRequests))
         .then((pokemonsDetails) => pokemonsDetails)
 }
+
+export default pokeApi;
+

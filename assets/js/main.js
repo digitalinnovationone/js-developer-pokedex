@@ -1,9 +1,12 @@
+import pokeApi from "./poke-api.js"
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
+const pokemonSelected = document.getElementById('selectedPokemons')
 
 const maxRecords = 151
 const limit = 10
 let offset = 0;
+
 
 function convertPokemonToLi(pokemon) {
     return `
@@ -31,6 +34,31 @@ function loadPokemonItens(offset, limit) {
 }
 
 loadPokemonItens(offset, limit)
+
+pokemonList.addEventListener('click', (event) => {
+    const pokemon = event.target.closest('.pokemon')
+    if (pokemon) {
+        console.log(pokemon)
+        const pokemonNumber = pokemon.querySelector('.number').textContent
+        const pokemonName = pokemon.querySelector('.name').textContent
+        const pokemonTypes = Array.from(pokemon.querySelectorAll('.type')).map(type => type.textContent)
+        const pokemonPhoto = pokemon.querySelector('img').src
+        console.log(pokemonNumber, pokemonName, pokemonTypes, pokemonPhoto)
+        pokemonSelected.innerHTML = convertPokemonToLi({
+            number: pokemonNumber,
+            name: pokemonName,
+            type: pokemonTypes[0],
+            types: pokemonTypes,
+            photo: pokemonPhoto
+        })
+
+
+        pokemonSelected.classList.add('animate-card')
+        setTimeout(() => {
+            pokemonSelected.classList.remove('animate-card')
+        }, 1000)
+    }
+})
 
 loadMoreButton.addEventListener('click', () => {
     offset += limit

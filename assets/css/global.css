@@ -6,12 +6,33 @@
 body {
     background-color: #f6f8fc;
 }
+h1{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: gray;
+    text-align: center;
+}
 
 .content {
-    width: 100vw;
-    height: 100vh;
+    display: block;
+    width: auto;
+    height: auto;
     padding: 1rem;
     background-color: #fff;
+    
+    
+}
+.pokemon-content {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: #fff;
+}
+
+.pokemon-content > div {
+    width: 50%;
 }
 
 @media screen and (min-width: 992px) {
@@ -20,5 +41,8 @@ body {
         height: auto;
         margin: 1rem auto;
         border-radius: 1rem;
+    }
+    .pokemon-content {
+        display: flex;
     }
 }
