@@ -5,6 +5,10 @@
     padding: 0;
     list-style: none;
 }
+.headerPokemon{
+    display: flex;
+    justify-content: space-between;
+}
 
 .normal {
     background-color: #a6a877;
@@ -127,6 +131,25 @@
     height: 70px;
 }
 
+#pokemonDialog{
+    animation: animatezoom 0.6s;
+    border: none;
+    border-radius: 1rem;
+}
+#pokemonDialog header {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+}
+#pokemonDialog h2{
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+
 .pagination {
     display: flex;
     flex-direction: row;
@@ -146,6 +169,61 @@
     border-radius: 1rem;
 }
 
+.navbar {
+    overflow: hidden;
+    background-color:  white ;
+    border-radius: 5rem ;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #333 ;
+    text-align: center;
+    padding: 0.875rem 1rem;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    background-color: #000;
+    color: white;
+  }
+
+  .content {
+    padding: 1.25rem;
+  }
+
+.dialogSubContent{
+    background-color: #ddd;
+    border-radius: 1.25rem;
+}
+.progress-bar{
+    height: 50px;
+    padding: 5px;
+    background-color: #ccc;
+    display: flex;
+    flex-direction: row-reverse;
+    --progress:50;
+    justify-content:space-between;
+}
+
+.progress-bar::before{
+    content: '';
+    width: 50%;
+    width: calc(var(--progress) * 1%);
+    background-color: hsl( calc(var(--progress) * 1.2) , 80%, 50%);
+}  
+
+.aboutPokemon{
+    display: flex;
+    padding: 13px;
+    margin: 10px;
+    list-style: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+}
+  
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;

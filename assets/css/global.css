@@ -4,14 +4,27 @@
 }
 
 body {
-    background-color: #f6f8fc;
+    background-color: #e85757;
+}
+h1{
+    color: aliceblue;
 }
 
 .content {
     width: 100vw;
     height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #e85757;
+}
+
+
+@keyframes animatezoom{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 @media screen and (min-width: 992px) {
