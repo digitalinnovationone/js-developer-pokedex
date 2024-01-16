@@ -74,7 +74,7 @@ async function openInfoPokemon (namePokemon) {
                                     <section>
                                         <nav class="navbar">
                                             <a href="#" class="active" onclick="showContentDialog('about')">About</a>
-                                            <a href="#" onclick="showContentDialog('status')">Status</a>
+                                            <a href="#" onclick="showContentDialog('status')">Base Stats</a>
                                         </nav>
                                         
                                         <section id="aboutContent" class="dialogSubContent">
