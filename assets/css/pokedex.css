@@ -169,7 +169,7 @@
     background-color: #000;
     color: white;
   }
-  
+
   .content {
     padding: 1.25rem;
   }
@@ -178,7 +178,23 @@
     background-color: #ddd;
     border-radius: 1.25rem;
 }
+.progress-bar{
+    height: 50px;
+    padding: 5px;
+    background-color: #ccc;
+    display: flex;
+    flex-direction: row-reverse;
+    --progress:50;
+    justify-content:space-between;
+}
 
+.progress-bar::before{
+    content: '';
+    width: 50%;
+    width: calc(var(--progress) * 1%);
+    background-color: hsl( calc(var(--progress) * 1.2) , 80%, 50%);
+}  
+  
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;

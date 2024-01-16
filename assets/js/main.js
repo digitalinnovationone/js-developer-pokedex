@@ -47,13 +47,13 @@ loadMoreButton.addEventListener('click', () => {
     }
 })
 
-function  closeDialog(){  pokemonDialog.close() }
 
 async function openInfoPokemon (namePokemon) {
     const infoPokemon = await  pokeApi.getByPokemonName(namePokemon)
-    console.log(infoPokemon)
+
     pokemonDialog.showModal()
-    pokemonDialog.classList.add(infoPokemon.about.egg_cycle)
+    pokemonDialog.classList.add(infoPokemon.about[0].egg_cycle)
+
     pokemonDialog.innerHTML = `<main class="pokemon ${infoPokemon.about.egg_cycle}"> 
                                     <header>
                                         <span onclick=closeDialog()>X </span> 
@@ -94,20 +94,46 @@ async function openInfoPokemon (namePokemon) {
                                         </section>
                                     
                                         <section id="statusContent" class="dialogSubContent" style="display: none;">
-                                            <h2>Base Stats</h2>
                                         </section>
                                     </section>
                                 </main>`
+
+                                const statusContent = document.getElementById("statusContent");
+                                
+                                infoPokemon.baseStats.forEach((baseStat) => {
+                                    const progressBarElement = createProgressBar(baseStat);
+                                    statusContent.appendChild(progressBarElement);
+                                });
 } 
+
+function createProgressBar(baseStat) {
+    const progressBarContainer = document.createElement("div");
+    const progressBar = document.createElement("div");
+    const paragraphElement = document.createElement("p");
+    
+    progressBarContainer.className = "progress-bar-container";
+    progressBar.className = "progress-bar";
+    progressBar.classList.add(baseStat.stat.name);
+    progressBar.style.setProperty('--progress', `${baseStat.base_stat}`);
+
+    paragraphElement.textContent = `${baseStat.stat.name}: `;
+ 
+    progressBar.appendChild(paragraphElement);
+    progressBarContainer.appendChild(progressBar);
+
+    return progressBarContainer;
+}
 
 function showContentDialog(contentId) {
     let contents = document.getElementsByClassName('dialogSubContent');
     for (let i = 0; i < contents.length; i++) {
-      contents[i].style.display = 'none';
+        contents[i].style.display = 'none';
     }
-  
+    
     let selectedContent = document.getElementById(contentId + 'Content');
     if (selectedContent) {
       selectedContent.style.display = 'block';
     }
   }
+  
+  function  closeDialog(){  pokemonDialog.close() }
