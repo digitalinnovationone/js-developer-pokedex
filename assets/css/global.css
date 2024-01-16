@@ -1,12 +1,16 @@
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    min-width: 0;
 }
 
 body {
-    background-color: #f6f8fc;
+    background-color: #f6f6f6;
 }
-
+a {
+    text-decoration: none;
+    color: inherit;
+}
 .content {
     width: 100vw;
     height: 100vh;
