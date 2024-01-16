@@ -152,26 +152,32 @@
 
 .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color:  white ;
+    border-radius: 5rem ;
   }
   
   .navbar a {
     float: left;
     display: block;
-    color: white;
+    color: #333 ;
     text-align: center;
-    padding: 14px 16px;
+    padding: 0.875rem 1rem;
     text-decoration: none;
   }
   
   .navbar a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #000;
+    color: white;
   }
   
   .content {
-    padding: 20px;
+    padding: 1.25rem;
   }
+
+.dialogSubContent{
+    background-color: #ddd;
+    border-radius: 1.25rem;
+}
 
 @media screen and (min-width: 380px) {
     .pokemons {

@@ -29,11 +29,13 @@ function convertMoreInformationPokemon (info)  {
         moreInformation.about.egg_groups = responseData.egg_groups[0].name;
         moreInformation.about.species = responseData.genera[6].genus
     });
-    moreInformation.about.egg_cycle = info.types[0].name           
+    moreInformation.about.egg_cycle = info.types[0].type.name     
+    moreInformation.about.types =  info.types.map((typeSlot) => typeSlot.type.name) 
+    moreInformation.about = [moreInformation.about]
     
     moreInformation.baseStats = info.stats;
-
-    console.log(moreInformation)
+    moreInformation.id = info.id;
+    moreInformation.photo =  info.sprites.other.dream_world.front_default      
 
     return moreInformation
 }

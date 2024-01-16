@@ -12,14 +12,14 @@ function convertPokemonToLi(pokemon) {
                 <span class="number">#${pokemon.number}</span>
                 <span class="name">${pokemon.name}</span>
 
-                <div class="detail">
+                <section class="detail">
                     <ol class="types">
                         ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                     </ol>
 
                     <img src="${pokemon.photo}"
                         alt="${pokemon.name}">
-                </div>
+                </section>
             </li>
     `
 }
@@ -47,16 +47,61 @@ loadMoreButton.addEventListener('click', () => {
     }
 })
 
-function  closeDialog(){ pokemonDialog.close() }
+function  closeDialog(){  pokemonDialog.close() }
 
-function openInfoPokemon(namePokemon){
-    pokeApi.getByPokemonName(namePokemon)
+async function openInfoPokemon (namePokemon) {
+    const infoPokemon = await  pokeApi.getByPokemonName(namePokemon)
+    console.log(infoPokemon)
     pokemonDialog.showModal()
-    pokemonDialog.innerHTML += `<div>  <div>${namePokemon}<div/> <div onclick=closeDialog()>X </div> </div>`
+    pokemonDialog.classList.add(infoPokemon.about.egg_cycle)
+    pokemonDialog.innerHTML = `<main class="pokemon ${infoPokemon.about.egg_cycle}"> 
+                                    <header>
+                                        <span onclick=closeDialog()>X </span> 
+                                        <span> #${ String(infoPokemon.id).padStart(3, '0')} </span>
+                                    </header>
+                                    
+
+                                    <section class="detail">
+                                        <h4>${namePokemon}<h4/> 
+                                        <ol class="types">
+                                            ${infoPokemon.about[0].types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                                        </ol>
+                                    </section> 
+
+                                    <figure>
+                                        <img src=${infoPokemon.photo} alt='imagem do ${namePokemon}' >
+                                    </figure>
+                                    <section>
+                                        <nav class="navbar">
+                                            <a href="#" class="active" onclick="showContentDialog('about')">About</a>
+                                            <a href="#" onclick="showContentDialog('status')">Status</a>
+                                        </nav>
+                                        
+                                        <section id="aboutContent" class="dialogSubContent">
+                                            <ol class="types">   
+                                                 ${infoPokemon.about.map((aboutPokemon)=>{
+                                                    if(Array.isArray(aboutPokemon)){
+                                                        return aboutPokemon.map((element)=>{
+                                                                return  `<li class"type">${element}</li>`
+                                                            }).join('')
+                                                    }else{
+
+                                                        return Object.entries(aboutPokemon).map(([key,value])=> {
+                                                            return `<li> ${key}:  ${value} </li>`}).join('')
+                                                    }
+                                                }).join('')}
+                                            </ol>
+                                        </section>
+                                    
+                                        <section id="statusContent" class="dialogSubContent" style="display: none;">
+                                            <h2>Base Stats</h2>
+                                        </section>
+                                    </section>
+                                </main>`
 } 
 
 function showContentDialog(contentId) {
-    let contents = document.getElementsByClassName('dialogContent');
+    let contents = document.getElementsByClassName('dialogSubContent');
     for (let i = 0; i < contents.length; i++) {
       contents[i].style.display = 'none';
     }
