@@ -5,4 +5,5 @@ class Pokemon {
     type;
     types = [];
     photo;
+    weigth;
 }
