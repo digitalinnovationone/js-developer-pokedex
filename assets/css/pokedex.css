@@ -164,7 +164,6 @@
     }
 }
 
-/* Adicione estilos para o spinner */
 .spinner {
     border: 4px solid rgba(0, 0, 0, 0.1);
     border-left: 4px solid #3498db;
@@ -176,7 +175,7 @@
     /* Começa escondido */
     position: absolute;
     top: 69%;
-    left: 48%;
+    left: 49%;
     transform: translate(-50%, -50%);
 }
 

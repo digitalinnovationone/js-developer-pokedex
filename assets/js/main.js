@@ -25,10 +25,10 @@ function convertPokemonToLi(pokemon) {
 }
 
 function loadPokemonItens(offset, limit) {
-    pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
-        const newHtml = pokemons.map(convertPokemonToLi).join('')
-        pokemonList.innerHTML += newHtml
-    })
+    return pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
+        const newHtml = pokemons.map(convertPokemonToLi).join('');
+        pokemonList.innerHTML += newHtml;
+    });
 }
 
 loadPokemonItens(offset, limit)
@@ -47,12 +47,20 @@ loadMoreButton.addEventListener('click', () => {
                 // Remove o botão "Load More" e esconde o spinner
                 loadMoreButton.parentElement.removeChild(loadMoreButton);
                 spinner.style.display = 'none';
+            })
+            .catch((error) => {
+                console.error('Erro ao carregar Pokémon:', error);
+                spinner.style.display = 'none'; // Certifique-se de esconder o spinner em caso de erro
             });
     } else {
         loadPokemonItens(offset, limit)
             .then(() => {
                 // Esconde o spinner após o carregamento
                 spinner.style.display = 'none';
+            })
+            .catch((error) => {
+                console.error('Erro ao carregar Pokémon:', error);
+                spinner.style.display = 'none'; // Certifique-se de esconder o spinner em caso de erro
             });
     }
 });
