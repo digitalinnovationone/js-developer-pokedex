@@ -7,19 +7,18 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
-            <span class="number">#${pokemon.number}</span>
-            <span class="name">${pokemon.name}</span>
+    <li class="pokemon ${pokemon.type}" data-number="${pokemon.number}" data-name="${pokemon.name}" data-photo="${pokemon.photo}">
+    <span class="number">#${pokemon.number}</span>
+    <span class="name">${pokemon.name}</span>
 
-            <div class="detail">
-                <ol class="types">
-                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-                </ol>
+    <div class="detail">
+        <ol class="types">
+            ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+        </ol>
 
-                <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
-            </div>
-        </li>
+        <img src="${pokemon.photo}" alt="${pokemon.name}">
+    </div>
+</li>
     `
 }
 
@@ -45,3 +44,15 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
+
+pokemonList.addEventListener('click', (event) => {
+    const listItem = event.target.closest('li.pokemon');
+    if (listItem) {
+        const number = listItem.dataset.number;
+        const name = listItem.dataset.name;
+        const photo = listItem.dataset.photo;
+
+        window.location.href = `details.html?number=${number}&name=${name}&photo=${photo}`;
+    }
+});
