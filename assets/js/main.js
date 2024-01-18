@@ -1,5 +1,6 @@
-const pokemonList = document.getElementById('pokemonList')
-const loadMoreButton = document.getElementById('loadMoreButton')
+const spinner = document.getElementById('spinner');
+const pokemonList = document.getElementById('pokemonList');
+const loadMoreButton = document.getElementById('loadMoreButton');
 
 const maxRecords = 151
 const limit = 10
@@ -33,15 +34,25 @@ function loadPokemonItens(offset, limit) {
 loadPokemonItens(offset, limit)
 
 loadMoreButton.addEventListener('click', () => {
-    offset += limit
-    const qtdRecordsWithNexPage = offset + limit
+    // Mostra o spinner
+    spinner.style.display = 'block';
 
-    if (qtdRecordsWithNexPage >= maxRecords) {
-        const newLimit = maxRecords - offset
+    offset += limit;
+    const qtdRecordsWithNextPage = offset + limit;
+
+    if (qtdRecordsWithNextPage >= maxRecords) {
+        const newLimit = maxRecords - offset;
         loadPokemonItens(offset, newLimit)
-
-        loadMoreButton.parentElement.removeChild(loadMoreButton)
+            .then(() => {
+                // Remove o botão "Load More" e esconde o spinner
+                loadMoreButton.parentElement.removeChild(loadMoreButton);
+                spinner.style.display = 'none';
+            });
     } else {
         loadPokemonItens(offset, limit)
+            .then(() => {
+                // Esconde o spinner após o carregamento
+                spinner.style.display = 'none';
+            });
     }
-})
+});
