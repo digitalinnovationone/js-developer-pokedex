@@ -1,0 +1,42 @@
+.numberGrass {
+    color: #3fa890;
+    text-align: right;
+}
+
+.numberFire {
+    color:#c55d5d;
+    text-align: right;
+}
+
+.numberWater {
+    color:#5e96c7;
+    text-align: right;
+}
+
+.numberEletric {
+    color: #ebbd3e;
+    text-align: right;
+}
+
+#bulbasaur,
+#ivysaur,
+#venusaur {
+    background-color: #61e3cb;
+}
+
+#charmander,
+#charmeleon,
+#charizard {
+    background-color: #fb6d6c;
+}
+
+#squirtle,
+#wartortle,
+#blastoise {
+    background-color: #77befe;
+}
+
+#pikachu {
+    background-color: #fad162;
+}
+
