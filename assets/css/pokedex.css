@@ -3,7 +3,7 @@
     list-style: none;
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; 
 }
 
 .pokemon {
