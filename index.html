@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
 
     <!-- Nosso CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
@@ -25,7 +26,11 @@
 <body>
     <section class="content">
         <h1>Pokedex</h1>
-
+        <div id="search-bar">
+            <input type="text" id="search" />
+            <button id="search-btn"><i class="gg-search"></i></button>
+        </div>
+        
         <ol id="pokemonList" class="pokemons">
             <!-- ..... Pokemons here ..... -->
         </ol>
