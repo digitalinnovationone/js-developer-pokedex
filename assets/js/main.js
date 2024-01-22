@@ -27,25 +27,65 @@ function convertPokemonToLi(pokemon) {
     `;
 }
 
+let loadedPokemonNames = [];
+let addedPokemonNames = [];
+
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
-        const newHtml = pokemons.map(convertPokemonToLi).join('')
-        pokemonList.innerHTML += newHtml
-    })
+        pokemons.forEach((pokemon) => {
+            // Verifica se o Pokémon já foi carregado ou adicionado
+            const pokemonName = pokemon.name.toLowerCase();
+            if (!loadedPokemonNames.includes(pokemonName) && !addedPokemonNames.includes(pokemonName)) {
+                const newHtml = convertPokemonToLi(pokemon);
+                pokemonList.innerHTML += newHtml;
+                // Adiciona o nome do Pokémon ao array de nomes carregados
+                loadedPokemonNames.push(pokemonName);
+            }
+        });
+    });
 }
 
-loadPokemonItens(offset, limit)
+loadPokemonItens(offset, limit);
 
 loadMoreButton.addEventListener('click', () => {
-    offset += limit
-    const qtdRecordsWithNexPage = offset + limit
+    offset += limit;
+    const qtdRecordsWithNextPage = offset + limit;
 
-    if (qtdRecordsWithNexPage >= maxRecords) {
-        const newLimit = maxRecords - offset
-        loadPokemonItens(offset, newLimit)
-
-        loadMoreButton.parentElement.removeChild(loadMoreButton)
+    if (qtdRecordsWithNextPage >= maxRecords) {
+        const newLimit = maxRecords - offset;
+        loadPokemonItens(offset, newLimit);
+        loadMoreButton.parentElement.removeChild(loadMoreButton);
     } else {
-        loadPokemonItens(offset, limit)
+        loadPokemonItens(offset, limit);
     }
-})
+});
+
+$(document).ready(function() {
+    $('#searchInput').on('input', function() {
+        const searchTerm = $(this).val().toLowerCase();
+        $('.pokemon').each(function() {
+            const name = $(this).find('.name').text().toLowerCase();
+            const number = $(this).find('.number').text().slice(1);
+
+            if (name.includes(searchTerm) || number.includes(searchTerm)) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+
+        // Chama a função getPokemonByName se o item não estiver carregado ou adicionado
+        const pokemonNames = $('.name').map(function() {
+            return $(this).text().toLowerCase();
+        }).get();
+
+        if (!pokemonNames.includes(searchTerm) && !loadedPokemonNames.includes(searchTerm) && !addedPokemonNames.includes(searchTerm)) {
+            pokeApi.getPokemonByName(searchTerm).then((pokemon) => {
+                const newHtml = convertPokemonToLi(pokemon);
+                pokemonList.innerHTML += newHtml;
+                // Adiciona o nome do Pokémon ao array de nomes adicionados
+                addedPokemonNames.push(searchTerm);
+            });
+        }
+    });
+});

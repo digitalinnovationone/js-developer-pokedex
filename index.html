@@ -17,15 +17,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&display=swap" rel="stylesheet">
 
-    <!-- Nosso CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/pokedex.css">
+
+    <!-- Boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+        crossorigin="anonymous">
 </head>
 
 <body>
     <section class="content">
         <div class="header">
             <img src="assets/img/pokedex.png" width="200px" alt="Pokedex">
+            <input type="text" id="searchInput" class="form-control" style="margin: 0 auto; text-align: center; max-width: 300px; margin-bottom: 20px; " placeholder="Buscar por um Pokémon">
         </div>
 
         <ol id="pokemonList" class="pokemons">
@@ -34,12 +40,18 @@
 
         <div class="pagination">
             <button id="loadMoreButton" type="button">
-                Load More
+                Carregar mais
             </button>
         </div>
     </section>
 
-    <!-- Nosso JS -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript -->
     <script src="assets/js/pokemon-model.js"></script>
     <script src="assets/js/poke-api.js"></script>
     <script src="assets/js/main.js"></script>
