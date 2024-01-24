@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -12,24 +12,24 @@
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Font Roboto -->
+    <!-- Roboto Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
 
-    <!-- Nosso CSS -->
+    <!-- CSS Style -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
 </head>
 
 <body>
-    <section class="content">
+
+    <nav>
         <h1>Pokedex</h1>
+    </nav>
 
-        <ol id="pokemonList" class="pokemons">
-            <!-- ..... Pokemons here ..... -->
-        </ol>
-
+    <section class="content">
+        <ol id="pokemonList" class="pokemons"></ol>
         <div class="pagination">
             <button id="loadMoreButton" type="button">
                 Load More
@@ -37,7 +37,22 @@
         </div>
     </section>
 
-    <!-- Nosso JS -->
+    <footer class="text-center">
+        <div>
+            <p>All Rights Reserved to DIO & DanielSantDev - Frontend Bootcamp &copy; 2024</p>
+        </div>
+
+        <div class="links" id="contato">
+            <a href="https://github.com/DanielSantDev" target="_blank">
+                <img src="./assets/imgs/github-logo.svg" width="50px" alt="logo-github" />
+            </a>
+            <a href="https://www.linkedin.com/in/ddanielssantana/" target="_blank">
+                <img src="./assets/imgs/linkedin-logo.svg" width="60px" alt="logo-linkedin" />
+            </a>
+        </div>
+    </footer>
+
+    <!-- JS code -->
     <script src="/assets/js/pokemon-model.js"></script>
     <script src="/assets/js/poke-api.js"></script>
     <script src="/assets/js/main.js"></script>
