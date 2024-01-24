@@ -97,6 +97,7 @@
     text-transform: capitalize;
     color: #fff;
     margin-bottom: .25rem;
+    text-align: left;
 }
 
 .pokemon .detail {

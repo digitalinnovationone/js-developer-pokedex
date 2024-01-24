@@ -1,0 +1,43 @@
+.card {
+    background: none;
+    border: none;
+    border-radius: 1rem;
+    position:relative;
+}
+
+.card:hover {
+    top: -3px;
+    border: outset;
+    box-shadow: 0 20px 10px #666;
+    background-image: url("https://cdn.dribbble.com/users/1122023/screenshots/2850044/media/c602dfdd96b1918b58de9be6c495daa7.png?resize=400x0");
+}
+
+.card:hover .hiddenDetails {
+    display: contents;
+    color: white;
+    text-align: center;
+    margin-top: .25rem;
+    padding: .625rem;
+    visibility: visible;
+}
+
+h5 {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: .5em;
+    margin-block-end: .5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.card .hiddenDetails {
+    display: none;
+    visibility: hidden;
+}
+
+.abilities {
+    font-size: 0.70em;
+    text-align: left;
+    text-transform: capitalize;
+}

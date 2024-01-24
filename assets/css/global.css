@@ -5,6 +5,7 @@
 
 body {
     background-color: #f6f8fc;
+    background-image: url("https://cdn.dribbble.com/users/1122023/screenshots/2850044/media/c602dfdd96b1918b58de9be6c495daa7.png?resize=400x0");
 }
 
 .content {
@@ -12,6 +13,12 @@ body {
     height: 100vh;
     padding: 1rem;
     background-color: #fff;
+}
+
+.footer {
+    display: grid;
+    opacity: .5;
+    text-align: center;
 }
 
 @media screen and (min-width: 992px) {
