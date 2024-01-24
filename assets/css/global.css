@@ -1,17 +1,163 @@
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+/*Navegation Bar
+_______________*/
+
+nav {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 500;
+}
+
+/* Main Structure
+____________________*/
+
 body {
-    background-color: #f6f8fc;
+    background: url('../imgs/Pokemon-BG2.png') center;
+    background-size: auto;
 }
 
 .content {
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #4CAF50;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.pokemons {
+    list-style: none;
+    padding: 0;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pokemon-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.pokemon-card:hover {
+    transform: scale(1.05);
+}
+
+.card-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.types {
+    margin-bottom: 10px;
+}
+
+.types ol {
+    list-style: none;
+    padding: 0;
+}
+
+.types li {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.pokemon-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+#loadMoreButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#loadMoreButton:hover {
+    background-color: #206d23;
+}
+
+
+/*Footer
+___________________*/
+
+footer.text-center {
+    background-color: #4CAF50; 
+    color: #fff; 
+    padding: 48px;
+    text-align: center;
+}
+
+footer.text-center p {
+    margin: 0;
+}
+
+footer.text-center .links {
+    margin-top: 10px;
+}
+
+footer.text-center a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+footer.text-center a img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+footer.text-center a:hover {
+    color: #ffd700;
+}
+
+.footer-links a {
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.footer-links img {
+    max-width: 30px;
+    height: auto;
 }
 
 @media screen and (min-width: 992px) {
