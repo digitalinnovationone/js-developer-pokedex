@@ -4,7 +4,8 @@
 }
 
 body {
-    background-color: #f6f8fc;
+    background: linear-gradient(10deg, rgba(0, 72, 255, 0.695), rgba(255, 1, 1, 0.695), rgba(245, 221, 1, 0.695));
+    background-repeat: no-repeat;
 }
 
 .content {
