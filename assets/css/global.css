@@ -1,17 +1,20 @@
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     box-sizing: border-box;
 }
-
 body {
-    background-color: #f6f8fc;
+    background-color: #292929;
 }
-
-.content {
-    width: 100vw;
-    height: 100vh;
+article {
+    width: 100%;
+    height: fit-content;
     padding: 1rem;
-    background-color: #fff;
+    background: rgb(103,215,207);
+    background: linear-gradient
+    (180deg, rgba(103,215,207,1) 0%, 
+    rgba(216,255,252,1) 25%, rgba(216,255,252,1) 50%, 
+    rgba(216,255,252,1) 75%, 
+    rgba(103,215,207,1) 100%);
 }
 
 @media screen and (min-width: 992px) {
