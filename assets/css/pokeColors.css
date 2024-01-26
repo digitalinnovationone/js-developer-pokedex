@@ -1,0 +1,18 @@
+.grass { background: rgb(105, 201, 111); }
+.normal { background: rgb(171, 171, 171);}
+.fire { background: rgb(230, 194, 119);}
+.water { background: rgb(97, 163, 194);}
+.electric { background: rgb(240, 232, 127);}
+.ice { background: rgb(117, 224, 231);}
+.ground { background: rgb(228, 220, 119); background: linear-gradient(180deg, rgb(228, 220, 110) 49.9%, rgb(143, 121, 71) 50%);}
+.flying  { background: rgb(82, 176, 169); background: linear-gradient(180deg, rgb(82, 176, 169) 49.9%, rgb(171, 171, 171) 50%);}
+.poison { background: rgb(152, 95, 185);}
+.fighting { background: rgb(170, 135, 88);}
+.psychic { background: rgb(181, 114, 219);}
+.dark { background: rgb(71, 64, 73);} 
+.rock { background: rgb(102, 86, 50);}
+.bug { background: rgb(95, 187, 101);}
+.ghost{ background: rgb(99, 62, 121);}
+.steel { background: rgb(138, 156, 165);}
+.dragon { background: rgb(82, 176, 169); background: linear-gradient(180deg, rgb(82, 176, 169) 49.9%, rgb(209, 105, 105) 50%);}
+.fairy { background: rgb(223, 116, 166);}
