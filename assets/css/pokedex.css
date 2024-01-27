@@ -146,6 +146,72 @@
     border-radius: 1rem;
 }
 
+.tab-row {
+    display: flex;
+    justify-content: space-around; /
+   
+}
+
+
+.pokemon-details {
+    display: flex;
+    flex-wrap: wrap; 
+    border: 2px solid #ddd; 
+    border-radius: 10px; 
+    background-color: #fff; 
+    padding: 10px;
+    margin-top: 20px; 
+}
+.column {
+  
+    position: relative; 
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative; 
+    color: #007bff; /* Cor padrão do texto (azul piscina) */
+    transition: color 0.3s; /* Adicionada transição para suavizar a mudança de cor */
+}
+
+.tab.active {
+    color: #000; /* Mudança de cor para preto quando a aba está ativa */
+    border-bottom: 2px solid #800080; /* Cor roxa para indicar aba ativa */
+}
+
+.tab.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #800080; /* Cor roxa para o traço */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+.tab-content {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.tab-content .content {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: none;
+}
+
+.tab-content[style*="block"] .content {
+    display: block;
+}
+
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;

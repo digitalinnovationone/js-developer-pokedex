@@ -1,13 +1,15 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
+var titleModal = document.getElementById('title-modal-pokemon-detail');
+
 const maxRecords = 151
 const limit = 10
 let offset = 0;
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
+        <li class="pokemon ${pokemon.type}" id="pokemon${pokemon.number}"  data-toggle="modal" data-target="#modalPokemonDetail">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
@@ -45,3 +47,59 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
+function mostrarConteudo(tabName) {
+    var tabs = document.getElementsByClassName("tab-content");
+    for (var i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = "none";
+    }
+  
+    var tabLinks = document.getElementsByClassName("tab");
+    for (var i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].classList.remove("active");
+    }
+  
+    document.getElementById(tabName).style.display = "block";
+    document.querySelector(`.tab[onclick="mostrarConteudo('${tabName}')"]`).classList.add("active");
+  }
+  
+
+  document.getElementById('pokemonList').addEventListener('click', async function (event) {
+    const clickedPokemon = event.target.closest('[id^="pokemon"]');
+  
+    if (clickedPokemon) {
+      const numeroPokemon = clickedPokemon.id.match(/\d+/);
+  
+      if (numeroPokemon) {
+        titleModal.textContent = "Detalhes do Pokemon #" + numeroPokemon;
+  
+        try {
+          const pokemonData = await obterDetalhesPokemon(numeroPokemon);
+          await loadPokemonModal(pokemonData);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    }
+  });
+  
+  
+  function getColorForStat(statName) {
+    switch (statName) {
+      case 'hp':
+        return 'success'; // ou qualquer outra classe de cor do Bootstrap
+      case 'attack':
+        return 'danger';
+      case 'defense':
+        return 'info';
+      case 'special-attack':
+        return 'warning';
+      case 'special-defense':
+        return 'primary';
+      case 'speed':
+        return 'secondary';
+      default:
+        return 'dark';
+    }
+  }
+  
