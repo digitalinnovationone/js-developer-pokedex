@@ -20,6 +20,10 @@
     <!-- Nosso CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
+
+     <!-- css do Boostrap 4 para o modal bonitinho-->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 </head>
 
 <body>
@@ -35,12 +39,48 @@
                 Load More
             </button>
         </div>
+
+        <div class="modal fade" id="modalPokemonDetail" >
+            <div class="modal-dialog" >
+            <div class="modal-content" style="width: 500px">
+                <div class="modal-header">
+                <h4 class="modal-title" id="title-modal-pokemon-detail">Detalhes do Pokemon #</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div id="pokemon-detail">
+                        
+
+
+                    </div>
+
+
+                </div>
+                <div class="modal-footer justify-content-between">              
+                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+
+               
+            </div>
+            <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+
     </section>
 
     <!-- Nosso JS -->
     <script src="/assets/js/pokemon-model.js"></script>
+    <script src="/assets/js/pokemon-detail.js"></script>   
     <script src="/assets/js/poke-api.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
