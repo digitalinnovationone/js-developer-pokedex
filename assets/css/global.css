@@ -1,6 +1,11 @@
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #2d2d2d;
 }
 
 body {
@@ -12,6 +17,10 @@ body {
     height: 100vh;
     padding: 1rem;
     background-color: #fff;
+}
+
+.content h1 {
+    color: #2d2d2d;
 }
 
 @media screen and (min-width: 992px) {

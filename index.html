@@ -5,26 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=48&id=45674&format=png" type="image/x-icon">
+
     <title>Pokedex</title>
+    <link rel="stylesheet" href="https://archives.bulbagarden.net/media/upload/4/4b/Pok%C3%A9dex_logo.png">
 
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+          integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+          
     <!-- Font Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Roboto:wght@100;300;500;700&family=Spectral:ital,wght@0,500;1,600&display=swap" rel="stylesheet">
+    
     <!-- Nosso CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
 </head>
 
 <body>
+    
     <section class="content">
-        <h1>Pokedex</h1>
+        <div class="logo">
+            <img src="/assets/img/Pokédex_logo.png" alt="Pokedex Logo">
+        </div>
 
         <ol id="pokemonList" class="pokemons">
             <!-- ..... Pokemons here ..... -->
@@ -32,10 +39,16 @@
 
         <div class="pagination">
             <button id="loadMoreButton" type="button">
-                Load More
+                Carregue mais
             </button>
         </div>
     </section>
+
+     <!-- jQuery -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+     <!-- JavaScript do Bootstrap -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Nosso JS -->
     <script src="/assets/js/pokemon-model.js"></script>
