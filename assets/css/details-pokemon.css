@@ -1,0 +1,267 @@
+body {
+    overflow: hidden;
+}
+
+h1 {
+  text-transform: capitalize;
+}
+
+.poke-wrapper {
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.content-pokemon {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-pokemon .normal {
+  background-color: #a6a877;
+}
+
+.content-pokemon .grass {
+  background-color: #77c850;
+}
+
+.content-pokemon .fire {
+  background-color: #ee7f30;
+}
+
+.content-pokemon .water {
+  background-color: #678fee;
+}
+
+.content-pokemon .electric {
+  background-color: #f7cf2e;
+}
+
+.content-pokemon .ice {
+  background-color: #98d5d7;
+}
+
+.content-pokemon .ground {
+  background-color: #dfbf69;
+}
+
+.content-pokemon .flying {
+  background-color: #a98ff0;
+}
+
+.content-pokemon .poison {
+  background-color: #a040a0;
+}
+
+.content-pokemon .fighting {
+  background-color: #bf3029;
+}
+
+.content-pokemon .psychic {
+  background-color: #f65687;
+}
+
+.content-pokemon .dark {
+  background-color: #725847;
+}
+
+.content-pokemon .rock {
+  background-color: #b8a137;
+}
+
+.content-pokemon .bug {
+  background-color: #a8b720;
+}
+
+.content-pokemon .ghost {
+  background-color: #6e5896;
+}
+
+.content-pokemon .steel {
+  background-color: #b9b7cf;
+}
+
+.content-pokemon .dragon {
+  background-color: #6f38f6;
+}
+
+.content-pokemon .fairy {
+  background-color: #f9aec7;
+}
+
+.content-pokemon img {
+    width: 15rem;
+    height: 15rem;
+    padding: 1rem;
+}
+
+.content-pokemon .types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+  
+.content-pokemon .description {
+    margin: 2rem 3rem;
+    text-align: center;
+    padding: 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #2d2d2d;
+}
+
+.content-pokemon .types .type {
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0;
+    min-width: 5rem;
+    font-size: 0.9rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+}
+
+.pokemon-detail-footer {
+    width: 100%;
+    margin: 0rem 3rem;
+    background-color: #ffff;
+    border-radius: 50px;
+    height: 100dvh;
+}
+
+.pokemon-detail-footer ul {
+    margin: 0 3rem;
+    padding: 0;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.pokemon-detail-footer .stats-container .stats {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.pokemon-detail-footer .stats-container .stats p {
+    min-width: 30px;
+}
+
+.pokemon-detail-footer .stats-container .progress-bar {
+    width: 100%;
+    height: 2rem;
+    background-color: #dddddd;
+    border-radius: 6px;
+    position: relative;
+}
+.pokemon-detail-footer .stats-container .progress-bar .progress {
+    height: 100%;
+    border-radius: 6px;
+    position: absolute;
+}
+
+.pokemon-detail-footer .stats-container .stats :first-child {
+    flex: 1;
+}
+
+.pokemon-detail-footer .stats-container .stats :nth-child(2) {
+    flex: 1;
+}
+
+.pokemon-detail-footer .stats-container .stats :nth-child(3) {
+    flex: 9;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.nav-button {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    padding: .4rem;
+    border-radius: 6rem;
+    height: 50px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.navbar .normal {
+    background-color: #a6a877;
+}
+  
+.navbar .grass {
+  background-color: #77c850;
+}
+
+.navbar .fire {
+  background-color: #ee7f30;
+}
+
+.navbar .water {
+  background-color: #678fee;
+}
+
+.navbar .electric {
+  background-color: #f7cf2e;
+}
+
+.navbar .ice {
+  background-color: #98d5d7;
+}
+
+.navbar .ground {
+  background-color: #dfbf69;
+}
+
+.navbar .flying {
+  background-color: #a98ff0;
+}
+
+.navbar .poison {
+  background-color: #a040a0;
+}
+
+.navbar .fighting {
+  background-color: #bf3029;
+}
+
+.navbar .psychic {
+  background-color: #f65687;
+}
+
+.navbar .dark {
+  background-color: #725847;
+}
+
+.navbar .rock {
+  background-color: #b8a137;
+}
+
+.navbar .bug {
+  background-color: #a8b720;
+}
+
+.navbar .ghost {
+  background-color: #6e5896;
+}
+
+.navbar .steel {
+  background-color: #b9b7cf;
+}
+
+.navbar .dragon {
+  background-color: #6f38f6;
+}
+
+.navbar .fairy {
+  background-color: #f9aec7;
+}
