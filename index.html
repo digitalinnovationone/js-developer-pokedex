@@ -1,46 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+    <head>
+        <title>Pokédex Online</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        <link 
+        rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!-- Font Roboto -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="assets/css/pokeColors.css">
+        <link rel="stylesheet" href="assets/css/pokeGlobal.css">
+        <link rel="stylesheet" href="assets/css/pokestyle.css">
 
-    <!-- Nosso CSS -->
-    <link rel="stylesheet" href="/assets/css/global.css">
-    <link rel="stylesheet" href="/assets/css/pokedex.css">
-</head>
+        <link rel="icon" href="assets/css/pokeicon.png">
+    </head>
 
-<body>
-    <section class="content">
-        <h1>Pokedex</h1>
+    <body>
+        <header>
+            <div class="head">
+                <span id="title">
+                    <h2>Pokédex</h2>
+                </span>
+                <span class="circle">
+                    <img src="assets/css/pokeball.png">
+                </span>
+            </div>
+        </header>
 
-        <ol id="pokemonList" class="pokemons">
-            <!-- ..... Pokemons here ..... -->
-        </ol>
+        <article>
+                <ol id="pokemonList" class="pokemons">
+                </ol>
+                <div class="pagination">
+                    <button id="loadMoreButton" type="button">
+                        Veja mais
+                    </button>
+                </div>
+        </article>
 
-        <div class="pagination">
-            <button id="loadMoreButton" type="button">
-                Load More
-            </button>
-        </div>
-    </section>
 
-    <!-- Nosso JS -->
-    <script src="/assets/js/pokemon-model.js"></script>
-    <script src="/assets/js/poke-api.js"></script>
-    <script src="/assets/js/main.js"></script>
-</body>
+        <footer>
+            <p>Todos os direitos dos personagens são da <strong>The Pokémon Company</strong></p>
+        </footer>
 
+        <script src="assets/js/pokemon.js"></script>
+        <script src="assets/js/pokeapi.js"></script>
+        <script src="assets/js/pokeMain.js"></script>
+    </body>
 </html>
