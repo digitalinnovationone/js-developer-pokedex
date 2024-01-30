@@ -13,18 +13,24 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
   pokemon.types = types;
   pokemon.type = type;
 
-  pokemon.attack = pokeDetail.stats.find(
-    (stat) => stat.stat.name === "attack"
-  ).base_stat;
-  pokemon.hp = pokeDetail.stats.find(
-    (stat) => stat.stat.name === "hp"
-  ).base_stat;
-  pokemon.defense = pokeDetail.stats.find(
-    (stat) => stat.stat.name === "defense"
-  ).base_stat;
-  pokemon.speed = pokeDetail.stats.find(
-    (stat) => stat.stat.name === "speed"
-  ).base_stat;
+  pokemon.stats.hp = pokeDetail.stats.find((item) => item.stat.name === "hp");
+  pokemon.stats.atk = pokeDetail.stats.find(
+    (item) => item.stat.name === "attack"
+  );
+
+  pokemon.stats.def = pokeDetail.stats.find(
+    (item) => item.stat.name === "defense"
+  );
+  pokemon.stats.sAtk = pokeDetail.stats.find(
+    (item) => item.stat.name === "special-attack"
+  );
+
+  pokemon.stats.sDef = pokeDetail.stats.find(
+    (item) => item.stat.name === "special-defense"
+  );
+  pokemon.stats.spd = pokeDetail.stats.find(
+    (item) => item.stat.name === "speed"
+  );
 
   pokemon.photo = pokeDetail.sprites.other.showdown.front_default;
 

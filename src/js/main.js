@@ -74,6 +74,26 @@ function PokemonByID(pokemon) {
                     <div class="title"> <hr> Sobre <hr> </div>
                     <p>Altura: ${pokemon.altura}</p>
                     <p>Peso: ${pokemon.peso}</p>
+
+                    <ul class="stats-container">
+                        <div class="title"> <hr> Status <hr> </div>
+                        ${Object.entries(pokemon.stats)
+                          .map(
+                            ([statName]) =>
+                              `<li class='stats'>
+                            <p>${statName}</p>
+                            <p>${pokemon.stats[statName].base_stat}</p>
+                            <span class='progress-bar dark'>
+                            <span style="width: ${
+                              pokemon.stats[statName].base_stat > 100
+                                ? 100
+                                : pokemon.stats[statName].base_stat
+                            }%" 
+                                class='progress ${pokemon.type}'/></span>
+                        </li>`
+                          )
+                          .join("")}
+                  </ul>
                 </div>
             </div>
         </div>
