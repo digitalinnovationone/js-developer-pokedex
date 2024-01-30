@@ -1,10 +1,17 @@
+@font-face {
+  font-family: "Pokemon";
+  src: url("../../assets/fonts/PokemonGB.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Pokemon";
   box-sizing: border-box;
 }
 
 body {
-  background: url("../../assets/pokedex.png");
+  background: url("../../assets/img/pokedex.png");
   background-color: #eb4441;
   background-size: 100%;
   background-repeat: no-repeat;

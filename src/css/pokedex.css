@@ -114,19 +114,19 @@
 }
 
 .pokemon .detail .types .type {
-  color: #fff;
+  color: black;
   padding: 0.25rem 0.5rem;
   margin: 0.25rem 0;
-  font-size: 0.825rem;
+  font-size: 0.6rem;
+  font-variant: small-caps;
+  font-weight: bolder;
   border-radius: 1rem;
-  font-weight: bold;
   filter: brightness(1.1);
   text-align: center;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .pokemon .detail img {
-  max-width: 100%;
+  max-width: 70%;
   height: 70px;
 }
 
