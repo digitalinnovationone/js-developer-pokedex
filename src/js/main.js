@@ -1,5 +1,7 @@
 const pokemonList = document.getElementById("pokemonList");
 const loadMoreButton = document.getElementById("loadMoreButton");
+const overlay = document.getElementById("overlay");
+const pokemonDetail = document.getElementById("pokemonDetail");
 
 const maxRecords = 151;
 const limit = 12;
@@ -7,7 +9,9 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
   return `
-        <li class="pokemon ${pokemon.type}">
+        <li class="pokemon ${pokemon.type}"onClick="showpokemonDetail(${
+    pokemon.number
+  })">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
@@ -47,3 +51,45 @@ loadMoreButton.addEventListener("click", () => {
     loadPokemonItens(offset, limit);
   }
 });
+
+function convertSinglePokemon(pokemon) {
+  return `
+        <div class="modal ${pokemon.type}">
+            <span class="close" onclick="closepokemonDetail()">&times;</span>
+            <span class="name">${pokemon.name}</span>
+            <span class="number">#${pokemon.number}</span>
+            <div class="detail">
+                <ol class="types row">
+                    ${pokemon.types
+                      .map((type) => `<li class="type ${type}">${type}</li>`)
+                      .join("")}
+                </ol>
+
+                <img src="${pokemon.photo}"
+                     alt="${pokemon.name}">
+            </div>
+        </div>
+    `;
+}
+
+function showpokemonDetail(pokemonId) {
+  pokeApi.getSinglePokemon(pokemonId).then((data) => {
+    const singlePokemon = convertSinglePokemon(data);
+    Modal(singlePokemon);
+  });
+  overlay.addEventListener("click", () => {
+    overlay.style.display = "none";
+    pokemonDetail.style.display = "none";
+  });
+}
+
+function Modal(singlePokemon) {
+  overlay.style.display = "block";
+  pokemonDetail.style.display = "block";
+  pokemonDetail.innerHTML = singlePokemon;
+}
+
+function closepokemonDetail() {
+  overlay.style.display = "none";
+  pokemonDetail.style.display = "none";
+}

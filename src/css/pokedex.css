@@ -84,36 +84,45 @@
   margin: 0.5rem;
   padding: 1rem;
   border-radius: 1rem;
+  cursor: pointer;
 }
 
-.pokemon .number {
+.number {
   color: #000;
   opacity: 0.3;
   text-align: right;
   font-size: 0.625rem;
 }
 
-.pokemon .name {
+.name {
   text-transform: capitalize;
   color: #fff;
   margin-bottom: 0.25rem;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.pokemon .detail {
+.detail {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
-.pokemon .detail .types {
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 26.5%;
+}
+
+.types {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.pokemon .detail .types .type {
+.types .type {
   color: black;
   padding: 0.25rem 0.5rem;
   margin: 0.25rem 0;
@@ -125,7 +134,7 @@
   text-align: center;
 }
 
-.pokemon .detail img {
+.detail img {
   max-width: 70%;
   height: 80px;
 }
@@ -150,6 +159,53 @@
   cursor: pointer;
 }
 
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.pokemonDetail {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  border-radius: 1rem;
+  border-radius: 1rem;
+  z-index: 999;
+  width: 500px;
+  max-width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal {
+  padding: 20px;
+  max-width: 100%;
+  border-radius: inherit;
+}
+
+.modal > span {
+  cursor: pointer;
+}
+
+.modal > img {
+  height: 250px;
+  width: 100%;
+  max-width: 100%;
+}
+
 @media screen and (min-width: 380px) {
   .pokemons {
     grid-template-columns: 1fr 1fr;
@@ -165,5 +221,11 @@
 @media screen and (min-width: 992px) {
   .pokemons {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .row {
+    width: 30%;
   }
 }

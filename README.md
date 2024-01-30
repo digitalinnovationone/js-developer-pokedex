@@ -1,6 +1,6 @@
 # Pokédex
 
-Projeto de desenvolvimento de uma Pokédex proposto pelo Bootcamp da [Digital Innovation One - DIO](<[URL](https://web.dio.me/home)>) sobre Desenvolvimento Frontend com Angular. <br>
+Projeto de desenvolvimento de uma Pokédex proposto pelo Bootcamp da [Digital Innovation One - DIO](https://web.dio.me/home) sobre Desenvolvimento Frontend com Angular. <br>
 
 Trata-se de uma aplicação que utiliza a [PokeApi](https://pokeapi.co/) para apresentar detalhes de Pokémons, como Nome, Número e Status.
 
