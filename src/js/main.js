@@ -9,7 +9,7 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
   return `
-        <li class="pokemon ${pokemon.type}"onClick="showpokemonDetail(${
+        <li class="pokemon ${pokemon.type}"onClick="showPokemonDetail(${
     pokemon.number
   })">
             <span class="number">#${pokemon.number}</span>
@@ -52,29 +52,37 @@ loadMoreButton.addEventListener("click", () => {
   }
 });
 
-function convertSinglePokemon(pokemon) {
+function PokemonByID(pokemon) {
   return `
         <div class="modal ${pokemon.type}">
-            <span class="close" onclick="closepokemonDetail()">&times;</span>
+            <span class="close" onclick="closePokemonDetail()">&times;</span>
             <span class="name">${pokemon.name}</span>
             <span class="number">#${pokemon.number}</span>
-            <div class="detail">
+            <div class="info">
+                <img src="${pokemon.photo}"
+                alt="${pokemon.name}">
+
+                <div class="detail">
                 <ol class="types row">
                     ${pokemon.types
                       .map((type) => `<li class="type ${type}">${type}</li>`)
                       .join("")}
                 </ol>
-
-                <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
+                </div>
+                
+                <div class="about">
+                    <div class="title"> <hr> Sobre <hr> </div>
+                    <p>Altura: ${pokemon.altura}</p>
+                    <p>Peso: ${pokemon.peso}</p>
+                </div>
             </div>
         </div>
     `;
 }
 
-function showpokemonDetail(pokemonId) {
-  pokeApi.getSinglePokemon(pokemonId).then((data) => {
-    const singlePokemon = convertSinglePokemon(data);
+function showPokemonDetail(pokemonId) {
+  pokeApi.getPokemonByID(pokemonId).then((data) => {
+    const singlePokemon = PokemonByID(data);
     Modal(singlePokemon);
   });
   overlay.addEventListener("click", () => {
@@ -89,7 +97,7 @@ function Modal(singlePokemon) {
   pokemonDetail.innerHTML = singlePokemon;
 }
 
-function closepokemonDetail() {
+function closePokemonDetail() {
   overlay.style.display = "none";
   pokemonDetail.style.display = "none";
 }
