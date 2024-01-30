@@ -127,7 +127,7 @@
 
 .pokemon .detail img {
   max-width: 70%;
-  height: 70px;
+  height: 80px;
 }
 
 .pagination {
@@ -140,7 +140,7 @@
 }
 
 .pagination button {
-  padding: 0.25rem 0.5rem;
+  padding: 1rem 1rem;
   margin: 0.25rem 0;
   font-size: 1.2rem;
   color: #fff;

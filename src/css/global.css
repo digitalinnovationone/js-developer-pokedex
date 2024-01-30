@@ -10,6 +10,12 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  overscroll-behavior: none;
+}
+
 body {
   background: url("../../assets/img/pokedex.png");
   background-color: #eb4441;
@@ -19,7 +25,7 @@ body {
 
 .content {
   width: 100vw;
-  height: 100vh;
+  height: fit-content;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.5);
 }
