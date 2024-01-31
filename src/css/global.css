@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "Pokemon";
+  src: url("../../assets/fonts/PokemonGB.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Pokemon";
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  overscroll-behavior: none;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../../assets/img/pokedex.png");
+  background-color: #eb4441;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.content {
+  width: 100vw;
+  height: fit-content;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content img {
+  max-width: 100%;
+  align-items: center;
+}
+
+.settings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20vh;
+  padding: 0;
+  width: 20vh;
+  z-index: 20;
+}
+
+.cog {
+  width: 100%;
+  height: auto;
+  border: 0;
+  color: azure;
+  position: absolute;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.cog p {
+  position: absolute;
+  font-size: 8vh;
+  top: 0;
+  margin-left: 10px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  border: 5px rgba(0, 0, 0, 0.5);
+  border-radius: 3rem;
+  width: 50%;
+}
+
+@media screen and (min-width: 992px) {
+  .content {
+    max-width: 992px;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .settings {
+    width: 18vh;
+    left: 0;
+    bottom: 0 !important;
+    top: auto;
+    position: fixed;
+  }
+
+  .content {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    align-items: center;
+  }
+}
