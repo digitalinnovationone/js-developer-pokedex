@@ -43,25 +43,22 @@ body {
 
 .settings {
   position: absolute;
-  top: -10px;
-  left: -10px;
-  background: transparent;
+  top: 0;
+  left: 0;
   height: 20vh;
   padding: 0;
   width: 20vh;
   z-index: 20;
-  rotate: 90deg;
 }
 
 .cog {
   width: 100%;
   height: auto;
-  background-color: transparent;
   border: 0;
   color: azure;
   position: absolute;
   display: flex;
-  text-align: left;
+  text-align: center;
   align-items: center;
 }
 
@@ -71,16 +68,10 @@ body {
   top: 0;
   margin-left: 10px;
   cursor: pointer;
-  rotate: -90deg;
-}
-
-.triangle {
-  width: 100%;
-  height: auto;
-  fill: black;
-  top: 0;
-  left: 0;
-  border: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border: 5px rgba(0, 0, 0, 0.5);
+  border-radius: 3rem;
+  width: 50%;
 }
 
 @media screen and (min-width: 992px) {
@@ -99,10 +90,6 @@ body {
     bottom: 0 !important;
     top: auto;
     position: fixed;
-  }
-
-  .triangle {
-    fill: transparent;
   }
 
   .content {
