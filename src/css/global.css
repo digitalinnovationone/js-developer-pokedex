@@ -60,6 +60,7 @@ body {
   display: flex;
   text-align: center;
   align-items: center;
+  justify-content: center;
 }
 
 .cog p {
@@ -94,5 +95,8 @@ body {
 
   .content {
     width: 100%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    align-items: center;
   }
 }
