@@ -40,6 +40,20 @@
   font-size: 1rem;
 }
 
+.modal {
+  text-transform: uppercase;
+}
+
+.modal .number {
+  font-size: 1rem;
+  cursor: default;
+}
+
+.modal .name {
+  text-transform: capitalize;
+  cursor: default;
+}
+
 .info hr {
   width: 80%;
   margin-left: 0.7rem;
