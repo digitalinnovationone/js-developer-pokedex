@@ -10,6 +10,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: clip;
@@ -35,11 +40,61 @@ body {
   align-items: center;
 }
 
+.settings {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background: transparent;
+  height: 20vh;
+  padding: 0;
+  width: 20vh;
+  z-index: 20;
+  rotate: 90deg;
+}
+
+.cog {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  border: 0;
+  color: azure;
+  position: absolute;
+  display: flex;
+  text-align: left;
+  align-items: center;
+}
+
+.cog p {
+  position: absolute;
+  font-size: 8vh;
+  top: 0;
+  margin-left: 10px;
+  cursor: pointer;
+  rotate: -90deg;
+}
+
+.triangle {
+  width: 100%;
+  height: auto;
+  fill: black;
+  top: 0;
+  left: 0;
+  border: 0;
+}
+
 @media screen and (min-width: 992px) {
   .content {
     max-width: 992px;
     height: auto;
     margin: 1rem auto;
     border-radius: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .settings {
+    width: 18vh;
+    left: -1rem;
+    top: -1rem;
   }
 }
