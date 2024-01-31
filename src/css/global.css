@@ -94,7 +94,11 @@ body {
 @media (max-width: 800px) {
   .settings {
     width: 18vh;
-    left: -1rem;
+    left: -20px;
     top: -1rem;
+  }
+
+  .content {
+    width: 100%;
   }
 }
