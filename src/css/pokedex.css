@@ -84,7 +84,19 @@
   margin: 0.5rem;
   padding: 1rem;
   border-radius: 1rem;
+  transition: ease-in-out 0.5s;
   cursor: pointer;
+}
+
+#logo {
+  transition: ease-in-out 0.5s;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.pokemon:hover,
+#logo:hover {
+  transform: scale(1.1);
 }
 
 .number {

@@ -49,14 +49,26 @@ function PokemonByID(pokemon) {
       `;
 }
 
+const fade = [{ opacity: 0 }, { opacity: 1 }];
+
+const fadeTiming = {
+  duration: 500,
+  iterations: 1,
+};
+let animation;
+
+function fadeActivate() {
+  animation = pokemonDetail.animate(fade, fadeTiming);
+}
+
 function showPokemonDetail(pokemonId) {
+  fadeActivate();
   pokeApi.getPokemonByID(pokemonId).then((data) => {
     const singlePokemon = PokemonByID(data);
     Modal(singlePokemon);
   });
   overlay.addEventListener("click", () => {
-    overlay.style.display = "none";
-    pokemonDetail.style.display = "none";
+    closePokemonDetail();
   });
 }
 
@@ -67,6 +79,9 @@ function Modal(singlePokemon) {
 }
 
 function closePokemonDetail() {
-  overlay.style.display = "none";
-  pokemonDetail.style.display = "none";
+  animation.reverse();
+  animation.addEventListener("finish", function () {
+    overlay.style.display = "none";
+    pokemonDetail.style.display = "none";
+  });
 }

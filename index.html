@@ -24,7 +24,7 @@
 
   <body>
     <section class="content">
-      <img src="./assets/img/logo.png" />
+      <img id="logo" src="./assets/img/logo.png" />
 
       <ol id="pokemonList" class="pokemons">
         <!-- ..... Pokemon list ..... -->
@@ -35,9 +35,11 @@
       </div>
     </section>
 
-    <div id="overlay" class="overlay"></div>
-    <div id="pokemonDetail" class="pokemonDetail"></div>
-    <!-- ..... Pokemon details ..... -->
+    <div class="detailOrganizer">
+      <!-- ..... Pokemon details ..... -->
+      <div id="overlay" class="overlay"></div>
+      <div id="pokemonDetail" class="pokemonDetail"></div>
+    </div>
 
     <!-- JS -->
     <script src="./src/js/pokemon-model.js"></script>

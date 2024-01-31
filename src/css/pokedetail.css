@@ -132,6 +132,10 @@ ul {
   justify-content: space-between;
 }
 
+.detailOrganizer {
+  transition: 1s ease-in-out;
+}
+
 .modal {
   padding: 20px;
   max-width: 100%;
