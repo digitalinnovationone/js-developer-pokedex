@@ -4,11 +4,21 @@ const maxRecords = 151;
 const limit = 10;
 let offset = 0;
 
+function pad(number, padSize = 3){
+    numberString = number.toString();
+    
+    if (numberString.length < padSize){
+        numberString = numberString.padStart(padSize, "0");
+    }
+
+    return numberString
+}
+
 function loadPokemonItens(offset, limit){
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHTML = pokemons.map((pokemon) =>
         `<li class = "pokemon ${pokemon.mainType}">
-        <span class="number">#${pokemon.number}</span>
+        <span class="number">#${pad(pokemon.number)}</span>
         <span class="name">${pokemon.name}</span>
         <div class="detail">
             <ol class="types">
