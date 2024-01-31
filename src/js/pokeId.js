@@ -1,5 +1,6 @@
 const overlay = document.getElementById("overlay");
 const pokemonDetail = document.getElementById("pokemonDetail");
+let currentPokemonId = 1;
 
 function PokemonByID(pokemon) {
   return `
@@ -9,11 +10,11 @@ function PokemonByID(pokemon) {
               <span class="number">#${pokemon.number}</span>
               <div class="info">
                 <div class="row">
-                  <i class="fa fa-arrow-left" aria-hidden="true" onclick="previousPokemon()"></i>
+                  <i class="fa fa-arrow-left" aria-hidden="true" onclick="previousPokemon()" id="previous"></i>
                   <img src="${pokemon.photo}"
                   alt="${
                     pokemon.name
-                  }"> <i class="fa fa-arrow-right" aria-hidden="true" onclick="nextPokemon()"></i>
+                  }"> <i class="fa fa-arrow-right" aria-hidden="true" onclick="nextPokemon()" id="next"></i>
                 </div>
 
   
@@ -73,6 +74,7 @@ function showPokemonDetail(pokemonId) {
     fadeActivate();
     visible = true;
     pokeApi.getPokemonByID(pokemonId).then((data) => {
+      currentPokemonId = pokemonId;
       const singlePokemon = PokemonByID(data);
       Modal(singlePokemon);
     });
@@ -98,5 +100,38 @@ function closePokemonDetail() {
       pokemonDetail.style.display = "none";
     });
     visible = false;
+  }
+}
+
+function fetchPokemonById(pokemonId) {
+  return pokeApi.getPokemonByID(pokemonId);
+}
+
+function showPokemonDetailById(pokemonId) {
+  fetchPokemonById(pokemonId).then((data) => {
+    const singlePokemon = PokemonByID(data);
+    Modal(singlePokemon);
+  });
+}
+
+function nextPokemon() {
+  const nextPokemonId = currentPokemonId + 1;
+  if (nextPokemonId == 152) {
+    currentPokemonId = 1;
+    showPokemonDetailById(currentPokemonId);
+  } else {
+    currentPokemonId++;
+    showPokemonDetailById(currentPokemonId);
+  }
+}
+
+function previousPokemon() {
+  const previousPokemonId = currentPokemonId - 1;
+  if (previousPokemonId < 1) {
+    currentPokemonId = 151;
+    showPokemonDetailById(currentPokemonId);
+  } else {
+    currentPokemonId--;
+    showPokemonDetailById(currentPokemonId);
   }
 }

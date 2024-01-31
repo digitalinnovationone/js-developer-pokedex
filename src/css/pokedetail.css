@@ -14,15 +14,23 @@
 }
 
 .info img {
-  max-width: 70%;
+  max-width: 80%;
   height: 200px;
   margin: 1rem 0;
 }
 
 .info i {
   font-size: 3rem;
-  margin: 0 3rem;
   cursor: pointer;
+  position: absolute;
+}
+
+#previous {
+  left: 10%;
+}
+
+#next {
+  right: 10%;
 }
 
 .info .type {
