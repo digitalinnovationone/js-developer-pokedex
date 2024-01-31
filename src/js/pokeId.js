@@ -8,8 +8,14 @@ function PokemonByID(pokemon) {
               <span class="name">${pokemon.name}</span>
               <span class="number">#${pokemon.number}</span>
               <div class="info">
+                <div class="row">
+                  <i class="fa fa-arrow-left" aria-hidden="true" onclick="previousPokemon()"></i>
                   <img src="${pokemon.photo}"
-                  alt="${pokemon.name}">
+                  alt="${
+                    pokemon.name
+                  }"> <i class="fa fa-arrow-right" aria-hidden="true" onclick="nextPokemon()"></i>
+                </div>
+
   
                   <div class="detail">
                   <ol class="types row">
@@ -52,24 +58,30 @@ function PokemonByID(pokemon) {
 const fade = [{ opacity: 0 }, { opacity: 1 }];
 
 const fadeTiming = {
-  duration: 500,
+  duration: 350,
   iterations: 1,
 };
 let animation;
+let visible = false;
 
 function fadeActivate() {
   animation = pokemonDetail.animate(fade, fadeTiming);
 }
 
 function showPokemonDetail(pokemonId) {
-  fadeActivate();
-  pokeApi.getPokemonByID(pokemonId).then((data) => {
-    const singlePokemon = PokemonByID(data);
-    Modal(singlePokemon);
-  });
-  overlay.addEventListener("click", () => {
-    closePokemonDetail();
-  });
+  if (!visible) {
+    fadeActivate();
+    visible = true;
+    pokeApi.getPokemonByID(pokemonId).then((data) => {
+      const singlePokemon = PokemonByID(data);
+      Modal(singlePokemon);
+    });
+    if (visible) {
+      overlay.addEventListener("click", () => {
+        closePokemonDetail();
+      });
+    }
+  }
 }
 
 function Modal(singlePokemon) {
@@ -79,9 +91,12 @@ function Modal(singlePokemon) {
 }
 
 function closePokemonDetail() {
-  animation.reverse();
-  animation.addEventListener("finish", function () {
-    overlay.style.display = "none";
-    pokemonDetail.style.display = "none";
-  });
+  if (visible) {
+    animation.reverse();
+    animation.addEventListener("finish", function () {
+      overlay.style.display = "none";
+      pokemonDetail.style.display = "none";
+    });
+    visible = false;
+  }
 }

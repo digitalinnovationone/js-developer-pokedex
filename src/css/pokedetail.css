@@ -10,12 +10,19 @@
   justify-content: space-around;
   align-items: center;
   font-size: 0.7rem;
+  width: 100%;
 }
 
 .info img {
   max-width: 70%;
   height: 200px;
   margin: 1rem 0;
+}
+
+.info i {
+  font-size: 3rem;
+  margin: 0 3rem;
+  cursor: pointer;
 }
 
 .info .type {
