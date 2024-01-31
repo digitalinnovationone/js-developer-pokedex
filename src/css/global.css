@@ -19,6 +19,7 @@ html {
   scroll-behavior: smooth;
   overflow-x: clip;
   overscroll-behavior: none;
+  box-sizing: border-box;
 }
 
 body {
@@ -94,8 +95,14 @@ body {
 @media (max-width: 800px) {
   .settings {
     width: 18vh;
-    left: -20px;
-    top: -1rem;
+    left: 0;
+    bottom: 0 !important;
+    top: auto;
+    position: fixed;
+  }
+
+  .triangle {
+    fill: transparent;
   }
 
   .content {
