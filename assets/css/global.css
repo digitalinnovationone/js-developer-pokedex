@@ -1,24 +1,33 @@
-* {
-    font-family: 'Roboto', sans-serif;
+
+*{
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     box-sizing: border-box;
 }
+.content{
+    padding: 1rem;
+    background: #c94848 no-repeat fixed;
+    /* height: 100vh;
+    width: 100vw; */
 
-body {
-    background-color: #f6f8fc;
 }
 
-.content {
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
-    background-color: #fff;
+.content h1{
+    margin: 0;
+    text-align: center;
+    margin: .5rem 0;
+    background: #c9c9c9;
+}
+
+body{
+    background-color: #f6f8fc;
 }
 
 @media screen and (min-width: 992px) {
     .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
+      max-width: 992px;
+      height: auto;
+      margin: 1rem auto;
+      border-radius: 1rem;
     }
 }
+
