@@ -7,68 +7,129 @@
 }
 
 .normal{
-     background-color: #A8A77A;
+     --type_color: #A8A77A;
+     background-color: var(--type_color);
+     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
+     
 }
 .fire{
-     background-color: #EE8130;
+     --type_color: #ee7f30;
+     background-color: var(--type_color);
+     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
+     
 }
 .water{
-     background-color: #6390F0;
+     --type_color: #6390F0;
+     background-color: var(--type_color);
+     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
+
 }
 .electric{
-     background-color: #F7D02C;
+     --type_color: #F7D02C;
+     background-color: var(--type_color);
+     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .grass{
-     background-color: #7AC74C;
+     --type_color: #7AC74C;
+     background-color: var(--type_color);
+     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .ice{
-     background-color: #96D9D6;
+     --type_color: #96D9D6;
+     background-color: var(--type_color);
+     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .fighting{
-     background-color: #C22E28;
+     --type_color: #C22E28;
+     background-color: var(--type_color);
+     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .poison{
-     background-color: #A33EA1;
+     --type_color: #A33EA1;
+     background-color: var(--type_color);
+     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .ground{
-     background-color: #E2BF65;
+     --type_color: #E2BF65;
+     background-color: var(--type_color);
+     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .flying{
-     background-color: #A98FF3;
+     --type_color: #A98FF3;
+     background-color: var(--type_color);
+     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .psychic{
-     background-color: #F95587;
+     --type_color: #F95587;
+     background-color: var(--type_color);
+     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .bug{
-     background-color: #A6B91A;
+     --type_color: #A6B91A;
+     background-color: var(--type_color);
+     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
+     
 }
 .rock{
-     background-color: #B6A136;
+     --type_color: #B6A136;
+     background-color: var(--type_color);
+     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .ghost{
-     background-color: #735797;
+     --type_color: #735797;
+     background-color: var(--type_color);
+     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .dragon{
-     background-color: #6F35FC;
+     --type_color: #6F35FC;
+     background-color: var(--type_color);
+     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .dark{
-     background-color: #705746;
+     --type_color: #705746;
+     background-color: var(--type_color);
+     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .steel{
-     background-color: #B7B7CE;
+     --type_color: #B7B7CE;
+     background-color: var(--type_color);
+     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .fairy{
-     background-color: #D685AD;
+     --type_color: #D685AD;
+     background-color: var(--type_color);
+     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 
 
 .pokemon {
-    margin: .5rem;
-    padding: 1rem;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    color: #fff;
+     margin: .5rem;
+     padding: 1rem;
+     border-radius: 1rem;
+     display: flex;
+     flex-direction: column;
+     color: #fff;
+     background-repeat: no-repeat;
+     background-position: bottom 10% right 10%, 20% ;
+     background-size: 7rem, 150%;
 }
 
 .pokemon .name {
@@ -91,6 +152,9 @@
     font-size: .625rem;
     margin: .125rem 0;
     filter: brightness(1.1);
+    text-transform: capitalize;
+    background-image:none;
+    box-shadow: none;
 }
 
 .pokemon .number {
