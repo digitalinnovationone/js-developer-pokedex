@@ -1,5 +1,6 @@
-const pokemonList = document.getElementById('pokemonList')
-const loadMoreButton = document.getElementById('loadMoreButton')
+const spinner = document.getElementById('spinner');
+const pokemonList = document.getElementById('pokemonList');
+const loadMoreButton = document.getElementById('loadMoreButton');
 
 const maxRecords = 151
 const limit = 10
@@ -7,7 +8,7 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
+        <li class="pokemon ${pokemon.type}" onclick="expandPokemon(this)">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
@@ -16,32 +17,100 @@ function convertPokemonToLi(pokemon) {
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                 </ol>
 
-                <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
+                <img src="${pokemon.photo}" alt="${pokemon.name}">
             </div>
         </li>
-    `
+    `;
 }
 
+
 function loadPokemonItens(offset, limit) {
-    pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
-        const newHtml = pokemons.map(convertPokemonToLi).join('')
-        pokemonList.innerHTML += newHtml
-    })
+    return pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
+        const newHtml = pokemons.map(convertPokemonToLi).join('');
+        pokemonList.innerHTML += newHtml;
+    });
 }
 
 loadPokemonItens(offset, limit)
 
+function expandPokemon(element) {
+    // Remove a overlay e o item expandido existentes
+    const existingOverlay = document.querySelector('.overlay');
+    if (existingOverlay) {
+        existingOverlay.remove();
+    }
+
+    const existingExpandedPokemon = document.querySelector('.pokemon.expanded');
+    if (existingExpandedPokemon) {
+        existingExpandedPokemon.classList.remove('expanded');
+        existingExpandedPokemon.classList.remove('highlight');
+        existingExpandedPokemon.remove();
+    }
+
+
+    // Clona o item e adiciona a classe 'expanded'
+    const expandedPokemon = element.cloneNode(true);
+    expandedPokemon.classList.add('expanded');
+
+    // Cria a overlay
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+    overlay.addEventListener('click', closeOverlay); // Adiciona um event listener para fechar ao clicar na overlay
+    document.body.appendChild(overlay);
+
+    // Adiciona o botão de fechar ao item expandido
+    const closeButton = document.createElement('button');
+    closeButton.classList.add('close-btn');
+    closeButton.textContent = 'X';
+    closeButton.addEventListener('click', closeOverlay);
+    expandedPokemon.appendChild(closeButton);
+
+    // Adiciona o item expandido ao corpo do documento
+    document.body.appendChild(expandedPokemon);
+
+    // Adiciona classe de destaque ao item clicado
+    element.classList.add('highlight');
+}
+
+// Função para fechar o item expandido e a overlay
+function closeOverlay() {
+    const overlay = document.querySelector('.overlay');
+    overlay.remove();
+
+    const expandedPokemon = document.querySelector('.pokemon.expanded');
+    expandedPokemon.remove();
+}
+
+
+
 loadMoreButton.addEventListener('click', () => {
-    offset += limit
-    const qtdRecordsWithNexPage = offset + limit
+    // Mostra o spinner
+    spinner.style.display = 'block';
 
-    if (qtdRecordsWithNexPage >= maxRecords) {
-        const newLimit = maxRecords - offset
+    offset += limit;
+    const qtdRecordsWithNextPage = offset + limit;
+
+    if (qtdRecordsWithNextPage >= maxRecords) {
+        const newLimit = maxRecords - offset;
         loadPokemonItens(offset, newLimit)
-
-        loadMoreButton.parentElement.removeChild(loadMoreButton)
+            .then(() => {
+                // Remove o botão "Load More" e esconde o spinner
+                loadMoreButton.parentElement.removeChild(loadMoreButton);
+                spinner.style.display = 'none';
+            })
+            .catch((error) => {
+                console.error('Erro ao carregar Pokémon:', error);
+                spinner.style.display = 'none';
+            });
     } else {
         loadPokemonItens(offset, limit)
+            .then(() => {
+                // Esconde o spinner após o carregamento
+                spinner.style.display = 'none';
+            })
+            .catch((error) => {
+                console.error('Erro ao carregar Pokémon:', error);
+                spinner.style.display = 'none'; 
+            });
     }
-})
+});  
