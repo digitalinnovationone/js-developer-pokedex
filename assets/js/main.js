@@ -34,21 +34,29 @@ function loadPokemonItens(offset, limit) {
 loadPokemonItens(offset, limit)
 
 function expandPokemon(element) {
-    // Remove a overlay existente
+    // Remove a overlay e o item expandido existentes
     const existingOverlay = document.querySelector('.overlay');
     if (existingOverlay) {
         existingOverlay.remove();
     }
+
+    const existingExpandedPokemon = document.querySelector('.pokemon.expanded');
+    if (existingExpandedPokemon) {
+        existingExpandedPokemon.classList.remove('expanded');
+        existingExpandedPokemon.classList.remove('highlight');
+        existingExpandedPokemon.remove();
+    }
+
+
+    // Clona o item e adiciona a classe 'expanded'
+    const expandedPokemon = element.cloneNode(true);
+    expandedPokemon.classList.add('expanded');
 
     // Cria a overlay
     const overlay = document.createElement('div');
     overlay.classList.add('overlay');
     overlay.addEventListener('click', closeOverlay); // Adiciona um event listener para fechar ao clicar na overlay
     document.body.appendChild(overlay);
-
-    // Clona o item e adiciona a classe 'expanded'
-    const expandedPokemon = element.cloneNode(true);
-    expandedPokemon.classList.add('expanded');
 
     // Adiciona o botão de fechar ao item expandido
     const closeButton = document.createElement('button');
@@ -75,7 +83,6 @@ function closeOverlay() {
 
 
 
-
 loadMoreButton.addEventListener('click', () => {
     // Mostra o spinner
     spinner.style.display = 'block';
@@ -93,7 +100,7 @@ loadMoreButton.addEventListener('click', () => {
             })
             .catch((error) => {
                 console.error('Erro ao carregar Pokémon:', error);
-                spinner.style.display = 'none'; // Certifique-se de esconder o spinner em caso de erro
+                spinner.style.display = 'none';
             });
     } else {
         loadPokemonItens(offset, limit)
@@ -103,7 +110,7 @@ loadMoreButton.addEventListener('click', () => {
             })
             .catch((error) => {
                 console.error('Erro ao carregar Pokémon:', error);
-                spinner.style.display = 'none'; // Certifique-se de esconder o spinner em caso de erro
+                spinner.style.display = 'none'; 
             });
     }
 });  
