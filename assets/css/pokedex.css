@@ -190,28 +190,6 @@
     }
 }
 
-.pokemon.expanded {
-    position: fixed;
-    width: 17%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.pokemon.expanded .overlay {
-    display: block;
-}
-
-.pokemon.expanded .pokemon {
-    opacity: 0.7;
-}
-
-.pokemon.expanded .pokemon.highlight {
-    box-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
-}
-
 .overlay {
     display: none;
     position: fixed;
@@ -219,7 +197,41 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 998; 
+    background: rgba(0, 0, 0, 0.5); /* Cor e opacidade do fundo escurecido */
+    z-index: 999; /* Coloca a overlay acima de outros elementos, exceto o item expandido */
+    display: flex; /* Alterado para flex para centralizar o botão de fechar */
+    justify-content: center;
+    align-items: center;
 }
+
+.overlay .close-btn {
+    background-color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.pokemon.expanded {
+    position: fixed;
+    width: 17%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Adicione outros estilos conforme necessário */
+    z-index: 1000; /* Garante que o item expandido fique acima da overlay */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona sombra */
+}
+
+.close-btn {
+    background-color: #fff;
+    padding: 4px 6px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1001; /* Garante que o botão de fechar fique acima do item expandido */
+}
+
+
 
