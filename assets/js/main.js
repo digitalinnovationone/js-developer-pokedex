@@ -8,7 +8,7 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
+        <li class="pokemon ${pokemon.type}" onclick="expandPokemon(this)">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
@@ -17,12 +17,12 @@ function convertPokemonToLi(pokemon) {
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                 </ol>
 
-                <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
+                <img src="${pokemon.photo}" alt="${pokemon.name}">
             </div>
         </li>
-    `
+    `;
 }
+
 
 function loadPokemonItens(offset, limit) {
     return pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
@@ -32,6 +32,19 @@ function loadPokemonItens(offset, limit) {
 }
 
 loadPokemonItens(offset, limit)
+
+function expandPokemon(element) {
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+    document.body.appendChild(overlay);
+
+    const expandedPokemon = element.cloneNode(true);
+    expandedPokemon.classList.add('expanded');
+    document.body.appendChild(expandedPokemon);
+
+    // Adiciona classe de destaque ao item clicado
+    element.classList.add('highlight');
+} 
 
 loadMoreButton.addEventListener('click', () => {
     // Mostra o spinner
@@ -63,4 +76,4 @@ loadMoreButton.addEventListener('click', () => {
                 spinner.style.display = 'none'; // Certifique-se de esconder o spinner em caso de erro
             });
     }
-});
+});  
