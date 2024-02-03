@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Pokedex</title>
 
     <!-- Normalize CSS -->
@@ -23,12 +24,18 @@
 </head>
 
 <body>
-    <section class="content">
-        <h1>Pokedex</h1>
+    <section  class="content" >
+        <h1 id="h1">Pokedex</h1>
 
         <ol id="pokemonList" class="pokemons">
             <!-- ..... Pokemons here ..... -->
         </ol>
+
+        <div id="detailsOverlay" class="details-overlay">
+            <div class="details-content">
+                <!-- Conteúdo dos detalhes do Pokémon aqui -->
+            </div>
+        </div>
 
         <div class="pagination">
             <button id="loadMoreButton" type="button">
@@ -41,6 +48,7 @@
     <script src="/assets/js/pokemon-model.js"></script>
     <script src="/assets/js/poke-api.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/details.js"></script>
 </body>
 
 </html>

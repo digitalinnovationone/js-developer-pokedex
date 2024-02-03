@@ -11,7 +11,16 @@ body {
     width: 100vw;
     height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+    background-color: transparent;
+    
+}
+#h1 {
+    text-align: center;
+    margin-bottom: .25rem;
+    font-weight: bolder;
+    text-shadow: 2px 2px 0px white;
+    font-size: 2.15em;
+    letter-spacing: 0.5px;
 }
 
 @media screen and (min-width: 992px) {
