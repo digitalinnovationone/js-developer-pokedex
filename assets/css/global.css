@@ -22,6 +22,11 @@ body{
     background-color: #f6f8fc;
 }
 
+a{
+    list-style: none;
+    text-decoration: none;
+}
+
 @media screen and (min-width: 992px) {
     .content {
       max-width: 992px;
