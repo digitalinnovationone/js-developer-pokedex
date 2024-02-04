@@ -1,47 +1,39 @@
-const pokemonList = document.getElementById('pokemonList')
-const loadMoreButton = document.getElementById('loadMoreButton')
+const pokeList=document.querySelector('#pokemonList')
+const btLoad=document.querySelector('#carregar')
+const boll=document.querySelector('.carga')
 
-const maxRecords = 151
-const limit = 10
-let offset = 0;
+let offset=0
 
-function convertPokemonToLi(pokemon) {
-    return `
-        <li class="pokemon ${pokemon.type}">
-            <span class="number">#${pokemon.number}</span>
-            <span class="name">${pokemon.name}</span>
 
-            <div class="detail">
-                <ol class="types">
-                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-                </ol>
 
-                <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
-            </div>
-        </li>
-    `
+function pokemonToPokelist(pokemon){
+    return `<a href='pokepaige/?id=${pokemon.id}'>
+                <li class="pokemon ${pokemon.types[0]}">
+                    <span>#${pokemon.id.toString().padStart(3, 0)}</span>
+                    <h2>${pokemon.name}</h2>
+                    <div>
+                        <ol class="type">
+                            ${pokemon.types.map((element)=>`<li>${element}</li>`).join('')}
+                        </ol>
+                        <img class="pokeImg" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt="imagem de ${pokemon.name}">
+                    </div>
+                </li>
+            </a>`;
 }
 
-function loadPokemonItens(offset, limit) {
-    pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
-        const newHtml = pokemons.map(convertPokemonToLi).join('')
-        pokemonList.innerHTML += newHtml
+function carregaPoke(){
+    pokeApi.getPokemons(offset, 24).then((pokemons)=>{
+
+        pokemons.map((element)=>{
+            boll.style.display='none'
+            btLoad.style.display='block'
+            offset++
+            return pokeList.innerHTML+=pokemonToPokelist(element)
+        });
     })
 }
 
-loadPokemonItens(offset, limit)
+carregaPoke()
 
-loadMoreButton.addEventListener('click', () => {
-    offset += limit
-    const qtdRecordsWithNexPage = offset + limit
 
-    if (qtdRecordsWithNexPage >= maxRecords) {
-        const newLimit = maxRecords - offset
-        loadPokemonItens(offset, newLimit)
-
-        loadMoreButton.parentElement.removeChild(loadMoreButton)
-    } else {
-        loadPokemonItens(offset, limit)
-    }
-})
+btLoad.addEventListener('click', carregaPoke)

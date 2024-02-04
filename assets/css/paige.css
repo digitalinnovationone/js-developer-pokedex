@@ -1,0 +1,105 @@
+#content{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 0 1rem;
+    
+}header a, header div{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}header a:hover, header div:hover{
+    background-color: rgba(255, 255, 255, 0.418);
+}header i{
+    color: white;
+    font-size: 30px;
+
+
+}main{
+    padding: 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}main>div{
+    padding: 1rem;
+}.perfil{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: white;
+}.type{
+    display: flex;
+}.type>li{
+    display: flex;
+    margin: .2rem;
+    font-size: 1.2rem;
+}.perfil>span{
+    align-self: flex-end;
+    font-size: 1.5rem;
+    position: relative;
+}h1{
+    margin: 0;
+    font-size: 3.5rem;
+}.pokeImg{
+    position: absolute;
+    height: 250px;
+    align-self: center;
+    bottom: -25px;
+    z-index: 1;
+}.info{
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    border-radius: 2.5rem 2.5rem 0 0;
+}
+th{
+    text-align: left;
+    width: 100px;
+    color: gray;
+}th, td{
+    padding: 20px 7px;
+    font-size: 1.1rem;
+}
+
+h1, h2, h3{
+    text-transform: capitalize;
+}
+.statistic{
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.233);
+    padding: 5px;
+    width: 80%;
+    margin: auto;
+}.fa-mars{
+    color: blue;
+    margin: 0 3px;
+}.fa-venus{
+    color: rgb(255, 42, 149);
+    margin: 0 3px 0 5px;
+}
+
+@media(min-width:600px){
+    .pokeImg{
+        height: 270px;
+        bottom: -45px;
+    }h1{
+        font-size: 5rem;
+    }
+}@media(min-width:1100px){
+    .pokeImg{
+        height: 350px;
+    }h1{
+        font-size: 6rem;
+    }.type>li{
+        font-size: 1.5rem;
+    }
+}
