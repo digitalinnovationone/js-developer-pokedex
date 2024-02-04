@@ -1,24 +1,14 @@
-* {
-    font-family: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
 
-body {
-    background-color: #f6f8fc;
-}
-
-.content {
-    width: 100vw;
-    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}main{
     padding: 1rem;
-    background-color: #fff;
-}
-
-@media screen and (min-width: 992px) {
-    .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
+}a{
+    color: currentColor;
+    text-decoration: none;
 }
