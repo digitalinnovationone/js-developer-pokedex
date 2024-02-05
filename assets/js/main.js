@@ -5,9 +5,14 @@ const maxRecords = 151
 const limit = 10
 let offset = 0;
 
+function saveToLocalStorageAndRedirect(pokemon) {
+    localStorage.setItem('pokemon', JSON.stringify(pokemon));
+    location.href = 'details.html';
+}
+
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
+        <li class="pokemon ${pokemon.type}" onclick='saveToLocalStorageAndRedirect(${JSON.stringify(pokemon)});'>
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
