@@ -83,6 +83,7 @@
     flex-direction: column;
     margin: .5rem;
     padding: 1rem;
+    cursor: pointer;
     border-radius: 1rem;
 }
 
@@ -144,6 +145,191 @@
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+    cursor: pointer;
+}
+
+.modalPoke{
+    filter: brightness(1.05);
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: .25rem;
+    max-width: 40rem;
+}
+
+.modalPoke .header{
+    display: flex;
+    flex-direction: column;
+}
+
+.modalPoke .header .namePoke{
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    color: #f6f6f6;
+}
+
+.modalPoke .header .number{
+    font-size: 1rem;
+    align-self: flex-end !important;
+    opacity: .5;
+}
+
+.modalPoke .image{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+.modalPoke .image .imagePoke{
+    max-width: 10rem;
+    width: 100%;
+}
+
+.modalPoke .deitalsAndPower{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.modalPoke .detailsBox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f6f6f6;
+}
+
+.modalPoke .detailsBox .detailsTitle, .modalPoke .types h2{
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.modalPoke .detailsBox .detailsWidth{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: .5rem;
+    justify-content: space-around;
+}
+
+.modalPoke .detailsBox  .detailsWidth .detailText{
+    color: #f6f6f6;
+    filter: brightness(1.1);
+    padding: .25rem 1rem;
+    padding-top: .35rem;
+    border-radius: .25rem;
+}
+
+.modalPoke .types{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #f6f6f6;
+    align-items: center;
+}
+
+.modalPoke .types .typesList{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: .5rem;
+}
+
+.modalPoke .types .typesList .typeItem{
+    color: #f6f6f6;
+    filter: brightness(1.1);
+    list-style-type: none;
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+}
+
+.modalPoke .statusPoke{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: .5rem;
+}
+
+.modalPoke .statusPoke .namePoke{
+    font-size: 1rem;
+    color: #f6f6f6;
+    text-transform: capitalize;
+    letter-spacing: .05rem;
+}
+
+.modalPoke .statusPoke .statusBox{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+    height: 3.5rem;
+    justify-content: start;
+}
+
+.modalPoke .statusPoke .statusBox .titleStatus{
+    font-size: 1rem;
+    color: #f6f6f6;
+    text-transform: capitalize;
+    letter-spacing: .05rem;
+}
+
+.modalPoke .statusPoke .statusBox .box{
+    background-color: #252525;
+    color: #f6f6f6;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: -.5rem;
+    padding: .15rem;
+    border-radius: .25rem;
+    text-align: center;
+    filter: brightness(1.1);
+}
+
+.modalPoke .statusPoke .statusBox .hp{
+    background-color: #bf3029;
+}
+
+.modalPoke .statusPoke .statusBox .attack{
+    background-color: #ee7f30;
+}
+
+.modalPoke .statusPoke .statusBox .defense{
+    background-color: #98d5d7;
+}
+
+.modalPoke .statusPoke .statusBox .special-attack{
+    background-color: #ee7f50;
+}
+
+.modalPoke .statusPoke .statusBox .special-defense{
+    background-color: #98d5d9;
+}
+
+.modalPoke .statusPoke .statusBox .speed{
+    background-color: #678fee;
+}
+
+.modalPoke .buttonRemove{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.modalPoke .btnRemove{
+    cursor: pointer;
+    background-color: #bf3029;
+    filter: brightness(1.15);
+    border: none;
+    color: #f6f6f6;
+    padding: .25rem 1rem;
+    border-radius: .25rem;
 }
 
 @media screen and (min-width: 380px) {
@@ -161,5 +347,20 @@
 @media screen and (min-width: 992px) {
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media(max-width:592px){
+    .modalPoke{
+        width: 90%;
+        top: 1%;
+    }
+    .modalPoke .detailsBox .detailsWidth,
+    .modalPoke .types .typesList{
+        width: 75%;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 6rem;
+        text-align: center;
     }
 }
