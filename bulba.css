@@ -1,0 +1,96 @@
+body {
+    background-color: #4CAF50;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero .bulba{
+    color: #daeeda;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+
+.img {
+    width: 200px;
+    height: auto;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.content h2 {
+    color: #4CAF50;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    color: #3c7d34;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#bulbasaur-abilities li,
+#additional-info li {
+    color: #3c7d34;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+#bulbasaur-abilities li:last-child,
+#additional-info li:last-child {
+    border-bottom: none;
+}
+
+#additional-info li strong {
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .img {
+        width: 150px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .content h2 {
+        font-size: 20px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    #bulbasaur-abilities li,
+    #additional-info li {
+        font-size: 14px;
+    }
+}
