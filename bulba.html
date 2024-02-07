@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulbasauro</title>
+  <link rel="stylesheet" href="bulba.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="hero">
+    <h1 class="bulba">Bulbassauro</h1>
+    <img class="img" src="https://archives.bulbagarden.net/media/upload/f/fb/0001Bulbasaur.png" alt="Bulbasaur">
+  </div>
+
+  <div class="content">
+    <p>Bulbassauro é um Pokémon do tipo grama/venenoso.</p>
+    <h2>Habilidades especiais:</h2>
+    <p>Bulbassauro tem uma variedade de habilidades do tipo Grama que são concedidas pelo bulbo crescendo em suas costas. Pós, cheiros, pétalas e sementes podem vir da ponta do bulbo, e vinhas e folhas podem vir da base. Ao manipulá-los em movimentos como Semente Sanguessuga, Chicote de Vinha, Folha Navalha, Dança de Pétalas, Bomba de Semente e Doce Incenso, Bulbassauro tem um arsenal muito à sua disposição.</p>
+    <h2>Habilidades:</h2>
+    <ul id="bulbasaur-abilities">
+      
+    </ul>
+    <h2>Informações adicionais:</h2>
+    <ul id="additional-info">
+    </ul>
+  </div>
+
+  <script>
+    
+    const abilities = ["Crescimento", "Clorofila"];
+
+   
+    const abilitiesList = document.getElementById("bulbasaur-abilities");
+    abilities.forEach(function(ability) {
+      const li = document.createElement("li");
+      li.textContent = ability;
+      abilitiesList.appendChild(li);
+    });
+
+    
+    const additionalInfo = [
+      { label: "XP Base:", value: "64" },
+      { label: "Grupo de Ovos:", value: "Monstro/Planta" },
+      { label: "Evolução:", value: "Bulbasaur evolui para Ivysaur a partir do nível 16." }
+    ];
+
+   
+    const infoList = document.getElementById("additional-info");
+    additionalInfo.forEach(function(info) {
+      const li = document.createElement("li");
+      li.innerHTML = `<strong>${info.label}</strong> ${info.value}`;
+      infoList.appendChild(li);
+    });
+  </script>
+</body>
+</html>
