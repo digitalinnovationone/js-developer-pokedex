@@ -196,6 +196,101 @@
     border-radius: 5rem;
 }
 
+.pokemonInfo .detail {
+     margin: auto 0;
+     display: flex;
+     flex-direction: column;
+     background-color: #7AC74C;
+     height: 40%;
+     padding: 1.25rem;
+     background-image: url('/assets//img/pokeball.svg');
+     background-size: 40%;
+     background-repeat: no-repeat;
+     background-position: bottom 10% left 10%;
+ }
+
+
+ .pokemonInfo .detail .detailImage{
+     width: 60%;
+     align-self: center;
+ }
+ .pokemonInfo .name{
+     text-align: left;
+     color: #FFF;
+ }
+
+.pokemonInfo .number{
+     text-align: right;
+     color: #FFF;
+}
+
+ .pokemonInfo .buttons {
+     margin: auto 0;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+     margin: 1.25rem;
+     margin-bottom: 0;
+ }
+
+ .pokemonInfo .buttons button{
+     border: none;
+     background-color: transparent;
+     background: none;
+     color: #FFF;
+     height: 2.5rem;
+     width: 2.5rem;
+     font-weight: bolder;
+     padding: 0;
+     font-size: 2rem;
+ }
+
+.pokemonInfo:modal {
+     border: none;
+     border-radius: 1rem;
+     background-color: #7AC74C;
+     padding: 0 0 0 0;
+     height: 50vh;
+     width: 20vw;
+}
+
+.pokemonInfo .stats{
+     background-color: #f6f8fc;
+     margin-bottom: 0;
+     border-radius: 1rem 1rem 0 0;
+     padding: 1.25rem;
+     height: 60%;
+}
+
+.pokemonInfo .stats .statusName{
+     font-size: medium;
+     font-weight:300;
+}
+
+.pokemonInfo .stats .statusValue{
+     color: #5f5f5f;
+     font-weight: lighter;
+     text-align: right;
+}
+
+.stats .statsList{
+     padding: 0;
+     list-style: none;
+     justify-content: center;
+     display: flex;
+     flex-direction: column;
+     align-items: left;
+}
+
+.stats .statsList .statsListElement{
+     width: 100%;
+     list-style: none;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+}
 
 @media screen and (min-width: 380px) {
     .pokemons {
