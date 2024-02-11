@@ -1,7 +1,7 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 const pokemonInfoWindow = document.getElementById('pokemonInfoWindow')
-const closeInfoButton   = document.getElementById('closeInfoButton')
+
 const maxRecords = 151;
 const limit = 10;
 let offset = 0;
@@ -16,12 +16,65 @@ function pad(number, padSize = 3){
     return numberString
 }
 
-//Implementar essa função para mostra as informações. Criar outra função para fazer o fetch e consumir a api, outra para organizar os dados e popular a modal e depois mostar a modal
+
 function showPokemonInfo(number){
-    console.log("clicked!")
+    pokeApi.getPokemon(number).then((pokemon) => {
+
+            console.log(pokemon.eggGroup)
+            const modalHTML = 
+            `<div class="window ${pokemon.mainType}">
+            <div  class="detail ${pokemon.mainType}">
+            <span class="buttons">
+                <button id="closeInfoButton">←</button>
+                <button id="favoritePokemon">♡</button>
+            </span>
+            <span class = "name">${pokemon.name}</span>
+            <div class ="typeList">
+                <ol class="types">
+                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                </ol>
+            </div>
+            <span class = "number">#${pad(pokemon.number)}</span>
+            <img src = "${pokemon.image}" class = "detailImage">
+        </div>
+        
+        <div class="stats">
+            <span>About</span>
+            <ol class = "statsList">
+                <li class = "statsListElement">
+                    <span class = "statusName">Height</span>
+                    <span class = "statusValue">${pokemon.height.toFixed(1)} cm</span>
+                </li>
+                <li class = "statsListElement">
+                    <span class = "statusName">Weight</span>
+                    <span class = "statusValue">${pokemon.weight.toFixed(1)} kg</span>
+                </li>
+                <li class = "statsListElement">
+                    <span class = "statusName">Abilities</span>
+                    <span class = "statusValue">${pokemon.abilities}</span>
+                </li>
+                <li class = "statsListElement">
+                    <span class = "statusName">Egg Groups</span>
+                    <span class = "statusValue"> ${pokemon.eggGroup} </span>
+                </li>                                              
+                
+            </ol>
+            
+        </div>
+        </div>`
+            
+           pokemonInfoWindow.innerHTML = modalHTML;
+           const closeInfoButton   = document.getElementById('closeInfoButton')
+           closeInfoButton.addEventListener("click", ()=>{
+            pokemonInfoWindow.close();
+            pokemonInfoWindow.innerHTML = ""
+        })
+        });
+    
     pokemonInfoWindow.showModal();
-    console.log("Modal showed")
+   
 }
+
 
 function loadPokemonItens(offset, limit){
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
@@ -59,6 +112,3 @@ loadMoreButton.addEventListener('click', () => {
 })
 
 
-closeInfoButton.addEventListener("click", ()=>{
-    pokemonInfoWindow.close();
-})

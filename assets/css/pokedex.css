@@ -200,18 +200,56 @@
      margin: auto 0;
      display: flex;
      flex-direction: column;
-     background-color: #7AC74C;
-     height: 40%;
+     height: 60%;
      padding: 1.25rem;
-     background-image: url('/assets//img/pokeball.svg');
-     background-size: 40%;
      background-repeat: no-repeat;
-     background-position: bottom 10% left 10%;
+     background-position: bottom 25% left 25%, 20% ;
+     background-size: 65%, 150%;
+ }
+
+ .pokemonInfo .window{
+     background-image: none;
+     background-size: 1000%;
+     height: 100%;
+ }
+
+ .pokemonInfo .stats{
+     background-color: #f6f8fc;
+     margin-bottom: 0;
+     border-radius: 1rem 1rem 0 0;
+     padding: 1.25rem;
+     height: 40%;
+}
+
+
+ .pokemonInfo .name{
+     text-transform: capitalize;
+ }
+
+.typeList .types {
+     list-style: none;
+     display: flex;
+     flex-direction: row;
+     padding: 0;
+ }
+
+
+.typeList .types .type {
+     color: #fff;
+     padding: .25rem;
+     padding: .5rem;
+     border-radius: 5rem;
+     font-size: .625rem;
+     margin: .125rem 0;
+     filter: brightness(1.1);
+     text-transform: capitalize;
+     background-image:none;
+     box-shadow: none;
  }
 
 
  .pokemonInfo .detail .detailImage{
-     width: 60%;
+     width: 50%;
      align-self: center;
  }
  .pokemonInfo .name{
@@ -231,7 +269,8 @@
      align-items: center;
      justify-content: space-between;
      margin: 1.25rem;
-     margin-bottom: 0;
+     margin-left: 0;
+     margin-right: 0;
  }
 
  .pokemonInfo .buttons button{
@@ -240,7 +279,6 @@
      background: none;
      color: #FFF;
      height: 2.5rem;
-     width: 2.5rem;
      font-weight: bolder;
      padding: 0;
      font-size: 2rem;
@@ -249,19 +287,12 @@
 .pokemonInfo:modal {
      border: none;
      border-radius: 1rem;
-     background-color: #7AC74C;
      padding: 0 0 0 0;
-     height: 50vh;
-     width: 20vw;
+     height: 90vh;
+     width: 90vw;
 }
 
-.pokemonInfo .stats{
-     background-color: #f6f8fc;
-     margin-bottom: 0;
-     border-radius: 1rem 1rem 0 0;
-     padding: 1.25rem;
-     height: 60%;
-}
+
 
 .pokemonInfo .stats .statusName{
      font-size: medium;
@@ -296,16 +327,31 @@
     .pokemons {
         grid-template-columns: 1fr 1fr;
     }
+    .pokemonInfo:modal {
+     height: 90vh;
+     width: 90vw;
+     }
+
 }
 
 @media screen and (min-width: 576px) {
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr;
     }
+    .pokemonInfo:modal {
+     height: 70vh;
+     width: 50vw;
+     }
 }
 
 @media screen and (min-width: 992px) {
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
+    .pokemonInfo:modal {
+     height: 70vh;
+     width: 20vw;
+     }
+    
 }
