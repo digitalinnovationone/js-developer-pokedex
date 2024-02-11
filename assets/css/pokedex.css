@@ -9,113 +9,113 @@
 .normal{
      --type_color: #A8A77A;
      background-color: var(--type_color);
-     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     background-image: url( 'assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
      box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
      
 }
 .fire{
      --type_color: #ee7f30;
      background-color: var(--type_color);
-     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     background-image: url( 'assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
      box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
      
 }
 .water{
      --type_color: #6390F0;
      background-color: var(--type_color);
-     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     background-image: url( 'assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
      box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 
 }
 .electric{
      --type_color: #F7D02C;
      background-color: var(--type_color);
-     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     background-image: url( 'assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
      box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .grass{
      --type_color: #7AC74C;
      background-color: var(--type_color);
-     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     background-image: url( 'assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
      box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .ice{
      --type_color: #96D9D6;
      background-color: var(--type_color);
-     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     background-image: url( 'assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
      box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .fighting{
      --type_color: #C22E28;
      background-color: var(--type_color);
-     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     background-image: url( 'assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
      box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .poison{
      --type_color: #A33EA1;
      background-color: var(--type_color);
-     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     background-image: url( 'assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
      box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .ground{
      --type_color: #E2BF65;
      background-color: var(--type_color);
-     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     background-image: url( 'assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
      box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .flying{
      --type_color: #A98FF3;
      background-color: var(--type_color);
-     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     background-image: url( 'assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
      box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .psychic{
      --type_color: #F95587;
      background-color: var(--type_color);
-     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     background-image: url( 'assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
      box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .bug{
      --type_color: #A6B91A;
      background-color: var(--type_color);
-     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     background-image: url( 'assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
      box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
      
 }
 .rock{
      --type_color: #B6A136;
      background-color: var(--type_color);
-     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     background-image: url( 'assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
      box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .ghost{
      --type_color: #735797;
      background-color: var(--type_color);
-     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     background-image: url( 'assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
      box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .dragon{
      --type_color: #6F35FC;
      background-color: var(--type_color);
-     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     background-image: url( 'assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
      box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .dark{
      --type_color: #705746;
      background-color: var(--type_color);
-     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     background-image: url( 'assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
      box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .steel{
      --type_color: #B7B7CE;
      background-color: var(--type_color);
-     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     background-image: url( 'assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
      box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 .fairy{
      --type_color: #D685AD;
      background-color: var(--type_color);
-     background-image: url( '/assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
+     background-image: url( 'assets//img/pokeball.svg' ), linear-gradient(45deg, var(--type_color) 60%, #fff);
      box-shadow: 0.25rem 0.25rem 1rem var(--type_color);
 }
 
