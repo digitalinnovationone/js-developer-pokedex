@@ -1,24 +1,35 @@
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    
+    --cor-dex-number: #00000042;
+    --bug: #91c12f;
+    --dark: #5a5465;
+    --dragon: #0b6dc3;
+    --electric: #f4d23c;
+    --fairy: #ec8fe6;
+    --fighting: #ce416b;
+    --fire: #ff9d55;
+    --flying: #89aae3;
+    --ghost: #655bbb;
+    --grass: #63bc5a;
+    --ground: #d97845;
+    --ice: #73cec0;
+    --normal: #919aa2;
+    --poison: #b567ce;
+    --psychic: #fa7179;
+    --rock: #c5b78c;
+    --steel: #5a8ea2;
+    --water: #5090d6;
 }
 
-body {
-    background-color: #f6f8fc;
+html{
+    font-size: 62.5%;
+    font-weight: 400;
 }
 
-.content {
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
-    background-color: #fff;
-}
+body{
+    font-size: 16px;
 
-@media screen and (min-width: 992px) {
-    .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
+    background-color: #ebebeb;
 }
