@@ -1,5 +1,5 @@
 .pokemons {
-    display: grid;
+    display: inline;
     grid-template-columns: 1fr;
     margin: 0;
     padding: 0;
@@ -15,11 +15,11 @@
 }
 
 .fire {
-    background-color: #ee7f30;
+    background-color: #5c5754;
 }
 
 .water {
-    background-color: #678fee;
+    background-color: #f626b8;
 }
 
 .electric {
@@ -95,7 +95,7 @@
 
 .pokemon .name {
     text-transform: capitalize;
-    color: #fff;
+    color: #140202;
     margin-bottom: .25rem;
 }
 
@@ -113,7 +113,7 @@
 }
 
 .pokemon .detail .types .type {
-    color: #fff;
+    color: #ec3838;
     padding: .25rem .5rem;
     margin: .25rem 0;
     font-size: .625rem;
