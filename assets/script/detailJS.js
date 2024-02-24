@@ -4,7 +4,7 @@ const abaBase = document.getElementById("base")
 const abaEvolution = document.getElementById("evolution")
 const abaMoves = document.getElementById("moves")
 
-function convertPokemonToPage(pokemon) {
+function convertPokemonToPage(pokemon) { // manimula a dom e ecrementa informações da api
   return `
   <div class="detailCont ${pokemon.type}">
   <div class="paginacao2">
@@ -37,7 +37,7 @@ function convertPokemonToPage(pokemon) {
   `;
 }
 
-function loadAbout(pokemon){
+function loadAbout(pokemon){  
   return `
   <div class="contentDetail">
                     <ol class="contentlist">
@@ -103,7 +103,7 @@ function loadPokemonItens(name) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () { //essa função é responsável por carregar os detalhes do Pokémon com base no nome fornecido.
   const urlParams = new URLSearchParams(window.location.search);
   const pokemonName = urlParams.get("name");
   console.log(pokemonName);
