@@ -1,146 +1,68 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Detail</title>
-        <link rel="stylesheet" href="/assets/css/nomalize.css">
-        <link rel="stylesheet" href="/assets/css/global.css">
-        <link rel="stylesheet" href="/assets/css/detail.css">
-    </head>
-<body class="colorType">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
 
-    <section class="conteinerDetail">
-
-        <!-- BOTAO DE VOLTAR -->
-        <div class="paginacao2">
-            <button id="BackButton" type="button">
-                <a href="/index.html">Back</a>
-            </button>
-        </div>
-            <!-- CABECALHO -->
-        <div class="header">
-            <div>
-                <span class="name"><h1>Bulbasaur</h1></span>
-                <span class="nunber">#001</span>
-            </div>
-
-            <div class="detail">
-                <ul class="types">
-                    <li class="type">Grass</li>
-                    <li class="type">Poison</li>
-                </ul>
-            </div>
-            
-
-
-            <div class="imageDeteil">
-                <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png">
-            </div>
-        </div>
-        <!-- FIM CABECALHO -->
+    <link rel="stylesheet" href="/assets/css/detail.css" />
+    <link rel="stylesheet" href="/assets/css/nomalize.css">
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/pokedex.css">
     
-        <!-- aba de detalhe -->
-        <div class="abaConteudo">
-            <div class="tabBtns">
-                
-                <button class="tabBtn active" content-id="about">
-                    about
-                </button>
+  </head>
 
-                <button class="tabBtn" content-id="base">
-                    Base Status
-                </button>
+  <body>
+    <section id="pokemonDetail">
+      
+    </section>
 
-                <button class="tabBtn" content-id="evolution">
-                    evolution
-                </button>
+    <section id="aba">
+      <!-- aba de detalhe -->
+  <div class="abaConteudo">
+    <div class="tabBtns">
+        
+        <button class="tabBtn active" content-id="about">
+            about
+        </button>
 
-                <button class="tabBtn" content-id="moves">
-                    moves
-                </button>
-            </div>
-            
-            <div class="tabContent ">
-                <div class="abaContent show "   id="about">
+        <button class="tabBtn" content-id="base">
+            Base Status
+        </button>
 
-                        <div class="contentDetail">
-                            <ol class="contentlist">
-                                <li>Species <span>1</span> </li>
-                                <li>Height <span>2</span> </li>
-                                <li>Weight <span>3</span> </li>
-                                <li>Abilities <span>4</span> </li>
-                            </ol>
-                
-                            <h3>Breending</h3>
-                
-                            <ol class="contentlist">
-                                <li>Gener <span>1</span> </li>
-                                <li>Eeg Grups <span>2</span> </li>
-                                <li>Egg Cycle <span>3</span> </li>
-                            </ol>
-                        </div>
+        <button class="tabBtn" content-id="evolution">
+            evolution
+        </button>
 
-                </div>
+        <button class="tabBtn" content-id="moves">
+            moves
+        </button>
+    </div>
+    
+    <div id="tabContent ">
 
-                <div class="abaContent" id="base">
-
-                    <div class="contentDetail">
-                        <ol class="contentlist">
-                            <li>HP <span>1</span> </li>
-                            <li>Attack <span>2</span> </li>
-                            <li>Defense <span>3</span> </li>
-                            <li>Sp. Atk <span>4</span> </li>
-                            <li>Sp. Def <span>5</span> </li>
-                            <li>Speed <span>6</span> </li>
-                            <li>total <span>6</span> </li>
-                        </ol>
-
-                        <h3>Type Defense</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-
-                    </div>
-
-                </div>
-
-                <div class="abaContent" id="evolution">
-
-                    <h1>3</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi nam culpa placeat iure a ullam, magnam doloribus voluptatem. Non incidunt ratione similique harum nesciunt doloribus vel ea repellendus voluptatibus nam.</p>
-
-                </div>
-
-                <div class="abaContent" id="moves">
-
-                    <h1>4</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi nam culpa placeat iure a ullam, magnam doloribus voluptatem. Non incidunt ratione similique harum nesciunt doloribus vel ea repellendus voluptatibus nam.</p>
-
-                </div>
-            </div>
-
-
+        <div class="abaContent show"   id="about">
         </div>
-        <!-- fim aba de detalhe -->
 
+        <div class="abaContent" id="base">
+        </div>
+
+        <div class="abaContent" id="evolution">
+        </div>
+
+        <div class="abaContent"   id="moves">
+        </div>
+
+    </div>
+</div>
+<!-- fim aba de detalhe -->
     </section>
 
     <script src="/assets/script/pokemonModel.js"></script>
+    <script src="/assets/script/detailtabble.js"></script>
     <script src="/assets/script/pokeAPI.js"></script>
-    <script src="/assets/script/main.js"></script>
     <script src="/assets/script/detailJS.js"></script>
-</body>
+  </body>
 </html>
 
-        <!-- 
-        "Name" as text,
-        "Number" as text,
-        "Image" as text,
-        "Type1" as text,
-        "Type2" as text,
-        "HP" as number,
-        "Defense" as number,
-        "SpDefense" as number,
-        "Speed" as number,
-        "GrowthRate1" as text,
-        "GrowthRate2" as text
-        -->

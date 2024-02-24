@@ -1,53 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pokedex</title>
-        <link rel="stylesheet" href="/assets/css/nomalize.css">
-        <link rel="stylesheet" href="/assets/css/global.css">
-        <link rel="stylesheet" href="/assets/css/pokedex.css">
-    </head>
-    <body>
+<html lang="pt-BR">
 
-        <section class="content">
-            <h1>Pokedex</h1>  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/pokedex.css">
+    <link rel="stylesheet" href="/assets/css/nomalize.css">
+</head>
 
-            <div>
-                <a href="/detail.html">
-                    <ol id="pokemonList" class="pokemons">
-                        
-                        <!-- <li class="pokemon">
-                            <span class="nunber">#001</span>
-                            <span class="name">Bulbasaur</span>
+<body>
+    <section class="content">
+        <h1>Pokedex</h1>
 
-                            <div class="detail">
-                                <ol class="types">
-                                    <li class="type">Grass</li>
-                                    <li class="type">Poison</li>
-                                </ol>
-                                <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png" alt="Bulbasaur">
-                            </div>
-                        </li> -->
-
-                    </ol>
-                </a>
-            </div>
-
-            <div class="paginacao">
-                <button id="loadMoreButton" type="button">
-                    load More
-                </button>
-            </div>
-
+        <ol id="pokemonList" class="pokemons">
             
+        </ol>
 
-        </section>
+        <div class="pagination">
+            <button id="loadMoreButton" type="button">
+                Load More
+            </button>
+        </div>
+    </section>
 
-        <script src="/assets/script/pokemonModel.js"></script>
-        <script src="/assets/script/pokeAPI.js"></script>
-        <script src="/assets/script/main.js"></script>
-        <script src="/assets/script/detailJS.js"></script>
-        
-    </body>
+    <!-- Nosso JS -->
+    <script src="/assets/script/pokemonModel.js"></script>
+    <script src="/assets/script/pokeAPI.js"></script>
+    <script src="/assets/script/main.js"></script>
+</body>
+
 </html>

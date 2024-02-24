@@ -1,7 +1,14 @@
-class Pokemon{
+class Pokemon {
+    number;
     name;
-    nunber;
     type;
-    types = {}
+    types = [];
+    height;
+    weight;
+    abilities = [];
     photo;
+    moves = [];
+    stats = [];
+    stat;
+    indiceStat = [];
 }

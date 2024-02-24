@@ -1,7 +1,12 @@
 /* botao de sair */
-.conteinerDetail{
+#pokemonDetail{
     padding: 0;
     margin: 0;
+}
+
+.detailCont{
+    width: 100%;
+    height: 100%;
 }
 
 .colorType{
@@ -34,11 +39,12 @@
 
  .imageDeteil{
     text-align: center;
-    margin: -50px 0;
+    margin: auto;
  }
  .imageDeteil img{
-    max-width: 70%;
     display: block;
+    max-width: 40%;
+    min-width: 10%;
     margin: auto;
  }
 
@@ -50,11 +56,15 @@
 }
 
 .name{
-    color: #fff;
+    color: #ffffff;
     display: block;
     font-size: 1.5rem;
+    margin: 10px;
+    text-transform: capitalize;
 
 }
+
+/* conteudo aba */
 
 .detail{
     flex-direction: column;
@@ -62,17 +72,18 @@
 .detail .types{
     list-style:none;
     padding: 0px 0px;
-    margin: 10px 0px;
+    margin: 20px 0px;
+    background: none;
 }
 
 .detail .types .type{
     display: inline-block;
-    margin: 10px;
-    background-color: #c97575;
+    margin: 0.25rem 0;
     border-radius: 1rem;
-    padding: 5px;
+    padding: 0.25rem 0.5rem;
     margin: 0;
     font-size: 0.675rem;
+    filter: brightness(1.1);
 }
 
 .nunber{
@@ -95,18 +106,21 @@
 
 .contentDetail .contentlist{
     list-style: none;
-    margin: 2%;
+    margin: 5%;
     padding: 5% 0;
     color: #00000062;
 }
 
 .contentDetail .contentlist li{
     padding: 2% 0;
+    text-transform: capitalize;
 }
 
 .contentDetail .contentlist span{
-    padding: 10%;
+    padding: 10px;
     color: #000000;
+    text-transform: capitalize;
+    font-size: 90%;
 }
 
 .contentDetail h3{
