@@ -1,0 +1,170 @@
+/* botao de sair */
+#pokemonDetail{
+    padding: 0;
+    margin: 0;
+}
+
+.detailCont{
+    width: 100%;
+    height: 100%;
+}
+
+.colorType{
+    background: #11c711;
+}
+.paginacao2{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    padding: 0.2rem;
+ }
+ 
+ .paginacao2 button{
+    background: #db6c6c;
+    border: none;
+    border-radius: 1rem;
+    color: #ffffff;
+    padding: .25rem .5rem;
+    font-size: .825rem;
+ }
+ 
+ .paginacao2 button a{
+    color: #fff;
+    text-decoration: none;
+ }
+
+ /* imagem */
+
+ .imageDeteil{
+    text-align: center;
+    margin: auto;
+ }
+ .imageDeteil img{
+    display: block;
+    max-width: 40%;
+    min-width: 10%;
+    margin: auto;
+ }
+
+ /* cabecalho */
+
+.header{
+    padding: 10px;
+
+}
+
+.name{
+    color: #ffffff;
+    display: block;
+    font-size: 1.5rem;
+    margin: 10px;
+    text-transform: capitalize;
+
+}
+
+/* conteudo aba */
+
+.detail{
+    flex-direction: column;
+}
+.detail .types{
+    list-style:none;
+    padding: 0px 0px;
+    margin: 20px 0px;
+    background: none;
+}
+
+.detail .types .type{
+    display: inline-block;
+    margin: 0.25rem 0;
+    border-radius: 1rem;
+    padding: 0.25rem 0.5rem;
+    margin: 0;
+    font-size: 0.675rem;
+    filter: brightness(1.1);
+}
+
+.nunber{
+    color: #696969;
+    display: block;
+    text-align: right;
+    padding: 0 20px;
+    margin: -60px 0 0 0;
+}
+
+/* abas de detalhe */
+.contentDetail{
+    background: #f3f1f1;
+    border-radius: 1rem;
+    padding: 1%;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+
+.contentDetail .contentlist{
+    list-style: none;
+    margin: 5%;
+    padding: 5% 0;
+    color: #00000062;
+}
+
+.contentDetail .contentlist li{
+    padding: 2% 0;
+    text-transform: capitalize;
+}
+
+.contentDetail .contentlist span{
+    padding: 10px;
+    color: #000000;
+    text-transform: capitalize;
+    font-size: 90%;
+}
+
+.contentDetail h3{
+   padding: 0.5rem;
+   margin:  -0.9rem 0;
+}
+
+/*----------------------------abas----------------------------*/
+
+.abaContent{
+    display: none;
+}
+
+.abaContent.show{
+    display: flex;
+}
+
+.abaConteudo{
+    background: #fdfcfc;
+    border-radius: 1rem;
+    margin: auto;
+    width: 22rem;
+    height: 25rem;
+}
+
+.tabBtns{
+    display: flex;
+    gap: 6px;
+    padding: 1rem;
+}
+
+.tabBtn{
+    margin: auto;
+    padding-bottom: 3%;
+    border: none;
+    color: #00000062;
+    background-color: #00000000;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.active{
+    border-bottom: #aaaaaa solid 5px;
+    border-radius: 5px;
+    font-weight:700;
+    color: #000000;
+}

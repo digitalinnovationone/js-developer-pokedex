@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+
+    <link rel="stylesheet" href="/assets/css/detail.css" />
+    <link rel="stylesheet" href="/assets/css/nomalize.css">
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/pokedex.css">
+    
+  </head>
+
+  <body>
+    <section id="pokemonDetail">
+      
+    </section>
+
+    <section id="aba">
+      <!-- aba de detalhe -->
+  <div class="abaConteudo">
+    <div class="tabBtns">
+        
+        <button class="tabBtn active" content-id="about">
+            about
+        </button>
+
+        <button class="tabBtn" content-id="base">
+            Base Status
+        </button>
+
+        <button class="tabBtn" content-id="evolution">
+            evolution
+        </button>
+
+        <button class="tabBtn" content-id="moves">
+            moves
+        </button>
+    </div>
+    
+    <div id="tabContent ">
+
+        <div class="abaContent show"   id="about">
+        </div>
+
+        <div class="abaContent" id="base">
+        </div>
+
+        <div class="abaContent" id="evolution">
+        </div>
+
+        <div class="abaContent"   id="moves">
+        </div>
+
+    </div>
+</div>
+<!-- fim aba de detalhe -->
+    </section>
+
+    <script src="/assets/script/pokemonModel.js"></script>
+    <script src="/assets/script/detailtabble.js"></script>
+    <script src="/assets/script/pokeAPI.js"></script>
+    <script src="/assets/script/detailJS.js"></script>
+  </body>
+</html>
+
