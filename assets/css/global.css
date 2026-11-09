@@ -7,11 +7,16 @@ body {
     background-color: #f6f8fc;
 }
 
+h1 {
+    text-align: center;
+}
+
 .content {
+    border: 3px solid black;
     width: 100vw;
     height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #de4646;
 }
 
 @media screen and (min-width: 992px) {
